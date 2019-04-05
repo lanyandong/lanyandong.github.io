@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html>
+  <head><meta name="generator" content="Hexo 3.8.0">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+  <meta name="description" content="YDLan&#39;s blog">
+  <meta name="keyword" content>
+  
+    <link rel="shortcut icon" href="/css/images/logo.png">
+  
+  <title>
+    
+      指令周期的基本概念 | YDLan
+    
+  </title>
+  <link href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <link href="//cdnjs.cloudflare.com/ajax/libs/nprogress/0.2.0/nprogress.min.css" rel="stylesheet">
+  <link href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/tomorrow.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
+  
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/geopattern/1.2.3/js/geopattern.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/nprogress/0.2.0/nprogress.min.js"></script>
+  
+    <script src="/js/qrious.js"></script>
+  
+  
+  
+  
+    <!-- MathJax support START -->
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <!-- MathJax support END -->
+  
+
+
+</head>
+<div class="wechat-share">
+  <img src="/css/images/logo.png">
+</div>
+
+  <body>
+    <header class="header fixed-header">
+  <div class="header-container">
+    <a class="home-link" href="/">
+      <div class="logo"></div>
+      <span>YDLan</span>
+    </a>
+    <ul class="right-list">
+      
+        <li class="list-item">
+          
+            <a href="/" class="item-link">Home</a>
+          
+        </li>
+      
+        <li class="list-item">
+          
+            <a href="/tags/" class="item-link">Tags</a>
+          
+        </li>
+      
+        <li class="list-item">
+          
+            <a href="/archives/" class="item-link">Archives</a>
+          
+        </li>
+      
+        <li class="list-item">
+          
+            <a href="/links/" class="item-link">Links</a>
+          
+        </li>
+      
+        <li class="list-item">
+          
+            <a href="/about/" class="item-link">About</a>
+          
+        </li>
+      
+    </ul>
+    <div class="menu">
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </div>
+    <div class="menu-mask">
+      <ul class="menu-list">
+        
+          <li class="menu-item">
+            
+              <a href="/" class="menu-link">Home</a>
+            
+          </li>
+        
+          <li class="menu-item">
+            
+              <a href="/tags/" class="menu-link">Tags</a>
+            
+          </li>
+        
+          <li class="menu-item">
+            
+              <a href="/archives/" class="menu-link">Archives</a>
+            
+          </li>
+        
+          <li class="menu-item">
+            
+              <a href="/links/" class="menu-link">Links</a>
+            
+          </li>
+        
+          <li class="menu-item">
+            
+              <a href="/about/" class="menu-link">About</a>
+            
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</header>
+
+    <div id="article-banner">
+  <h2>指令周期的基本概念</h2>
+  <p class="post-date">2019-01-02</p>
+  <div class="arrow-down">
+    <a href="javascript:;"></a>
+  </div>
+</div>
+<main class="app-body flex-box">
+  <!-- Article START -->
+  <article class="post-article">
+    <section class="markdown-content"><p>最近一直在复习计算机组成原理，好多知识点都不是很清楚，PPT上写的也比较模糊，特别是讲解控制器和指令的部分，好多图演示的不太清楚。还好我发现了一篇文章，它把指令周期的基本概念和指令周期的数据流都进行了详细的讲解。我觉得写的很好，又怕自己以后不记得了，想看时找不到，所以就把它转载了。</p>
+<p>原文地址：<a href="http://media4.open.com.cn/l603/fushi/0903/jisuanjzcyl/web/lesson/char8/j2.htm?tdsourcetag=s_pctim_aiomsg" target="_blank" rel="noopener">http://media4.open.com.cn/l603/fushi/0903/jisuanjzcyl/web/lesson/char8/j2.htm?tdsourcetag=s_pctim_aiomsg</a></p>
+<h2 id="第二节-指令周期"><a href="#第二节-指令周期" class="headerlink" title="第二节　指令周期"></a>第二节　指令周期</h2><h3 id="一、指令周期的基本概念"><a href="#一、指令周期的基本概念" class="headerlink" title="一、指令周期的基本概念"></a>一、指令周期的基本概念</h3><p>CPU每取出并执行一条指令所需的全部时间叫指令周期，也即CPU完成一条指令的时间叫指令周期，如下图所示。图中的取指阶段完成取指令和分析指令的操作，又叫取指周期；执行阶段完成执行指令的操作，又叫执行周期。在大多数情况下， CPU就是按取指－执行－再取指－再执行……的顺序自动工作的。</p>
+<p><img src="http://media4.open.com.cn/l603/fushi/0903/jisuanjzcyl/web/lesson/char8/image/s4.gif" alt="img"></p>
+<p>由于各种指令操作功能不同，因此各种指令的指令周期是不相同的。例如无条件转移指令JMP X， 在执行阶段不需访问主存，而且操作简单，完全可以在取指阶段的后期将转移地址X送至PC， 以达到转移的目的。这样， JMP X指令的指令周期就是取指周期。又如一地址格式的加法指令ADD X，在执行阶段首先要从X所指示的存储单元中取出操作数，然后和ACC的内容相加，结果存于ACC，故这种指令的指令周期在取指和执行阶段各访问一次存储器，其指令周期就包括两个存取周期。再如乘法指令，其执行阶段所要完成的操作比加法指令多得多，故它的执行周期超过了加法指令，如下图所示。</p>
+<p><img src="http://media4.open.com.cn/l603/fushi/0903/jisuanjzcyl/web/lesson/char8/image/s5.gif" alt="img"></p>
+<p>此外，当遇到间接寻址的指令时，由于指令字中只给出操作数有效地址的地址，因此，为了取出操作数，需先访问一次存储器，取出有效地址，然后再访问存储器，取出操作数。这样，间接寻址的指令周期就包括取指周期、间址周期和执行周期三个阶段，其中间址周期用于取操作数的有效地址，因此间址周期介于取指周期和执行周期之间，如下图所示。</p>
+<p><img src="http://media4.open.com.cn/l603/fushi/0903/jisuanjzcyl/web/lesson/char8/image/s6.gif" alt="img"></p>
+<p>由第五章可知，当CPU采用中断方式实现主机与I/O交换信息时，CPU在每条指令执行阶段结束前， 都要发中断查询信号，以检测是否有某个I/O提出中断请求。如果有请求，CPU则要进入中断响应阶段，又称中断周期。在这阶段， CPU必须将程序断点保存到存储器中。这样，一个完整的指令周期应包括取指、间址、执行和中断4个子周期，如下图所示。由于间址周期和中断周期不一定包含在每个指令周期内，故图中用菱形框判断。</p>
+<p><img src="http://media4.open.com.cn/l603/fushi/0903/jisuanjzcyl/web/lesson/char8/image/s7.gif" alt="img"></p>
+<p>总之，上述4个周期都有CPU访存操作， 只是访存的目的不同。取指周期是为了取指令，间址周期是为了取有效地址，执行周期是为了取操作数(当指令为访存指令时)，中断周期是为了保存程序断点。这4个周期又可叫CPU的工作周期，为了区别它们，在CPU内可设置4个标志触发器，如下图所示。</p>
+<p><img src="http://media4.open.com.cn/l603/fushi/0903/jisuanjzcyl/web/lesson/char8/image/s8.gif" alt="img"></p>
+<p>图中的FE、IND，EX和INT分别对应取指、间址、执行和中断4个周期，并以“1”状态表示有效；它们分别由1→FE、1→IND、1→EX和1→INT4个信号控制。<br>设置CPU工作周期标志触发器对设计控制单元十分有利。 例如，在取指阶段，只要设置取指周期标志触发器FE为1， 由它控制取指阶段的各个操作，便获得对任何一条指令的取指命令序列。又如在间接寻址时，间址次数可由间址周期标志触发器IND确定，当它为“0”状态时，表示间址结束。再如对于一些执行周期不访存的指令(如转移指令，寄存器类型指令)，同样可以用它们的操作码与取指周期标志触发器的状态相“与”，作为相应微操作的控制条件。</p>
+<h3 id="二、指令周期的数据流"><a href="#二、指令周期的数据流" class="headerlink" title="二、指令周期的数据流"></a>二、指令周期的数据流</h3><p>为了便于分析指令周期中的数据流，假设CPU中有存储器地址寄存器MAR、存储器数据寄存器MDR、程序计数器PC和指令寄存器IR。</p>
+<h4 id="1-取指周期的数据流"><a href="#1-取指周期的数据流" class="headerlink" title="1. 取指周期的数据流"></a>1. 取指周期的数据流</h4><p><img src="http://media4.open.com.cn/l603/fushi/0903/jisuanjzcyl/web/lesson/char8/image/s9.gif" alt="img"></p>
+<p>上图是取指周期的数据流。PC中存放现行指令的地址，该地址送到MAR并送至地址总线， 然后由控制部件CU向存储器发出读命令，使对应MAR所指单元的内容(指令)经数据总线送至MDR，再送至IR，与此同时CU控制PC内容加1，形成下一条指令的地址。</p>
+<h4 id="2-间址周期的数据流"><a href="#2-间址周期的数据流" class="headerlink" title="2. 间址周期的数据流"></a>2. 间址周期的数据流</h4><p><img src="http://media4.open.com.cn/l603/fushi/0903/jisuanjzcyl/web/lesson/char8/image/s10.gif" alt="img"></p>
+<p>间址周期的数据流如上图所示。一旦取指周期结束，CU便检查IR中的内容，以确定其是否有间址操作， 如果需间址操作，则MDR中指示形式地址的右N位将被送至MAR，又送至地址总线，此后CU向存储器发读命令，并获取有效地址并存至MDR。</p>
+<h4 id="3-执行周期的数据流"><a href="#3-执行周期的数据流" class="headerlink" title="3. 执行周期的数据流"></a>3. 执行周期的数据流</h4><p>由于不同的指令在执行周期的操作不同，因此执行周期的数据流是多种多样的， 可能涉及到CPU内部寄存器间的数据传送、或对存储器(或I/O)进行读写操作、或对ALU的操作，因此，无法用统一的数据流图表示。</p>
+<h4 id="4-中断周期的数据流"><a href="#4-中断周期的数据流" class="headerlink" title="4. 中断周期的数据流"></a>4. 中断周期的数据流</h4><p>CPU进入中断周期要完成一系列操作， 其中PC当前的内容必须保存起来，以待执行完中断服务程序后可准确返回到该程序的间断处，这一操作的数据流如下图所示。</p>
+<p><img src="http://media4.open.com.cn/l603/fushi/0903/jisuanjzcyl/web/lesson/char8/image/s11.gif" alt="img"></p>
+<p>图中由CU把用于保存程序断点的存储器特殊地址（如堆栈指针的内容）送往MAR，并送到地址总线上， 同时将PC的内容（程序断点）送到MDR，并命令存储器写，最终使程序断点经数据总线存入存储器。此外，还需将中断服务程序的入口地址送至PC，为下一个指令周期的取指周期作好准备。</p>
+</section>
+    <!-- Tags START -->
+    
+      <div class="tags">
+        <span>Tags:</span>
+        
+  <a href="/tags#计组">
+    <span class="tag-code">计组</span>
+  </a>
+
+      </div>
+    
+    <!-- Tags END -->
+    <!-- NAV START -->
+    
+  <div class="nav-container">
+    <!-- reverse left and right to put prev and next in a more logic postition -->
+    
+    
+      <a class="nav-right" href="/2019/04/05/hello-world/">
+        
+          Hello World
+        
+        <span class="nav-arrow"> →</span>
+      </a>
+    
+  </div>
+
+    <!-- NAV END -->
+    <!-- 打赏 START -->
+    
+      <div class="money-like">
+        <div class="reward-btn">
+          赏
+          <span class="money-code">
+            <span class="alipay-code">
+              <div class="code-image"></div>
+              <b>使用支付宝打赏</b>
+            </span>
+            <span class="wechat-code">
+              <div class="code-image"></div>
+              <b>使用微信打赏</b>
+            </span>
+          </span>
+        </div>
+        <p class="notice">若你觉得我的文章对你有帮助，欢迎点击上方按钮对我打赏</p>
+      </div>
+    
+    <!-- 打赏 END -->
+    <!-- 二维码 START -->
+    
+      <div class="qrcode">
+        <canvas id="share-qrcode"></canvas>
+        <p class="notice">扫描二维码，分享此文章</p>
+      </div>
+    
+    <!-- 二维码 END -->
+    
+      <!-- Disqus START -->
+      <div id="disqus_thread"></div>
+      <!-- Disqus END -->
+    
+  </article>
+  <!-- Article END -->
+  <!-- Catalog START -->
+  
+    <aside class="catalog-container">
+  <div class="toc-main">
+    <strong class="toc-title">Catalog</strong>
+    
+      <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#第二节-指令周期"><span class="toc-nav-text">第二节　指令周期</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#一、指令周期的基本概念"><span class="toc-nav-text">一、指令周期的基本概念</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#二、指令周期的数据流"><span class="toc-nav-text">二、指令周期的数据流</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#1-取指周期的数据流"><span class="toc-nav-text">1. 取指周期的数据流</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#2-间址周期的数据流"><span class="toc-nav-text">2. 间址周期的数据流</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#3-执行周期的数据流"><span class="toc-nav-text">3. 执行周期的数据流</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#4-中断周期的数据流"><span class="toc-nav-text">4. 中断周期的数据流</span></a></li></ol></li></ol></li></ol>
+    
+  </div>
+</aside>
+  
+  <!-- Catalog END -->
+</main>
+
+<script>
+  (function () {
+    var url = 'http://yoursite.com/2019/01/02/2019-01-02-instructions-cycle/';
+    var banner = ''
+    if (banner !== '' && banner !== 'undefined' && banner !== 'null') {
+      $('#article-banner').css({
+        'background-image': 'url(' + banner + ')'
+      })
+    } else {
+      $('#article-banner').geopattern(url)
+    }
+    $('.header').removeClass('fixed-header')
+
+    // error image
+    $(".markdown-content img").on('error', function() {
+      $(this).attr('src', 'http://file.muyutech.com/error-img.png')
+      $(this).css({
+        'cursor': 'default'
+      })
+    })
+
+    // zoom image
+    $(".markdown-content img").on('click', function() {
+      var src = $(this).attr('src')
+      if (src !== 'http://file.muyutech.com/error-img.png') {
+        var imageW = $(this).width()
+        var imageH = $(this).height()
+
+        var zoom = ($(window).width() * 0.95 / imageW).toFixed(2)
+        zoom = zoom < 1 ? 1 : zoom
+        zoom = zoom > 2 ? 2 : zoom
+        var transY = (($(window).height() - imageH) / 2).toFixed(2)
+
+        $('body').append('<div class="image-view-wrap"><div class="image-view-inner"><img src="'+ src +'" /></div></div>')
+        $('.image-view-wrap').addClass('wrap-active')
+        $('.image-view-wrap img').css({
+          'width': `${imageW}`,
+          'transform': `translate3d(0, ${transY}px, 0) scale3d(${zoom}, ${zoom}, 1)`
+        })
+        $('html').css('overflow', 'hidden')
+
+        $('.image-view-wrap').on('click', function() {
+          $(this).remove()
+          $('html').attr('style', '')
+        })
+      }
+    })
+  })();
+</script>
+
+
+  <script>
+    var qr = new QRious({
+      element: document.getElementById('share-qrcode'),
+      value: document.location.href
+    });
+  </script>
+
+
+
+
+
+  <script>
+    var disqus_shortname = '';
+    
+    var disqus_url = 'http://yoursite.com/2019/01/02/2019-01-02-instructions-cycle/';
+    
+    (function(){
+      var dsq = document.createElement('script');
+      dsq.type = 'text/javascript';
+      dsq.async = true;
+      dsq.src = '//go.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+  </script>
+
+
+    <div class="scroll-top">
+  <span class="arrow-icon"></span>
+</div>
+    <footer class="app-footer">
+  <p class="copyright">
+    &copy; 2019 | Proudly powered by <a href="https://hexo.io" target="_blank">Hexo</a>
+    <br>
+    Theme by <a href="https://github.com/yanm1ng">yanm1ng</a>
+  </p>
+</footer>
+
+<script>
+  function async(u, c) {
+    var d = document, t = 'script',
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+    o.src = u;
+    if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+    s.parentNode.insertBefore(o, s);
+  }
+</script>
+<script>
+  async("//cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.6/fastclick.min.js", function(){
+    FastClick.attach(document.body);
+  })
+</script>
+
+<script>
+  var hasLine = 'true';
+  async("//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js", function(){
+    $('figure pre').each(function(i, block) {
+      var figure = $(this).parents('figure');
+      if (hasLine === 'false') {
+        figure.find('.gutter').hide();
+      }
+      var lang = figure.attr('class').split(' ')[1] || 'code';
+      var codeHtml = $(this).html();
+      var codeTag = document.createElement('code');
+      codeTag.className = lang;
+      codeTag.innerHTML = codeHtml;
+      $(this).attr('class', '').empty().html(codeTag);
+      figure.attr('data-lang', lang.toUpperCase());
+      hljs.highlightBlock(block);
+    });
+  })
+</script>
+<!-- Baidu Tongji -->
+
+<script src="/js/script.js"></script>
+  </body>
+</html>
