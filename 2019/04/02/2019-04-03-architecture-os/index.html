@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html>
+  <head><meta name="generator" content="Hexo 3.8.0">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+  <meta name="description" content="YDLan&#39;s blog">
+  <meta name="keyword" content>
+  
+    <link rel="shortcut icon" href="/css/images/logo.png">
+  
+  <title>
+    
+      计算机体系结构到操作系统 | YDLan
+    
+  </title>
+  <link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <link href="//cdn.bootcss.com/nprogress/0.2.0/nprogress.min.css" rel="stylesheet">
+  <link href="//cdn.bootcss.com/highlight.js/9.12.0/styles/tomorrow.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
+<link rel="stylesheet" href="/css/plugins/gitment.css">
+  <script src="//cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+  <script src="//cdn.bootcss.com/geopattern/1.2.3/js/geopattern.min.js"></script>
+  <script src="//cdn.bootcss.com/nprogress/0.2.0/nprogress.min.js"></script>
+  <script src="/js/qrious.js"></script>
+<script src="/js/gitment.js"></script>
+  
+  
+    <!-- MathJax support START -->
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <!-- MathJax support END -->
+  
+
+
+</head>
+<div class="wechat-share">
+  <img src="/css/images/logo.png">
+</div>
+
+  <body>
+    <header class="header fixed-header">
+  <div class="header-container">
+    <a class="home-link" href="/">
+      <div class="logo"></div>
+      <span>YDLan</span>
+    </a>
+    <ul class="right-list">
+      
+        <li class="list-item">
+          
+            <a href="/" class="item-link">Home</a>
+          
+        </li>
+      
+        <li class="list-item">
+          
+            <a href="/tags/" class="item-link">Tags</a>
+          
+        </li>
+      
+        <li class="list-item">
+          
+            <a href="/archives/" class="item-link">Archives</a>
+          
+        </li>
+      
+        <li class="list-item">
+          
+            <a href="/links/" class="item-link">Links</a>
+          
+        </li>
+      
+        <li class="list-item">
+          
+            <a href="/about/" class="item-link">About</a>
+          
+        </li>
+      
+    </ul>
+    <div class="menu">
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </div>
+    <div class="menu-mask">
+      <ul class="menu-list">
+        
+          <li class="menu-item">
+            
+              <a href="/" class="menu-link">Home</a>
+            
+          </li>
+        
+          <li class="menu-item">
+            
+              <a href="/tags/" class="menu-link">Tags</a>
+            
+          </li>
+        
+          <li class="menu-item">
+            
+              <a href="/archives/" class="menu-link">Archives</a>
+            
+          </li>
+        
+          <li class="menu-item">
+            
+              <a href="/links/" class="menu-link">Links</a>
+            
+          </li>
+        
+          <li class="menu-item">
+            
+              <a href="/about/" class="menu-link">About</a>
+            
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</header>
+
+    <div id="article-banner">
+  <h2>计算机体系结构到操作系统</h2>
+  <p class="post-date">2019-04-02</p>
+  <div class="arrow-down">
+    <a href="javascript:;"></a>
+  </div>
+</div>
+<main class="app-body flex-box">
+  <!-- Article START -->
+  <article class="post-article">
+    <section class="markdown-content"><p>计算机学科综合了数学，逻辑学，物理学多门基础学科，并在此基础上衍生了各种各样的算法，如果我们只以简单的一门学科的角度去看待它，有时候会陷入困惑，从一个系统的角度去看待，才符合计算机的发展历史。   </p>
+<p>​    </p>
+<p>以系统工程的角度看，就会涉及到两个问题：体系结构和优化。可以说计算机的演化的方向就是：<strong>设计更好的计算机层次体系得到一个具有更好性能的计算机</strong>。</p>
+<p>谈到体系结构，最重要的是完成三个过度：</p>
+<blockquote>
+<p>电路语言向功能简单的语言的过度，体现为指令集与汇编语言<br>简单语言向抽象程度更高的语言过度，体现为高级编程语言<br>高级语言向用户友好的界面过度，体现为图形化界面</p>
+</blockquote>
+<p>​    </p>
+<p>处理器、分层次的存储器、汇编器实现了第一个过度，编译器和操作系统的部分内核实现了第二个过度，不同的人机交互设备和操作系统实现了第三个过度。</p>
+<p>​    </p>
+<p>半个世纪以来，人们针对不同层次的优化，形成了各种各样的学问，并由此诞生了计算机这门学科，并形成了以智能化为核心的人类生存方式的革命。</p>
+<p>​    </p>
+<p>对于优化来讲，可以有不同层次的优化，每一层优化都要考虑到不妨碍底层的优化，同时不妨碍上层的使用，即把每一次都抽象封装起来。</p>
+<p>​    </p>
+<p>优化的基本思想基于两点：时序上的并发处理和空间上的层次存储。在现行的计算机体系结构下，主要的优化方式是流水处理，指令级并行，数据级并行，线程级并行，多级cache，虚存以及配套的编译器设计。由此也带来了保护和任务协调的问题。</p>
+<p>​    </p>
+<p>无论体系结构的设计或者各式各样的优化，我们可以看到操作系统无疑占有重要地位，它统一管理分配硬件资源，为高级语言提供操作硬件的接口，为用户提供了良好的服务环境。可以说操作系统是最为复杂的软件，它使计算机从实验室走向普罗大众。</p>
+<p>​    </p>
+<p>对于操作系统需要了解更多相关的概念与设计思路，操作系统是一个复杂软件，不同的需求不同的底层硬件将导致不同的实现方法，它面向用户，统一管理硬件资源，抽象层次相对较高，在对概念的理解中不必纠结具体实现，重点在于明白想法和思路。</p>
+<p>​    </p>
+<p>进程在现代分时操作系统中是一个核心概念，进程从产生到结束有阻塞，就绪，运行三种状态。进程的执行时间以ms为单位，而指令的运行时间以ns为单位，这就能够通过进程调度和中断来实现用户眼中的程序并发执行，而实际上处理器仍然是串行执行进程。</p>
+<p>​    </p>
+<p>根据距离处理器的远近可将进程的调度划分为短程调度，中程调度，长程调度。处理器可以根据进程到达的时刻，进程的执行时间，进程的优先级和进程的并发数量来进行进程调度。进程具有寄存器，代码段，数据段，堆栈和文件五类资源，每次新建进程开销都比较大。可以通过比较进程的吞吐量、周转时间和资源利用率来比较不同的进程调度算法的优劣。</p>
+<p>​    </p>
+<p>随着多核心处理器的推广，为了更好的利用多核心的并发性，线程被大量使用，最新的酷睿处理器支持8核16进程。另一方面，一个进程可以有多个线程，线程只需要寄存器，栈区两类资源，开销较少，有比较良好的可共享性，可以降低运行时间。线程有内核线程和用户线程两类，根据用户线程和内核线程的数量线程模型可分为多对一模型，一对一模型和多对多三种模型，其区别在于并发性和编程的简便性。</p>
+<p>​    </p>
+<p>有时候可能需要多个进程来协同完成不同的任务，进程之间需要相互通信，常见的通信方式有共享内存和消息传递两种方式。根据进程之间的不同逻辑关系可将其分为同步和互斥两类关系，通过信号量加以控制。</p>
+<p>​    </p>
+<p>当调度器调度的进程互斥，占有并等待，非抢占和循环等待时，就会造成死锁。我们通常使用静态预防，动态避免，动态消除或由编程人员来处理的方式来解决这些死锁的问题。常见的方法有自旋锁，互斥锁和银行家算法。</p>
+<p>​    </p>
+<p>由于处理器只能直接访问寄存器和内存，所以必须要将文件加载到内存才能执行。为了实现对不同进程的保护和管理，处理器内置基址寄存器和界限寄存器，对于用户来说看到的是逻辑地址，从0到结束，对于系统内部来说，看到的是物理地址，也就是基址寄存器到界限寄存器的地址。  </p>
+<p>​    </p>
+<p>高级语言机器可识别的二进制文件需要预处理，编译，汇编，链接四个步骤，对应的逻辑地址绑定方式也就分为编译时绑定，加载时绑定(从内存调用其他程序)，执行时绑定(从硬盘调用程序)。通过这些步骤完成了程序到进程的切换。</p>
+<p>​    </p>
+<p>在现代计算机体系中，用户视角的逻辑地址与物理地址的内存相互分隔，这是由于分页技术的使用，两者之间的转换通过硬件协调，受操作系统控制。用户不能访问逻辑地址以外的内存，也就是只能访问自己的页表所在内存。另外一种技术是段式内存分配，尽管段式内存分配可以实现代码段共享，但却会造成外碎片。页表的访问同样会造成二次访问，可用ROM来加速。</p>
+<p>​    </p>
+<p>还有一种重要的优化技术——虚存，基本思想和cache类似，均利用了分层次存储的思想，只不过cache一般由硬件实现而虚存由软件实现。cache实现了接近寄存器的存储速度和更大的存储容量，虚存实现内存的存储速度和比内存更高的存储容量。</p>
+<p>​    </p>
+<p>配合页表的使用，可以将一个大的存储空间映射到一个小的存储空间。当ROM里没有对应的页表时，就会发生缺页中断，根据预测的下一次使用时间，内存中存在时间，上一次使用时间可以有不同的算法。</p>
+<p>​    </p>
+<p>尽管硬盘属于外存，但是却可以不掉电存储大量文件，包括操作系统。所以尽管是输入输出设备，却也非常重要。</p>
+<p>​    </p>
+<p>与输入输出设备类似，文件系统分为设备驱动(中断处理)，基本文件系统，文件组织模块和逻辑文件系统四个层次。包含引导块(仅含有操作系统的分区拥有)，卷控制块(分区的详细信息)，目录(文件的基本信息)。</p>
+</section>
+    <!-- Tags START -->
+    
+      <div class="tags">
+        <span>Tags:</span>
+        
+  <a href="/tags#体系结构">
+    <span class="tag-code">体系结构</span>
+  </a>
+
+  <a href="/tags#OS">
+    <span class="tag-code">OS</span>
+  </a>
+
+      </div>
+    
+    <!-- Tags END -->
+    <!-- NAV START -->
+    
+  <div class="nav-container">
+    <!-- reverse left and right to put prev and next in a more logic postition -->
+    
+      <a class="nav-left" href="/2019/03/16/2019-03-16-rsic-instruction/">
+        <span class="nav-arrow">← </span>
+        
+          RISC指令集的五个周期
+        
+      </a>
+    
+    
+  </div>
+
+    <!-- NAV END -->
+    <!-- 打赏 START -->
+    
+    <!-- 打赏 END -->
+    <!-- 二维码 START -->
+    
+    <!-- 二维码 END -->
+    
+        <!-- Disqus START -->
+        <div id="disqus_thread"></div>
+        <!-- Disqus END -->
+    
+  </article>
+  <!-- Article END -->
+  <!-- Catalog START -->
+  
+    <aside class="catalog-container">
+  <div class="toc-main">
+    <strong class="toc-title">Catalog</strong>
+    
+      <ol class="nav">none</ol>
+    
+  </div>
+</aside>
+  
+  <!-- Catalog END -->
+</main>
+
+<script>
+  (function () {
+    var url = 'http://yoursite.com/2019/04/02/2019-04-03-architecture-os/';
+    var banner = ''
+    if (banner !== '' && banner !== 'undefined' && banner !== 'null') {
+      $('#article-banner').css({
+        'background-image': 'url(' + banner + ')'
+      })
+    } else {
+      $('#article-banner').geopattern(url)
+    }
+    $('.header').removeClass('fixed-header')
+
+     // error image
+    $(".markdown-content img").on('error', function() {
+      $(this).attr('src', 'http://file.muyutech.com/error-img.png')
+      $(this).css({
+        'cursor': 'default'
+      })
+    })
+
+    // zoom image
+    $(".markdown-content img").on('click', function() {
+      var src = $(this).attr('src')
+      if (src !== 'http://file.muyutech.com/error-img.png') {
+        var imageW = $(this).width()
+        var imageH = $(this).height()
+        
+        var zoom = ($(window).width() * 0.95 / imageW).toFixed(2)
+        zoom = zoom < 1 ? 1 : zoom
+        zoom = zoom > 2 ? 2 : zoom
+        var transY = (($(window).height() - imageH) / 2).toFixed(2)
+
+        $('body').append('<div class="image-view-wrap"><div class="image-view-inner"><img src="'+ src +'" /></div></div>')
+        $('.image-view-wrap').addClass('wrap-active')
+        $('.image-view-wrap img').css({
+          'width': `${imageW}`,
+          'transform': `translate3d(0, ${transY}px, 0) scale3d(${zoom}, ${zoom}, 1)`
+        })
+        $('html').css('overflow', 'hidden')
+
+        $('.image-view-wrap').on('click', function() {
+          $(this).remove()
+          $('html').attr('style', '')
+        })
+      }
+    })
+
+    // qrcode
+    var qr = new QRious({
+      element: document.getElementById('share-qrcode'),
+      value: document.location.href
+    });
+
+    // gitment
+    var gitmentConfig = "";
+    if (gitmentConfig !== 'undefined') {
+      var gitment = new Gitment({
+        id: "计算机体系结构到操作系统",
+        owner: "",
+        repo: "",
+        oauth: {
+          client_id: "",
+          client_secret: ""
+        },
+        theme: {
+          render(state, instance) {
+            const container = document.createElement('div')
+            container.lang = "en-US"
+            container.className = 'gitment-container gitment-root-container'
+            container.appendChild(instance.renderHeader(state, instance))
+            container.appendChild(instance.renderEditor(state, instance))
+            container.appendChild(instance.renderComments(state, instance))
+            container.appendChild(instance.renderFooter(state, instance))
+            return container;
+          }
+        }
+      })
+      gitment.render(document.getElementById('comments'))
+    }
+  })();
+</script>
+
+<script>
+  var disqus_shortname = '';
+  
+  var disqus_url = 'http://yoursite.com/2019/04/02/2019-04-03-architecture-os/';
+  
+  (function(){
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//go.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+
+    <div class="scroll-top">
+  <span class="arrow-icon"></span>
+</div>
+    <footer class="app-footer">
+  <p class="copyright">
+    &copy; 2019 | 由<a href="https://hexo.io" target="_blank">Hexo</a>强力驱动
+    <br>
+    Theme by <a href="https://github.com/yanm1ng/hexo-theme-vexo">Vexo</a> | Modify by <a href="https://github.com/timespaceforce">YDLan</a>
+  </p>
+</footer>
+
+<script>
+  function async(u, c) {
+    var d = document, t = 'script',
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+    o.src = u;
+    if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+    s.parentNode.insertBefore(o, s);
+  }
+</script>
+<script>
+  async("//cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function(){
+    FastClick.attach(document.body);
+  })
+</script>
+
+<script>
+  var hasLine = 'true';
+  async("//cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js", function(){
+    $('figure pre').each(function(i, block) {
+      var figure = $(this).parents('figure');
+      if (hasLine === 'false') {
+        figure.find('.gutter').hide();
+      }
+      var lang = figure.attr('class').split(' ')[1] || 'code';
+      var codeHtml = $(this).html();
+      var codeTag = document.createElement('code');
+      codeTag.className = lang;
+      codeTag.innerHTML = codeHtml;
+      $(this).attr('class', '').empty().html(codeTag);
+      figure.attr('data-lang', lang.toUpperCase());
+      hljs.highlightBlock(block);
+    });
+  })
+</script>
+<!-- Baidu Tongji -->
+
+<script src="/js/script.js"></script>
+  </body>
+</html>
