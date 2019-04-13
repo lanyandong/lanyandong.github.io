@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang>
+
+
+
+
+
+
+
+<head>
+	
+	
+	<link rel="stylesheet" href="/css/allinone.min.css">
+
+	
+
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+	<title>Algorithm thought | YDLAN</title>
+
+	<meta name="HandheldFriendly" content="True">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+	<meta name="generator" content="hexo">
+	<meta name="author" content="YDLAN">
+	<meta name="description" content>
+
+	
+	<meta name="keywords" content>
+	
+
+	
+	<link rel="shortcut icon" href="http://wx1.sinaimg.cn/small/00709Ldkly1fyqxzh4yttj30dw0ci40h.jpg">
+	<link rel="apple-touch-icon" href="http://wx1.sinaimg.cn/small/00709Ldkly1fyqxzh4yttj30dw0ci40h.jpg">
+	
+
+	
+	<meta name="theme-color" content="#3c484e">
+	<meta name="msapplication-TileColor" content="#3c484e">
+	
+
+	
+
+	
+
+	<meta property="og:site_name" content="YDLAN">
+	<meta property="og:type" content="article">
+	<meta property="og:title" content="Algorithm thought | YDLAN">
+	<meta property="og:description" content>
+	<meta property="og:url" content="http://ydlan.cn/2018/07/08/2018-07-08-algorithm-summary/">
+
+	
+	<meta property="article:published_time" content="2018-07-08T00:07:00+08:00"> 
+	<meta property="article:author" content="YDLAN">
+	<meta property="article:published_first" content="YDLAN, /2018/07/08/2018-07-08-algorithm-summary/">
+	
+</head>
+<body class="post-template">
+	<div class="site-wrapper">
+		
+
+
+
+
+<header class="site-header outer" style="z-index: 999">
+    <div class="inner">
+        
+<nav class="site-nav"> 
+    <div class="site-nav-left">
+        <ul class="nav">
+            <li>
+                
+                <a href="/" title="Home">HOME</a>
+                
+            </li>
+            
+            
+            <li>
+                <a href="/archives" title="ARCHIVES">ARCHIVES</a>
+            </li>
+            
+            <li>
+                <a href="/about" title="ABOUT">ABOUT</a>
+            </li>
+            
+            
+        </ul> 
+    </div>
+    
+    <div class="search-button">
+        <a href="#search" class="subscribe-button" style="margin: 0 10px;">Search ...</a>
+    </div>
+     
+    <div class="site-nav-right">
+        
+        <a href="#search" class="subscribe-button" style="margin: 0 10px;">Search ...</a>
+         
+        
+<div class="social-links">
+    
+    
+    <a class="social-link" title="github" href="https://github.com/timespaceforce" target="_blank" rel="noopener">
+        <svg viewbox="0 0 1049 1024" xmlns="http://www.w3.org/2000/svg"><path d="M524.979332 0C234.676191 0 0 234.676191 0 524.979332c0 232.068678 150.366597 428.501342 358.967656 498.035028 26.075132 5.215026 35.636014-11.299224 35.636014-25.205961 0-12.168395-0.869171-53.888607-0.869171-97.347161-146.020741 31.290159-176.441729-62.580318-176.441729-62.580318-23.467619-60.841976-58.234462-76.487055-58.234463-76.487055-47.804409-32.15933 3.476684-32.15933 3.476685-32.15933 53.019436 3.476684 80.83291 53.888607 80.83291 53.888607 46.935238 79.963739 122.553122 57.365291 152.97411 43.458554 4.345855-33.897672 18.252593-57.365291 33.028501-70.402857-116.468925-12.168395-239.022047-57.365291-239.022047-259.012982 0-57.365291 20.860106-104.300529 53.888607-140.805715-5.215026-13.037566-23.467619-66.926173 5.215027-139.067372 0 0 44.327725-13.906737 144.282399 53.888607 41.720212-11.299224 86.917108-17.383422 131.244833-17.383422s89.524621 6.084198 131.244833 17.383422C756.178839 203.386032 800.506564 217.29277 800.506564 217.29277c28.682646 72.1412 10.430053 126.029806 5.215026 139.067372 33.897672 36.505185 53.888607 83.440424 53.888607 140.805715 0 201.64769-122.553122 245.975415-239.891218 259.012982 19.121764 16.514251 35.636014 47.804409 35.636015 97.347161 0 70.402857-0.869171 126.898978-0.869172 144.282399 0 13.906737 9.560882 30.420988 35.636015 25.205961 208.601059-69.533686 358.967656-265.96635 358.967655-498.035028C1049.958663 234.676191 814.413301 0 524.979332 0z"/></svg>
+    </a>
+    
+    
+    <a class="social-link" title="facebook" href="https://facebook" target="_blank" rel="noopener">
+        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 32 32"><path d="M19 6h5V0h-5c-3.86 0-7 3.14-7 7v3H8v6h4v16h6V16h5l1-6h-6V7c0-.542.458-1 1-1z"/></svg>
+
+    </a>
+    
+    
+    <a class="social-link" title="twitter" href="https://twitter.com" target="_blank" rel="noopener">
+        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 32 32"><path d="M30.063 7.313c-.813 1.125-1.75 2.125-2.875 2.938v.75c0 1.563-.188 3.125-.688 4.625a15.088 15.088 0 0 1-2.063 4.438c-.875 1.438-2 2.688-3.25 3.813a15.015 15.015 0 0 1-4.625 2.563c-1.813.688-3.75 1-5.75 1-3.25 0-6.188-.875-8.875-2.625.438.063.875.125 1.375.125 2.688 0 5.063-.875 7.188-2.5-1.25 0-2.375-.375-3.375-1.125s-1.688-1.688-2.063-2.875c.438.063.813.125 1.125.125.5 0 1-.063 1.5-.25-1.313-.25-2.438-.938-3.313-1.938a5.673 5.673 0 0 1-1.313-3.688v-.063c.813.438 1.688.688 2.625.688a5.228 5.228 0 0 1-1.875-2c-.5-.875-.688-1.813-.688-2.75 0-1.063.25-2.063.75-2.938 1.438 1.75 3.188 3.188 5.25 4.25s4.313 1.688 6.688 1.813a5.579 5.579 0 0 1 1.5-5.438c1.125-1.125 2.5-1.688 4.125-1.688s3.063.625 4.188 1.813a11.48 11.48 0 0 0 3.688-1.375c-.438 1.375-1.313 2.438-2.563 3.188 1.125-.125 2.188-.438 3.313-.875z"/></svg>
+
+    </a>
+    
+    
+    
+    
+</div>
+    </div>
+</nav>
+    </div>
+</header>
+
+
+<main id="site-main" class="site-main outer" role="main">
+    <div class="inner">
+        <header class="post-full-header">
+            <section class="post-full-meta">
+                <time class="post-full-meta-date" datetime="2018-07-07T16:00:00.000Z" itemprop="datePublished">
+                    2018-07-8
+                </time>
+                
+                <span class="date-divider">/</span>
+                
+                <a href="/categories/学习笔记/">学习笔记</a>&nbsp;&nbsp;
+                
+                
+            </section>
+            <h1 class="post-full-title">Algorithm thought</h1>
+        </header>
+        <article class="post-full no-image">
+            
+            <section class="post-full-content">
+                <div id="lightgallery" class="markdown-body">
+                    <blockquote>
+<ul>
+<li>算法在计算机的学习过程中是非常重要的，多对于一些常用的算法我们应该了解它的算法思想，所以，在此对一些常用算法思想做一个概念上的简单总结</li>
+</ul>
+</blockquote>
+<h2 id="递归的基本概念"><a href="#递归的基本概念" class="headerlink" title="递归的基本概念"></a>递归的基本概念</h2><p>一般来说，递归是一个过程或函数在它的定义或说明中又直接或间接调用它自己的一种方法。</p>
+<p>递归本质是把一个复杂的大问题层层转化为一个与原问题相似的小问题，利用小问题的解来构筑大问题的解。学习用递归解决问题的关键就是找到问题的递归式，有了递归式就可以知道大问题与小问题之间的关系，从而解决问题了。</p>
+<p>递归只需少量的程序就可描述出解题过程所需要的多次重复计算，大大地减少了程序的代码量。它的能力在于用有限的语句来定义无限集合。正是如此，递归才能用很少的代码解决很复杂的问题。然而在使用递归解决问题时要特别注意，一定要有一个明确的递归结束条件，否则就会陷入无限循环中。例如在解决汉诺塔问题时，递归结束条件就是n=1。只要判断n=1，就停止继续调用Hanoi，开始返回值。</p>
+<p>习惯递归的思想后，可以在很短的时间里写出正确的程序。写递归程序的诀窍就是：（1）怎么分，怎么合；（2）怎么终止。</p>
+<blockquote>
+<p>（平面划分问题，汉诺塔问题）</p>
+</blockquote>
+<h2 id="分治法的基本思想"><a href="#分治法的基本思想" class="headerlink" title="分治法的基本思想"></a>分治法的基本思想</h2><p>分治法是我们计算机科学解决问题的一种基本方法。从字面上来理解就是是“分而治之”。它的基本思想是把一个复杂的问题分成两个或更多的相同或相似的互相独立的子问题，再把子问题分成更小的子问题，直到最后的子问题可以简单的直接求解，然后将这些子问题的解合并从而构造出原问题的解。而用分治法求解问题的时候，通常会用到递归的思想来求解子问题。</p>
+<blockquote>
+<p>（找假币的例子）</p>
+</blockquote>
+<h2 id="分治法与递归的联系与区别"><a href="#分治法与递归的联系与区别" class="headerlink" title="分治法与递归的联系与区别"></a>分治法与递归的联系与区别</h2><p>其实在我们用分治法解题时，往往能会用到递归的思想。分治法产生的子问题往往是原问题的较小模式，反复应用分治法，可以使子问题与原问题的类型保持一致，而其规模却不断缩小，最终使子问题缩小到很容易直接求出其解，这就为使用递归提供了方便。在分治法中用递归的思想求解问题是计算机科学解决问题时常有的一种手段，由此也产生了很多高效的算法。</p>
+<h2 id="贪心算法的基本概念"><a href="#贪心算法的基本概念" class="headerlink" title="贪心算法的基本概念"></a>贪心算法的基本概念</h2><p>贪心算法，又被称为贪婪算法，也是用来求解最优化问题的一种方法。一般来说，求解最优化问题的过程就是做一系列决定从而实现最优值的过程。最优解就是实现最优值的这些决定。动态规划考虑全局最优，得到的解一定是最优解。贪心算法是一种在每一步选择中都采取当前状态下最好或最优（即最有利）的选择，从而希望导致结果是最好或最优的算法。贪心算法考虑局部最优，每次都做当前看起来最优的决定，得到的解不一定是全局最优解。但是在有最优子结构的问题中，贪心算法能够得到最优解。最优子结构就是局部最优解能决定全局最优解。简单地说，问题能够分解成子问题来解决，子问题的最优解能递推到最终问题的最优解。虽然对于很多问题贪心算法不一定能得到最优解，但是它的效率高，所求得的答案比较接近最优结果。因此，贪心算法可以用作辅助算法或者直接解决一些要求结果不特别精确的问题。</p>
+<blockquote>
+<p>（找零钱问题）</p>
+</blockquote>
+<h2 id="动态规划的基本概念"><a href="#动态规划的基本概念" class="headerlink" title="动态规划的基本概念"></a>动态规划的基本概念</h2><p>动态规划是求解最优化问题的一种方法。通常这种问题有很多解，每个解都对应一个值，最优化问题是希望找到一个对应最优值（最大值或最小值）的解。动态规划与分治法类似，其基本思想也是将待求解问题分解成若干个子问题，先求解子问题，然后从这些子问题的解得到原问题的解。与分治法不同的是，适合于用动态规划求解的问题，经分解得到子问题往往不是互相独立的，即子问题之间具有重叠的部分。在这种情况下，如果用分治法求解就会重复的求解这些重叠的部分。而动态规划只会对这些重叠的部分求解一次并用表格保存这些解，如此一来就可以避免大量的重复计算。动态规划最特别的地方是自底向上的求解子问题并将这些子问题的解保存起来。这种用空间换取时间的方式大大提高了求解问题的效率。</p>
+<blockquote>
+<p>（求最优解，最长增长子数列，背包问题）</p>
+</blockquote>
+<h2 id="动态规划求解问题的4个步骤"><a href="#动态规划求解问题的4个步骤" class="headerlink" title="动态规划求解问题的4个步骤"></a>动态规划求解问题的4个步骤</h2><p>动态规划求解问题一般可以分为4个步骤：</p>
+<ol>
+<li>定义最优解的结构。</li>
+<li>递归的定义最优解的值。</li>
+<li>以自底向上的方式计算最优解的值。</li>
+<li>用第（3）步中计算过程的信息构造最优解。</li>
+</ol>
+
+                </div>
+            </section>
+        </article>
+    </div>
+
+    
+    <div style="height: 4vw;width: 100%"></div>
+    <nav id="gobottom" class="pagination">
+        
+        <a class="prev-post" title="计算机导论——计算机入门篇" href="/2018/07/11/2018-07-11-computer-introduction/">
+            ← 计算机导论——计算机入门篇
+        </a>
+        
+        <span class="prev-next-post">•</span>
+        
+        <a class="next-post" title="（转）给新手程序员的一封信" href="/2018/07/07/2018-07-07-letter-relay/">
+            （转）给新手程序员的一封信 →
+        </a>
+        
+    </nav>
+
+    
+    <div class="inner">
+        <div id="comment"></div>
+    </div>
+    
+</main>
+
+<div class="toc-bar">
+    <div class="toc-btn-bar">
+        <a href="#site-main" class="toc-btn">
+            <svg viewbox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg"><path d="M793.024 710.272a32 32 0 1 0 45.952-44.544l-310.304-320a32 32 0 0 0-46.4 0.48l-297.696 320a32 32 0 0 0 46.848 43.584l274.752-295.328 286.848 295.808z"/></svg>
+        </a>
+        <div class="toc-btn toc-switch">
+            <svg class="toc-open" viewbox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg"><path d="M779.776 480h-387.2a32 32 0 0 0 0 64h387.2a32 32 0 0 0 0-64M779.776 672h-387.2a32 32 0 0 0 0 64h387.2a32 32 0 0 0 0-64M256 288a32 32 0 1 0 0 64 32 32 0 0 0 0-64M392.576 352h387.2a32 32 0 0 0 0-64h-387.2a32 32 0 0 0 0 64M256 480a32 32 0 1 0 0 64 32 32 0 0 0 0-64M256 672a32 32 0 1 0 0 64 32 32 0 0 0 0-64"/></svg>
+            <svg class="toc-close hide" viewbox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg"><path d="M512 960c-247.039484 0-448-200.960516-448-448S264.960516 64 512 64 960 264.960516 960 512 759.039484 960 512 960zM512 128.287273c-211.584464 0-383.712727 172.128262-383.712727 383.712727 0 211.551781 172.128262 383.712727 383.712727 383.712727 211.551781 0 383.712727-172.159226 383.712727-383.712727C895.712727 300.415536 723.551781 128.287273 512 128.287273z"/><path d="M557.05545 513.376159l138.367639-136.864185c12.576374-12.416396 12.672705-32.671738 0.25631-45.248112s-32.704421-12.672705-45.248112-0.25631l-138.560301 137.024163-136.447897-136.864185c-12.512727-12.512727-32.735385-12.576374-45.248112-0.063647-12.512727 12.480043-12.54369 32.735385-0.063647 45.248112l136.255235 136.671523-137.376804 135.904314c-12.576374 12.447359-12.672705 32.671738-0.25631 45.248112 6.271845 6.335493 14.496116 9.504099 22.751351 9.504099 8.12794 0 16.25588-3.103239 22.496761-9.247789l137.567746-136.064292 138.687596 139.136568c6.240882 6.271845 14.432469 9.407768 22.65674 9.407768 8.191587 0 16.352211-3.135923 22.591372-9.34412 12.512727-12.480043 12.54369-32.704421 0.063647-45.248112L557.05545 513.376159z"/></svg>
+        </div>
+        <a href="#gobottom" class="toc-btn">
+            <svg viewbox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg"><path d="M231.424 346.208a32 32 0 0 0-46.848 43.584l297.696 320a32 32 0 0 0 46.4 0.48l310.304-320a32 32 0 1 0-45.952-44.544l-286.848 295.808-274.752-295.36z"/></svg>
+        </a>
+    </div>
+    <div class="toc-main">
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#递归的基本概念"><span class="toc-text">递归的基本概念</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#分治法的基本思想"><span class="toc-text">分治法的基本思想</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#分治法与递归的联系与区别"><span class="toc-text">分治法与递归的联系与区别</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#贪心算法的基本概念"><span class="toc-text">贪心算法的基本概念</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#动态规划的基本概念"><span class="toc-text">动态规划的基本概念</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#动态规划求解问题的4个步骤"><span class="toc-text">动态规划求解问题的4个步骤</span></a></li></ol>
+    </div>
+</div>
+
+
+
+	</div>
+	
+
+
+<aside class="read-next outer">
+    <div class="inner">
+        <div class="read-next-feed">
+            
+            
+
+<article class="read-next-card" style="background-image: url(http://p15.qhimg.com/bdr/__85/t0124ff19064139f313.jpg)">
+  <header class="read-next-card-header">
+    <small class="read-next-card-header-sitetitle">&mdash; YDLAN &mdash;</small>
+    <h3 class="read-next-card-header-title">Recent Posts</h3>
+  </header>
+  <div class="read-next-divider">
+    <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24">
+      <path d="M13 14.5s2 3 5 3 5.5-2.463 5.5-5.5S21 6.5 18 6.5c-5 0-7 11-12 11C2.962 17.5.5 15.037.5 12S3 6.5 6 6.5s4.5 3.5 4.5 3.5"/>
+    </svg>
+  </div>
+  <div class="read-next-card-content">
+    <ul>
+      
+      
+      
+      <li>
+        <a href="/2019/04/12/2019-04-12-hexo-blog/">选择blog主题为Hexo-Casper</a>
+      </li>
+      
+      
+      
+      <li>
+        <a href="/2019/04/02/2019-04-03-architecture-os/">计算机体系结构到操作系统</a>
+      </li>
+      
+      
+      
+      <li>
+        <a href="/2019/03/31/2019-03-31-mkdocs/">MkDocs构建项目文档流程</a>
+      </li>
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+    </ul>
+  </div>
+  <footer class="read-next-card-footer">
+    <a href="/archives">  MORE  → </a>
+  </footer>
+</article>
+
+            
+            
+            
+
+<article class="read-next-card" style="background-image: url(http://p15.qhimg.com/bdr/__85/t0124ff19064139f313.jpg)">
+    <header class="read-next-card-header" style="padding-bottom: 20px">
+        <h3 class="read-next-card-header-title">Categories</h3>
+    </header>
+    <div class="read-next-card-content">
+        <ul>
+            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/分享/">分享</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/学习笔记/">学习笔记</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/小把戏录/">小把戏录</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/计算机/">计算机</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/随笔集/">随笔集</a></li></ul>
+        </ul>
+    </div>
+</article>
+
+
+            
+            
+            
+
+<article class="read-next-card" style="background-image: url(http://p15.qhimg.com/bdr/__85/t0124ff19064139f313.jpg)">
+	<header class="read-next-card-header" style="padding-bottom: 20px">
+		<h3 class="read-next-card-header-title">Tag Cloud</h3>
+	</header>
+	<div class="read-next-card-content-ext">
+		<a href="/tags/2019/" style="font-size: 14px;">2019</a> <a href="/tags/Algorithm/" style="font-size: 14px;">Algorithm</a> <a href="/tags/C/" style="font-size: 14px;">C++</a> <a href="/tags/Git/" style="font-size: 14px;">Git</a> <a href="/tags/OS/" style="font-size: 14px;">OS</a> <a href="/tags/RISC/" style="font-size: 14px;">RISC</a> <a href="/tags/computer/" style="font-size: 14px;">computer</a> <a href="/tags/hexo/" style="font-size: 14px;">hexo</a> <a href="/tags/markdown/" style="font-size: 14px;">markdown</a> <a href="/tags/notes/" style="font-size: 14px;">notes</a> <a href="/tags/shell/" style="font-size: 14px;">shell</a> <a href="/tags/体系结构/" style="font-size: 14px;">体系结构</a> <a href="/tags/分享/" style="font-size: 24px;">分享</a> <a href="/tags/指令周期/" style="font-size: 14px;">指令周期</a> <a href="/tags/智博会/" style="font-size: 14px;">智博会</a>
+	</div>
+</article>
+
+            
+        </div>
+    </div>
+</aside>
+
+	
+
+
+
+
+<div id="search" class="search-overlay subscribe-overlay">
+    <div class="search-form">
+        
+        <img class="search-overlay-logo" src="http://wx1.sinaimg.cn/small/00709Ldkly1fyqxzh4yttj30dw0ci40h.jpg" alt="YDLAN">
+        
+        <input id="local-search-input" class="search-input" type="text" name="search" placeholder="Search ...">
+        <a class="search-overlay-close" href="#"></a>
+    </div>
+    <div id="local-search-result"></div>
+</div>
+
+
+<footer class="site-footer outer">
+	<div class="site-footer-content inner">
+		<section class="copyright">
+			<a href="/" title="YDLAN">YDLAN</a>
+			&copy; 2019
+		</section>
+		<nav class="site-footer-nav">
+			
+            <a href="https://hexo.io" title="Hexo" target="_blank" rel="noopener">Hexo</a>
+            <a href="https://github.com/xzhih/hexo-theme-casper" title="Casper" target="_blank" rel="noopener">Casper</a>
+        </nav>
+    </div>
+</footer>
+	
+
+
+<script>
+    if(window.navigator && navigator.serviceWorker) {
+        navigator.serviceWorker.getRegistrations()
+        .then(function(registrations) {
+            for(let registration of registrations) {
+                registration.unregister();
+            }
+        });
+    }
+</script>
+
+
+
+
+
+
+
+<div class="floating-header">
+	<div class="floating-header-logo">
+        <a href="/" title="YDLAN">
+			
+                <img src="http://wx1.sinaimg.cn/small/00709Ldkly1fyqxzh4yttj30dw0ci40h.jpg" alt="YDLAN icon">
+			
+            <span>YDLAN</span>
+        </a>
+    </div>
+    <span class="floating-header-divider">&mdash;</span>
+    <div class="floating-header-title">Algorithm thought</div>
+    <progress class="progress" value="0">
+        <div class="progress-container">
+            <span class="progress-bar"></span>
+        </div>
+    </progress>
+</div>
+
+
+
+
+
+<script src="/js/mix/post-lazy-local.min.js"></script>
+
+<script>;(function() {var bLazy = new Blazy()})();</script>
+
+
+
+
+<script src="/js/lightgallery.min.js"></script>
+<link rel="stylesheet" href="/css/lightgallery.min.css">
+<script>
+    lightGallery(document.getElementById('lightgallery'), {
+        selector: '.post-img'
+    });
+</script>
+
+
+
+
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+<script>
+    new Valine({
+        el: '#comment' ,
+        verify: false,
+        notify: false,
+        appId: '7WurRjcFYafHR5cOpPlavBcP-gzGzoHsz',
+        appKey: 'qvW4QooDLPpd6wQWc2AxN5dE',
+        placeholder: 'Just go go',
+        pageSize: 10,
+        avatar: 'mm',
+        visitor: true,
+    });
+</script>
+
+
+
+
+
+
+<script>searchFunc("/")</script>
+
+
+
+
+
+</body>
+</html>
