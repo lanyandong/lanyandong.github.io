@@ -17,7 +17,7 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-	<title>Algorithm thought | 格子小七</title>
+	<title>Blog Plans | 格子小七</title>
 
 	<meta name="HandheldFriendly" content="True">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
@@ -45,14 +45,14 @@
 
 	<meta property="og:site_name" content="格子小七">
 	<meta property="og:type" content="article">
-	<meta property="og:title" content="Algorithm thought | 格子小七">
+	<meta property="og:title" content="Blog Plans | 格子小七">
 	<meta property="og:description" content>
-	<meta property="og:url" content="http://smallseven.top/2018/07/08/2018-07-08-algorithm-summary/">
+	<meta property="og:url" content="http://smallseven.top/2019/06/07/2019-06-07-blog-planning/">
 
 	
-	<meta property="article:published_time" content="2018-07-08T00:07:00+08:00"> 
+	<meta property="article:published_time" content="2019-06-07T11:06:00+08:00"> 
 	<meta property="article:author" content="格子小七">
-	<meta property="article:published_first" content="格子小七, /2018/07/08/2018-07-08-algorithm-summary/">
+	<meta property="article:published_first" content="格子小七, /2019/06/07/2019-06-07-blog-planning/">
 	
 </head>
 <body class="post-template">
@@ -129,54 +129,31 @@
     <div class="inner">
         <header class="post-full-header">
             <section class="post-full-meta">
-                <time class="post-full-meta-date" datetime="2018-07-07T16:00:00.000Z" itemprop="datePublished">
-                    2018-07-8
+                <time class="post-full-meta-date" datetime="2019-06-07T03:04:25.000Z" itemprop="datePublished">
+                    2019-06-7
                 </time>
                 
                 <span class="date-divider">/</span>
                 
-                <a href="/categories/学习笔记/">学习笔记</a>&nbsp;&nbsp;
-                
                 
             </section>
-            <h1 class="post-full-title">Algorithm thought</h1>
+            <h1 class="post-full-title">Blog Plans</h1>
         </header>
         <article class="post-full no-image">
             
             <section class="post-full-content">
                 <div id="lightgallery" class="markdown-body">
-                    <blockquote>
-<ul>
-<li>算法在计算机的学习过程中是非常重要的，多对于一些常用的算法我们应该了解它的算法思想，所以，在此对一些常用算法思想做一个概念上的简单总结</li>
-</ul>
-</blockquote>
-<h2 id="递归的基本概念"><a href="#递归的基本概念" class="headerlink" title="递归的基本概念"></a>递归的基本概念</h2><p>一般来说，递归是一个过程或函数在它的定义或说明中又直接或间接调用它自己的一种方法。</p>
-<p>递归本质是把一个复杂的大问题层层转化为一个与原问题相似的小问题，利用小问题的解来构筑大问题的解。学习用递归解决问题的关键就是找到问题的递归式，有了递归式就可以知道大问题与小问题之间的关系，从而解决问题了。</p>
-<p>递归只需少量的程序就可描述出解题过程所需要的多次重复计算，大大地减少了程序的代码量。它的能力在于用有限的语句来定义无限集合。正是如此，递归才能用很少的代码解决很复杂的问题。然而在使用递归解决问题时要特别注意，一定要有一个明确的递归结束条件，否则就会陷入无限循环中。例如在解决汉诺塔问题时，递归结束条件就是n=1。只要判断n=1，就停止继续调用Hanoi，开始返回值。</p>
-<p>习惯递归的思想后，可以在很短的时间里写出正确的程序。写递归程序的诀窍就是：（1）怎么分，怎么合；（2）怎么终止。</p>
-<blockquote>
-<p>（平面划分问题，汉诺塔问题）</p>
-</blockquote>
-<h2 id="分治法的基本思想"><a href="#分治法的基本思想" class="headerlink" title="分治法的基本思想"></a>分治法的基本思想</h2><p>分治法是我们计算机科学解决问题的一种基本方法。从字面上来理解就是是“分而治之”。它的基本思想是把一个复杂的问题分成两个或更多的相同或相似的互相独立的子问题，再把子问题分成更小的子问题，直到最后的子问题可以简单的直接求解，然后将这些子问题的解合并从而构造出原问题的解。而用分治法求解问题的时候，通常会用到递归的思想来求解子问题。</p>
-<blockquote>
-<p>（找假币的例子）</p>
-</blockquote>
-<h2 id="分治法与递归的联系与区别"><a href="#分治法与递归的联系与区别" class="headerlink" title="分治法与递归的联系与区别"></a>分治法与递归的联系与区别</h2><p>其实在我们用分治法解题时，往往能会用到递归的思想。分治法产生的子问题往往是原问题的较小模式，反复应用分治法，可以使子问题与原问题的类型保持一致，而其规模却不断缩小，最终使子问题缩小到很容易直接求出其解，这就为使用递归提供了方便。在分治法中用递归的思想求解问题是计算机科学解决问题时常有的一种手段，由此也产生了很多高效的算法。</p>
-<h2 id="贪心算法的基本概念"><a href="#贪心算法的基本概念" class="headerlink" title="贪心算法的基本概念"></a>贪心算法的基本概念</h2><p>贪心算法，又被称为贪婪算法，也是用来求解最优化问题的一种方法。一般来说，求解最优化问题的过程就是做一系列决定从而实现最优值的过程。最优解就是实现最优值的这些决定。动态规划考虑全局最优，得到的解一定是最优解。贪心算法是一种在每一步选择中都采取当前状态下最好或最优（即最有利）的选择，从而希望导致结果是最好或最优的算法。贪心算法考虑局部最优，每次都做当前看起来最优的决定，得到的解不一定是全局最优解。但是在有最优子结构的问题中，贪心算法能够得到最优解。最优子结构就是局部最优解能决定全局最优解。简单地说，问题能够分解成子问题来解决，子问题的最优解能递推到最终问题的最优解。虽然对于很多问题贪心算法不一定能得到最优解，但是它的效率高，所求得的答案比较接近最优结果。因此，贪心算法可以用作辅助算法或者直接解决一些要求结果不特别精确的问题。</p>
-<blockquote>
-<p>（找零钱问题）</p>
-</blockquote>
-<h2 id="动态规划的基本概念"><a href="#动态规划的基本概念" class="headerlink" title="动态规划的基本概念"></a>动态规划的基本概念</h2><p>动态规划是求解最优化问题的一种方法。通常这种问题有很多解，每个解都对应一个值，最优化问题是希望找到一个对应最优值（最大值或最小值）的解。动态规划与分治法类似，其基本思想也是将待求解问题分解成若干个子问题，先求解子问题，然后从这些子问题的解得到原问题的解。与分治法不同的是，适合于用动态规划求解的问题，经分解得到子问题往往不是互相独立的，即子问题之间具有重叠的部分。在这种情况下，如果用分治法求解就会重复的求解这些重叠的部分。而动态规划只会对这些重叠的部分求解一次并用表格保存这些解，如此一来就可以避免大量的重复计算。动态规划最特别的地方是自底向上的求解子问题并将这些子问题的解保存起来。这种用空间换取时间的方式大大提高了求解问题的效率。</p>
-<blockquote>
-<p>（求最优解，最长增长子数列，背包问题）</p>
-</blockquote>
-<h2 id="动态规划求解问题的4个步骤"><a href="#动态规划求解问题的4个步骤" class="headerlink" title="动态规划求解问题的4个步骤"></a>动态规划求解问题的4个步骤</h2><p>动态规划求解问题一般可以分为4个步骤：</p>
-<ol>
-<li>定义最优解的结构。</li>
-<li>递归的定义最优解的值。</li>
-<li>以自底向上的方式计算最优解的值。</li>
-<li>用第（3）步中计算过程的信息构造最优解。</li>
-</ol>
+                    <p>自己搭建博客也好久了，一直都在倒腾，也花费了一些时间精力，当然也有很多收获。因为各种原因更新的频率很低，内容输出很少，主要不太清楚要输出那些方面的内容会比较好，所以结合自己的实际情况，给自己博客做一个规划吧。</p>
+<p><strong>为什么要写博客？</strong></p>
+<p>其实就是给自己找一块写字的地方，以前有做笔记的习惯，虽然记了但很少会拿来看，但仍然有一种充实感。现在很少手写笔记，所以有很多想法，或者值得纪念的东西，如果不进行记录很可能就会忘了，所以做成博客是一个不错方法，偶尔也可以感动一下自己，不是吗。</p>
+<p>其次是针对技术难题的记录，把一些技术难题记录下来，如果下次遇到也方便查找，减少重复踩坑的可能。当然，如果自己的文章能够帮助到其他人，那不是更好吗。只可惜目前技术水平太低，没有遇到啥技术难题，大多是一些学习笔记，之后尽量写一些技术类或者经验类文章，提升一下Blog的格调。</p>
+<p>写博客是一个学习的过程，你会因为博客认识更多优秀的人，他们文章可能会对的学习生活有所启发，也可能会解决你遇到的技术问题，或者给你提供了更多信息资讯，这些信息远比那些流量自媒体更有价值。</p>
+<p>如果能够维持博客固定更新的话，坚持做一件事，你会收获很多东西，从不要低估坚持这个东西，绳锯木断，水滴石穿，请相信坚持的力量。当然少一些功利主义，多些不为什么的坚持，可能会做得更好。</p>
+<p><strong>自己的博客计划</strong></p>
+<p>本博客采用的 Hexo + Github pages 搭建的静态博客，想着只更新一些个人笔记，也没必要推广啥的，对于访问速度也没太大要求，也不想弄啥SSL了，国内备案也挺烦的，在阿里云万网买的域名 smallseven.top 感觉还不错，格子小七这个昵称也还挺可爱的。所以在这个个人博客平台主要记录一些学习笔记，生活感想之类的，技术类的文章主要发一些有质量的。</p>
+<p>因为学习中常常会遇到一些杂七杂八的问题，都是一些小细节，所以不打算在个人博客里进行记录。我一般会在csdn进行发布，虽然csdn经常遭人吐槽，但是用来做做笔记还是挺好的，重要的是希望这些小问题的解答可以帮助到其他需要帮助的人，自己踩过的坑，希望别人可以避免掉，发扬程序猿的互帮互助精神。</p>
+<p>还有一个我比较喜欢的平台是博客园，个人觉得博客园的文章质量比csdn要高，讲的很详细，自定义主题也很多，所以体验比csdn要更舒服一些，我在博客园很少发文章，主要是关注一些优秀的博主，学习一些知识和技能。经常在园子里逛一逛能够了解一些多元化的东西，降低信息壁垒，也算是一种学习途径吧。</p>
+<p><strong>最后：如果你觉得一件事情有意义那就去做吧，如果你觉得做这件事能够让你快乐的话，那就Hold on，请相信时间的力量，它会给你答案</strong></p>
 
                 </div>
             </section>
@@ -187,14 +164,10 @@
     <div style="height: 4vw;width: 100%"></div>
     <nav id="gobottom" class="pagination">
         
-        <a class="prev-post" title="计算机导论——计算机入门篇" href="/2018/07/11/2018-07-11-computer-introduction/">
-            ← 计算机导论——计算机入门篇
-        </a>
-        
         <span class="prev-next-post">•</span>
         
-        <a class="next-post" title="（转）给新手程序员的一封信" href="/2018/07/07/2018-07-07-letter-relay/">
-            （转）给新手程序员的一封信 →
+        <a class="next-post" title="六月，感想" href="/2019/06/06/2019-06-06-my-feelings/">
+            六月，感想 →
         </a>
         
     </nav>
@@ -220,7 +193,7 @@
         </a>
     </div>
     <div class="toc-main">
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#递归的基本概念"><span class="toc-text">递归的基本概念</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#分治法的基本思想"><span class="toc-text">分治法的基本思想</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#分治法与递归的联系与区别"><span class="toc-text">分治法与递归的联系与区别</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#贪心算法的基本概念"><span class="toc-text">贪心算法的基本概念</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#动态规划的基本概念"><span class="toc-text">动态规划的基本概念</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#动态规划求解问题的4个步骤"><span class="toc-text">动态规划求解问题的4个步骤</span></a></li></ol>
+        
     </div>
 </div>
 
@@ -397,7 +370,7 @@
         </a>
     </div>
     <span class="floating-header-divider">&mdash;</span>
-    <div class="floating-header-title">Algorithm thought</div>
+    <div class="floating-header-title">Blog Plans</div>
     <progress class="progress" value="0">
         <div class="progress-container">
             <span class="progress-bar"></span>
