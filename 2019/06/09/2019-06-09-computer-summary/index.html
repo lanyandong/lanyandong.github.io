@@ -17,7 +17,7 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-	<title>MkDocs构建项目文档流程 | 格子小七</title>
+	<title>计算机：组成原理和体系结构 | 格子小七</title>
 
 	<meta name="HandheldFriendly" content="True">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
@@ -45,14 +45,14 @@
 
 	<meta property="og:site_name" content="格子小七">
 	<meta property="og:type" content="article">
-	<meta property="og:title" content="MkDocs构建项目文档流程 | 格子小七">
+	<meta property="og:title" content="计算机：组成原理和体系结构 | 格子小七">
 	<meta property="og:description" content>
-	<meta property="og:url" content="http://smallseven.top/2019/03/31/2019-03-31-mkdocs/">
+	<meta property="og:url" content="http://smallseven.top/2019/06/09/2019-06-09-computer-summary/">
 
 	
-	<meta property="article:published_time" content="2019-03-31T18:03:00+08:00"> 
+	<meta property="article:published_time" content="2019-06-09T20:06:00+08:00"> 
 	<meta property="article:author" content="格子小七">
-	<meta property="article:published_first" content="格子小七, /2019/03/31/2019-03-31-mkdocs/">
+	<meta property="article:published_first" content="格子小七, /2019/06/09/2019-06-09-computer-summary/">
 	
 </head>
 <body class="post-template">
@@ -129,50 +129,35 @@
     <div class="inner">
         <header class="post-full-header">
             <section class="post-full-meta">
-                <time class="post-full-meta-date" datetime="2019-03-31T10:59:22.000Z" itemprop="datePublished">
-                    2019-03-31
+                <time class="post-full-meta-date" datetime="2019-06-09T12:22:27.000Z" itemprop="datePublished">
+                    2019-06-9
                 </time>
                 
                 <span class="date-divider">/</span>
                 
-                <a href="/categories/小把戏录/">小把戏录</a>&nbsp;&nbsp;
-                
                 
             </section>
-            <h1 class="post-full-title">MkDocs构建项目文档流程</h1>
+            <h1 class="post-full-title">计算机：组成原理和体系结构</h1>
         </header>
         <article class="post-full no-image">
             
             <section class="post-full-content">
                 <div id="lightgallery" class="markdown-body">
-                    <p>发现很多开源的项目文档，技术说明文档都是使用 mkdocs 构建，自己也了解了一下，确实很简单，快速。它的主题也很简洁，大方，作为技术项目说明或者笔记文档是相当合适的。</p>
-<p>构建部署流程大致如下，详细可以参考官方完整指南。</p>
-<p>环境：</p>
-<ul>
-<li>支持Windows/Linux/macOS</li>
-<li>需要安装 Python 2.7 +</li>
-<li>需要 pip</li>
-</ul>
-<p>1、安装MkDocs </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ pip install mkdocs</span><br></pre></td></tr></table></figure>
-<p>运行 <code>mkdocs help</code> 可以检查是否正确安装。</p>
-<p>2、输入以下命令构建项目</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ mkdocs new project</span><br></pre></td></tr></table></figure>
-<p><code>project</code> 是指项目名，你要在那个目录下创建，就切换到那个目录下  Windows的cmd 命令行和Linux的终端命令都是类似操作。</p>
-<p>构建好的项目里有一个配置文件 <code>mkdocs.yml</code>, 和一个包含文档源码的 <code>docs</code> 文件夹. 在 <code>docs</code> 文件夹里包含了一个名为 <code>index.md</code> 的文档. </p>
-<p>3、启动内建服务器，进行预览</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ mkdocs serve</span><br></pre></td></tr></table></figure>
-<p>它会自动使用8000 端口，在浏览器中打开<code>&lt;http://127.0.0.1:8000/&gt;</code>就可以完成效果的预览。</p>
-<p>之后就是修改配置文件 <code>mkdocs.yml</code> ，自己可以添加一些配置信息，包括站点名称，文档页面等，很简单。</p>
-<p>4、使用以下命令,创建新的页面</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ curl &apos;jaspervdj.be/lorem-markdownum/markdown.txt&apos; &gt; docs/about.md</span><br></pre></td></tr></table></figure>
-<p>其实根本不用那么麻烦，在Windows下只用像创建文件目录那样操作即可，所有的文件都在<code>docs</code> 文件目录内。</p>
-<p>5、主要是修改配置文件 <code>mkdocs.yml</code>，这个决定了你的站点结构。</p>
-<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">site_name:</span> <span class="string">LYDSDOCS</span></span><br><span class="line"></span><br><span class="line"><span class="attr">nav:</span></span><br><span class="line"><span class="attr">- Home:</span> <span class="string">index.md</span></span><br><span class="line"><span class="attr">- CSDocs:</span></span><br><span class="line"><span class="bullet">        -</span> <span class="string">操作系统:</span> <span class="string">csdocs/OSNotes.md</span></span><br><span class="line"><span class="bullet">        -</span> <span class="string">数据结构:</span> <span class="string">csdocs/data-structure.md</span></span><br><span class="line"><span class="bullet">        -</span> <span class="string">软件工程:</span> <span class="string">csdocs/software.md</span></span><br><span class="line"></span><br><span class="line"><span class="attr">- About:</span> <span class="string">about.md</span></span><br><span class="line"></span><br><span class="line"><span class="attr">theme:</span> <span class="string">readthedocs</span></span><br></pre></td></tr></table></figure>
-<p>6、站点生成</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ mkdocs build</span><br></pre></td></tr></table></figure>
-<p>该命令创建了一个 <code>site</code> 新目录. 里面的文件就是你的站点资源文件，你可以把这些文件部署到服务器上或者github page上，就可以进行访问了。</p>
-<p>大概流程就这些，其实和 hexo 生成站点差不多，一些具体的细节可以参考官方文档。<a href="https://markdown-docs-zh.readthedocs.io/zh_CN/latest/" target="_blank" rel="noopener">MkDocs 中文文档</a></p>
+                    <h3 id="0x00-前言"><a href="#0x00-前言" class="headerlink" title="0x00 前言"></a>0x00 前言</h3><p>大三这一年学习了组成原理和体系结构这两门偏底层的专业课程，虽然学的不怎么样，但还是或多或少有些不一样的感受，下面就梳理一下自己学到的东西，记录一下自己理解一些的东西。</p>
+<h3 id="0x01-抽象"><a href="#0x01-抽象" class="headerlink" title="0x01 抽象"></a>0x01 抽象</h3><p>对于计算机科班生来说计算机不再只是一台用于办公或计算的机器，而更多的是一种抽象的概念。计算机最核心的能力就是计算，而处理计算需要的是对数据的理解能力，在计算机的世界只有0和1，更准确的说是只有高低电平，这种脉冲信号才是真实存在的，这就是一种抽象。使用0和1来代表脉冲信号的高低电平，当然这种对应关系也只是相对的，这涉及的正是之前模电和数字逻辑课程所学的东西。有了数模电，其中的二极管，三极管，门电路才是构成计算机最基础最底层的东西。而计算机也正是通过这些器件一层一层的抽象，形成多种复杂的数据处理单元和数据通路，最终封装成为一个我们容易理解和使用的机器。</p>
+<h3 id="0x02-集成电路"><a href="#0x02-集成电路" class="headerlink" title="0x02 集成电路"></a>0x02 集成电路</h3><p>计算机可以处理信息的方式就是将信息转化为0和1，在逻辑上表现为True 和 False，而在硬件上则是高低电平，在最开始的计算机计算就是通过这种高低电平的打孔计算，这处理起来是非常麻烦的，而且能够处理的数据量非常有限，甚至还没普通算术来的快。但随着硬件和集成电路的发展，计算机底层电路经过几代的更换后，计算机性能得到了飞速的发展，对于硬件的优化是对计算机至关重要的，集成电路的发展对计算各个硬件设计至关重要，从第一台计算诞生到至今，集成电路设计几乎一直是计算发展的核心，而这种最底层的设计需要多个领域技术的结合，包括电子，材料，物理等，所以技术难度很大，需要投入的成本也是巨大的，如果没有原始的技术积累是很难做到的。</p>
+<h3 id="0x03-编码"><a href="#0x03-编码" class="headerlink" title="0x03 编码"></a>0x03 编码</h3><p>编码是计算机最有意思的地方，如何让程序成为计算机可以执行的指令，而指令又是如何装换为机器码的，这种机器码是怎么控制计算机电路的呢，这都是一些有趣的问题。对于计算机程序指令，最开始的认识是高级语言转换为汇编语言，而汇编由转换为可执行的机器码。那为何需要将高级语言转为汇编再转为机器码，而不是高级语言直接转为机器码呢？其实这个设计是为方便程序的优化和调试，高级语言转为汇编是需要编译器的，编译器可以处理好高级语言到汇编这一过程，而真正复杂的是汇编程序转换为机器码，这是需要物理电路实现的，通过机器码01序列来控制对应的寄存器和电路，来进行相应状态的切换，这就是计算机最基础的实现，但这种实现到底怎么实现的呢，我现在还是不太清楚，这可能涉及到EE的内容，但作为CS方向应该有一定的了解，之前也找了《编码:隐匿在计算机软硬件背后的语言》书来看，但只看了部分，等有时间在看一看深入了解一下。</p>
+<h3 id="0x04-指令和程序"><a href="#0x04-指令和程序" class="headerlink" title="0x04 指令和程序"></a>0x04 指令和程序</h3><p>指令简单理解就是控制计算机执行的命令，指令说到还是一串01的序列，只是将这串指令意义化了，就像给寄存器命名，而实际上指向的还是一个地址而已，这是我个人理解的，指令本身含义不大，关键的是它对电路的控制和状态转移的操作，这才是指令真正的意义，除了指令外，还有程序，命令，操作等概念，记得当时计组课上讲过，微程序是一组微指令的集合，微指令是一个单位时间内出现的一组微操作的描述语句，在微指令的控制字段中，每一位代表一个微命令。这些大概就是它们的具体区别吧。</p>
+<h3 id="0x05-数据通路"><a href="#0x05-数据通路" class="headerlink" title="0x05 数据通路"></a>0x05 数据通路</h3><p>这是我们实验实现过的东西，当时使用Verilog编程实现简单MIPS数据通路，如果将实验拆分为各个模块那到并不是很难，分别实现存储器，运算器，控制单元，然后将这些模块组合，在加上程序计算器，IO模块，基本上就可以实现简单的数据通路，而且是单周期的所以理解起来相对比较容易。数据通路是CPU的核心框架，基本上就是实现了一个简单的CPU，比较复杂的是PC的寻址，指令的译码，以及IO操作，这种对于硬件的操作虽然实现是有一定难度的，但也是能一种更好理解计算机的方式。</p>
+<h3 id="0x06-体系结构"><a href="#0x06-体系结构" class="headerlink" title="0x06 体系结构"></a>0x06 体系结构</h3><p>说到体系结构自然想到的就是冯诺依曼体系结构，现代计算机，大部分是基于冯诺依曼体系结构的，其核心就是存储程序和顺序执行，它定义了整个计算的基础框架，无论计算机怎么发展其基本原理都基本相同。体系结构特点包括了计算机处理的数据和指令用二进制表示，指令和数据都存储在同一个存储器中，顺序执行程序的每一条指令，硬件组成包括运算器，控制器，存储器，输入设备和输出设备。我们平时所接触的和学习都是围绕着这个体系所展开的，而其中的每一个部分想要将它理解透都是要花费很多精力的，后面计算机设计都是在这个基础上改进优化，对于后学者而言，能改进的东西越来越少，需要学习的是越来越多，就当下计算机的能力而言，硬件和体系结构的性能几乎已经达到了一个比较高的水平，如果想突破这种极限，可能需要一种新的体系结构来定义计算机了。</p>
+<h3 id="0x07-处理器"><a href="#0x07-处理器" class="headerlink" title="0x07 处理器"></a>0x07 处理器</h3><p>广义上处理器就是指平时所说的CPU，简单理解CPU就是控制程序执行，处理数据的一个单元，也可以理解为个集成电路，和上面提到的集成电路和数据通路类似，CPU是计算机的核心是必不可少的组成部分。微处理器的发展几乎代表了计算机的发展，而这里不得不提就是Intel(英特尔)，这个公司的发展史可以说是代表了这个微处理器的发展历程，包括8x86，奔腾等都是处理器发展的代表，包括后面发展起来的AMD, 高通等公司都是目前芯片领域的巨头，当然芯片不仅包括了处理器芯片，还包括了其他的功能芯片。说到这些，自己其实了解的真的太少了，关于芯片这部分其实我自己还是挺感兴趣的，对于这个设计流程包括功能特性以及工作原理其实还都想去了解一下的，有机会还得多看看书和找找资料。</p>
+<h3 id="0x08-ISA"><a href="#0x08-ISA" class="headerlink" title="0x08 ISA"></a>0x08 ISA</h3><p>指令集架构，说到这里又得感叹自己了解的太少了，对于指令集架构最主要分为CISC和RISC，当时老师讲课一直提到了，因为书上也没提到，所以感觉很懵，都不知道在讲什么，好多课都荒废了，后面还是查了资料才知道的。对于指令集架构无非就是涉及到指令寻址方式，操作数类型和表示方法，以及指令的编码等，还提到一个编译优化等，对于这些东西真的只是学个概念，想要真的弄明白还是要花费一些时间和精力的，况且就单纯老师上课讲的东西，也只是让我们了解一个大概。还有就是MIPS指令结构，这稍微了解的多一些，包括一些指令类型，寻址等，但平时用的太少所以也不熟。</p>
+<h3 id="0x09-流水线"><a href="#0x09-流水线" class="headerlink" title="0x09 流水线"></a>0x09 流水线</h3><p>流水线几乎是体系结构整本书的重点，其实就是讲的是调高程序并行度的一种方法，流水线主要是体现的是指令级的并行，通过流水线来提高程序效率，流水线虽然可以提高效率，但还是存在一些问题，比如一些数据冒险，控制冒险，结构冒险等，这些都是可以进行优化的，所以提出了一系列改进措施和调度策略，包括了scoreboard，tomasulo，分支预测等。其实只要理解了，其实并不复杂，我们也都是以传统5级流水线作为例子，几乎又把之前提到的东西重复了一遍，包括取指，译码，执行，访存和回写。当然比较难的还是对于汇编指令的不太熟悉，因为完全没有好好的去学习汇编，都是在例子上接触的一些，所以，有些时候弄起来很难得心应手。</p>
+<h3 id="0x0A-Cache"><a href="#0x0A-Cache" class="headerlink" title="0x0A Cache"></a>0x0A Cache</h3><p>cache是一个很重要的结构对于计算机来说，它位于是连接CPU和主存的一种高速缓存，由于空间局部性和时间局部性原理，所以可以通过cache缓存来提高CPU对于数据的访问效率，从而提高计算机性能，主存和cache的映射方式包括全相关，直接映射和组相连，连接方式不同效率和复杂度也不同。cache也是可以进行优化的包括多级cache，还有TLB，以及相关的替换策略都是为了提高计算机的性能。</p>
+<h3 id="0x0B-线程级并行"><a href="#0x0B-线程级并行" class="headerlink" title="0x0B 线程级并行"></a>0x0B 线程级并行</h3><p>包括SISD，SIMD，MISD、MIMD，还包括向量机，GPU等，这部分了解的并不是太多。</p>
+<h3 id="0x0C-量化方法"><a href="#0x0C-量化方法" class="headerlink" title="0x0C 量化方法"></a>0x0C 量化方法</h3><p>量化方法就比较好理解了，主要就是对性能进行评估，使用一些指标比如说CPU时间，CPI，加速比，平均访存时间，还有功耗能耗等，其目的就还是可以量化计算机CPU的执行效率，以及性能提升，是衡量性能优化的指标。</p>
+<h3 id="0x0D-总结"><a href="#0x0D-总结" class="headerlink" title="0x0D 总结"></a>0x0D 总结</h3><p>大体上把计组和体系结构的学到东西梳理了一遍，才发现自己学到的东西几乎是碎片化的，自己的知识体系结构根本没有很清楚的逻辑，如果不去记录或者输出，真的不知道自己理解那些东西，其实大学学习更多的是了解一个概念，形成一个大体的知识架构，架构内部的东西是要靠我们自己填补的。</p>
+<p>想要去深入了解一个领域的知识是需要花费很多时间的，获取到的信息如果不进行加工处理内化到自己的知识体系里是无用的。这也是我在进行梳理时真正体会到的。很多东西很难通过三言两语叙述清楚，首先是自己对内容的不太熟悉，其次是没有一个清楚的表达目的。关于计组和体系结构，本身内容就比较抽象，其次就是练习的时间太少，还有就是学这些东西可能对自己意义不大，但学习这个事还是不能太功利，也不能太心急，对于我来说这两门课还算有些兴趣的，或多或少也算是了解了一些东西，至于考试成绩什么的那又是后话了。</p>
 
                 </div>
             </section>
@@ -183,14 +168,10 @@
     <div style="height: 4vw;width: 100%"></div>
     <nav id="gobottom" class="pagination">
         
-        <a class="prev-post" title="选择blog主题为Hexo-Casper" href="/2019/04/12/2019-04-12-hexo-blog/">
-            ← 选择blog主题为Hexo-Casper
-        </a>
-        
         <span class="prev-next-post">•</span>
         
-        <a class="next-post" title="认识 Shell Bash Cmd" href="/2019/03/28/2019-03-28-linux-shell/">
-            认识 Shell Bash Cmd →
+        <a class="next-post" title="Blog Plans" href="/2019/06/07/2019-06-07-blog-planning/">
+            Blog Plans →
         </a>
         
     </nav>
@@ -216,7 +197,7 @@
         </a>
     </div>
     <div class="toc-main">
-        
+        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#0x00-前言"><span class="toc-text">0x00 前言</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#0x01-抽象"><span class="toc-text">0x01 抽象</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#0x02-集成电路"><span class="toc-text">0x02 集成电路</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#0x03-编码"><span class="toc-text">0x03 编码</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#0x04-指令和程序"><span class="toc-text">0x04 指令和程序</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#0x05-数据通路"><span class="toc-text">0x05 数据通路</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#0x06-体系结构"><span class="toc-text">0x06 体系结构</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#0x07-处理器"><span class="toc-text">0x07 处理器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#0x08-ISA"><span class="toc-text">0x08 ISA</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#0x09-流水线"><span class="toc-text">0x09 流水线</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#0x0A-Cache"><span class="toc-text">0x0A Cache</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#0x0B-线程级并行"><span class="toc-text">0x0B 线程级并行</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#0x0C-量化方法"><span class="toc-text">0x0C 量化方法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#0x0D-总结"><span class="toc-text">0x0D 总结</span></a></li></ol>
     </div>
 </div>
 
@@ -395,7 +376,7 @@
         </a>
     </div>
     <span class="floating-header-divider">&mdash;</span>
-    <div class="floating-header-title">MkDocs构建项目文档流程</div>
+    <div class="floating-header-title">计算机：组成原理和体系结构</div>
     <progress class="progress" value="0">
         <div class="progress-container">
             <span class="progress-bar"></span>
