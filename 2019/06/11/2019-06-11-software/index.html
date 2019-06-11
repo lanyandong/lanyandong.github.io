@@ -17,7 +17,7 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-	<title>RISC指令集的五个周期 | 格子小七</title>
+	<title>软件工程：设计难于实现 | 格子小七</title>
 
 	<meta name="HandheldFriendly" content="True">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
@@ -45,14 +45,14 @@
 
 	<meta property="og:site_name" content="格子小七">
 	<meta property="og:type" content="article">
-	<meta property="og:title" content="RISC指令集的五个周期 | 格子小七">
+	<meta property="og:title" content="软件工程：设计难于实现 | 格子小七">
 	<meta property="og:description" content>
-	<meta property="og:url" content="http://smallseven.top/2019/03/16/2019-03-16-rsic-instruction/">
+	<meta property="og:url" content="http://smallseven.top/2019/06/11/2019-06-11-software/">
 
 	
-	<meta property="article:published_time" content="2019-03-16T15:03:00+08:00"> 
+	<meta property="article:published_time" content="2019-06-11T10:06:00+08:00"> 
 	<meta property="article:author" content="格子小七">
-	<meta property="article:published_first" content="格子小七, /2019/03/16/2019-03-16-rsic-instruction/">
+	<meta property="article:published_first" content="格子小七, /2019/06/11/2019-06-11-software/">
 	
 </head>
 <body class="post-template">
@@ -129,30 +129,28 @@
     <div class="inner">
         <header class="post-full-header">
             <section class="post-full-meta">
-                <time class="post-full-meta-date" datetime="2019-03-16T07:29:44.000Z" itemprop="datePublished">
-                    2019-03-16
+                <time class="post-full-meta-date" datetime="2019-06-11T02:27:32.000Z" itemprop="datePublished">
+                    2019-06-11
                 </time>
                 
                 <span class="date-divider">/</span>
                 
-                <a href="/categories/计算机/">计算机</a>&nbsp;&nbsp;
+                <a href="/categories/学习笔记/">学习笔记</a>&nbsp;&nbsp;
                 
                 
             </section>
-            <h1 class="post-full-title">RISC指令集的五个周期</h1>
+            <h1 class="post-full-title">软件工程：设计难于实现</h1>
         </header>
         <article class="post-full no-image">
             
             <section class="post-full-content">
                 <div id="lightgallery" class="markdown-body">
-                    <p>RISC(reduced instruction set computer,精简指令集计算机)简称为精简指令集。RISC把执行指令的精力主要放在了经常使用的指令上面。本文主要介绍了在RISC指令集中一条指令的五个主要执行CC（Clock Cycle，时钟周期）的主要涵义以及内容。</p>
-<p>这五个时钟周期分别为：IF(Instruction fetch，取指令)，ID(Instruction decode/register fetch cycle，指令解码)，EX（Execution/effective address cycle，执行），MEM(Memory access，内存访问)， WB(Write-back cycle，写回)。</p>
-<p><strong>IF</strong>：根据PC（program counter，程序计数器）中所存储的内存地址，在内存中找到该地址所指向的指令，并将该指令存储在寄存器中。同时，PC指向下一条指令，完成这个操作要求PC加4（以32位指令集为例，如果是64位则要加8）。</p>
-<p><strong>ID</strong> :  操作从IF阶段获取来的指令。将指令解码，最终找到指令所需要的寄存器中存储的数据。如果该指令只一条跳转指令，那么在这一阶段需要根据跳转指令的意义对获取的值进行比较，如果比较结果为true则执行跳转，如果比较结果为false则不执行跳转，继续下一条指令的执行；如果指令需要对指令中某些位进行填充，也在ID阶段完成，比如对高四位进行填充以满足指令结果是32位；计算可能跳转的指令的地址。   </p>
-<p><strong>EX</strong> : ALU（Arithmetic Logic Unit，算术逻辑单元）对ID阶段的结果进行计算。在ID阶段已经获得了指令计算所需要的寄存器的值，那么在EX阶段需要根据指令的意义对这些寄存器的值进行计算。计算根据指令的不同变得不同。主要有三种类型的ALU计算：1. ALU根据ID中补充的地址，对有效的地址单元进行计算，最终得到所需要的内存的地址；2. 根据指令的意义，对从寄存器中获取的值，进行操作，比如对两个寄存器的值进行相加；3. 根据寄存器的值以及补充的值，计算出立即数的结果。    </p>
-<p><strong>MEM</strong>：如果当前指令是Load指令，那么，根据EX计算出的内存地址，从内存中获取对应的值；如果当前指令是store，那么，根据EX计算出的内存地址和寄存器的值，将寄存器的值存入该内存地址中。其他的指令一般不会设计内存的访问。   </p>
-<p><strong>WB</strong>：将计算出来的最终的寄存器的值写入到register file（寄存器文件）中。这部操作包括从内存中获取的值以及通过算术运算得到的结果。 </p>
-<p>以上五个时钟周期便是一条RISC指令执行的主要步骤。</p>
+                    <h3 id="0x00-前言"><a href="#0x00-前言" class="headerlink" title="0x00 前言"></a>0x00 前言</h3><p>记录一下我对软件工程的理解，说实话在校学习期间很难接触到真正意义上的软件开发，更别提会参考或采用软件工程的解决办法。更多的是编写一些很小很小而且漏洞百出的小程序，锻炼的只不过是对编程语言的熟悉和对一些算法的理解和掌握。而真正的软件开发应该不是这样的，虽然我目前还没接触到，但我知道肯定不是简单的编码，而是有一整套设计思路和开发流程的，因为这是质量和效率的保证。</p>
+<h3 id="0x01-设计与实现"><a href="#0x01-设计与实现" class="headerlink" title="0x01 设计与实现"></a>0x01 设计与实现</h3><p>对于软件的开发，我认为设计远比实现复杂，首先我们先忽略对需求的分析，就单纯从一个简单功能来看，设计对于整个开发都是十分重要的，设计不仅要考虑程序的整个流程和部署，还要考虑到最终结果是否是有意义的。就我个人而言，常常会因为设计而苦恼，首先是没有一个很好解决办法的思路，其次是设计不合理导致后续的实现异常复杂。也常因为自己写了一手好bug而感到奔溃，这些都不是实现的问题，更多的是设计不合理或者对于问题本身理解的偏差造成的。实现对于设计是相对容易的，无非就是编码，这和自己对编程语言掌握的程度有关，还有就是算法与数据结构的熟练程度有关。</p>
+<h3 id="0x02-理论的意义"><a href="#0x02-理论的意义" class="headerlink" title="0x02 理论的意义"></a>0x02 理论的意义</h3><p>理论的最大意义就是起到要个引导和规范作用，通过软件工程可以规范整个软件开发的流程和实施步骤，这也是为什么软件工程可以单独作为一门学科而存在的原因之一。软件工程把软件放在了一个产品的角度，从最开始的分析设计，开发实现，测试运维以及质量管理都提出了较为规范和通用的实施步骤和方法策略，从而使软件的开发难度降低，提高了生产效率。以前一直认为理论是无用的，实践才是硬道理，后来才发现自己对于理论的认知是有偏差的，理论并非夸夸奇谈，它的意义也并非限于其字面含义，而重要的是其提出的方法和理念。理论更像是人们总结出的经验，它并非局限于某个问题本身，而是针对某类问题的一个通用解决方案。理论研究和良好的理论体系对于一个行业的发展是至关重要的，我认为没有理论的支持，所有的设计和实现都是没有太大价值的。</p>
+<h3 id="0x03-软件开发困境"><a href="#0x03-软件开发困境" class="headerlink" title="0x03 软件开发困境"></a>0x03 软件开发困境</h3><p>软件开发其实是一种实施细节，即使有很多理论的支持，还是抵不过多变复杂的技术，现在越来越多的框架，虽然免去了重复造轮子，但对于程序员来讲也并没减少负担，反而程序员需要去学习和了解这些框架和技术，完成开发任务。这些开发任务并非其他行业那样只要掌握了足够理论就可以解决多数问题，相反软件开发更多像是一种技术实施细节，这种实施细节只针对某个特定问题有用，换一个场景就未必有用了，所以在程序员行业，只有不断学习汲取新的东西才不会被淘汰。特别是这种实施细节对于软件开发是一种无法规避的难题，如果不了解是无法完成开发任务的，技术的更新迭代远比我们学习新技术的速度快，这是软件开发无法避免的问题，也是我们程序员不得不面对的难题。</p>
+<h3 id="0x04-敏捷开发"><a href="#0x04-敏捷开发" class="headerlink" title="0x04 敏捷开发"></a>0x04 敏捷开发</h3><p>敏捷开发算是一种很好的开发策略针在目前状况下，我理解的敏捷开发是一种小而快的开发，适用于多变的小项。这种开发策略是一种可以针对具体需求进行随机应变的，可以理解为专注于某个需求进行精准开发。对于当下社会情形，精准显得越来越重要，随着社会分工越来越完善，协同合作也显得越来越重要，只有把工作划分到不同领域，才能提高生产效率，就像流水线一样；然后通过协同合作把各个领域的能力进行汇聚，才能发挥真正的价值，简单来说就是利用分工合作，提高效率汇聚价值。敏捷，我理解的就是高度的分工，互联网企业是分工合作体现的最明显的一类企业，无论从技术还是管理层都涉及到多个部门领域，而针对技术展开的部门和部门内部的工作组，都是分工的体现，在计算机行业想要完成任何一款产品研发都是要分工合作的，因为它涉及到多种各样的技术栈，而科技公司很难找到什么都精通的人才。为了适应市场需求，我们可能也只能进行精准学习，想要成为大牛，可能得不断学习，不断精进了。</p>
+<h3 id="0x05-总结"><a href="#0x05-总结" class="headerlink" title="0x05 总结"></a>0x05 总结</h3><p>以上就是自己对于软件工程，对于软件开发以及将要投身于的IT行业的理解，自己写下这些东西可能毫无价值，但它代表的是当前的一些理解和思考，这可能是学生时期才会有的想法。多年以后，自己对于行业有了更深的接触和了解后，一定会有有一些不一样理解和思考的，那就等以后再说吧。</p>
 
                 </div>
             </section>
@@ -163,14 +161,10 @@
     <div style="height: 4vw;width: 100%"></div>
     <nav id="gobottom" class="pagination">
         
-        <a class="prev-post" title="认识 Shell Bash Cmd" href="/2019/03/28/2019-03-28-linux-shell/">
-            ← 认识 Shell Bash Cmd
-        </a>
-        
         <span class="prev-next-post">•</span>
         
-        <a class="next-post" title="This is my first micro-entrepreneurship" href="/2019/01/20/2019-01-20-entrepreneurship/">
-            This is my first micro-entrepreneurship →
+        <a class="next-post" title="计算机：组成原理和体系结构" href="/2019/06/09/2019-06-09-computer-summary/">
+            计算机：组成原理和体系结构 →
         </a>
         
     </nav>
@@ -196,7 +190,7 @@
         </a>
     </div>
     <div class="toc-main">
-        
+        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#0x00-前言"><span class="toc-text">0x00 前言</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#0x01-设计与实现"><span class="toc-text">0x01 设计与实现</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#0x02-理论的意义"><span class="toc-text">0x02 理论的意义</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#0x03-软件开发困境"><span class="toc-text">0x03 软件开发困境</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#0x04-敏捷开发"><span class="toc-text">0x04 敏捷开发</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#0x05-总结"><span class="toc-text">0x05 总结</span></a></li></ol>
     </div>
 </div>
 
@@ -377,7 +371,7 @@
         </a>
     </div>
     <span class="floating-header-divider">&mdash;</span>
-    <div class="floating-header-title">RISC指令集的五个周期</div>
+    <div class="floating-header-title">软件工程：设计难于实现</div>
     <progress class="progress" value="0">
         <div class="progress-container">
             <span class="progress-bar"></span>
