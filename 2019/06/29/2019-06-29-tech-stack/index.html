@@ -17,7 +17,7 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-	<title>MkDocs构建项目文档流程 | 格子小七</title>
+	<title>零碎技术栈 | 格子小七</title>
 
 	<meta name="HandheldFriendly" content="True">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
@@ -45,14 +45,14 @@
 
 	<meta property="og:site_name" content="格子小七">
 	<meta property="og:type" content="article">
-	<meta property="og:title" content="MkDocs构建项目文档流程 | 格子小七">
+	<meta property="og:title" content="零碎技术栈 | 格子小七">
 	<meta property="og:description" content>
-	<meta property="og:url" content="http://smallseven.top/2019/03/31/2019-03-31-mkdocs/">
+	<meta property="og:url" content="http://smallseven.top/2019/06/29/2019-06-29-tech-stack/">
 
 	
-	<meta property="article:published_time" content="2019-03-31T18:03:00+08:00"> 
+	<meta property="article:published_time" content="2019-06-29T22:06:00+08:00"> 
 	<meta property="article:author" content="格子小七">
-	<meta property="article:published_first" content="格子小七, /2019/03/31/2019-03-31-mkdocs/">
+	<meta property="article:published_first" content="格子小七, /2019/06/29/2019-06-29-tech-stack/">
 	
 </head>
 <body class="post-template">
@@ -129,50 +129,39 @@
     <div class="inner">
         <header class="post-full-header">
             <section class="post-full-meta">
-                <time class="post-full-meta-date" datetime="2019-03-31T10:59:22.000Z" itemprop="datePublished">
-                    2019-03-31
+                <time class="post-full-meta-date" datetime="2019-06-29T14:28:46.000Z" itemprop="datePublished">
+                    2019-06-29
                 </time>
                 
                 <span class="date-divider">/</span>
                 
-                <a href="/categories/小把戏录/">小把戏录</a>&nbsp;&nbsp;
-                
                 
             </section>
-            <h1 class="post-full-title">MkDocs构建项目文档流程</h1>
+            <h1 class="post-full-title">零碎技术栈</h1>
         </header>
         <article class="post-full no-image">
             
             <section class="post-full-content">
                 <div id="lightgallery" class="markdown-body">
-                    <p>发现很多开源的项目文档，技术说明文档都是使用 mkdocs 构建，自己也了解了一下，确实很简单，快速。它的主题也很简洁，大方，作为技术项目说明或者笔记文档是相当合适的。</p>
-<p>构建部署流程大致如下，详细可以参考官方完整指南。</p>
-<p>环境：</p>
-<ul>
-<li>支持Windows/Linux/macOS</li>
-<li>需要安装 Python 2.7 +</li>
-<li>需要 pip</li>
-</ul>
-<p>1、安装MkDocs </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ pip install mkdocs</span><br></pre></td></tr></table></figure>
-<p>运行 <code>mkdocs help</code> 可以检查是否正确安装。</p>
-<p>2、输入以下命令构建项目</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ mkdocs new project</span><br></pre></td></tr></table></figure>
-<p><code>project</code> 是指项目名，你要在那个目录下创建，就切换到那个目录下  Windows的cmd 命令行和Linux的终端命令都是类似操作。</p>
-<p>构建好的项目里有一个配置文件 <code>mkdocs.yml</code>, 和一个包含文档源码的 <code>docs</code> 文件夹. 在 <code>docs</code> 文件夹里包含了一个名为 <code>index.md</code> 的文档. </p>
-<p>3、启动内建服务器，进行预览</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ mkdocs serve</span><br></pre></td></tr></table></figure>
-<p>它会自动使用8000 端口，在浏览器中打开<code>&lt;http://127.0.0.1:8000/&gt;</code>就可以完成效果的预览。</p>
-<p>之后就是修改配置文件 <code>mkdocs.yml</code> ，自己可以添加一些配置信息，包括站点名称，文档页面等，很简单。</p>
-<p>4、使用以下命令,创建新的页面</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ curl &apos;jaspervdj.be/lorem-markdownum/markdown.txt&apos; &gt; docs/about.md</span><br></pre></td></tr></table></figure>
-<p>其实根本不用那么麻烦，在Windows下只用像创建文件目录那样操作即可，所有的文件都在<code>docs</code> 文件目录内。</p>
-<p>5、主要是修改配置文件 <code>mkdocs.yml</code>，这个决定了你的站点结构。</p>
-<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">site_name:</span> <span class="string">LYDSDOCS</span></span><br><span class="line"></span><br><span class="line"><span class="attr">nav:</span></span><br><span class="line"><span class="attr">- Home:</span> <span class="string">index.md</span></span><br><span class="line"><span class="attr">- CSDocs:</span></span><br><span class="line"><span class="bullet">        -</span> <span class="string">操作系统:</span> <span class="string">csdocs/OSNotes.md</span></span><br><span class="line"><span class="bullet">        -</span> <span class="string">数据结构:</span> <span class="string">csdocs/data-structure.md</span></span><br><span class="line"><span class="bullet">        -</span> <span class="string">软件工程:</span> <span class="string">csdocs/software.md</span></span><br><span class="line"></span><br><span class="line"><span class="attr">- About:</span> <span class="string">about.md</span></span><br><span class="line"></span><br><span class="line"><span class="attr">theme:</span> <span class="string">readthedocs</span></span><br></pre></td></tr></table></figure>
-<p>6、站点生成</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ mkdocs build</span><br></pre></td></tr></table></figure>
-<p>该命令创建了一个 <code>site</code> 新目录. 里面的文件就是你的站点资源文件，你可以把这些文件部署到服务器上或者github page上，就可以进行访问了。</p>
-<p>大概流程就这些，其实和 hexo 生成站点差不多，一些具体的细节可以参考官方文档。<a href="https://markdown-docs-zh.readthedocs.io/zh_CN/latest/" target="_blank" rel="noopener">MkDocs 中文文档</a></p>
+                    <h3 id="0x00-前言"><a href="#0x00-前言" class="headerlink" title="0x00 前言"></a>0x00 前言</h3><p>好久没有写东西做总结了，应该时时更新，日日总结，保持对新事物的好奇心，回顾所学旧的知识，融汇贯通。因为实训接触了一些新的玩意儿，如: Vuejs，Flutter, Kotlin 等，也刚好有时间，就干脆多了解一些，顺便做了一点笔记，丰富一下自己的认知。没有实际干货，也不算是技术栈，以后到底会不会深入学习，还真不知道，先记录一下吧。</p>
+<h3 id="0x01-Vue-js"><a href="#0x01-Vue-js" class="headerlink" title="0x01 Vue.js"></a>0x01 Vue.js</h3><p><img alt="vue.js" class="post-img b-lazy" href="https://s2.ax1x.com/2019/06/29/ZlJObR.md.jpg" data-src="https://s2.ax1x.com/2019/06/29/ZlJObR.md.jpg"></p>
+<p>Vue.js 是以数据驱动和组件化思想构建的一个JavaScript MVVM库，提供了简洁和易于理解的的API，能够快速上手。</p>
+<p>什么是MVVM（Model-View-ViewModel），简单来说就是一种设计模式，借鉴了MVC的思想，在前端页面中，将Model用纯JavaScript对象表示，View负责显示，两者做到了最大限度的分离，对于现在多功能的前端和复杂业务逻辑的后端，以及技术分工的划分，这其实是技术发展的一个必然趋势。把Model和View关联起来的就是ViewModel。ViewModel负责把Model的数据同步到View显示出来，还负责把View的修改同步回Model。对于MVVM，我们并不用关注DOM，而是直接操作JavaScript对象，去除操作DOM的繁琐步骤。</p>
+<p>使用Vue其实就是一个定义MVVM各个组成部分的过程，可以归结为：定义View，定义Model，创建Vue实例（连接View 和Model）。目前只是做一个简单了解，要是想要更深入的了解或是使用，还得好好学习一番。下面是一个简单例子：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">!DOCTYPE html&gt;</span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">title</span>&gt;</span><span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">        <span class="comment">&lt;!--这是View--&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"app"</span>&gt;</span></span><br><span class="line">            &#123;&#123; message &#125;&#125;</span><br><span class="line">        <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line">    </span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"js/vue.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="undefined">        // 这是Model</span></span><br><span class="line"><span class="undefined">        var exampleData = &#123;</span></span><br><span class="line"><span class="undefined">            message: 'Hello World!'</span></span><br><span class="line"><span class="undefined">        &#125;</span></span><br><span class="line"><span class="undefined"></span></span><br><span class="line"><span class="undefined">        // 创建一个 Vue 实例或 "ViewModel"</span></span><br><span class="line"><span class="undefined">        // 它连接 View 与 Model</span></span><br><span class="line"><span class="undefined">        new Vue(&#123;</span></span><br><span class="line"><span class="undefined">            el: '#app',</span></span><br><span class="line"><span class="undefined">            data: exampleData</span></span><br><span class="line"><span class="undefined">        &#125;)</span></span><br><span class="line"><span class="undefined">    </span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">    </span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h3 id="0x01-Flutter框架"><a href="#0x01-Flutter框架" class="headerlink" title="0x01 Flutter框架"></a>0x01 Flutter框架</h3><p><img alt="flutter" class="post-img b-lazy" href="https://s2.ax1x.com/2019/06/29/ZlJjV1.jpg" data-src="https://s2.ax1x.com/2019/06/29/ZlJjV1.jpg"></p>
+<p>Flutter 是 Google推出并开源的移动应用开发框架，开发者可以通过 Dart语言开发 App，一套代码同时运行在 iOS 和 Android平台。</p>
+<p>之前一直没有了解和关注移动开发这一块，最近也是因为实训内容涉及到Android开发，所以特意去了解了一下。对于移动开发需要区分原生开发和跨平台技术，原生应用程序是指某一移动平台（比如iOS 和安卓）所特有的应用，使用相应平台支持的开发工具和语音，并直接调用系统提供的SDK API。比如Android原生应用就是指使用Java或Kotlin语言直接调用Android SDK开发的应用程序；而iOS原生应用就是指通过Objective-C或Swift语言直接调用iOS SDK开发的应用程序。</p>
+<p>原生开发的优势在于速度快、性能高、可以实现复杂动画及绘制，整体用户体验好，但存在动态化和开发成本较大的问题，因此诞生了一些跨平台的动态化框架，而Flutter就是其中之一，属于一种自绘UI+原生的技术模式，性能比较好，开发效率也比较高，而且也是一种很新的框架，由Google在2017年的 I/O 大会上首次推出，至今短短两年的时间，其生态系统快速增长，相信未来发展也很值得期待。</p>
+<p>由于目前Flutter仍处于快速发展的阶段，其应用场景的资讯和参考资料并不是很多，想要深入了解可以通过官网和源码等渠道进行学习，包括Dart 语言，这些对于我个人来说都是很陌生的东西，现在发现可以学习的东西太多了，需要学习的东西也很多，保持一颗好奇心，不断去尝试，技术人就是要不断学习的。</p>
+<h3 id="0x02-Kotlin-语言"><a href="#0x02-Kotlin-语言" class="headerlink" title="0x02 Kotlin 语言"></a>0x02 Kotlin 语言</h3><p><img alt="kotlin" class="post-img b-lazy" href="https://s2.ax1x.com/2019/06/29/ZlJqKJ.md.png" data-src="https://s2.ax1x.com/2019/06/29/ZlJqKJ.md.png"></p>
+<p>是一种在 Java 虚拟机上运行的静态类型编程语言，被称之为 Android 世界的Swift，由 JetBrains 设计开发并开源。Kotlin 可以编译成Java字节码，也可以编译成 JavaScript，方便在没有 JVM 的设备上运行。</p>
+<p>在Google I/O 2017中，Google 宣布 Kotlin 成为 Android 官方开发语言，主要原因可能还是因为Google 和 Oracle 的官司纠纷，导致Google不得不推出Kotlin，当然作为Android开发的核心语言Java，在未来的发展中依然具有巨大影响力。</p>
+<p>另外值得一提的是Oracle公司，近些年对于开源界并不友好，收购了Sun公司（Java，MySQL），开源社区因为担心MySQL被闭源，另外维护了MariaDB作为其分支，之前在数据库课程实验时使用的就是MariaDB，因此顺便了解了Sun公司及其整个发展历程，从兴起到巅峰再到衰亡，也是十分感叹，信息技术行业真的是一个不断更新变换的行业，无论是技术还是产业，整个生态都是快节奏的，真的需要把握时机，顺应变换，更新迭代，否则将会被淘汰。</p>
+<p>对于开源，在计算机行业也只有在计算机行业才能实现和发展的，这是一种行业特性，对于传统行业是无法做到的，开源是一种精神，开源不等于免费，知识产权也是需要保护，在现实利益的趋势下，到底该如何定义开源，真的不是一两句能够说清楚的，对于开发者来讲当然应高喊开源万岁。</p>
+<h3 id="0x03-Gradle-工具"><a href="#0x03-Gradle-工具" class="headerlink" title="0x03 Gradle 工具"></a>0x03 Gradle 工具</h3><p><img alt="gradle" class="post-img b-lazy" href="https://s2.ax1x.com/2019/06/29/ZlJ55V.png" data-src="https://s2.ax1x.com/2019/06/29/ZlJ55V.png"></p>
+<p>Gradle是一个基于Apache Ant和Apache Maven概念的项目自动化构建开源工具。面向Java应用为主。当前其支持的语言限于Java、Groovy、Kotlin和Scala，计划未来将支持更多的语言。</p>
+<p>这个东西主要是在使用Android Studio开发应用时，发现在使用Gradle构建项目，不太清楚到底是个啥就查了一下，简单来说gradle就是一个基于JVM的构建工具，支持局部构建，支持多方式依赖管理，与ant、maven、ivy有良好的相容相关性，gradle适用于任何结构的工程。</p>
 
                 </div>
             </section>
@@ -183,14 +172,10 @@
     <div style="height: 4vw;width: 100%"></div>
     <nav id="gobottom" class="pagination">
         
-        <a class="prev-post" title="选择blog主题为Hexo-Casper" href="/2019/04/12/2019-04-12-hexo-blog/">
-            ← 选择blog主题为Hexo-Casper
-        </a>
-        
         <span class="prev-next-post">•</span>
         
-        <a class="next-post" title="认识 Shell Bash Cmd" href="/2019/03/28/2019-03-28-linux-shell/">
-            认识 Shell Bash Cmd →
+        <a class="next-post" title="初识 Docker" href="/2019/06/17/2019-06-17-docker-study/">
+            初识 Docker →
         </a>
         
     </nav>
@@ -216,7 +201,7 @@
         </a>
     </div>
     <div class="toc-main">
-        
+        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#0x00-前言"><span class="toc-text">0x00 前言</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#0x01-Vue-js"><span class="toc-text">0x01 Vue.js</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#0x01-Flutter框架"><span class="toc-text">0x01 Flutter框架</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#0x02-Kotlin-语言"><span class="toc-text">0x02 Kotlin 语言</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#0x03-Gradle-工具"><span class="toc-text">0x03 Gradle 工具</span></a></li></ol>
     </div>
 </div>
 
@@ -403,7 +388,7 @@
         </a>
     </div>
     <span class="floating-header-divider">&mdash;</span>
-    <div class="floating-header-title">MkDocs构建项目文档流程</div>
+    <div class="floating-header-title">零碎技术栈</div>
     <progress class="progress" value="0">
         <div class="progress-container">
             <span class="progress-bar"></span>
