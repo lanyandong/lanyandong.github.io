@@ -17,7 +17,7 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-	<title>关于Navicat for MySQL 的使用小结 | 格子小七</title>
+	<title>Embedded-Hardware | 格子小七</title>
 
 	<meta name="HandheldFriendly" content="True">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
@@ -45,14 +45,14 @@
 
 	<meta property="og:site_name" content="格子小七">
 	<meta property="og:type" content="article">
-	<meta property="og:title" content="关于Navicat for MySQL 的使用小结 | 格子小七">
+	<meta property="og:title" content="Embedded-Hardware | 格子小七">
 	<meta property="og:description" content>
-	<meta property="og:url" content="http://smallseven.top/2019/05/30/2019-05-30-navicat-mysql/">
+	<meta property="og:url" content="http://smallseven.top/2019/07/11/2019-07-11-embedded-hardware/">
 
 	
-	<meta property="article:published_time" content="2019-05-30T08:05:00+08:00"> 
+	<meta property="article:published_time" content="2019-07-11T10:07:00+08:00"> 
 	<meta property="article:author" content="格子小七">
-	<meta property="article:published_first" content="格子小七, /2019/05/30/2019-05-30-navicat-mysql/">
+	<meta property="article:published_first" content="格子小七, /2019/07/11/2019-07-11-embedded-hardware/">
 	
 </head>
 <body class="post-template">
@@ -129,8 +129,8 @@
     <div class="inner">
         <header class="post-full-header">
             <section class="post-full-meta">
-                <time class="post-full-meta-date" datetime="2019-05-30T00:50:23.000Z" itemprop="datePublished">
-                    2019-05-30
+                <time class="post-full-meta-date" datetime="2019-07-11T02:16:10.000Z" itemprop="datePublished">
+                    2019-07-11
                 </time>
                 
                 <span class="date-divider">/</span>
@@ -139,76 +139,20 @@
                 
                 
             </section>
-            <h1 class="post-full-title">关于Navicat for MySQL 的使用小结</h1>
+            <h1 class="post-full-title">Embedded-Hardware</h1>
         </header>
         <article class="post-full no-image">
             
             <section class="post-full-content">
                 <div id="lightgallery" class="markdown-body">
-                    <p>最近都在做数据库的实验，通过实验了解了一些SQL的语法，也更加熟悉了mysql的使用，实验从最开始数据库的创建，表的创建，包括添加一些条件约束，创建索引触发器等都涉及到了。到后面有关mysql的权限管理，以及通过powerdesigner进行数据库建模设计，和使用Java 编程对数据库进行增删改查，几乎包含了所有数据库基础操作。通过实验，不仅是熟悉一些操作，更多的是了解认识更多东西。实验我使用的是Navicat，mysql，sql的基础语法太多，用到去查就行，这里主要记录一些偏实践性的东西，算是一个小总结吧。</p>
-<h4 id="1-、命令行界面查看mysql-版本"><a href="#1-、命令行界面查看mysql-版本" class="headerlink" title="1 、命令行界面查看mysql 版本"></a>1 、命令行界面查看mysql 版本</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">mysql&gt; select version();</span><br><span class="line">+-----------------+</span><br><span class="line">| version()       |</span><br><span class="line">+-----------------+</span><br><span class="line">| 10.1.32-MariaDB |</span><br><span class="line">+-----------------+</span><br><span class="line">1 row in set</span><br></pre></td></tr></table></figure>
-<p>也可以使用<code>select version() from dual；</code>命令，这里的 dual  是数据库里的一个默认表，在没有引用表的情况下，允许将dual指定为虚拟表名。在Oracle中使用的比较多，是一个oracle内部表，它仅包含一行一列，不论我们做什么操作（不要删除记录）它都只有一条记录。<br>在Mysql，SQL Server 等数据库中也都有dual 表，不过在mysql中的dual表没有值，<code>select * from dual</code> 这种语句会报错。</p>
-<h4 id="2、MySQL-和-MariaDB"><a href="#2、MySQL-和-MariaDB" class="headerlink" title="2、MySQL 和 MariaDB"></a>2、MySQL 和 MariaDB</h4><p>我使用的xmapp的一个工具包，里面包括了mysql，但是在使用时我发现了我是MariaDB，不是mysql，然后就简单了解了一下mariaDB 和 mysql 的区别。</p>
-<p>MariaDB数据库管理系统是MySQL的一个分支，主要由开源社区在维护，采用GPL授权许可。MariaDB的目的是完全兼容MySQL，包括API和命令行，使之能轻松成为MySQL的代替品。</p>
-<p>MariaDB的API和协议兼容MySQL，另外又添加了一些功能，以支持本地的非阻塞操作和进度报告，所以所有使用MySQL的连接器、程序库和应用程序也将可以在MariaDB下工作。</p>
-<p>但两者之间也存在不兼容性，MariaDB 的文档中列出了 MySQL 和 MariaDB 之间的数百个不兼容问题。因此，我们无法通过简单的方案在这两个数据库之间进行迁移。</p>
-<h4 id="3、数据库存储引擎"><a href="#3、数据库存储引擎" class="headerlink" title="3、数据库存储引擎"></a>3、数据库存储引擎</h4><p>数据库管理系统（DBMS）使用数据引擎进行创建、查询、更新和删除数据。不同的存储引擎提供不同的存储机制、索引技巧、锁定水平等功能，使用不同的存储引擎，还可以 获得特定的功能。</p>
-<p>可以使用<code>show engines</code> 命令查看MySQL 使用的引擎；</p>
-<blockquote>
-<p>MySQL 支持的存储引擎包括：InnoDB、MyISAM、Memory、CSV、Archive、Blackhole、Merge、Federated、Example等</p>
-<p>MariaDB 支持的存储引擎包括：XtraDB、InnoDB、MariaDB ColumnStore、Aria、Archive、Blackhole、Cassandra Storage Engine、Connect、CSV、FederatedX、Memory、Merge、Mroonga、MyISAM、MyRocks等</p>
-</blockquote>
-<p>数据库可以支持多少个存储引擎其实并不太重要，满足需求才是最重要的。如果想了解不同数据库存储引擎的区别可以参考这篇文章 <a href="https://www.cnblogs.com/domi22/p/8059403.html" target="_blank" rel="noopener">数据库—四种存储引擎</a>。</p>
-<h4 id="4、Navicat的帮助文档"><a href="#4、Navicat的帮助文档" class="headerlink" title="4、Navicat的帮助文档"></a>4、Navicat的帮助文档</h4><p>Navicat提供了特别详细的帮助文档可以点击帮助菜单打开，也可以直接使用按<code>f1</code>打开。下面是Navicat for MySQL 一些常用的快捷键。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">ctrl+q            打开查询窗口</span><br><span class="line">ctrl+/            注释sql语句</span><br><span class="line">ctrl+shift +/     解除注释</span><br><span class="line">ctrl+r            运行查询窗口的sql语句</span><br><span class="line">ctrl+shift+r      只运行选中的sql语句</span><br><span class="line">F6                打开一个mysql命令行窗口</span><br><span class="line">ctrl+d            查看表结构详情，包括索引 触发器，存储过程，外键，唯一键</span><br><span class="line">ctrl+l            删除一行</span><br><span class="line">ctrl+n            打开一个新的查询窗口</span><br><span class="line">ctrl+w            关闭一个查询窗口</span><br><span class="line">ctrl+tab          多窗口切换</span><br></pre></td></tr></table></figure>
-<h4 id="5、sql-脚本的导入导出"><a href="#5、sql-脚本的导入导出" class="headerlink" title="5、sql 脚本的导入导出"></a>5、sql 脚本的导入导出</h4><ol>
-<li><p>可以直接点击右键点击数据库，运行SQL文件 或者转储SQL文件，就可以将已有的sql 文件导入数据库和将数据库保存为sql文件。也可以右键单击数据库，选择文件传输，这里可以选择不同的连接和数据格式，可以有选择的导入导出传输。</p>
-</li>
-<li><p>通过命令行导出sql文件</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysqldump -h 127.0.0.1 -uroot -ppassword databasename &gt;D:/back_databasename.sql</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>使用命令行，先进入mysql的安装目录。我这里是xmapp安装的，所以切换到C:\xampp\mysql\bin</p>
-<p>mysqldump -h 127.0.0.1 -uroot -ppassword databasename &gt;D:/back_databasename.sql</p>
-<p>用户名为：root，与-u之间可有空格（-h后也可由空格）密码为：password（你自己的密码），注意！-p后面不可有空格，直接跟密码。数据库名称为：databasename（你自己要导入导出的数据库名），导出路径为：D:/back_databasename.sql（根据自己实际情况修改）</p>
-</blockquote>
-</li>
-<li><p>通过命令行还原sql文件，上面步骤相似</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysql -h 127.0.0.1 -u root -ppassword -f databasename &lt;D:/back_databasename.sql --default-character-set=gbk</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>使用命令将数据库下表中的数据导出成文本文件</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">mysql&gt; use hhh;  // 使用hhh数据库</span><br><span class="line">mysql&gt; show tables; //查看数据库中的表</span><br><span class="line">mysql&gt;select * from user into outfile &apos;out.txt&apos;; //将user表保存为文本文件out.txt</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-<h4 id="6、使用xmapp启动mysql"><a href="#6、使用xmapp启动mysql" class="headerlink" title="6、使用xmapp启动mysql"></a>6、使用xmapp启动mysql</h4><ol>
-<li><p>命令行进入，先在Xampp的控制面板(shell)开启MYSQL，直接进入路径启动</p>
-<blockquote>
-<p>命令行切换至xmapp安装目录下的mysql目录下的bin目录</p>
-<p>比如：C:\xampp\mysql\bin</p>
-<p>mysql -u root -p 回车 </p>
-<p>要求输入密码（如果是第一次登陆，直接回车，默认密码 “”）修改密码</p>
-</blockquote>
-</li>
-<li><p>修改密码</p>
-<blockquote>
-<p>命令行切换至xmapp安装目录下的mysql目录下的bin目录</p>
-<p>比如：C:\xampp\mysql\bin</p>
-<p>使用命令修改密码：mysqladmin -u root -p password 新密码</p>
-<p>修改密码后 mysql -u root -p 登录时就需要输入密码了</p>
-</blockquote>
-</li>
-<li><p>配置环境变量</p>
-<blockquote>
-<p>Path变量中加入C:\xampp\mysql\bin </p>
-<p>win+R -&gt; cmd回车</p>
-<p>mysql -u root -p 回车 </p>
-<p>要求输入密码（如果是第一次登陆，直接回车，默认密码 “”）</p>
-</blockquote>
-</li>
-</ol>
-<h4 id="7、root-和-非root的区别"><a href="#7、root-和-非root的区别" class="headerlink" title="7、root 和 非root的区别"></a>7、root 和 非root的区别</h4><p>我在使用xmapp时，启动mysql，并通过Navicat连接了数据库后，创建了一些数据库，在Navicat里面的命令行界面可以查看到我创建的数据库，但是在xmapp shell 里面进入mysql 却没有显示我创建的数据库。</p>
-<p><strong>原因</strong>：是我在使用Navicat连接mysql时，使用的是root身份，但通过xmapp shell 进入mysql，我是直接启动的mysql，并没有使用root 进登录的。所以无法查看root身份下的创建的数据库，只是有几个系统默认的数据库。</p>
-<p><strong>解决方法</strong>：使用命令 mysql -u root -p 进入mysql。这时就可以通过查看自己创建的数据库了。</p>
-<p><strong>重要</strong>：以后在使用数据库时要区分以什么身份登录root 和非root有很大区别，对于数据库的管理权限也有所不同，具体情况具体分析。</p>
+                    <h3 id="0x00-前言"><a href="#0x00-前言" class="headerlink" title="0x00 前言"></a>0x00 前言</h3><p>终于有时间了，整理一下嵌入式硬件的东西，在过去的一个学期里选修了嵌入式课程，然后相对完整的了解了嵌入式开发过程，咱物联网专业比较好的一点就是可以结合软硬件，都可以了解，上学期还做了一些WSN ZigBee，RFID 的实验，当时觉得用不到，没想到，这次实训竟然也做嵌入式开发，也使用了ZigBee模块完成一些功能，感觉所有东西并不是绝对没用，多了解一点总是好的。</p>
+<h3 id="0x01-嵌入式入门"><a href="#0x01-嵌入式入门" class="headerlink" title="0x01 嵌入式入门"></a>0x01 嵌入式入门</h3><p>关于硬件的东西，之前几乎是从来没有接触，完全不懂什么SOC，也不知道什么MCU，更别说是做开发了，之前唯一对硬件感兴趣的就是树莓派，听说是一块很不错的板子，但由于各种情况，也没有入坑。知道这个学期选了嵌入式，然后因为要完成实验所以入坑了一块EK-TM4C123GXL 开发板，麻雀虽小五脏俱全，这块板子基本能够满足所有嵌入式的基本开发，用来学习还是很不错的。</p>
+<p>关于硬件的学习，其实最主要还是要了解硬件资源，熟悉硬件提供的功能，包括GPIO，时钟，中断等，这些都是最基本的，另外就是一些ADC，DAC，时钟频率，高低电平，这些也是要十分熟悉才行。硬件开发有很多东西是记不住的，所以学会查文档很重要的，学习路线可以大致为：看文档了解硬件资源–找案例照葫芦画瓢–网上查阅资料–查开发文档；有些东西不用刻意去记，用的时候去查就行。但构建思路，开发步骤是需要明确的，比如说要使用GPIO时要初始化寄存器，使用模块功能时要考虑时钟的影响，使用中断时要了解如何调用中断处理函数，如果有要连接传感器的话，还要参考传感器的资料，了解其电气特性等。总之，查资料，阅读资料，理解资料在硬件开发中尤为重要。</p>
+<h3 id="0x02-实训硬件开发"><a href="#0x02-实训硬件开发" class="headerlink" title="0x02 实训硬件开发"></a>0x02 实训硬件开发</h3><p>实训时使用的是CC2530，搭载了ZigBee模块，在开发中都是使用IAR软件，刚好和我们wsn实验ZigBee联系上了，不过我们在wsn实验中我只使用了ZigBee协议栈组网通信，而这次我是利用ZigBee通信来控制硬件功能，而硬件功能实现就是需要嵌入式开发的知识了，刚好把所学内容进行了结合，在嵌入式开发中，不同的硬件资源可能开发就有所不同，但大多数底层逻辑是相同的，所以重点是理解思路。但嵌入式开发仍然有很多烦人的问题，这些Bug出现的原因各种各样，有的是硬件本身故障，有的程序错误，甚至可能的电路连接错误，所以在开发中遇到Bug，排查问题方式方法很关键，我个人认为先从硬件开始检查，最后再检查软件程序，逐层排查是一个相对较好的思路。</p>
+<p>当将嵌入式硬件和网络连接起来后，功能开始就更强大了，当然问题出现几率也开始变大了，在物联网传感器硬件开发中，一般使用ZigBee进行硬件组网，网络协议是单独的且复杂的，很多时候我们在开发过程中是不允许修改协议栈的，都已经封装好的，我们需要的是理解代码，了解功能实现思路，然后再做简单的自定义开发，所以读代码也物联网硬件开发需要的能力。</p>
+<p>在硬件开发中调试是一个不得不进行的过程，而硬件开发的调试不像软件那么方便，它需要在开发板或是硬件资源中运行，这是一个比较繁琐的过程，构建，编译，烧录，运行，测试输出这是一个最基本的流程，也是一个相对花费时间的过程，所以想要提升开发效率，最好的办法是理解问题本质并细心的修改问题，而不是盲目的测试，企图用巧合来达到成功。</p>
+<h3 id="0x03-总结"><a href="#0x03-总结" class="headerlink" title="0x03 总结"></a>0x03 总结</h3><p>本来是准备写一篇详细嵌入式硬件开发的文章，把自己使用的TM4C123GXL 开发和CC2530开发时使用的核心技术，关键代码总结一下，后面发现硬件开发这玩意儿，只要理解了解很简单，实现起来也是多变的，没有一个很固定的标准，所以也不太好总结，也没太必要，下一次遇到是查资料就行。这次在完成项目时参考了很多网上的资料，学到很多东西，比如博客园的小蜜蜂老师和csdn的Bruceoxl老师，他们的博文很全面也很详细，给了我很大的帮助，同时也挺佩服他们能够输出那么多优质内容，应该向他们学习。</p>
+<p>写到这也要告一段落了，关于硬件嵌入式ZigBee开发，我究竟理解多少，掌握了多少，过段时间后我是否还能记起，这些都是无法量化和衡量的，只希望自己总结的方法能够适用于以后的问题。</p>
 
                 </div>
             </section>
@@ -219,14 +163,14 @@
     <div style="height: 4vw;width: 100%"></div>
     <nav id="gobottom" class="pagination">
         
-        <a class="prev-post" title="六月，感想" href="/2019/06/06/2019-06-06-my-feelings/">
-            ← 六月，感想
+        <a class="prev-post" title="VMware-Linux" href="/2019/07/11/2019-07-11-vmware-linux/">
+            ← VMware-Linux
         </a>
         
         <span class="prev-next-post">•</span>
         
-        <a class="next-post" title="关于前端学习的小总结" href="/2019/05/02/2019-05-02-study-html/">
-            关于前端学习的小总结 →
+        <a class="next-post" title="零碎技术栈" href="/2019/06/29/2019-06-29-tech-stack/">
+            零碎技术栈 →
         </a>
         
     </nav>
@@ -252,7 +196,7 @@
         </a>
     </div>
     <div class="toc-main">
-        <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-、命令行界面查看mysql-版本"><span class="toc-text">1 、命令行界面查看mysql 版本</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2、MySQL-和-MariaDB"><span class="toc-text">2、MySQL 和 MariaDB</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3、数据库存储引擎"><span class="toc-text">3、数据库存储引擎</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4、Navicat的帮助文档"><span class="toc-text">4、Navicat的帮助文档</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#5、sql-脚本的导入导出"><span class="toc-text">5、sql 脚本的导入导出</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#6、使用xmapp启动mysql"><span class="toc-text">6、使用xmapp启动mysql</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#7、root-和-非root的区别"><span class="toc-text">7、root 和 非root的区别</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#0x00-前言"><span class="toc-text">0x00 前言</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#0x01-嵌入式入门"><span class="toc-text">0x01 嵌入式入门</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#0x02-实训硬件开发"><span class="toc-text">0x02 实训硬件开发</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#0x03-总结"><span class="toc-text">0x03 总结</span></a></li></ol>
     </div>
 </div>
 
@@ -443,7 +387,7 @@
         </a>
     </div>
     <span class="floating-header-divider">&mdash;</span>
-    <div class="floating-header-title">关于Navicat for MySQL 的使用小结</div>
+    <div class="floating-header-title">Embedded-Hardware</div>
     <progress class="progress" value="0">
         <div class="progress-container">
             <span class="progress-bar"></span>

@@ -145,10 +145,10 @@
             
             <section class="post-full-content">
                 <div id="lightgallery" class="markdown-body">
-                    <h3 id="0x01-容器与虚拟机"><a href="#0x01-容器与虚拟机" class="headerlink" title="0x01 容器与虚拟机"></a>0x01 容器与虚拟机</h3><p>我们用的传统虚拟机如 <code>VMware</code> ， <code>VisualBox</code> 之类的需要模拟整台机器包括硬件，每台虚拟机都需要有自己的操作系统，虚拟机一旦被开启，预分配给它的资源将全部被占用。每一台虚拟机包括应用，必要的二进制和库，以及一个完整的用户操作系统。</p>
+                    <h3 id="容器与虚拟机"><a href="#容器与虚拟机" class="headerlink" title="容器与虚拟机"></a>容器与虚拟机</h3><p>我们用的传统虚拟机如 <code>VMware</code> ， <code>VisualBox</code> 之类的需要模拟整台机器包括硬件，每台虚拟机都需要有自己的操作系统，虚拟机一旦被开启，预分配给它的资源将全部被占用。每一台虚拟机包括应用，必要的二进制和库，以及一个完整的用户操作系统。</p>
 <p>而容器技术是和我们的宿主机共享硬件资源及操作系统，可以实现资源的动态分配。容器包含应用和其所有的依赖包，但是与其他容器共享内核。容器在宿主机操作系统中，在用户空间以分离的进程运行。容器技术是实现操作系统虚拟化的一种途径，可以让您在资源受到隔离的进程中运行应用程序及其依赖关系。</p>
 <p><code>Docker</code> 将应用程序与该程序的依赖，打包在一个文件里面。运行这个文件，就会生成一个虚拟容器。程序在这个虚拟容器里运行，就好像在真实的物理机上运行一样。有了 <code>Docker</code> ，就不用担心环境问题。</p>
-<h3 id="0x02-Docker的优势"><a href="#0x02-Docker的优势" class="headerlink" title="0x02 Docker的优势"></a>0x02 Docker的优势</h3><p><strong>Docker相比于传统虚拟化方式具有更多的优势：</strong></p>
+<h3 id="Docker的优势"><a href="#Docker的优势" class="headerlink" title="Docker的优势"></a>Docker的优势</h3><p><strong>Docker相比于传统虚拟化方式具有更多的优势：</strong></p>
 <ul>
 <li><code>docker</code> 启动快速属于秒级别。虚拟机通常需要几分钟去启动</li>
 <li><code>docker</code> 需要的资源更少， <code>docker</code> 在操作系统级别进行虚拟化， <code>docker</code> 容器和内核交互，几乎没有性能损耗，性能优于通过 <code>Hypervisor</code> 层与内核层的虚拟化</li>
@@ -165,29 +165,29 @@
 <thead>
 <tr>
 <th>特性</th>
-<th>容器</th>
+<th style="text-align:left">容器</th>
 <th>虚拟机</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>启动</td>
-<td>秒级</td>
+<td style="text-align:left">秒级</td>
 <td>分钟级</td>
 </tr>
 <tr>
 <td>硬盘使用</td>
-<td>一般为MB</td>
+<td style="text-align:left">一般为MB</td>
 <td>一般为GB</td>
 </tr>
 <tr>
 <td>性能</td>
-<td>接近原生</td>
+<td style="text-align:left">接近原生</td>
 <td>弱于</td>
 </tr>
 <tr>
 <td>系统支持量</td>
-<td>单机支持上千个容器</td>
+<td style="text-align:left">单机支持上千个容器</td>
 <td>一般是几十个</td>
 </tr>
 </tbody>
@@ -235,7 +235,7 @@
         </a>
     </div>
     <div class="toc-main">
-        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#0x01-容器与虚拟机"><span class="toc-text">0x01 容器与虚拟机</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#0x02-Docker的优势"><span class="toc-text">0x02 Docker的优势</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#容器与虚拟机"><span class="toc-text">容器与虚拟机</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Docker的优势"><span class="toc-text">Docker的优势</span></a></li></ol>
     </div>
 </div>
 
@@ -267,20 +267,24 @@
       
       
       <li>
+        <a href="/2019/07/11/2019-07-11-vmware-linux/">VMware-Linux</a>
+      </li>
+      
+      
+      
+      <li>
+        <a href="/2019/07/11/2019-07-11-embedded-hardware/">Embedded-Hardware</a>
+      </li>
+      
+      
+      
+      <li>
         <a href="/2019/06/29/2019-06-29-tech-stack/">零碎技术栈</a>
       </li>
       
       
       
-      <li>
-        <a href="/2019/06/17/2019-06-17-docker-study/">初识 Docker</a>
-      </li>
       
-      
-      
-      <li>
-        <a href="/2019/06/17/2019-06-17-regular-expression/">regular-expression</a>
-      </li>
       
       
       
@@ -353,7 +357,7 @@
 		<h3 class="read-next-card-header-title">Tag Cloud</h3>
 	</header>
 	<div class="read-next-card-content-ext">
-		<a href="/tags/2019/" style="font-size: 14px;">2019</a> <a href="/tags/Algorithm/" style="font-size: 14px;">Algorithm</a> <a href="/tags/C/" style="font-size: 14px;">C++</a> <a href="/tags/Docker/" style="font-size: 14px;">Docker</a> <a href="/tags/Git/" style="font-size: 14px;">Git</a> <a href="/tags/RISC/" style="font-size: 14px;">RISC</a> <a href="/tags/computer/" style="font-size: 14px;">computer</a> <a href="/tags/hexo/" style="font-size: 14px;">hexo</a> <a href="/tags/markdown/" style="font-size: 14px;">markdown</a> <a href="/tags/mysql/" style="font-size: 14px;">mysql</a> <a href="/tags/notes/" style="font-size: 14px;">notes</a> <a href="/tags/shell/" style="font-size: 14px;">shell</a> <a href="/tags/分享/" style="font-size: 24px;">分享</a> <a href="/tags/前端/" style="font-size: 14px;">前端</a> <a href="/tags/指令周期/" style="font-size: 14px;">指令周期</a> <a href="/tags/智博会/" style="font-size: 14px;">智博会</a> <a href="/tags/计算机/" style="font-size: 14px;">计算机</a>
+		<a href="/tags/2019/" style="font-size: 14px;">2019</a> <a href="/tags/Algorithm/" style="font-size: 14px;">Algorithm</a> <a href="/tags/C/" style="font-size: 14px;">C++</a> <a href="/tags/Docker/" style="font-size: 14px;">Docker</a> <a href="/tags/Git/" style="font-size: 14px;">Git</a> <a href="/tags/RISC/" style="font-size: 14px;">RISC</a> <a href="/tags/computer/" style="font-size: 14px;">computer</a> <a href="/tags/hexo/" style="font-size: 14px;">hexo</a> <a href="/tags/linux/" style="font-size: 14px;">linux</a> <a href="/tags/markdown/" style="font-size: 14px;">markdown</a> <a href="/tags/mysql/" style="font-size: 14px;">mysql</a> <a href="/tags/notes/" style="font-size: 14px;">notes</a> <a href="/tags/shell/" style="font-size: 14px;">shell</a> <a href="/tags/分享/" style="font-size: 24px;">分享</a> <a href="/tags/前端/" style="font-size: 14px;">前端</a> <a href="/tags/嵌入式/" style="font-size: 14px;">嵌入式</a> <a href="/tags/指令周期/" style="font-size: 14px;">指令周期</a> <a href="/tags/智博会/" style="font-size: 14px;">智博会</a> <a href="/tags/计算机/" style="font-size: 14px;">计算机</a>
 	</div>
 </article>
 
