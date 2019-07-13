@@ -186,6 +186,15 @@
 <p>Docker镜像是一个特殊的文件系统，除了提供容器运行时所需的程序、库、资源、配置等文件外，还包含了一些为运行时准备的一些配置参数（如匿名卷、环境变量、用户等）。Docker 设计时，就充分利用 Union FS 的技术，将其设计为分层存储的架构。镜像实际是由多层文件系统联合组成。镜像构建时，会一层层构建，前一层是后一层的基础。每一层构建完就不会再发生改变，后一层上的任何改变只发生在自己这一层。</p>
 <p>镜像（Image）和容器（Container）的关系，就像是面向对象程序设计中的类和实例一样，镜像是静态的定义，容器是镜像运行时的实体。容器可以被创建、启动、停止、删除、暂停等，容器的实质是进程，但与直接在宿主执行的进程不同，容器进程运行于属于自己的独立的命名空间。</p>
 <p>镜像构建完成后，可以很容易的在当前宿主上运行，但是，如果需要在其他服务器上使用这个镜像，我们就需要一个集中的存储、分发镜像的服务，Docker Registry 就是这样的服务。一个 Docker Registry中可以包含多个仓库（Repository）；每个仓库可以包含多个标签（Tag）；每个标签对应一个镜像。</p>
+<p>在上面分别介绍了docker的三个基本概念：Image(镜像)，Container(容器)，Repository(仓库)和C/S的架构。现在在详细记录一下这些组件协作运行容器的过程：</p>
+<ol>
+<li><code>Docker</code> 客户端执行 <code>docker run</code> 命令</li>
+<li><code>Dockerdaemon</code> 发现本地没有我们需要的镜像</li>
+<li><code>daemon</code> 从 <code>DockerHub</code> 下载镜像</li>
+<li>下载完成后，镜像被保存到本地</li>
+<li><code>Dockerdaemon</code> 启动容器</li>
+</ol>
+<p><code>Dockerdaemon</code> 是服务器组件，以 <code>Linux</code> 后台服务的方式运行，是 <code>Docker</code> 最核心的后台进程，我们也把它称为守护进程。它负责响应来自 <code>Docker Client</code> 的请求，然后将这些请求翻译成系统调用完成容器管理操作。</p>
 <h3 id="0x03-Docker-安装与使用"><a href="#0x03-Docker-安装与使用" class="headerlink" title="0x03 Docker 安装与使用"></a>0x03 Docker 安装与使用</h3><p>LXC （Linux Container）内核虚拟化技术，可以提供轻量级虚拟化，以便隔离进程和资源。</p>
 <p>Ubuntu12.04 安装Docker需要升级内核（Docker 在3.8内核下运行最佳，Ubuntu1204内核版本为3.2）</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span> install the backported kernel</span><br><span class="line">sudo apt-get update</span><br><span class="line">sudo apt-get install linux-image-generic-lts-raring linux-headers-generic-lts-raring</span><br><span class="line"><span class="meta">#</span> reboot</span><br><span class="line">sudo reboot</span><br></pre></td></tr></table></figure>
@@ -220,6 +229,28 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"># 查找 Docker Hub 上的 nginx 镜像</span><br><span class="line">docker search nginx</span><br><span class="line"></span><br><span class="line"># 拉取镜像</span><br><span class="line">docker pull nginx</span><br><span class="line"></span><br><span class="line"># 查看本地镜像</span><br><span class="line">docker images nginx</span><br><span class="line"></span><br><span class="line"># 启动一个Nginx容器实例</span><br><span class="line"># --name(容器名)、-p(端口映射)、-d(后台执行)</span><br><span class="line">docker run --name nginx-test -p 8080:80 -d nginx</span><br><span class="line"></span><br><span class="line"># 查看容器是否有在运行</span><br><span class="line">docker ps</span><br></pre></td></tr></table></figure>
 <p><img alt="img" class="post-img b-lazy" href="https://s2.ax1x.com/2019/07/13/Z4DLhd.md.png" data-src="https://s2.ax1x.com/2019/07/13/Z4DLhd.md.png"></p>
 <p>创建Nginx容器成功后，可以使用 ip + 端口号进行访问，Ubuntu系统可以直接使用127.0.0.1:端口号，如果是云服务器的话就是 ip+端口号，注意端口号要进行防火墙设置以保证可用。</p>
+<h3 id="0x05-Dockerfile"><a href="#0x05-Dockerfile" class="headerlink" title="0x05 Dockerfile"></a>0x05 Dockerfile</h3><p>除了上述的拉取镜像生成容器实例的基本方法，还可以使用<code>Dockerfile</code>来定义镜像创建容器，这里的<code>Dockerfile</code>非常类似Makefile 和 Linux下shell。<code>Dockerfile</code> 是由一行行命令语句组成，并且支持已 <code>#</code> 开头的注释行。一般来说，可以将 <code>Dockerfile</code> 分为四个部分：</p>
+<ol>
+<li><p>基础镜像(父镜像)信息指令 FROM</p>
+</li>
+<li><p>维护者信息指令 MAINTAINER</p>
+</li>
+<li><p>镜像操作指令 RUN 、 EVN 、 ADD 和 WORKDIR 等</p>
+</li>
+<li><p>容器启动指令 CMD 、 ENTRYPOINT 和 USER 等</p>
+</li>
+</ol>
+<p><strong>通过Dockerfile 构建Tomcat 镜像</strong></p>
+<p>创建目录tomcat,用于存放后面的相关东西</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"># webapps目录将映射为tomcat容器配置的应用程序目录、logs目录将映射为tomcat容器的日# 志目录、conf目录里的配置文件将映射为tomcat容器的配置文件</span><br><span class="line"></span><br><span class="line">mkdir -p ~/tomcat/webapps ~/tomcat/logs ~/tomcat/conf</span><br></pre></td></tr></table></figure>
+<p>进入创建的tomcat目录，创建Dockerfile</p>
+<figure class="highlight docker"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">FROM</span> openjdk:<span class="number">8</span>-jre</span><br><span class="line"></span><br><span class="line"><span class="keyword">ENV</span> CATALINA_HOME /usr/local/tomcat</span><br><span class="line"><span class="keyword">ENV</span> PATH $CATALINA_HOME/bin:$PATH</span><br><span class="line"><span class="keyword">RUN</span> mkdir -p "$CATALINA_HOME"</span><br><span class="line"><span class="keyword">WORKDIR</span> $CATALINA_HOME</span><br><span class="line"></span><br><span class="line"><span class="comment"># 可以直接访问 https://hub.docker.com/_/tomcat/</span></span><br><span class="line"><span class="comment"># 选择代码仓库，里面就有Dockerfile，</span></span><br><span class="line"><span class="comment"># 自己复制下来然后自定义修改就行</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">EXPOSE</span> <span class="number">8080</span></span><br><span class="line"><span class="keyword">CMD</span> ["catalina.sh", "run"]</span><br></pre></td></tr></table></figure>
+<p>通过Dockerfile创建一个镜像，并命名。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker build -t tomcat2.</span><br></pre></td></tr></table></figure>
+<p>创建完成后，我们可以在本地的镜像列表里查找到刚刚创建的镜像</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker images|grep tomcat2</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"># 运行容器</span><br><span class="line"># 将主机中当前目录下的test挂载到容器的/test</span><br><span class="line">docker run --name tomcat -p 8080:8080 -v $PWD/test:/usr/local/tomcat/webapps/test -d tomcat</span><br></pre></td></tr></table></figure>
+<h3 id="0x06-总结"><a href="#0x06-总结" class="headerlink" title="0x06 总结"></a>0x06 总结</h3><p>至此就把Docker的一些基本的概念和使用进行了简单总结，看了一些资料，自己对Docker也有了一些了解和认识，特别是它设计一个理念和架构，对于复杂的应用开发部署真的做到了简单高效，上面总结了Docker应用的优势和基础的架构，自己也亲自装了Docker并创建了一些容器实例，熟悉了Docker的一些常用指令和使用Dockerfile创建Image，也算是一个简单的入门吧。因为接触并不是很多，至于它的具体应用场景个人还是不太清楚，但个人认为应该是很有应用前景的。</p>
 
                 </div>
             </section>
@@ -263,7 +294,7 @@
         </a>
     </div>
     <div class="toc-main">
-        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#0x00-容器与虚拟机"><span class="toc-text">0x00 容器与虚拟机</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#0x01-Docker的优势"><span class="toc-text">0x01 Docker的优势</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#0x02-Docker基础架构"><span class="toc-text">0x02 Docker基础架构</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#0x03-Docker-安装与使用"><span class="toc-text">0x03 Docker 安装与使用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#0x04-Docker-常用命令"><span class="toc-text">0x04 Docker 常用命令</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#0x00-容器与虚拟机"><span class="toc-text">0x00 容器与虚拟机</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#0x01-Docker的优势"><span class="toc-text">0x01 Docker的优势</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#0x02-Docker基础架构"><span class="toc-text">0x02 Docker基础架构</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#0x03-Docker-安装与使用"><span class="toc-text">0x03 Docker 安装与使用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#0x04-Docker-常用命令"><span class="toc-text">0x04 Docker 常用命令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#0x05-Dockerfile"><span class="toc-text">0x05 Dockerfile</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#0x06-总结"><span class="toc-text">0x06 总结</span></a></li></ol>
     </div>
 </div>
 
