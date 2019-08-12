@@ -17,7 +17,7 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-	<title>指令周期的基本概念 | 格子小七</title>
+	<title>秋招之前 | 格子小七</title>
 
 	<meta name="HandheldFriendly" content="True">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
@@ -45,14 +45,14 @@
 
 	<meta property="og:site_name" content="格子小七">
 	<meta property="og:type" content="article">
-	<meta property="og:title" content="指令周期的基本概念 | 格子小七">
+	<meta property="og:title" content="秋招之前 | 格子小七">
 	<meta property="og:description" content>
-	<meta property="og:url" content="http://smallseven.top/2019/01/02/2019-01-02-instructions-cycle/">
+	<meta property="og:url" content="http://smallseven.top/2019/08/12/2019-08-12-before-recruitment/">
 
 	
-	<meta property="article:published_time" content="2019-01-02T19:01:00+08:00"> 
+	<meta property="article:published_time" content="2019-08-12T09:08:00+08:00"> 
 	<meta property="article:author" content="格子小七">
-	<meta property="article:published_first" content="格子小七, /2019/01/02/2019-01-02-instructions-cycle/">
+	<meta property="article:published_first" content="格子小七, /2019/08/12/2019-08-12-before-recruitment/">
 	
 </head>
 <body class="post-template">
@@ -133,44 +133,36 @@
     <div class="inner">
         <header class="post-full-header">
             <section class="post-full-meta">
-                <time class="post-full-meta-date" datetime="2019-01-02T11:46:52.000Z" itemprop="datePublished">
-                    2019-01-2
+                <time class="post-full-meta-date" datetime="2019-08-12T01:01:05.000Z" itemprop="datePublished">
+                    2019-08-12
                 </time>
                 
                 <span class="date-divider">/</span>
                 
-                <a href="/categories/计算机/">计算机</a>&nbsp;&nbsp;
+                <a href="/categories/随笔集/">随笔集</a>&nbsp;&nbsp;
                 
                 
             </section>
-            <h1 class="post-full-title">指令周期的基本概念</h1>
+            <h1 class="post-full-title">秋招之前</h1>
         </header>
         <article class="post-full no-image">
             
             <section class="post-full-content">
                 <div id="lightgallery" class="markdown-body">
-                    <p>最近一直在复习计算机组成原理，好多知识点都不是很清楚，PPT上写的也比较模糊，特别是讲解控制器和指令的部分，好多图演示的不太清楚。还好我发现了一篇文章，它把指令周期的基本概念和指令周期的数据流都进行了详细的讲解。我觉得写的很好，又怕自己以后不记得了，想看时找不到，所以就把它转载了。</p>
-<p>原文地址：<a href="http://media4.open.com.cn/l603/fushi/0903/jisuanjzcyl/web/lesson/char8/j2.htm?tdsourcetag=s_pctim_aiomsg" target="_blank" rel="noopener">http://media4.open.com.cn/l603/fushi/0903/jisuanjzcyl/web/lesson/char8/j2.htm?tdsourcetag=s_pctim_aiomsg</a></p>
-<h2 id="第二节-指令周期"><a href="#第二节-指令周期" class="headerlink" title="第二节　指令周期"></a>第二节　指令周期</h2><h3 id="一、指令周期的基本概念"><a href="#一、指令周期的基本概念" class="headerlink" title="一、指令周期的基本概念"></a>一、指令周期的基本概念</h3><p>CPU每取出并执行一条指令所需的全部时间叫指令周期，也即CPU完成一条指令的时间叫指令周期，如下图所示。图中的取指阶段完成取指令和分析指令的操作，又叫取指周期；执行阶段完成执行指令的操作，又叫执行周期。在大多数情况下， CPU就是按取指－执行－再取指－再执行……的顺序自动工作的。</p>
-<p><img alt="img" class="post-img b-lazy" href="http://media4.open.com.cn/l603/fushi/0903/jisuanjzcyl/web/lesson/char8/image/s4.gif" data-src="http://media4.open.com.cn/l603/fushi/0903/jisuanjzcyl/web/lesson/char8/image/s4.gif"></p>
-<p>由于各种指令操作功能不同，因此各种指令的指令周期是不相同的。例如无条件转移指令JMP X， 在执行阶段不需访问主存，而且操作简单，完全可以在取指阶段的后期将转移地址X送至PC， 以达到转移的目的。这样， JMP X指令的指令周期就是取指周期。又如一地址格式的加法指令ADD X，在执行阶段首先要从X所指示的存储单元中取出操作数，然后和ACC的内容相加，结果存于ACC，故这种指令的指令周期在取指和执行阶段各访问一次存储器，其指令周期就包括两个存取周期。再如乘法指令，其执行阶段所要完成的操作比加法指令多得多，故它的执行周期超过了加法指令，如下图所示。</p>
-<p><img alt="img" class="post-img b-lazy" href="http://media4.open.com.cn/l603/fushi/0903/jisuanjzcyl/web/lesson/char8/image/s5.gif" data-src="http://media4.open.com.cn/l603/fushi/0903/jisuanjzcyl/web/lesson/char8/image/s5.gif"></p>
-<p>此外，当遇到间接寻址的指令时，由于指令字中只给出操作数有效地址的地址，因此，为了取出操作数，需先访问一次存储器，取出有效地址，然后再访问存储器，取出操作数。这样，间接寻址的指令周期就包括取指周期、间址周期和执行周期三个阶段，其中间址周期用于取操作数的有效地址，因此间址周期介于取指周期和执行周期之间，如下图所示。</p>
-<p><img alt="img" class="post-img b-lazy" href="http://media4.open.com.cn/l603/fushi/0903/jisuanjzcyl/web/lesson/char8/image/s6.gif" data-src="http://media4.open.com.cn/l603/fushi/0903/jisuanjzcyl/web/lesson/char8/image/s6.gif"></p>
-<p>由第五章可知，当CPU采用中断方式实现主机与I/O交换信息时，CPU在每条指令执行阶段结束前， 都要发中断查询信号，以检测是否有某个I/O提出中断请求。如果有请求，CPU则要进入中断响应阶段，又称中断周期。在这阶段， CPU必须将程序断点保存到存储器中。这样，一个完整的指令周期应包括取指、间址、执行和中断4个子周期，如下图所示。由于间址周期和中断周期不一定包含在每个指令周期内，故图中用菱形框判断。</p>
-<p><img alt="img" class="post-img b-lazy" href="http://media4.open.com.cn/l603/fushi/0903/jisuanjzcyl/web/lesson/char8/image/s7.gif" data-src="http://media4.open.com.cn/l603/fushi/0903/jisuanjzcyl/web/lesson/char8/image/s7.gif"></p>
-<p>总之，上述4个周期都有CPU访存操作， 只是访存的目的不同。取指周期是为了取指令，间址周期是为了取有效地址，执行周期是为了取操作数(当指令为访存指令时)，中断周期是为了保存程序断点。这4个周期又可叫CPU的工作周期，为了区别它们，在CPU内可设置4个标志触发器，如下图所示。</p>
-<p><img alt="img" class="post-img b-lazy" href="http://media4.open.com.cn/l603/fushi/0903/jisuanjzcyl/web/lesson/char8/image/s8.gif" data-src="http://media4.open.com.cn/l603/fushi/0903/jisuanjzcyl/web/lesson/char8/image/s8.gif"></p>
-<p>图中的FE、IND，EX和INT分别对应取指、间址、执行和中断4个周期，并以“1”状态表示有效；它们分别由1→FE、1→IND、1→EX和1→INT4个信号控制。<br>设置CPU工作周期标志触发器对设计控制单元十分有利。 例如，在取指阶段，只要设置取指周期标志触发器FE为1， 由它控制取指阶段的各个操作，便获得对任何一条指令的取指命令序列。又如在间接寻址时，间址次数可由间址周期标志触发器IND确定，当它为“0”状态时，表示间址结束。再如对于一些执行周期不访存的指令(如转移指令，寄存器类型指令)，同样可以用它们的操作码与取指周期标志触发器的状态相“与”，作为相应微操作的控制条件。</p>
-<h3 id="二、指令周期的数据流"><a href="#二、指令周期的数据流" class="headerlink" title="二、指令周期的数据流"></a>二、指令周期的数据流</h3><p>为了便于分析指令周期中的数据流，假设CPU中有存储器地址寄存器MAR、存储器数据寄存器MDR、程序计数器PC和指令寄存器IR。</p>
-<h4 id="1-取指周期的数据流"><a href="#1-取指周期的数据流" class="headerlink" title="1. 取指周期的数据流"></a>1. 取指周期的数据流</h4><p><img alt="img" class="post-img b-lazy" href="http://media4.open.com.cn/l603/fushi/0903/jisuanjzcyl/web/lesson/char8/image/s9.gif" data-src="http://media4.open.com.cn/l603/fushi/0903/jisuanjzcyl/web/lesson/char8/image/s9.gif"></p>
-<p>上图是取指周期的数据流。PC中存放现行指令的地址，该地址送到MAR并送至地址总线， 然后由控制部件CU向存储器发出读命令，使对应MAR所指单元的内容(指令)经数据总线送至MDR，再送至IR，与此同时CU控制PC内容加1，形成下一条指令的地址。</p>
-<h4 id="2-间址周期的数据流"><a href="#2-间址周期的数据流" class="headerlink" title="2. 间址周期的数据流"></a>2. 间址周期的数据流</h4><p><img alt="img" class="post-img b-lazy" href="http://media4.open.com.cn/l603/fushi/0903/jisuanjzcyl/web/lesson/char8/image/s10.gif" data-src="http://media4.open.com.cn/l603/fushi/0903/jisuanjzcyl/web/lesson/char8/image/s10.gif"></p>
-<p>间址周期的数据流如上图所示。一旦取指周期结束，CU便检查IR中的内容，以确定其是否有间址操作， 如果需间址操作，则MDR中指示形式地址的右N位将被送至MAR，又送至地址总线，此后CU向存储器发读命令，并获取有效地址并存至MDR。</p>
-<h4 id="3-执行周期的数据流"><a href="#3-执行周期的数据流" class="headerlink" title="3. 执行周期的数据流"></a>3. 执行周期的数据流</h4><p>由于不同的指令在执行周期的操作不同，因此执行周期的数据流是多种多样的， 可能涉及到CPU内部寄存器间的数据传送、或对存储器(或I/O)进行读写操作、或对ALU的操作，因此，无法用统一的数据流图表示。</p>
-<h4 id="4-中断周期的数据流"><a href="#4-中断周期的数据流" class="headerlink" title="4. 中断周期的数据流"></a>4. 中断周期的数据流</h4><p>CPU进入中断周期要完成一系列操作， 其中PC当前的内容必须保存起来，以待执行完中断服务程序后可准确返回到该程序的间断处，这一操作的数据流如下图所示。</p>
-<p><img alt="img" class="post-img b-lazy" href="http://media4.open.com.cn/l603/fushi/0903/jisuanjzcyl/web/lesson/char8/image/s11.gif" data-src="http://media4.open.com.cn/l603/fushi/0903/jisuanjzcyl/web/lesson/char8/image/s11.gif"></p>
-<p>图中由CU把用于保存程序断点的存储器特殊地址（如堆栈指针的内容）送往MAR，并送到地址总线上， 同时将PC的内容（程序断点）送到MDR，并命令存储器写，最终使程序断点经数据总线存入存储器。此外，还需将中断服务程序的入口地址送至PC，为下一个指令周期的取指周期作好准备。</p>
+                    <p>接近八月中旬，秋招也陆陆续续的开始了。回想自己的春招经历，也是惨目忍睹，由于缺乏准备和自身能力的欠缺，错失了很多很好的机会。春招的试错，为秋招的准备提供了一个很好的指导，通过自己近段时间的学习和查缺补漏，技术栈和基础知识都得到了提升和巩固。但面对秋招，我觉得还是有很大的欠缺，下面就总结一下自己近段时间所学以及要努力提升的东西。</p>
+<p>从暑假实习结束回到学校，首先将上个学过的课程内容进行了简单的整理总结，因为上个学期的很多课程都还是比较重要，比如数据库，Java等都是自己将来工作中会常常使用的，嵌入式和计算机体系结构这些课程是对计算有更深入的了解，在之前的几篇博文中也总结了自己通过课程学习的所思所感所获。我们学的很多东西都很基础，对于自己职业发展也并没有很明显的帮助，所以将很多关键性的东西我都将其总结并同步到Github上了，如果以后涉及到了的话方便查看。</p>
+<p>总结春招的失误的教训，很多原因是由于基础不劳造成的，所以花费了一些时间来巩固基础的内容，包括操作系统，计算机网络，还有数据结构和算法。回顾了之前记录的笔记和参考了网上的一些内容，把计算机网路和操作系统的核心内容提取了出来，并构建了自己的Learning Notes（<a href="https://smallseven.top/mkdocs-notes/">https://smallseven.top/mkdocs-notes/</a>）。花费时间比较多的是数据结构和算法，之前学习的时候只是了解了大致的思想，并没有通过编程去实现它，这次通过Java编程实现了常用的排序算法和一些基础的数据结构，对这些知识又有了新的认识。</p>
+<p>关于Java的基础，将《Java基础教程》过了一遍，了解了一些不常用的方法和工具包。《Java编程思想》这本书写得比较详细深入，只看了几章自己觉得欠缺的内容。另外《Java数据结构和算法》基本上看完一遍，并把一些例子实现了。为了拓展内容还专门看了一些清华邓俊辉的数据结构，不愧是大师讲的内容，思路惊奇并且理论依据充足，记忆最深的是在讲Hash时，关于Hash函数的设计和减少冲突的算法就讲了很多种，并且都进行性能分析和对比，让人受益匪浅，如果有时间可以深入的了解一下。为了查缺补漏快速的过了一遍清华郑莉的Java基础课程，内容比较简单但还是有一些额外的收获，比如了解了更多关于Object类，继承多态，抽象类等方面的东西。通过对基础的复习，很多内容得到了巩固，最缺乏的就是练习了。</p>
+<p>关于Java Web开发的学习，学习过程并没有很清楚的路线，这也正是我比较担心的东西，Java后台开发涉及的东西很多，如果每一样都要学会才去上手实践，这大概可能不太现实，所以自己零零碎碎的学了一些东西，首先把SpringMVC框架的底层内容了解了一下，其次是将程序猿DD的SpringBoot的基础教程看了一遍。看完之后感觉学到了东西，又感觉什么也没学到，自己也很方。关于框架的学习还真得找大佬取取经。另外，还看了《深入理解Java虚拟机》，对于其中的Java内存模型，垃圾回收有了更深入的认识。至于Java的设计模式还没有看，但对OOP的设计原则有了一些了解。</p>
+<p>关于自己的技术栈，大致应该是以Java语言为核心的后端开发为主，去学习了解更多框架，熟悉业务流程，前后端分离以及近些年前端的崛起，后端也越来越苦逼，总有学不完的框架，而这些框架大多为了提高开发效率而屏蔽了底层实现细节，这对于开发人员是好是坏？自己的技术路线该如何选择，上天还是入地，这真是一个值得思考的问题。对于现在我自己的技术能力对于强大的后端开发而言，真的是连入门都算不上，这一点我自己十分清楚。对于一个应届生而言，大概其核心竞争力就是学习能力和专业基础知识，还有各方面的综合软实力，对于技术能力可能并不是企业关注的重点，但技术仍可能也是衡量一个人学习能力的一个重要指标，至少我认为。</p>
+<p>说了那么多，还是简单的列一下计划吧：</p>
+<ul>
+<li>抓紧时间弄几个有技术含量的项目，首先是巩固自己的知识，其次计算机本来就是实践出真知的一门学科，Coding是最基础的。尽量挖掘技术深度，这是一个区别于大数人的好办法，熟练精通某项技能是有必要的，而不是单纯的了解一些东西。</li>
+<li>结果才是反映能力的核心，做事尽量以结果为导向，有明确的目标才更容易坚持，过程啥的自己体会就够了。经常给自己一些正反馈，小小的成就感是很有必要的，尝试一些小的东西并做到完美，给自己一些正反馈会更加有动力。</li>
+<li>适当的压力是有必要的，经常做一些To Do List不仅可以提高效率还可以驱动自己，我现在已经开始了TWIL计划，记录每周所学，另外还计划每周至少一篇技术文章，花费一些时间，坚持做一件小事。</li>
+<li>警惕注意力劫持，这是最近了解到的一个词语，说的是很多信息流劫持了我们的注意力，会导致工作效率下降。所以应该注意这一点，自己的计划是主动屏蔽一些不相关的信息流，控制自己的好奇清晰，减少刻意强迫的行为。</li>
+</ul>
+<p>这是写在秋招之前的一篇小的总结，也安排了一些适当的计划。希望自己可以身体力行，做事时能够沉得下心，多一些专注力，一步一个脚印的来。保持积极良好的心态，秋招加油！</p>
 
                 </div>
             </section>
@@ -181,14 +173,10 @@
     <div style="height: 4vw;width: 100%"></div>
     <nav id="gobottom" class="pagination">
         
-        <a class="prev-post" title="Hexo + github page + markdown 搭建静态博客" href="/2019/01/12/2019-01-12-github-page/">
-            ← Hexo + github page + markdown 搭建静态博客
-        </a>
-        
         <span class="prev-next-post">•</span>
         
-        <a class="next-post" title="2019，加油" href="/2019/01/01/2019-01-01-planning-study/">
-            2019，加油 →
+        <a class="next-post" title="Java Web开发入门总结篇" href="/2019/07/24/2019-07-24-learn-spring/">
+            Java Web开发入门总结篇 →
         </a>
         
     </nav>
@@ -214,7 +202,7 @@
         </a>
     </div>
     <div class="toc-main">
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#第二节-指令周期"><span class="toc-text">第二节　指令周期</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#一、指令周期的基本概念"><span class="toc-text">一、指令周期的基本概念</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#二、指令周期的数据流"><span class="toc-text">二、指令周期的数据流</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-取指周期的数据流"><span class="toc-text">1. 取指周期的数据流</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-间址周期的数据流"><span class="toc-text">2. 间址周期的数据流</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-执行周期的数据流"><span class="toc-text">3. 执行周期的数据流</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-中断周期的数据流"><span class="toc-text">4. 中断周期的数据流</span></a></li></ol></li></ol></li></ol>
+        
     </div>
 </div>
 
@@ -413,7 +401,7 @@
         </a>
     </div>
     <span class="floating-header-divider">&mdash;</span>
-    <div class="floating-header-title">指令周期的基本概念</div>
+    <div class="floating-header-title">秋招之前</div>
     <progress class="progress" value="0">
         <div class="progress-container">
             <span class="progress-bar"></span>
