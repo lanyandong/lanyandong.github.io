@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang>
+
+
+
+
+
+
+
+<head>
+	
+	
+	<link rel="stylesheet" href="/css/allinone.min.css">
+
+	
+
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+	<title>利用Struts+Hibernate构建学生管理系统遇到的一些问题 | 格子小七</title>
+
+	<meta name="HandheldFriendly" content="True">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+	<meta name="generator" content="hexo">
+	<meta name="author" content="格子小七">
+	<meta name="description" content>
+
+	
+	<meta name="keywords" content>
+	
+
+	
+	<link rel="shortcut icon" href="https://s2.ax1x.com/2019/07/25/eZxb4O.th.jpg">
+	<link rel="apple-touch-icon" href="https://s2.ax1x.com/2019/07/25/eZxb4O.th.jpg">
+	
+
+	
+	<meta name="theme-color" content="#3c484e">
+	<meta name="msapplication-TileColor" content="#3c484e">
+	
+
+	
+
+	
+
+	<meta property="og:site_name" content="格子小七">
+	<meta property="og:type" content="article">
+	<meta property="og:title" content="利用Struts+Hibernate构建学生管理系统遇到的一些问题 | 格子小七">
+	<meta property="og:description" content>
+	<meta property="og:url" content="http://smallseven.top/2019/08/18/2019-08-18-ssh-test/">
+
+	
+	<meta property="article:published_time" content="2019-08-18T21:08:00+08:00"> 
+	<meta property="article:author" content="格子小七">
+	<meta property="article:published_first" content="格子小七, /2019/08/18/2019-08-18-ssh-test/">
+	
+</head>
+<body class="post-template">
+	<div class="site-wrapper">
+		
+
+
+
+
+<header class="site-header outer" style="z-index: 999">
+    <div class="inner">
+        
+<nav class="site-nav"> 
+    <div class="site-nav-left">
+        <ul class="nav">
+            <li>
+                
+                <a href="/" title="Home">HOME</a>
+                
+            </li>
+            
+            
+            <li>
+                <a href="/archives" title="ARCHIVES">ARCHIVES</a>
+            </li>
+            
+            <li>
+                <a href="/about" title="ABOUT">ABOUT</a>
+            </li>
+            
+            <li>
+                <a href="/atom.xml" title="RSS">RSS</a>
+            </li>
+            
+            
+        </ul> 
+    </div>
+    
+    <div class="search-button">
+        <a href="#search" class="subscribe-button" style="margin: 0 10px;">Search ...</a>
+    </div>
+     
+    <div class="site-nav-right">
+        
+        <a href="#search" class="subscribe-button" style="margin: 0 10px;">Search ...</a>
+         
+        
+<div class="social-links">
+    
+    
+    <a class="social-link" title="github" href="https://github.com/ydlan" target="_blank" rel="noopener">
+        <svg viewbox="0 0 1049 1024" xmlns="http://www.w3.org/2000/svg"><path d="M524.979332 0C234.676191 0 0 234.676191 0 524.979332c0 232.068678 150.366597 428.501342 358.967656 498.035028 26.075132 5.215026 35.636014-11.299224 35.636014-25.205961 0-12.168395-0.869171-53.888607-0.869171-97.347161-146.020741 31.290159-176.441729-62.580318-176.441729-62.580318-23.467619-60.841976-58.234462-76.487055-58.234463-76.487055-47.804409-32.15933 3.476684-32.15933 3.476685-32.15933 53.019436 3.476684 80.83291 53.888607 80.83291 53.888607 46.935238 79.963739 122.553122 57.365291 152.97411 43.458554 4.345855-33.897672 18.252593-57.365291 33.028501-70.402857-116.468925-12.168395-239.022047-57.365291-239.022047-259.012982 0-57.365291 20.860106-104.300529 53.888607-140.805715-5.215026-13.037566-23.467619-66.926173 5.215027-139.067372 0 0 44.327725-13.906737 144.282399 53.888607 41.720212-11.299224 86.917108-17.383422 131.244833-17.383422s89.524621 6.084198 131.244833 17.383422C756.178839 203.386032 800.506564 217.29277 800.506564 217.29277c28.682646 72.1412 10.430053 126.029806 5.215026 139.067372 33.897672 36.505185 53.888607 83.440424 53.888607 140.805715 0 201.64769-122.553122 245.975415-239.891218 259.012982 19.121764 16.514251 35.636014 47.804409 35.636015 97.347161 0 70.402857-0.869171 126.898978-0.869172 144.282399 0 13.906737 9.560882 30.420988 35.636015 25.205961 208.601059-69.533686 358.967656-265.96635 358.967655-498.035028C1049.958663 234.676191 814.413301 0 524.979332 0z"/></svg>
+    </a>
+    
+    
+    <a class="social-link" title="facebook" href="https://facebook" target="_blank" rel="noopener">
+        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 32 32"><path d="M19 6h5V0h-5c-3.86 0-7 3.14-7 7v3H8v6h4v16h6V16h5l1-6h-6V7c0-.542.458-1 1-1z"/></svg>
+
+    </a>
+    
+    
+    <a class="social-link" title="twitter" href="https://twitter.com" target="_blank" rel="noopener">
+        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 32 32"><path d="M30.063 7.313c-.813 1.125-1.75 2.125-2.875 2.938v.75c0 1.563-.188 3.125-.688 4.625a15.088 15.088 0 0 1-2.063 4.438c-.875 1.438-2 2.688-3.25 3.813a15.015 15.015 0 0 1-4.625 2.563c-1.813.688-3.75 1-5.75 1-3.25 0-6.188-.875-8.875-2.625.438.063.875.125 1.375.125 2.688 0 5.063-.875 7.188-2.5-1.25 0-2.375-.375-3.375-1.125s-1.688-1.688-2.063-2.875c.438.063.813.125 1.125.125.5 0 1-.063 1.5-.25-1.313-.25-2.438-.938-3.313-1.938a5.673 5.673 0 0 1-1.313-3.688v-.063c.813.438 1.688.688 2.625.688a5.228 5.228 0 0 1-1.875-2c-.5-.875-.688-1.813-.688-2.75 0-1.063.25-2.063.75-2.938 1.438 1.75 3.188 3.188 5.25 4.25s4.313 1.688 6.688 1.813a5.579 5.579 0 0 1 1.5-5.438c1.125-1.125 2.5-1.688 4.125-1.688s3.063.625 4.188 1.813a11.48 11.48 0 0 0 3.688-1.375c-.438 1.375-1.313 2.438-2.563 3.188 1.125-.125 2.188-.438 3.313-.875z"/></svg>
+
+    </a>
+    
+    
+    
+    
+</div>
+    </div>
+</nav>
+    </div>
+</header>
+
+
+<main id="site-main" class="site-main outer" role="main">
+    <div class="inner">
+        <header class="post-full-header">
+            <section class="post-full-meta">
+                <time class="post-full-meta-date" datetime="2019-08-18T13:51:56.000Z" itemprop="datePublished">
+                    2019-08-18
+                </time>
+                
+                <span class="date-divider">/</span>
+                
+                <a href="/categories/JavaEE/">JavaEE</a>&nbsp;&nbsp;
+                
+                
+            </section>
+            <h1 class="post-full-title">利用Struts+Hibernate构建学生管理系统遇到的一些问题</h1>
+        </header>
+        <article class="post-full no-image">
+            
+            <section class="post-full-content">
+                <div id="lightgallery" class="markdown-body">
+                    <p>私以为在学习过程中多一些BUG是有好处的，通过BUG可以学习很多新的东西，以及解决问题方法。当然遇到BUG首先应该仔细看报错信息，然后准确定位问题，不要盲目的百度检索。下面就来记录一下利用Struts+Hibernate构建学生管理系统遇到的一些问题，如果以后出现类似问题，方便查阅。</p>
+<h3 id="1-jar包配置问题"><a href="#1-jar包配置问题" class="headerlink" title="1. jar包配置问题"></a>1. jar包配置问题</h3><p>本次项目的开发环境为：Struts2.3 + hibernate3.0 + MySQL5.0，由于使用的是Eclipse，并没有使用Maven进行项目构建，所以所有的环境和需要的jar都需要手动配置。项目需要导入需要的核心jar包，包括：hibernate-core包，struts2-core包，mysql驱动包 junit单元测试包。</p>
+<p>所需要的jar包，大多可通过百度查的官方下载地址（<a href="https://mvnrepository.com/" target="_blank" rel="noopener">https://mvnrepository.com/</a>），下载需要的jar，然后导入到项目的WEB-INF目录下的lib目录中。</p>
+<h3 id="2-配置struts环境"><a href="#2-配置struts环境" class="headerlink" title="2. 配置struts环境"></a>2. 配置struts环境</h3><p>配置struts只需要简单的两部：</p>
+<ol>
+<li>修改web.xml, 配置过滤器。这里需要弄清楚struts使用的版本。</li>
+<li>创建struts.xml 并将文件保存在Java Resources 下的src目录下，struts.xml 是用来拦截请求转发至对应Action的，所以要完成Action注册。</li>
+</ol>
+<p>下面是一个简单的struts.xml配置例子：</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span></span><br><span class="line"><span class="meta">&lt;!DOCTYPE struts PUBLIC</span></span><br><span class="line"><span class="meta">        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"</span></span><br><span class="line"><span class="meta">        "http://struts.apache.org/dtds/struts-2.0.dtd"&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">struts</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- Struts xml的配置文件 --&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- 所有匹配*.action的请求都由struts2处理 --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">constant</span> <span class="attr">name</span>=<span class="string">"struts.action.extension"</span> <span class="attr">value</span>=<span class="string">"action,,"</span> /&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- 是否启用开发模式 --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">constant</span> <span class="attr">name</span>=<span class="string">"struts.devMode"</span> <span class="attr">value</span>=<span class="string">"true"</span> /&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">package</span> <span class="attr">name</span>=<span class="string">"default"</span> <span class="attr">extends</span>=<span class="string">"struts-default"</span> <span class="attr">namespace</span>=<span class="string">"/"</span>&gt;</span></span><br><span class="line">        <span class="comment">&lt;!-- 如果不指定method，那么默认方法是execute--&gt;</span></span><br><span class="line">        <span class="comment">&lt;!--name:Action类的名字，具有唯一性，页面上通过name来访问Action类 --&gt;</span></span><br><span class="line"></span><br><span class="line">        <span class="tag">&lt;<span class="name">action</span> <span class="attr">name</span>=<span class="string">"test"</span> <span class="attr">class</span>=<span class="string">"test"</span> <span class="attr">method</span>=<span class="string">"test"</span>&gt;</span></span><br><span class="line">            <span class="comment">&lt;!-- 配置结果集 :name属性的值一定要与execute方法的返回值一致--&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">result</span> <span class="attr">name</span>=<span class="string">"test"</span>&gt;</span>test.jsp<span class="tag">&lt;/<span class="name">result</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">action</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">package</span>&gt;</span></span><br><span class="line">    </span><br><span class="line"><span class="tag">&lt;/<span class="name">struts</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h3 id="3-hibernate相关配置"><a href="#3-hibernate相关配置" class="headerlink" title="3. hibernate相关配置"></a>3. hibernate相关配置</h3><p>创建hibernate.cfg.xml文件,并将文件保存在Java Resources 下的src目录下。配置文件包括两个核心部分：一个是property属性，主要配置的是数据库的链接。另外一个是mapping属性，指定关联的 .hbm.xml文件。</p>
+<p>另外指定currentSession()方法所得到的Session由谁来跟踪管理，thread指Session由当前线程来跟踪管理，这是一种事务配置的方式，实质上是只当前session通过当前执行的线程来跟踪和界定。</p>
+<p>hibernate还有一个很牛的feature就是可以用HQL，这是完全可以把查询映射到你OO模型的查询语言，我们可以不用过多关注SQL的编写，而更关注于数据和数据、对象和对象之间的关系。</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span></span><br><span class="line"><span class="meta">&lt;!DOCTYPE hibernate-configuration PUBLIC</span></span><br><span class="line"><span class="meta">		"-//Hibernate/Hibernate Configuration DTD 3.0//EN"</span></span><br><span class="line"><span class="meta">		"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd"&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">hibernate-configuration</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">session-factory</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"connection.username"</span>&gt;</span>root<span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"connection.password"</span>&gt;</span>root<span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"connection.driver_class"</span>&gt;</span>com.mysql.jdbc.Driver<span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"connection.url"</span>&gt;</span>jdbc:mysql://localhost:3306/studentms?useUnicode=true&amp;amp;characterEncoding=utf-8<span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"dialect"</span>&gt;</span>org.hibernate.dialect.MySQLDialect<span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br><span class="line">		<span class="comment">&lt;!-- 执行操作时是否在控制台打印SQL --&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"show_sql"</span>&gt;</span>true<span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"format_sql"</span>&gt;</span>true<span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br><span class="line">        	<span class="comment">&lt;!-- 指定自动生成数据表的策略 --&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"hbm2ddl.auto"</span>&gt;</span>update<span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br><span class="line">        	<span class="comment">&lt;!-- 指定currentSession()方法所得到的Session由谁来跟踪管理，thread指Session由当前线程来跟踪管理 --&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"hibernate.current_session_context_class"</span>&gt;</span>thread<span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br><span class="line">		<span class="comment">&lt;!-- 指定关联的 .hbm.xml文件 --&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">mapping</span> <span class="attr">resource</span>=<span class="string">"entity/Students.hbm.xml"</span>/&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">mapping</span> <span class="attr">resource</span>=<span class="string">"entity/Users.hbm.xml"</span>/&gt;</span></span><br><span class="line">	<span class="tag">&lt;/<span class="name">session-factory</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">hibernate-configuration</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>关于实体和表的映射，需要生成相关.hbm.xml映射文件，用于向Hibernate提供关于将对象持久化到关系数据库中的信息，持久化对象的映射定义可全部存储在同一个映射文件中，也可将每个对象的映射定义存储在独立的文件中。后一种方法较好，因为将大量持久化类的映射定义存储在一个文件中比较麻烦，而且将难以调试和隔离特定类的映射定义错误。</p>
+<h3 id="4-设计接口和实现类"><a href="#4-设计接口和实现类" class="headerlink" title="4. 设计接口和实现类"></a>4. 设计接口和实现类</h3><p>面向接口编程是OOP的设计原则之一，目的是就是降低程序的耦合性，接口定义统一的编程规范，实现类可以根据具体的业务逻辑实现特定的功能，既利于程序的扩展，也利于程序的维护。</p>
+<p>在对数据库进行管理时，可以利用Hibernate的 SessionFactroy接口，创建会话工厂对象，它充当数据存储源的代理，并负责创建Session对象。一般情况下，一个项目通常只需要一个SessionFactory就够，然后在其他类中调用其中的方法就OK了。下面就是一个简单的创建会话对象的类方法。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> org.hibernate.SessionFactory;</span><br><span class="line"><span class="keyword">import</span> org.hibernate.boot.registry.StandardServiceRegistryBuilder;</span><br><span class="line"><span class="keyword">import</span> org.hibernate.cfg.Configuration;</span><br><span class="line"><span class="keyword">import</span> org.hibernate.service.ServiceRegistry;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">// 会话工厂类,目的获得SessionFactory对象</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MyHibernateSessionFactory</span> </span>&#123;</span><br><span class="line">	</span><br><span class="line">	<span class="keyword">private</span> <span class="keyword">static</span> SessionFactory sessionFactory; <span class="comment">//会话工厂属性</span></span><br><span class="line">	<span class="comment">// 构造函数保证单例模式</span></span><br><span class="line">	<span class="function"><span class="keyword">private</span> <span class="title">MyHibernateSessionFactory</span><span class="params">()</span></span>&#123;</span><br><span class="line">		</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="comment">//共有的静态方法，获得会话工厂对象</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> SessionFactory <span class="title">getSessionFactory</span><span class="params">()</span></span>&#123;</span><br><span class="line">		<span class="keyword">if</span>(sessionFactory==<span class="keyword">null</span>)&#123;</span><br><span class="line">			<span class="comment">//创建配置对象</span></span><br><span class="line">			Configuration config = <span class="keyword">new</span> Configuration().configure();</span><br><span class="line">			<span class="comment">//创建服务注册对象  </span></span><br><span class="line">			ServiceRegistry serviceRegistry = <span class="keyword">new</span> StandardServiceRegistryBuilder().applySettings(config.getProperties()).build();</span><br><span class="line">			<span class="comment">//创建sessionFactory</span></span><br><span class="line">			sessionFactory = config.buildSessionFactory(serviceRegistry);</span><br><span class="line">			<span class="keyword">return</span> sessionFactory;</span><br><span class="line">		&#125;<span class="keyword">else</span>&#123;</span><br><span class="line">			<span class="keyword">return</span> sessionFactory;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>利用Hibernate的Query，Transaction和Session可以完成数据库事务的管理操作，Query负责执行各种数据库查询。它可以使用HQL语言或SQL语句两种表达方式。它的返回值一般是List，需要自己转换。Transaction接口负责事务相关的操作，一般在Hibernate的增删改中出现，但是使用Hibernate的人一般使用spring)去管理事务。</p>
+<p>这里值得注意的是Hibernate的Session接口， Session可以看作介于数据连接与事务管理一种中间接口，有时也称Session是一个持久层管理器，因为它包含这一些持久层相关的操作，如存储持久对象至数据库，以及从数据库从获得它们。</p>
+<p>在Hibernate中，实例化的Session是一个轻量级的类，创建和销毁它都不会占用很多资源，这不同于JSP 应用中的HttpSession，一般情况我们会会HttpSesion 对象称为用户session。</p>
+<h3 id="5-设计Action控制器"><a href="#5-设计Action控制器" class="headerlink" title="5.  设计Action控制器"></a>5.  设计Action控制器</h3><p>在项目中Action承担着一个控制业务调度和管理跳转的功能，Action就像是服务员，顾客点什么菜，菜上给几号桌，都是ta的职责；所以当实现功能后，需要在struts.xml 中进行注册，与JSP的请求相对应，并完成相应的界面调用。</p>
+<p>Struts接受的表单数据的方式有几种方式，分别是实体类对象，属性驱动，模型驱动的方式和表达式驱动等，具体采用哪种需要根据具体的业务逻辑来选择，没有最好的，只有最合适的。</p>
+<p>可以直接使用Validator(验证器)框架对表单数据进行验证，而不需要用户编写代码去验证，拦截器是在Action提交之前，动态的拦截Action，然后查询配置文件，如果当前的Action配置了拦截器，那么就相应的实例化出拦截器对象，并串联成表，最后一个一个调用拦截器。</p>
+<p>拦截器只对Action进行处理，对其余的不进行处理。拦截器可以读取值栈中的东西，就像登录验证时，拦截器可以读取Session的内容。拦截器一次创建可以多次被调用，只要是使用拦截器的Action，Action执行几次，拦截器就同样执行几次。</p>
+<h3 id="6-项目框架"><a href="#6-项目框架" class="headerlink" title="6. 项目框架"></a>6. 项目框架</h3><p>项目中没有使用spring进行解耦，而是将hibernate和struts进行整合，项目也基本上符合MVC的一个设计理念：</p>
+<p>Entity对应数据库表的实体类，Dao层是使用hibernate连接数据库、操作数据库（增删改查）定义了一些列操作数据库的接口，Service层：引用对应的Dao数据库操作。在一定程度上Dao层和Service可以写在一起。以上几层综合起来类似于MVC的模型层。</p>
+<p>Action层：处理业务调度和管理跳转，引用对应的Service层，结合Struts的配置文件，跳转到指定的页面。起到一个控制层的作用。</p>
+<p>最后是JSP表现的视图层，可以通过编写JSP进行请求和数据显示，这里可以使用struts的一些标签，通过用户session读出数据。JSP真的太难写了ORZ…前后端分离是相当有必要的，使用页面模板也是很有必要的。</p>
+<p>整个项目的调用流程基本上是：<strong>JSP—Action—Service—DAO—Hibernate</strong>。整个项目框架的优点是：利用Struts负责Web层，进行请求拦截。利用Hibernate负责持久化层，完成对数据库的crud操作。</p>
+<h3 id="7-问题总结"><a href="#7-问题总结" class="headerlink" title="7. 问题总结"></a>7. 问题总结</h3><p>通过上面的总结，把项目构建的重要步骤和项目的框架流程都进行分析，从零开始，一步步的构建一个完整项目，真的能够学到很多东西。熟能生巧，多看多思多动手，技术能力自然就有增长咯。</p>
+
+                </div>
+            </section>
+        </article>
+    </div>
+
+    
+    <div style="height: 4vw;width: 100%"></div>
+    <nav id="gobottom" class="pagination">
+        
+        <a class="prev-post" title="智力算法和一些有趣的算法题（LeetCode）" href="/2019/08/21/2019-08-21-leetcode-ac/">
+            ← 智力算法和一些有趣的算法题（LeetCode）
+        </a>
+        
+        <span class="prev-next-post">•</span>
+        
+        <a class="next-post" title="秋招之前" href="/2019/08/12/2019-08-12-before-recruitment/">
+            秋招之前 →
+        </a>
+        
+    </nav>
+
+    
+    <div class="inner">
+        <div id="comment"></div>
+    </div>
+    
+</main>
+
+<div class="toc-bar">
+    <div class="toc-btn-bar">
+        <a href="#site-main" class="toc-btn">
+            <svg viewbox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg"><path d="M793.024 710.272a32 32 0 1 0 45.952-44.544l-310.304-320a32 32 0 0 0-46.4 0.48l-297.696 320a32 32 0 0 0 46.848 43.584l274.752-295.328 286.848 295.808z"/></svg>
+        </a>
+        <div class="toc-btn toc-switch">
+            <svg class="toc-open" viewbox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg"><path d="M779.776 480h-387.2a32 32 0 0 0 0 64h387.2a32 32 0 0 0 0-64M779.776 672h-387.2a32 32 0 0 0 0 64h387.2a32 32 0 0 0 0-64M256 288a32 32 0 1 0 0 64 32 32 0 0 0 0-64M392.576 352h387.2a32 32 0 0 0 0-64h-387.2a32 32 0 0 0 0 64M256 480a32 32 0 1 0 0 64 32 32 0 0 0 0-64M256 672a32 32 0 1 0 0 64 32 32 0 0 0 0-64"/></svg>
+            <svg class="toc-close hide" viewbox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg"><path d="M512 960c-247.039484 0-448-200.960516-448-448S264.960516 64 512 64 960 264.960516 960 512 759.039484 960 512 960zM512 128.287273c-211.584464 0-383.712727 172.128262-383.712727 383.712727 0 211.551781 172.128262 383.712727 383.712727 383.712727 211.551781 0 383.712727-172.159226 383.712727-383.712727C895.712727 300.415536 723.551781 128.287273 512 128.287273z"/><path d="M557.05545 513.376159l138.367639-136.864185c12.576374-12.416396 12.672705-32.671738 0.25631-45.248112s-32.704421-12.672705-45.248112-0.25631l-138.560301 137.024163-136.447897-136.864185c-12.512727-12.512727-32.735385-12.576374-45.248112-0.063647-12.512727 12.480043-12.54369 32.735385-0.063647 45.248112l136.255235 136.671523-137.376804 135.904314c-12.576374 12.447359-12.672705 32.671738-0.25631 45.248112 6.271845 6.335493 14.496116 9.504099 22.751351 9.504099 8.12794 0 16.25588-3.103239 22.496761-9.247789l137.567746-136.064292 138.687596 139.136568c6.240882 6.271845 14.432469 9.407768 22.65674 9.407768 8.191587 0 16.352211-3.135923 22.591372-9.34412 12.512727-12.480043 12.54369-32.704421 0.063647-45.248112L557.05545 513.376159z"/></svg>
+        </div>
+        <a href="#gobottom" class="toc-btn">
+            <svg viewbox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg"><path d="M231.424 346.208a32 32 0 0 0-46.848 43.584l297.696 320a32 32 0 0 0 46.4 0.48l310.304-320a32 32 0 1 0-45.952-44.544l-286.848 295.808-274.752-295.36z"/></svg>
+        </a>
+    </div>
+    <div class="toc-main">
+        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-jar包配置问题"><span class="toc-text">1. jar包配置问题</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-配置struts环境"><span class="toc-text">2. 配置struts环境</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-hibernate相关配置"><span class="toc-text">3. hibernate相关配置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-设计接口和实现类"><span class="toc-text">4. 设计接口和实现类</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-设计Action控制器"><span class="toc-text">5.  设计Action控制器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-项目框架"><span class="toc-text">6. 项目框架</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-问题总结"><span class="toc-text">7. 问题总结</span></a></li></ol>
+    </div>
+</div>
+
+
+
+	</div>
+	
+
+
+<aside class="read-next outer">
+    <div class="inner">
+        <div class="read-next-feed">
+            
+            
+
+<article class="read-next-card" style="background-image: url(https://s2.ax1x.com/2019/06/06/Vdw0FH.jpg)">
+  <header class="read-next-card-header">
+    <small class="read-next-card-header-sitetitle">&mdash; 格子小七 &mdash;</small>
+    <h3 class="read-next-card-header-title">Recent Posts</h3>
+  </header>
+  <div class="read-next-divider">
+    <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24">
+      <path d="M13 14.5s2 3 5 3 5.5-2.463 5.5-5.5S21 6.5 18 6.5c-5 0-7 11-12 11C2.962 17.5.5 15.037.5 12S3 6.5 6 6.5s4.5 3.5 4.5 3.5"/>
+    </svg>
+  </div>
+  <div class="read-next-card-content">
+    <ul>
+      
+      
+      
+      <li>
+        <a href="/2019/08/21/2019-08-21-leetcode-ac/">智力算法和一些有趣的算法题（LeetCode）</a>
+      </li>
+      
+      
+      
+      <li>
+        <a href="/2019/08/18/2019-08-18-ssh-test/">利用Struts+Hibernate构建学生管理系统遇到的一些问题</a>
+      </li>
+      
+      
+      
+      <li>
+        <a href="/2019/08/12/2019-08-12-before-recruitment/">秋招之前</a>
+      </li>
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+    </ul>
+  </div>
+  <footer class="read-next-card-footer">
+    <a href="/archives">  MORE  → </a>
+  </footer>
+</article>
+
+            
+            
+            
+
+<article class="read-next-card" style="background-image: url(https://s2.ax1x.com/2019/06/06/Vdw0FH.jpg)">
+    <header class="read-next-card-header" style="padding-bottom: 20px">
+        <h3 class="read-next-card-header-title">Categories</h3>
+    </header>
+    <div class="read-next-card-content">
+        <ul>
+            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/JavaEE/">JavaEE</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/分享/">分享</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/学习笔记/">学习笔记</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/小把戏录/">小把戏录</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/算法/">算法</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/计算机/">计算机</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/随笔集/">随笔集</a></li></ul>
+        </ul>
+    </div>
+</article>
+
+
+            
+            
+            
+
+<article class="read-next-card" style="background-image: url(https://s2.ax1x.com/2019/06/06/Vdw0FH.jpg)">
+	<header class="read-next-card-header" style="padding-bottom: 20px">
+		<h3 class="read-next-card-header-title">Tag Cloud</h3>
+	</header>
+	<div class="read-next-card-content-ext">
+		<a href="/tags/2019/" style="font-size: 14px;">2019</a> <a href="/tags/Algorithm/" style="font-size: 14px;">Algorithm</a> <a href="/tags/C/" style="font-size: 14px;">C++</a> <a href="/tags/Docker/" style="font-size: 14px;">Docker</a> <a href="/tags/Git/" style="font-size: 14px;">Git</a> <a href="/tags/Java/" style="font-size: 14px;">Java</a> <a href="/tags/JavaEE/" style="font-size: 14px;">JavaEE</a> <a href="/tags/RISC/" style="font-size: 14px;">RISC</a> <a href="/tags/computer/" style="font-size: 14px;">computer</a> <a href="/tags/hexo/" style="font-size: 14px;">hexo</a> <a href="/tags/linux/" style="font-size: 14px;">linux</a> <a href="/tags/markdown/" style="font-size: 14px;">markdown</a> <a href="/tags/mysql/" style="font-size: 14px;">mysql</a> <a href="/tags/notes/" style="font-size: 14px;">notes</a> <a href="/tags/shell/" style="font-size: 14px;">shell</a> <a href="/tags/分享/" style="font-size: 24px;">分享</a> <a href="/tags/前端/" style="font-size: 14px;">前端</a> <a href="/tags/嵌入式/" style="font-size: 14px;">嵌入式</a> <a href="/tags/指令周期/" style="font-size: 14px;">指令周期</a> <a href="/tags/智博会/" style="font-size: 14px;">智博会</a> <a href="/tags/算法/" style="font-size: 14px;">算法</a> <a href="/tags/计算机/" style="font-size: 14px;">计算机</a>
+	</div>
+</article>
+
+            
+        </div>
+    </div>
+</aside>
+
+	
+
+
+
+
+<div id="search" class="search-overlay subscribe-overlay">
+    <div class="search-form">
+        
+        <img class="search-overlay-logo" src="https://s2.ax1x.com/2019/07/25/eZxb4O.th.jpg" alt="格子小七">
+        
+        <input id="local-search-input" class="search-input" type="text" name="search" placeholder="Search ...">
+        <a class="search-overlay-close" href="#"></a>
+    </div>
+    <div id="local-search-result"></div>
+</div>
+
+
+<footer class="site-footer outer">
+	<div class="site-footer-content inner">
+		<section class="copyright">
+			<a href="/" title="格子小七">格子小七</a>
+			&copy; 2019
+		</section>
+		<nav class="site-footer-nav">
+			
+            <a href="https://hexo.io" title="Hexo" target="_blank" rel="noopener">Hexo</a>
+            <a href="https://github.com/xzhih/hexo-theme-casper" title="Casper" target="_blank" rel="noopener">Casper</a>
+        </nav>
+    </div>
+</footer>
+	
+
+
+<script>
+    if(window.navigator && navigator.serviceWorker) {
+        navigator.serviceWorker.getRegistrations()
+        .then(function(registrations) {
+            for(let registration of registrations) {
+                registration.unregister();
+            }
+        });
+    }
+</script>
+
+
+
+
+
+
+
+<div class="floating-header">
+	<div class="floating-header-logo">
+        <a href="/" title="格子小七">
+			
+                <img src="https://s2.ax1x.com/2019/07/25/eZxb4O.th.jpg" alt="格子小七 icon">
+			
+            <span>格子小七</span>
+        </a>
+    </div>
+    <span class="floating-header-divider">&mdash;</span>
+    <div class="floating-header-title">利用Struts+Hibernate构建学生管理系统遇到的一些问题</div>
+    <progress class="progress" value="0">
+        <div class="progress-container">
+            <span class="progress-bar"></span>
+        </div>
+    </progress>
+</div>
+
+
+
+
+
+<script src="/js/mix/post-lazy-local.min.js"></script>
+
+<script>;(function() {var bLazy = new Blazy()})();</script>
+
+
+
+
+<script src="/js/lightgallery.min.js"></script>
+<link rel="stylesheet" href="/css/lightgallery.min.css">
+<script>
+    lightGallery(document.getElementById('lightgallery'), {
+        selector: '.post-img'
+    });
+</script>
+
+
+
+
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+<script>
+    new Valine({
+        el: '#comment' ,
+        verify: false,
+        notify: false,
+        appId: '7WurRjcFYafHR5cOpPlavBcP-gzGzoHsz',
+        appKey: 'qvW4QooDLPpd6wQWc2AxN5dE',
+        placeholder: 'Just go go',
+        pageSize: 10,
+        avatar: 'mm',
+        visitor: true,
+    });
+</script>
+
+
+
+
+
+
+<script>searchFunc("/")</script>
+
+
+
+
+
+</body>
+</html>
