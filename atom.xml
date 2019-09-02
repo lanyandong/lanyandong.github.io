@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://smallseven.top/"/>
-  <updated>2019-08-30T01:42:03.659Z</updated>
+  <updated>2019-09-02T13:44:48.678Z</updated>
   <id>http://smallseven.top/</id>
   
   <author>
@@ -15,6 +15,65 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Java基础强化——Reflection</title>
+    <link href="http://smallseven.top/2019/09/02/2019-09-02-java-reflection/"/>
+    <id>http://smallseven.top/2019/09/02/2019-09-02-java-reflection/</id>
+    <published>2019-09-02T09:43:53.000Z</published>
+    <updated>2019-09-02T13:44:48.678Z</updated>
+    
+    <content type="html"><![CDATA[<p>1、反射：在程序运行时通过一个类的对象获取这个类的信息的方法。</p><p>2、Class类：在java里万事万物皆对象，可以理解为是Class类的对象，Class有一些方法可以由类的对象获取类的信息。获取一个class的Class实例有三种办法，如下：</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> reflection;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ReflectionDemo</span> </span>&#123;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String args[])</span> </span>&#123;</span><br><span class="line"><span class="comment">// 实例对象如何表示</span></span><br><span class="line">ClassDemo classDemo = <span class="keyword">new</span> ClassDemo();</span><br><span class="line"></span><br><span class="line"><span class="comment">// ClassDemo是类，其实也是一个实例对象是基于Class的。</span></span><br><span class="line"><span class="comment">//方法1：（任何一个类都有一个隐含的成员变量class）</span></span><br><span class="line">Class c1 = ClassDemo.class; </span><br><span class="line"></span><br><span class="line"><span class="comment">//方法2：（通过getClass()方法获取一个对象的类信息）</span></span><br><span class="line">Class c2 = classDemo.getClass(); </span><br><span class="line"></span><br><span class="line"><span class="comment">// 两种表达式相同的</span></span><br><span class="line">System.out.println(c1 == c2);</span><br><span class="line"></span><br><span class="line"><span class="comment">//方法3：通过Class的forName()方法</span></span><br><span class="line">Class c3 = <span class="keyword">null</span>;</span><br><span class="line"><span class="keyword">try</span> &#123;</span><br><span class="line">c3 = Class.forName(<span class="string">"reflection.ClassDemo"</span>);</span><br><span class="line">&#125; <span class="keyword">catch</span> (Exception e) &#123;</span><br><span class="line"><span class="comment">// <span class="doctag">TODO:</span> handle exception</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 也是相等的</span></span><br><span class="line">System.out.println(c2 == c3);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 可以通过c1，c2, c3创建该类的对象</span></span><br><span class="line"><span class="keyword">try</span> &#123;</span><br><span class="line">ClassDemo classDemo2 = (ClassDemo)c1.newInstance(); <span class="comment">// 根据实际情况进行强制类型转换</span></span><br><span class="line">classDemo2.print();</span><br><span class="line">&#125; <span class="keyword">catch</span> (InstantiationException e) &#123;</span><br><span class="line"><span class="comment">// TODO Auto-generated catch block</span></span><br><span class="line">e.printStackTrace();</span><br><span class="line">&#125; <span class="keyword">catch</span> (IllegalAccessException e) &#123;</span><br><span class="line"><span class="comment">// TODO Auto-generated catch block</span></span><br><span class="line">e.printStackTrace();</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// classdemo 类</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">ClassDemo</span></span>&#123;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">print</span><span class="params">()</span> </span>&#123;</span><br><span class="line">System.out.println(<span class="string">"class demo"</span>);</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>3、静态加载和动态加载：静态加载时值程序在编译期的时候就完成了加载编译，比如new对象就是编译时加载的，已经创建好了对象实例。而动态加载时指在运行时需要使用的时候才进行加载，绕过编译且不报错。</p><p>4、通过反射API获取类信息：使用Class的提供的方法可以获取一个对象的类的信息，包括成员变量，成员方法，构造方法，甚至包括接口信息，继承关系等。Java的反射API提供的<code>Field</code>类封装了成员变量的所有信息，<code>Method</code>对象封装了方法的所有信息，<code>Constructor</code>对象封装了构造方法的所有信息。</p><p>5、动态代理：JDK提供的动态创建接口对象的方式，即没有实现类但是在运行期动态创建了一个接口对象的方式。</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.lang.reflect.InvocationHandler;</span><br><span class="line"><span class="keyword">import</span> java.lang.reflect.Method;</span><br><span class="line"><span class="keyword">import</span> java.lang.reflect.Proxy;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 定义一个InvocationHandler实例，它负责实现接口的方法调用；</span></span><br><span class="line"><span class="comment">// 通过Proxy.newProxyInstance()创建interface实例，它需要3个参数：(使用的`ClassLoader`；需要实现的接口数组；用来处理接口方法调用的`InvocationHandler`实例。)</span></span><br><span class="line"><span class="comment">//将返回的`Object`强制转型为接口。 </span></span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Main</span> </span>&#123;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String args[])</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">InvocationHandler handler = <span class="keyword">new</span> InvocationHandler() &#123;</span><br><span class="line"><span class="meta">@Override</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> Object <span class="title">invoke</span><span class="params">(Object proxy, Method method, Object[] args)</span> <span class="keyword">throws</span> Throwable </span>&#123;</span><br><span class="line">                System.out.println(method);</span><br><span class="line">                <span class="keyword">if</span> (method.getName().equals(<span class="string">"morning"</span>)) &#123;</span><br><span class="line">                    System.out.println(<span class="string">"Good morning, "</span> + args[<span class="number">0</span>]);</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">return</span> <span class="keyword">null</span>;</span><br><span class="line">            &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">Hello hello = (Hello) Proxy.newProxyInstance(</span><br><span class="line">            Hello.class.getClassLoader(), <span class="comment">// 传入ClassLoader</span></span><br><span class="line">            <span class="keyword">new</span> Class[] &#123; Hello.class &#125;,  <span class="comment">// 传入要实现的接口</span></span><br><span class="line">            handler); <span class="comment">// 传入处理调用方法的InvocationHandler</span></span><br><span class="line">        hello.morning(<span class="string">"Bob"</span>);</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">interface</span> <span class="title">Hello</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">morning</span><span class="params">(String name)</span></span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>6、代理模式和反射机制：动态代理是设计模式当中代理模式的一种（为其他对象提供一种代理以控制这个对象的访问），JDK的动态代理主要是使用的是反射机制。常应用于AOP（面向切面编程）、RPC（远程过程调用），反编译，EventBus 2.x，动态生成类框架等。</p><p>优点：运行期类型的判断，动态类加载，动态代理使用反射；</p><p>缺点：性能是一个问题，反射相当于一系列解释操作，通知jvm要做的事情，性能比直接的java代码要慢很多。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;1、反射：在程序运行时通过一个类的对象获取这个类的信息的方法。&lt;/p&gt;
+&lt;p&gt;2、Class类：在java里万事万物皆对象，可以理解为是Class类的对象，Class有一些方法可以由类的对象获取类的信息。获取一个class的Class实例有三种办法，如下：&lt;/p&gt;
+&lt;fig
+      
+    
+    </summary>
+    
+      <category term="学习笔记" scheme="http://smallseven.top/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    
+    
+      <category term="Java" scheme="http://smallseven.top/tags/Java/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>基于SSM框架的秒杀系统开发过程</title>
+    <link href="http://smallseven.top/2019/09/02/2019-09-02-ssm-seckill/"/>
+    <id>http://smallseven.top/2019/09/02/2019-09-02-ssm-seckill/</id>
+    <published>2019-09-02T09:43:48.000Z</published>
+    <updated>2019-09-02T13:43:08.259Z</updated>
+    
+    <content type="html"><![CDATA[<p>1、数据库的设计</p><p>2、开发环境的搭建</p><ul><li>maven项目管理</li><li>pom.xml相关依赖配置</li></ul><p>3、DAO层的设计与开发</p><ul><li>mybatis与spring的整合</li><li>Junit测试</li></ul><p>4、Service层的设计与开发</p><ul><li>接口设计与实现</li><li>声明式事务</li></ul><p>5、Web层的设计与开发</p><ul><li><p>SpringMVC 的整合</p></li><li><p>JSP的编写</p></li><li>bootstrap和js框架</li></ul><p>6、高性能优化</p><ul><li>事务管理优化</li><li>Redis缓存</li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;1、数据库的设计&lt;/p&gt;
+&lt;p&gt;2、开发环境的搭建&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;maven项目管理&lt;/li&gt;
+&lt;li&gt;pom.xml相关依赖配置&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;3、DAO层的设计与开发&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;mybatis与spring的整合&lt;/li&gt;
+&lt;l
+      
+    
+    </summary>
+    
+      <category term="JavaEE" scheme="http://smallseven.top/categories/JavaEE/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>2019中国国际智能产业博览会</title>
@@ -446,60 +505,6 @@
     
     
       <category term="hexo" scheme="http://smallseven.top/tags/hexo/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>MkDocs构建项目文档流程</title>
-    <link href="http://smallseven.top/2019/03/31/2019-03-31-mkdocs/"/>
-    <id>http://smallseven.top/2019/03/31/2019-03-31-mkdocs/</id>
-    <published>2019-03-31T10:59:22.000Z</published>
-    <updated>2019-04-13T01:48:16.157Z</updated>
-    
-    <content type="html"><![CDATA[<p>发现很多开源的项目文档，技术说明文档都是使用 mkdocs 构建，自己也了解了一下，确实很简单，快速。它的主题也很简洁，大方，作为技术项目说明或者笔记文档是相当合适的。</p><p>构建部署流程大致如下，详细可以参考官方完整指南。</p><p>环境：</p><ul><li>支持Windows/Linux/macOS</li><li>需要安装 Python 2.7 +</li><li>需要 pip</li></ul><p>1、安装MkDocs </p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ pip install mkdocs</span><br></pre></td></tr></table></figure><p>运行 <code>mkdocs help</code> 可以检查是否正确安装。</p><p>2、输入以下命令构建项目</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ mkdocs new project</span><br></pre></td></tr></table></figure><p><code>project</code> 是指项目名，你要在那个目录下创建，就切换到那个目录下  Windows的cmd 命令行和Linux的终端命令都是类似操作。</p><p>构建好的项目里有一个配置文件 <code>mkdocs.yml</code>, 和一个包含文档源码的 <code>docs</code> 文件夹. 在 <code>docs</code> 文件夹里包含了一个名为 <code>index.md</code> 的文档. </p><p>3、启动内建服务器，进行预览</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ mkdocs serve</span><br></pre></td></tr></table></figure><p>它会自动使用8000 端口，在浏览器中打开<code>&lt;http://127.0.0.1:8000/&gt;</code>就可以完成效果的预览。</p><p>之后就是修改配置文件 <code>mkdocs.yml</code> ，自己可以添加一些配置信息，包括站点名称，文档页面等，很简单。</p><p>4、使用以下命令,创建新的页面</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ curl &apos;jaspervdj.be/lorem-markdownum/markdown.txt&apos; &gt; docs/about.md</span><br></pre></td></tr></table></figure><p>其实根本不用那么麻烦，在Windows下只用像创建文件目录那样操作即可，所有的文件都在<code>docs</code> 文件目录内。</p><p>5、主要是修改配置文件 <code>mkdocs.yml</code>，这个决定了你的站点结构。</p><figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">site_name:</span> <span class="string">LYDSDOCS</span></span><br><span class="line"></span><br><span class="line"><span class="attr">nav:</span></span><br><span class="line"><span class="attr">- Home:</span> <span class="string">index.md</span></span><br><span class="line"><span class="attr">- CSDocs:</span></span><br><span class="line"><span class="bullet">        -</span> <span class="string">操作系统:</span> <span class="string">csdocs/OSNotes.md</span></span><br><span class="line"><span class="bullet">        -</span> <span class="string">数据结构:</span> <span class="string">csdocs/data-structure.md</span></span><br><span class="line"><span class="bullet">        -</span> <span class="string">软件工程:</span> <span class="string">csdocs/software.md</span></span><br><span class="line"></span><br><span class="line"><span class="attr">- About:</span> <span class="string">about.md</span></span><br><span class="line"></span><br><span class="line"><span class="attr">theme:</span> <span class="string">readthedocs</span></span><br></pre></td></tr></table></figure><p>6、站点生成</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ mkdocs build</span><br></pre></td></tr></table></figure><p>该命令创建了一个 <code>site</code> 新目录. 里面的文件就是你的站点资源文件，你可以把这些文件部署到服务器上或者github page上，就可以进行访问了。</p><p>大概流程就这些，其实和 hexo 生成站点差不多，一些具体的细节可以参考官方文档。<a href="https://markdown-docs-zh.readthedocs.io/zh_CN/latest/" target="_blank" rel="noopener">MkDocs 中文文档</a></p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;发现很多开源的项目文档，技术说明文档都是使用 mkdocs 构建，自己也了解了一下，确实很简单，快速。它的主题也很简洁，大方，作为技术项目说明或者笔记文档是相当合适的。&lt;/p&gt;
-&lt;p&gt;构建部署流程大致如下，详细可以参考官方完整指南。&lt;/p&gt;
-&lt;p&gt;环境：&lt;/p&gt;
-&lt;ul&gt;
-
-      
-    
-    </summary>
-    
-      <category term="小把戏录" scheme="http://smallseven.top/categories/%E5%B0%8F%E6%8A%8A%E6%88%8F%E5%BD%95/"/>
-    
-    
-      <category term="markdown" scheme="http://smallseven.top/tags/markdown/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>认识 Shell Bash Cmd</title>
-    <link href="http://smallseven.top/2019/03/28/2019-03-28-linux-shell/"/>
-    <id>http://smallseven.top/2019/03/28/2019-03-28-linux-shell/</id>
-    <published>2019-03-28T13:30:18.000Z</published>
-    <updated>2019-04-13T01:47:56.722Z</updated>
-    
-    <content type="html"><![CDATA[<p>Windows 系统中的 cmd 的某些命令和 dos 中的命令相似，所以有很多人把二者混为一谈，dos 本身就是一个系统，我们大概几乎可能接触不到了，而我们平时使用的 cmd 命令行是属于Windows系统的一部分，是一种桌面应用。另外 cmd 也不是 shell，虽然都是命令解释器，但 bash 要比 cmd 强大的多，当然Windows也有强大的shell叫windows power shell。</p><p>对于我们常说的 Shell，它既是一种脚本语言，又是一种应用程序。Shell 是 UNIX/Linux 下的脚本编程语言，它无需编译，是解释执行的。另外 Shell 还是用户和应用程序与内核沟通的桥梁，它的一端连接着 UNIX/Linux 内核，它提供了用户与内核进行交互操作的一种接口，它接收用户输入的命令并把它送入内核去执行。</p><p>Shell管理我们与操作系统之间的交互：等待我们输入，向操作系统解释我们的输入，并且处理各种各样的操作系统的输出结果。不同系统有不同的shell，如bash、C shell、windows power shell 等等；在linux系统中，通常是Bourne Again shell ( 即bash).</p><p>Terminal 在Linux 系统中打开终端后，就可以输入Shell 命令了。</p><p>Bash 是shell 的一种，最常用的shell之一。</p><p>git Bash 方便在windows下使用git命令的模拟终端。</p><p>PuTTY是一个Telnet、SSH、rlogin、纯TCP以及串行接口连接软件。</p><p>Xshell是一款功能强大且安全的终端模拟器，支持SSH、SFTP、TELNET、RLOGIN和SERIAL。</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;Windows 系统中的 cmd 的某些命令和 dos 中的命令相似，所以有很多人把二者混为一谈，dos 本身就是一个系统，我们大概几乎可能接触不到了，而我们平时使用的 cmd 命令行是属于Windows系统的一部分，是一种桌面应用。另外 cmd 也不是 shell，虽然都
-      
-    
-    </summary>
-    
-      <category term="学习笔记" scheme="http://smallseven.top/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
-    
-    
-      <category term="shell" scheme="http://smallseven.top/tags/shell/"/>
     
   </entry>
   
