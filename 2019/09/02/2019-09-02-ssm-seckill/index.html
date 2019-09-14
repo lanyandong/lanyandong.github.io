@@ -274,9 +274,17 @@
 <li>jQuery开发交互界面，使用CDN 获取公共js，获取jQuery Cookie操作插件和countDown倒计时插件，自定义交互逻辑脚本。</li>
 <li>交互逻辑脚本实现，封装秒杀相关ajax的url，模块化JS，执行交互逻辑以及数据回传显示。</li>
 </ul>
-<h3 id="6、高性能优化"><a href="#6、高性能优化" class="headerlink" title="6、高性能优化"></a>6、高性能优化</h3><ul>
-<li>事务管理优化</li>
-<li>Redis缓存</li>
+<h3 id="6、高性能优化"><a href="#6、高性能优化" class="headerlink" title="6、高性能优化"></a>6、高性能优化</h3><p>使用Redis缓存：</p>
+<ul>
+<li>Redis的使用：下载解压，进入解压文件里，使用命令行执行make，然后在启动Redis server，然后使用执行命令’redis-cli -p 6379’查看运行情况，这里的端口需要自己设置。</li>
+<li>项目中使用Redis：添加相关的依赖，包括jedis和protostuff-core以及protostuff-runtime序列化的依赖。</li>
+<li>在DAO层设计一个RedisDao,作为数据的缓冲cache。并通过序列化和反序列化操作，实现对象的存取。改造exportSeckillUrl方法,一定要先注入redisDao。</li>
+<li>写存储过程,然后去，Mysql控制台执行储存过程。</li>
+</ul>
+<p>事务控制优化：</p>
+<ul>
+<li>调整事务的执行顺序（SQL的顺序），通过的事务的调整控制，减少虚拟机的GC操作，提高系统的运行效率。</li>
+<li>改造SeckillController中的execute方法调用,把一开始调用普通方法的改成调用储存过程的那个方法。</li>
 </ul>
 
                 </div>
@@ -353,6 +361,12 @@
       
       
       <li>
+        <a href="/2019/09/14/2019-09-14-redis-study/">关于NoSQL,Redis,CAP,分布式系统</a>
+      </li>
+      
+      
+      
+      <li>
         <a href="/2019/09/02/2019-09-02-java-reflection/">Java基础强化——Reflection</a>
       </li>
       
@@ -363,10 +377,6 @@
       </li>
       
       
-      
-      <li>
-        <a href="/2019/08/29/2019-08-29-cse2019/">2019中国国际智能产业博览会</a>
-      </li>
       
       
       
@@ -459,7 +469,7 @@
 		<h3 class="read-next-card-header-title">Tag Cloud</h3>
 	</header>
 	<div class="read-next-card-content-ext">
-		<a href="/tags/2019/" style="font-size: 14px;">2019</a> <a href="/tags/Algorithm/" style="font-size: 14px;">Algorithm</a> <a href="/tags/C/" style="font-size: 14px;">C++</a> <a href="/tags/Docker/" style="font-size: 14px;">Docker</a> <a href="/tags/Git/" style="font-size: 14px;">Git</a> <a href="/tags/Java/" style="font-size: 24px;">Java</a> <a href="/tags/JavaEE/" style="font-size: 14px;">JavaEE</a> <a href="/tags/RISC/" style="font-size: 14px;">RISC</a> <a href="/tags/computer/" style="font-size: 14px;">computer</a> <a href="/tags/hexo/" style="font-size: 14px;">hexo</a> <a href="/tags/linux/" style="font-size: 14px;">linux</a> <a href="/tags/markdown/" style="font-size: 14px;">markdown</a> <a href="/tags/mysql/" style="font-size: 14px;">mysql</a> <a href="/tags/notes/" style="font-size: 14px;">notes</a> <a href="/tags/shell/" style="font-size: 14px;">shell</a> <a href="/tags/分享/" style="font-size: 24px;">分享</a> <a href="/tags/前端/" style="font-size: 14px;">前端</a> <a href="/tags/嵌入式/" style="font-size: 14px;">嵌入式</a> <a href="/tags/指令周期/" style="font-size: 14px;">指令周期</a> <a href="/tags/智博会/" style="font-size: 14px;">智博会</a> <a href="/tags/算法/" style="font-size: 14px;">算法</a> <a href="/tags/计算机/" style="font-size: 14px;">计算机</a>
+		<a href="/tags/2019/" style="font-size: 14px;">2019</a> <a href="/tags/Algorithm/" style="font-size: 14px;">Algorithm</a> <a href="/tags/C/" style="font-size: 14px;">C++</a> <a href="/tags/Docker/" style="font-size: 14px;">Docker</a> <a href="/tags/Git/" style="font-size: 14px;">Git</a> <a href="/tags/Java/" style="font-size: 24px;">Java</a> <a href="/tags/JavaEE/" style="font-size: 14px;">JavaEE</a> <a href="/tags/RISC/" style="font-size: 14px;">RISC</a> <a href="/tags/Redis/" style="font-size: 14px;">Redis</a> <a href="/tags/computer/" style="font-size: 14px;">computer</a> <a href="/tags/hexo/" style="font-size: 14px;">hexo</a> <a href="/tags/linux/" style="font-size: 14px;">linux</a> <a href="/tags/markdown/" style="font-size: 14px;">markdown</a> <a href="/tags/mysql/" style="font-size: 14px;">mysql</a> <a href="/tags/notes/" style="font-size: 14px;">notes</a> <a href="/tags/shell/" style="font-size: 14px;">shell</a> <a href="/tags/分享/" style="font-size: 24px;">分享</a> <a href="/tags/前端/" style="font-size: 14px;">前端</a> <a href="/tags/嵌入式/" style="font-size: 14px;">嵌入式</a> <a href="/tags/指令周期/" style="font-size: 14px;">指令周期</a> <a href="/tags/智博会/" style="font-size: 14px;">智博会</a> <a href="/tags/算法/" style="font-size: 14px;">算法</a> <a href="/tags/计算机/" style="font-size: 14px;">计算机</a>
 	</div>
 </article>
 
