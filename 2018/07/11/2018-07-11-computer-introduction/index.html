@@ -1,157 +1,253 @@
 <!DOCTYPE html>
-<html lang>
-
-
-
-
-
-
-
+<html lang="zh-CN">
 <head>
-	
-	
-	<link rel="stylesheet" href="/css/allinone.min.css">
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 3.8.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon16x16.png">
 
-	
+<link rel="stylesheet" href="/css/main.css">
 
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Monda:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic|PT Mono:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
 
-	<title>计算机导论——计算机入门篇 | 格子小七</title>
 
-	<meta name="HandheldFriendly" content="True">
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
-	<meta name="generator" content="hexo">
-	<meta name="author" content="格子小七">
-	<meta name="description" content>
+<script id="hexo-configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    version: '7.5.0',
+    exturl: false,
+    sidebar: {"position":"right","display":"post","offset":12,"onmobile":false},
+    copycode: {"enable":false,"show_result":false,"style":null},
+    back2top: {"enable":true,"sidebar":false,"scrollpercent":false},
+    bookmark: {"enable":false,"color":"#222","save":"auto"},
+    fancybox: false,
+    mediumzoom: false,
+    lazyload: false,
+    pangu: false,
+    algolia: {
+      appID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    },
+    localsearch: {"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
+    path: '',
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    translation: {
+      copy_button: '复制',
+      copy_success: '复制成功',
+      copy_failure: '复制失败'
+    },
+    sidebarPadding: 40
+  };
+</script>
 
-	
-	<meta name="keywords" content>
-	
+  <meta name="description" content="第一章1、计算机系统的层次硬件层：包括计算机的各个部分，控制器，运算器（CPU）、存储器、输入设备和输出设备。  软件层：包括由汇编及高级语言等开发出来的应用程序。  操作系统层（OS）：是连接硬件和软件的中间桥梁，它由机器指令和广义指令组成。">
+<meta name="keywords" content="computer">
+<meta property="og:type" content="article">
+<meta property="og:title" content="计算机导论——计算机入门篇">
+<meta property="og:url" content="http://smallseven.top/2018/07/11/2018-07-11-computer-introduction/index.html">
+<meta property="og:site_name" content="YDLAN">
+<meta property="og:description" content="第一章1、计算机系统的层次硬件层：包括计算机的各个部分，控制器，运算器（CPU）、存储器、输入设备和输出设备。  软件层：包括由汇编及高级语言等开发出来的应用程序。  操作系统层（OS）：是连接硬件和软件的中间桥梁，它由机器指令和广义指令组成。">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="http://wx4.sinaimg.cn/large/00709Ldkly1fw4j8v1slej30b002mjr6.jpg">
+<meta property="og:image" content="http://wx1.sinaimg.cn/large/00709Ldkly1fw4j8vnenxj30jr0f4aex.jpg">
+<meta property="og:image" content="http://wx2.sinaimg.cn/large/00709Ldkly1fw4j8w2651j30ky0d10t5.jpg">
+<meta property="og:image" content="http://wx3.sinaimg.cn/large/00709Ldkly1fw4j8wid9ij30he07i74s.jpg">
+<meta property="og:image" content="http://wx1.sinaimg.cn/large/00709Ldkly1fw4j8x2in7j30pk0c040d.jpg">
+<meta property="og:updated_time" content="2019-04-13T01:46:03.532Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="计算机导论——计算机入门篇">
+<meta name="twitter:description" content="第一章1、计算机系统的层次硬件层：包括计算机的各个部分，控制器，运算器（CPU）、存储器、输入设备和输出设备。  软件层：包括由汇编及高级语言等开发出来的应用程序。  操作系统层（OS）：是连接硬件和软件的中间桥梁，它由机器指令和广义指令组成。">
+<meta name="twitter:image" content="http://wx4.sinaimg.cn/large/00709Ldkly1fw4j8v1slej30b002mjr6.jpg">
 
-	
-	<link rel="shortcut icon" href="https://s2.ax1x.com/2019/07/25/eZxb4O.th.jpg">
-	<link rel="apple-touch-icon" href="https://s2.ax1x.com/2019/07/25/eZxb4O.th.jpg">
-	
+<link rel="canonical" href="http://smallseven.top/2018/07/11/2018-07-11-computer-introduction/">
 
-	
-	<meta name="theme-color" content="#3c484e">
-	<meta name="msapplication-TileColor" content="#3c484e">
-	
 
-	
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome: false,
+    isPost: true,
+    isPage: false,
+    isArchive: false
+  };
+</script>
 
-	
+  <title>计算机导论——计算机入门篇 | YDLAN</title>
+  
 
-	<meta property="og:site_name" content="格子小七">
-	<meta property="og:type" content="article">
-	<meta property="og:title" content="计算机导论——计算机入门篇 | 格子小七">
-	<meta property="og:description" content>
-	<meta property="og:url" content="http://smallseven.top/2018/07/11/2018-07-11-computer-introduction/">
 
-	
-	<meta property="article:published_time" content="2018-07-11T00:07:00+08:00"> 
-	<meta property="article:author" content="格子小七">
-	<meta property="article:published_first" content="格子小七, /2018/07/11/2018-07-11-computer-introduction/">
-	
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
 </head>
-<body class="post-template">
-	<div class="site-wrapper">
-		
 
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
 
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-meta">
 
-
-<header class="site-header outer" style="z-index: 999">
-    <div class="inner">
-        
-<nav class="site-nav"> 
-    <div class="site-nav-left">
-        <ul class="nav">
-            <li>
-                
-                <a href="/" title="Home">HOME</a>
-                
-            </li>
-            
-            
-            <li>
-                <a href="/archives" title="ARCHIVES">ARCHIVES</a>
-            </li>
-            
-            <li>
-                <a href="/about" title="ABOUT">ABOUT</a>
-            </li>
-            
-            <li>
-                <a href="/atom.xml" title="RSS">RSS</a>
-            </li>
-            
-            
-        </ul> 
+    <div>
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">YDLAN</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
     </div>
-    
-    <div class="search-button">
-        <a href="#search" class="subscribe-button" style="margin: 0 10px;">Search ...</a>
+        <p class="site-subtitle">一起来探索吧！</p>
+  </div>
+
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
     </div>
-     
-    <div class="site-nav-right">
-        
-        <a href="#search" class="subscribe-button" style="margin: 0 10px;">Search ...</a>
-         
-        
-<div class="social-links">
-    
-    
-    <a class="social-link" title="github" href="https://github.com/ydlan" target="_blank" rel="noopener">
-        <svg viewbox="0 0 1049 1024" xmlns="http://www.w3.org/2000/svg"><path d="M524.979332 0C234.676191 0 0 234.676191 0 524.979332c0 232.068678 150.366597 428.501342 358.967656 498.035028 26.075132 5.215026 35.636014-11.299224 35.636014-25.205961 0-12.168395-0.869171-53.888607-0.869171-97.347161-146.020741 31.290159-176.441729-62.580318-176.441729-62.580318-23.467619-60.841976-58.234462-76.487055-58.234463-76.487055-47.804409-32.15933 3.476684-32.15933 3.476685-32.15933 53.019436 3.476684 80.83291 53.888607 80.83291 53.888607 46.935238 79.963739 122.553122 57.365291 152.97411 43.458554 4.345855-33.897672 18.252593-57.365291 33.028501-70.402857-116.468925-12.168395-239.022047-57.365291-239.022047-259.012982 0-57.365291 20.860106-104.300529 53.888607-140.805715-5.215026-13.037566-23.467619-66.926173 5.215027-139.067372 0 0 44.327725-13.906737 144.282399 53.888607 41.720212-11.299224 86.917108-17.383422 131.244833-17.383422s89.524621 6.084198 131.244833 17.383422C756.178839 203.386032 800.506564 217.29277 800.506564 217.29277c28.682646 72.1412 10.430053 126.029806 5.215026 139.067372 33.897672 36.505185 53.888607 83.440424 53.888607 140.805715 0 201.64769-122.553122 245.975415-239.891218 259.012982 19.121764 16.514251 35.636014 47.804409 35.636015 97.347161 0 70.402857-0.869171 126.898978-0.869172 144.282399 0 13.906737 9.560882 30.420988 35.636015 25.205961 208.601059-69.533686 358.967656-265.96635 358.967655-498.035028C1049.958663 234.676191 814.413301 0 524.979332 0z"/></svg>
-    </a>
-    
-    
-    <a class="social-link" title="facebook" href="https://facebook" target="_blank" rel="noopener">
-        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 32 32"><path d="M19 6h5V0h-5c-3.86 0-7 3.14-7 7v3H8v6h4v16h6V16h5l1-6h-6V7c0-.542.458-1 1-1z"/></svg>
-
-    </a>
-    
-    
-    <a class="social-link" title="twitter" href="https://twitter.com" target="_blank" rel="noopener">
-        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 32 32"><path d="M30.063 7.313c-.813 1.125-1.75 2.125-2.875 2.938v.75c0 1.563-.188 3.125-.688 4.625a15.088 15.088 0 0 1-2.063 4.438c-.875 1.438-2 2.688-3.25 3.813a15.015 15.015 0 0 1-4.625 2.563c-1.813.688-3.75 1-5.75 1-3.25 0-6.188-.875-8.875-2.625.438.063.875.125 1.375.125 2.688 0 5.063-.875 7.188-2.5-1.25 0-2.375-.375-3.375-1.125s-1.688-1.688-2.063-2.875c.438.063.813.125 1.125.125.5 0 1-.063 1.5-.25-1.313-.25-2.438-.938-3.313-1.938a5.673 5.673 0 0 1-1.313-3.688v-.063c.813.438 1.688.688 2.625.688a5.228 5.228 0 0 1-1.875-2c-.5-.875-.688-1.813-.688-2.75 0-1.063.25-2.063.75-2.938 1.438 1.75 3.188 3.188 5.25 4.25s4.313 1.688 6.688 1.813a5.579 5.579 0 0 1 1.5-5.438c1.125-1.125 2.5-1.688 4.125-1.688s3.063.625 4.188 1.813a11.48 11.48 0 0 0 3.688-1.375c-.438 1.375-1.313 2.438-2.563 3.188 1.125-.125 2.188-.438 3.313-.875z"/></svg>
-
-    </a>
-    
-    
-    
-    
+  </div>
 </div>
-    </div>
+
+
+<nav class="site-nav">
+  
+  <ul id="menu" class="menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-fw fa-home"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-fw fa-user"></i>关于</a>
+
+  </li>
+  </ul>
+
 </nav>
-    </div>
-</header>
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
 
 
-<main id="site-main" class="site-main outer" role="main">
-    <div class="inner">
-        <header class="post-full-header">
-            <section class="post-full-meta">
-                <time class="post-full-meta-date" datetime="2018-07-10T16:00:00.000Z" itemprop="datePublished">
-                    2018-07-11
-                </time>
-                
-                <span class="date-divider">/</span>
-                
-                <a href="/categories/学习笔记/">学习笔记</a>&nbsp;&nbsp;
-                
-                
-            </section>
-            <h1 class="post-full-title">计算机导论——计算机入门篇</h1>
-        </header>
-        <article class="post-full no-image">
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content">
             
-            <section class="post-full-content">
-                <div id="lightgallery" class="markdown-body">
-                    <h2 id="第一章"><a href="#第一章" class="headerlink" title="第一章"></a>第一章</h2><h3 id="1、计算机系统的层次"><a href="#1、计算机系统的层次" class="headerlink" title="1、计算机系统的层次"></a>1、计算机系统的层次</h3><p>硬件层：包括计算机的各个部分，控制器，运算器（CPU）、存储器、输入设备和输出设备。  </p>
-<p>软件层：包括由汇编及高级语言等开发出来的应用程序。  </p>
-<p>操作系统层（OS）：是连接硬件和软件的中间桥梁，它由机器指令和广义指令组成。  </p>
+
+  <div class="posts-expand">
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://smallseven.top/2018/07/11/2018-07-11-computer-introduction/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="YDLAN">
+      <meta itemprop="description" content="YDLAN的个人博客">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="YDLAN">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          计算机导论——计算机入门篇
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2018-07-11 00:00:00" itemprop="dateCreated datePublished" datetime="2018-07-11T00:00:00+08:00">2018-07-11</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/学习笔记/" itemprop="url" rel="index">
+                    <span itemprop="name">学习笔记</span>
+                  </a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h2 id="第一章"><a href="#第一章" class="headerlink" title="第一章"></a>第一章</h2><h3 id="1、计算机系统的层次"><a href="#1、计算机系统的层次" class="headerlink" title="1、计算机系统的层次"></a>1、计算机系统的层次</h3><p>硬件层：包括计算机的各个部分，控制器，运算器（CPU）、存储器、输入设备和输出设备。  </p><p>软件层：包括由汇编及高级语言等开发出来的应用程序。  </p><p>操作系统层（OS）：是连接硬件和软件的中间桥梁，它由机器指令和广义指令组成。  </p><a id="more"></a>
+
+
 <blockquote>
 <p>. 机器指令：指的是CPU能够直接识别并执行的指令；<br>. 广义指令：是指系统定义和解释的软件指令;</p>
 </blockquote>
@@ -177,7 +273,7 @@
 <h3 id="3、不同进制的快速转换"><a href="#3、不同进制的快速转换" class="headerlink" title="3、不同进制的快速转换"></a>3、不同进制的快速转换</h3><p>以十进制为中间流转(‘除R取余法’、‘乘R取整法’)；R进制数转换为十进制数时，将各位数与它的位权乘积相累加；  </p>
 <p>十进制整数转换为R进制整数：可用十进制整数连续地除以R，每次除法获得的余数即为相应R进制数一位，最后按逆序输出结果。“除R取整法”；<br>十进制小数转换成R进制小数：可用十进制的小数连续地乘以R，用得到的整数部分组成R进制的小数，最后按顺序输出结果。“乘R取整法”；</p>
 <p>对于二进制数和八进制数、十六进制数之间的转换，有简便快速的“三位一并”和“四位一并法”。</p>
-<h3 id="4、浮点数的表示方法"><a href="#4、浮点数的表示方法" class="headerlink" title="4、浮点数的表示方法"></a>4、浮点数的表示方法</h3><p>在计算机中整数以外的其他数（带小数的数）被称为浮点数；<br>浮点运算的规则和整数的运算规则相同；<br>计算机使用类似科学记数的方法表示浮点数，包括指数e和尾数m以及带符号数的符号位；<br>二进制浮点数1.011×2^010在计算机中存为：<br><img alt="img1" class="post-img b-lazy" href="http://wx4.sinaimg.cn/large/00709Ldkly1fw4j8v1slej30b002mjr6.jpg" data-src="http://wx4.sinaimg.cn/large/00709Ldkly1fw4j8v1slej30b002mjr6.jpg"></p>
+<h3 id="4、浮点数的表示方法"><a href="#4、浮点数的表示方法" class="headerlink" title="4、浮点数的表示方法"></a>4、浮点数的表示方法</h3><p>在计算机中整数以外的其他数（带小数的数）被称为浮点数；<br>浮点运算的规则和整数的运算规则相同；<br>计算机使用类似科学记数的方法表示浮点数，包括指数e和尾数m以及带符号数的符号位；<br>二进制浮点数1.011×2^010在计算机中存为：<br><img src="http://wx4.sinaimg.cn/large/00709Ldkly1fw4j8v1slej30b002mjr6.jpg" alt="img1"></p>
 <h3 id="5、逻辑运算"><a href="#5、逻辑运算" class="headerlink" title="5、逻辑运算"></a>5、逻辑运算</h3><p>基本运算是由0和1的逻辑运算衍生而来;</p>
 <blockquote>
 <p>. 真—假—&gt;1-0<br>. “与（AND）”、“或（OR）”、“非（NOT）”</p>
@@ -192,7 +288,7 @@
 <li>外存（Storage）  </li>
 <li>显存</li>
 </ol>
-<p><img alt="img2" class="post-img b-lazy" href="http://wx1.sinaimg.cn/large/00709Ldkly1fw4j8vnenxj30jr0f4aex.jpg" data-src="http://wx1.sinaimg.cn/large/00709Ldkly1fw4j8vnenxj30jr0f4aex.jpg"></p>
+<p><img src="http://wx1.sinaimg.cn/large/00709Ldkly1fw4j8vnenxj30jr0f4aex.jpg" alt="img2"></p>
 <p>图示是目前计算机系统最基础的存储层次</p>
 <blockquote>
 <p>.速度越快价格越高容量越小，离CPU越近;<br>.速度越慢价格越低容量越大，离CPU越远</p>
@@ -210,7 +306,7 @@
 <p>函数调用的特点：（越早被调用的函数，越晚被返回）；因为程序在执行过程是是根据指令寄存器里的指令依次执行（除函数调用，调用后的返回以及控制结构），每次函数调用都有一个返回值，然后程序继续执行。   </p>
 <p>栈：栈是一种非常重要的数据结构，它按照先进后出的原则存储数据，即先进入的数据被压入栈底，最后的数据在栈顶，需要取数据的时候从栈顶开始弹出数据。所以它的特色是“先进后出”和“后进先出”；（只能从一端放数据和取数据）； </p>
 <h2 id="第四章-编程与python初识"><a href="#第四章-编程与python初识" class="headerlink" title="第四章  编程与python初识"></a>第四章  编程与python初识</h2><h3 id="1、Python优点"><a href="#1、Python优点" class="headerlink" title="1、Python优点"></a>1、Python优点</h3><p>软件质量高；提高开发效率；程序可一致性强；标准库的支持。  </p>
-<h3 id="2、LIST-STRING-DICTIONARY三种内置数据结构的使用。"><a href="#2、LIST-STRING-DICTIONARY三种内置数据结构的使用。" class="headerlink" title="2、LIST STRING DICTIONARY三种内置数据结构的使用。"></a>2、LIST STRING DICTIONARY三种内置数据结构的使用。</h3><p>数据类型结构图：<br><img alt="img3" class="post-img b-lazy" href="http://wx2.sinaimg.cn/large/00709Ldkly1fw4j8w2651j30ky0d10t5.jpg" data-src="http://wx2.sinaimg.cn/large/00709Ldkly1fw4j8w2651j30ky0d10t5.jpg">   </p>
+<h3 id="2、LIST-STRING-DICTIONARY三种内置数据结构的使用。"><a href="#2、LIST-STRING-DICTIONARY三种内置数据结构的使用。" class="headerlink" title="2、LIST STRING DICTIONARY三种内置数据结构的使用。"></a>2、LIST STRING DICTIONARY三种内置数据结构的使用。</h3><p>数据类型结构图：<br><img src="http://wx2.sinaimg.cn/large/00709Ldkly1fw4j8w2651j30ky0d10t5.jpg" alt="img3">   </p>
 <p><strong>列表（list）：*</strong>不同于数组，列表的元素类型可以是不一样的，（可以是整型，浮点型，字符串，还可以是列表）；序列的通用操作主要包括：索引、分片、链接（加）、重复（乘）；以及检查某个元素是否属于序列。 遍历，即要依次对列表中的所有元素进行访问（操作），对列表这种线性数据结构最自然的遍历方式是循环。 </p>
 <p><strong>字符串（string）：</strong>同列表一样，字符串也实现了序列的通用操作和函数。但是字符串的内容是不可改变的；字符串对某一个索引所在位置进行赋值是不允许的。（字符串与数值型相互转化、字符串转化为列表）。   </p>
 <p><strong>字典（dictionary）：</strong>字典是Python中唯一的映射类型。字典中的每一个元素都是一个键值对（Key：Value），而Key在字典中只会出现一次，也就是大家知道函数是不可以有一对多的映射关系。键key是集合X中的一个元素，而Value指的是集合Y中的一个元素，如f（key）=value；   </p>
@@ -280,7 +376,7 @@
 <li>栈（Stack）是用户存放程序临时创建的局部变量区域。除此以外，在函数被调用时，其参数也会被压入发起调用的进程栈中，并且等到函数调用结束后，函数的返回值也会被存放回栈中。由于栈这种数据结构具有先进后出特点，所以栈能够特别方便用于保存/恢复调用现场。  </li>
 <li>堆（Heap）是用于存放进程运行中动态分配的内存段，它的大小并不固定，可根据进程运行的需要动态扩张或缩减。例如所有的类对象（objects）是存放在这个区域的。  </li>
 <li>BSS段（Block Started by Symbol）通常是指用来存放程序中未初始化的全局变量的一块内存区域。  </li>
-<li>另外，操作系统为了统一管理进程，专门设置了一个数据结构，即进程控制块（Process Control Block，PCB），用来记录进程的特征信息，描述进程运动变化的过程。PCB是操作系统感知进程存在的唯一标识，进程与PCB是一一对应的。<br><img alt="img4" class="post-img b-lazy" href="http://wx3.sinaimg.cn/large/00709Ldkly1fw4j8wid9ij30he07i74s.jpg" data-src="http://wx3.sinaimg.cn/large/00709Ldkly1fw4j8wid9ij30he07i74s.jpg">  </li>
+<li>另外，操作系统为了统一管理进程，专门设置了一个数据结构，即进程控制块（Process Control Block，PCB），用来记录进程的特征信息，描述进程运动变化的过程。PCB是操作系统感知进程存在的唯一标识，进程与PCB是一一对应的。<br><img src="http://wx3.sinaimg.cn/large/00709Ldkly1fw4j8wid9ij30he07i74s.jpg" alt="img4">  </li>
 </ol>
 <h3 id="6、进程调度的常用策略及性能衡量指标"><a href="#6、进程调度的常用策略及性能衡量指标" class="headerlink" title="6、进程调度的常用策略及性能衡量指标"></a>6、进程调度的常用策略及性能衡量指标</h3><p><strong>性能衡量指标：</strong>  </p>
 <ol>
@@ -289,317 +385,187 @@
 </ol>
 <p><strong>常用策略：</strong> 先来先服务（FCFS）、短作业优先（SJF）。  </p>
 <h3 id="7、目录树形结构，相对路径，绝对路径"><a href="#7、目录树形结构，相对路径，绝对路径" class="headerlink" title="7、目录树形结构，相对路径，绝对路径"></a>7、目录树形结构，相对路径，绝对路径</h3><p>文件基本概念：文件命名、文件类型（普通文件、目录文件、块设备文件、字符设备文件）。</p>
-<p>目录树结构：<br><img alt="img5" class="post-img b-lazy" href="http://wx1.sinaimg.cn/large/00709Ldkly1fw4j8x2in7j30pk0c040d.jpg" data-src="http://wx1.sinaimg.cn/large/00709Ldkly1fw4j8x2in7j30pk0c040d.jpg">  </p>
+<p>目录树结构：<br><img src="http://wx1.sinaimg.cn/large/00709Ldkly1fw4j8x2in7j30pk0c040d.jpg" alt="img5">  </p>
 <h2 id="第七章-计算机相关"><a href="#第七章-计算机相关" class="headerlink" title="第七章 计算机相关"></a>第七章 计算机相关</h2><h3 id="1、大数据的四大特点"><a href="#1、大数据的四大特点" class="headerlink" title="1、大数据的四大特点"></a>1、大数据的四大特点</h3><p><strong>数据：</strong>在计算机科学中，数据是指所有能输入到计算机并被计算机程序处理的，具有一点意义的数字、字母、符号和模拟量等通称。<br><strong>数据处理：</strong>是对数据的采集、存储、检索、加工、变换和传输。</p>
 <p><strong>大数据：</strong>大数据是一个广泛的概念，大数据的核心能力是发现规律和预测未来。<br>【高级数据公司IDC】 海量的数据规模（Volume）、快速的数据流转和动态的数据体系（Velovity）、多样的数据类型（Variety）、巨大的数据价值（Value）。<br>【亚马逊大数据科学家】 大数据是任何超过一台计算机处理能力的数据量。<br>【维基百科】 大数据（big data）指的是所涉及的资料量规模巨大到无法通过目前主流软件工具，在合理的时间内达到撷取、管理、处理并整理成帮助企业经营决策更积极目的的资讯。 </p>
 
-                </div>
-            </section>
-        </article>
     </div>
 
     
-    <div style="height: 4vw;width: 100%"></div>
-    <nav id="gobottom" class="pagination">
-        
-        <a class="prev-post" title="2018中国国际智能产业博览会" href="/2018/08/25/2018-08-25-chongqing-sce/">
-            ← 2018中国国际智能产业博览会
-        </a>
-        
-        <span class="prev-next-post">•</span>
-        
-        <a class="next-post" title="Algorithm thought" href="/2018/07/08/2018-07-08-algorithm-summary/">
-            Algorithm thought →
-        </a>
-        
-    </nav>
-
     
-    <div class="inner">
-        <div id="comment"></div>
-    </div>
     
-</main>
 
-<div class="toc-bar">
-    <div class="toc-btn-bar">
-        <a href="#site-main" class="toc-btn">
-            <svg viewbox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg"><path d="M793.024 710.272a32 32 0 1 0 45.952-44.544l-310.304-320a32 32 0 0 0-46.4 0.48l-297.696 320a32 32 0 0 0 46.848 43.584l274.752-295.328 286.848 295.808z"/></svg>
-        </a>
-        <div class="toc-btn toc-switch">
-            <svg class="toc-open" viewbox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg"><path d="M779.776 480h-387.2a32 32 0 0 0 0 64h387.2a32 32 0 0 0 0-64M779.776 672h-387.2a32 32 0 0 0 0 64h387.2a32 32 0 0 0 0-64M256 288a32 32 0 1 0 0 64 32 32 0 0 0 0-64M392.576 352h387.2a32 32 0 0 0 0-64h-387.2a32 32 0 0 0 0 64M256 480a32 32 0 1 0 0 64 32 32 0 0 0 0-64M256 672a32 32 0 1 0 0 64 32 32 0 0 0 0-64"/></svg>
-            <svg class="toc-close hide" viewbox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg"><path d="M512 960c-247.039484 0-448-200.960516-448-448S264.960516 64 512 64 960 264.960516 960 512 759.039484 960 512 960zM512 128.287273c-211.584464 0-383.712727 172.128262-383.712727 383.712727 0 211.551781 172.128262 383.712727 383.712727 383.712727 211.551781 0 383.712727-172.159226 383.712727-383.712727C895.712727 300.415536 723.551781 128.287273 512 128.287273z"/><path d="M557.05545 513.376159l138.367639-136.864185c12.576374-12.416396 12.672705-32.671738 0.25631-45.248112s-32.704421-12.672705-45.248112-0.25631l-138.560301 137.024163-136.447897-136.864185c-12.512727-12.512727-32.735385-12.576374-45.248112-0.063647-12.512727 12.480043-12.54369 32.735385-0.063647 45.248112l136.255235 136.671523-137.376804 135.904314c-12.576374 12.447359-12.672705 32.671738-0.25631 45.248112 6.271845 6.335493 14.496116 9.504099 22.751351 9.504099 8.12794 0 16.25588-3.103239 22.496761-9.247789l137.567746-136.064292 138.687596 139.136568c6.240882 6.271845 14.432469 9.407768 22.65674 9.407768 8.191587 0 16.352211-3.135923 22.591372-9.34412 12.512727-12.480043 12.54369-32.704421 0.063647-45.248112L557.05545 513.376159z"/></svg>
-        </div>
-        <a href="#gobottom" class="toc-btn">
-            <svg viewbox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg"><path d="M231.424 346.208a32 32 0 0 0-46.848 43.584l297.696 320a32 32 0 0 0 46.4 0.48l310.304-320a32 32 0 1 0-45.952-44.544l-286.848 295.808-274.752-295.36z"/></svg>
-        </a>
-    </div>
-    <div class="toc-main">
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#第一章"><span class="toc-text">第一章</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1、计算机系统的层次"><span class="toc-text">1、计算机系统的层次</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2、高级语言与汇编语言的区别"><span class="toc-text">2、高级语言与汇编语言的区别</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3、解释性语言和编译型语言的区别和各自的特点"><span class="toc-text">3、解释性语言和编译型语言的区别和各自的特点</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4、历代计算机的发展阶段和每个阶段的特点"><span class="toc-text">4、历代计算机的发展阶段和每个阶段的特点</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#第二章-计算与存储"><span class="toc-text">第二章  计算与存储</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1、进制的概念"><span class="toc-text">1、进制的概念</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2、计算机为什么采用二进制"><span class="toc-text">2、计算机为什么采用二进制</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3、不同进制的快速转换"><span class="toc-text">3、不同进制的快速转换</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4、浮点数的表示方法"><span class="toc-text">4、浮点数的表示方法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5、逻辑运算"><span class="toc-text">5、逻辑运算</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6、存储设备的类型和各种存储设备的特点"><span class="toc-text">6、存储设备的类型和各种存储设备的特点</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#第三章-指令与函数"><span class="toc-text">第三章  指令与函数</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1、CPU的组成"><span class="toc-text">1、CPU的组成</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2、常用汇编指令的功能及功能指令格式"><span class="toc-text">2、常用汇编指令的功能及功能指令格式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4、函数调用的调用过程"><span class="toc-text">4、函数调用的调用过程</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#第四章-编程与python初识"><span class="toc-text">第四章  编程与python初识</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1、Python优点"><span class="toc-text">1、Python优点</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2、LIST-STRING-DICTIONARY三种内置数据结构的使用。"><span class="toc-text">2、LIST STRING DICTIONARY三种内置数据结构的使用。</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3、基本赋值语句和增强赋值语句的使用"><span class="toc-text">3、基本赋值语句和增强赋值语句的使用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4、三种控制机构的熟练掌握"><span class="toc-text">4、三种控制机构的熟练掌握</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5、函数调用过程的参数传递和变量使用"><span class="toc-text">5、函数调用过程的参数传递和变量使用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6、面向对象和面向对象编程的定义和特点"><span class="toc-text">6、面向对象和面向对象编程的定义和特点</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7、类的定义和实例化"><span class="toc-text">7、类的定义和实例化</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#第五章-算法思想"><span class="toc-text">第五章 算法思想</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1、算法的五个重要特点"><span class="toc-text">1、算法的五个重要特点</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2、常用的算法思想"><span class="toc-text">2、常用的算法思想</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#第六章-简单了解操作系统"><span class="toc-text">第六章 简单了解操作系统</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#常见操作系统"><span class="toc-text">常见操作系统</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2、计算机的启动过程"><span class="toc-text">2、计算机的启动过程</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3、操作系统对硬件资源的管理"><span class="toc-text">3、操作系统对硬件资源的管理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4、操作系统对应用程序的服务：软件中断"><span class="toc-text">4、操作系统对应用程序的服务：软件中断</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5、进程的组成部分及状态转换图"><span class="toc-text">5、进程的组成部分及状态转换图</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6、进程调度的常用策略及性能衡量指标"><span class="toc-text">6、进程调度的常用策略及性能衡量指标</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7、目录树形结构，相对路径，绝对路径"><span class="toc-text">7、目录树形结构，相对路径，绝对路径</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#第七章-计算机相关"><span class="toc-text">第七章 计算机相关</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1、大数据的四大特点"><span class="toc-text">1、大数据的四大特点</span></a></li></ol></li></ol>
-    </div>
-</div>
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/computer/" rel="tag"># computer</a>
+          </div>
 
+        
 
+          <div class="post-nav">
+            <div class="post-nav-next post-nav-item">
+                <a href="/2018/07/08/2018-07-08-algorithm-summary/" rel="next" title="Algorithm thought">
+                  <i class="fa fa-chevron-left"></i> Algorithm thought
+                </a>
+            </div>
 
-	</div>
-	
+            <span class="post-nav-divider"></span>
 
+            <div class="post-nav-prev post-nav-item">
+                <a href="/2018/08/25/2018-08-25-chongqing-sce/" rel="prev" title="2018中国国际智能产业博览会">
+                  2018中国国际智能产业博览会 <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+      </footer>
+    
+  </article>
+  
+  
+  
 
-<aside class="read-next outer">
-    <div class="inner">
-        <div class="read-next-feed">
-            
-            
-
-<article class="read-next-card" style="background-image: url(https://s2.ax1x.com/2019/06/06/Vdw0FH.jpg)">
-  <header class="read-next-card-header">
-    <small class="read-next-card-header-sitetitle">&mdash; 格子小七 &mdash;</small>
-    <h3 class="read-next-card-header-title">Recent Posts</h3>
-  </header>
-  <div class="read-next-divider">
-    <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24">
-      <path d="M13 14.5s2 3 5 3 5.5-2.463 5.5-5.5S21 6.5 18 6.5c-5 0-7 11-12 11C2.962 17.5.5 15.037.5 12S3 6.5 6 6.5s4.5 3.5 4.5 3.5"/>
-    </svg>
   </div>
-  <div class="read-next-card-content">
-    <ul>
-      
-      
-      
-      <li>
-        <a href="/2019/09/14/2019-09-14-redis-study/">关于NoSQL,Redis,CAP,分布式系统</a>
-      </li>
-      
-      
-      
-      <li>
-        <a href="/2019/09/02/2019-09-02-java-reflection/">Java基础强化——Reflection</a>
-      </li>
-      
-      
-      
-      <li>
-        <a href="/2019/09/02/2019-09-02-ssm-seckill/">基于SSM框架的秒杀系统开发过程</a>
-      </li>
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-    </ul>
+
+
+          </div>
+          
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
   </div>
-  <footer class="read-next-card-footer">
-    <a href="/archives">  MORE  → </a>
-  </footer>
-</article>
 
-            
-            
-            
+  <aside class="sidebar">
+    <div class="sidebar-inner">
 
-<article class="read-next-card" style="background-image: url(https://s2.ax1x.com/2019/06/06/Vdw0FH.jpg)">
-    <header class="read-next-card-header" style="padding-bottom: 20px">
-        <h3 class="read-next-card-header-title">Categories</h3>
-    </header>
-    <div class="read-next-card-content">
-        <ul>
-            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/JavaEE/">JavaEE</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/分享/">分享</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/学习笔记/">学习笔记</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/小把戏录/">小把戏录</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/算法/">算法</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/计算机/">计算机</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/随笔集/">随笔集</a></li></ul>
-        </ul>
-    </div>
-</article>
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
 
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#第一章"><span class="nav-number">1.</span> <span class="nav-text">第一章</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1、计算机系统的层次"><span class="nav-number">1.1.</span> <span class="nav-text">1、计算机系统的层次</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2、高级语言与汇编语言的区别"><span class="nav-number">1.2.</span> <span class="nav-text">2、高级语言与汇编语言的区别</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3、解释性语言和编译型语言的区别和各自的特点"><span class="nav-number">1.3.</span> <span class="nav-text">3、解释性语言和编译型语言的区别和各自的特点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4、历代计算机的发展阶段和每个阶段的特点"><span class="nav-number">1.4.</span> <span class="nav-text">4、历代计算机的发展阶段和每个阶段的特点</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第二章-计算与存储"><span class="nav-number">2.</span> <span class="nav-text">第二章  计算与存储</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1、进制的概念"><span class="nav-number">2.1.</span> <span class="nav-text">1、进制的概念</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2、计算机为什么采用二进制"><span class="nav-number">2.2.</span> <span class="nav-text">2、计算机为什么采用二进制</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3、不同进制的快速转换"><span class="nav-number">2.3.</span> <span class="nav-text">3、不同进制的快速转换</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4、浮点数的表示方法"><span class="nav-number">2.4.</span> <span class="nav-text">4、浮点数的表示方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5、逻辑运算"><span class="nav-number">2.5.</span> <span class="nav-text">5、逻辑运算</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6、存储设备的类型和各种存储设备的特点"><span class="nav-number">2.6.</span> <span class="nav-text">6、存储设备的类型和各种存储设备的特点</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第三章-指令与函数"><span class="nav-number">3.</span> <span class="nav-text">第三章  指令与函数</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1、CPU的组成"><span class="nav-number">3.1.</span> <span class="nav-text">1、CPU的组成</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2、常用汇编指令的功能及功能指令格式"><span class="nav-number">3.2.</span> <span class="nav-text">2、常用汇编指令的功能及功能指令格式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4、函数调用的调用过程"><span class="nav-number">3.3.</span> <span class="nav-text">4、函数调用的调用过程</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第四章-编程与python初识"><span class="nav-number">4.</span> <span class="nav-text">第四章  编程与python初识</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1、Python优点"><span class="nav-number">4.1.</span> <span class="nav-text">1、Python优点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2、LIST-STRING-DICTIONARY三种内置数据结构的使用。"><span class="nav-number">4.2.</span> <span class="nav-text">2、LIST STRING DICTIONARY三种内置数据结构的使用。</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3、基本赋值语句和增强赋值语句的使用"><span class="nav-number">4.3.</span> <span class="nav-text">3、基本赋值语句和增强赋值语句的使用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4、三种控制机构的熟练掌握"><span class="nav-number">4.4.</span> <span class="nav-text">4、三种控制机构的熟练掌握</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5、函数调用过程的参数传递和变量使用"><span class="nav-number">4.5.</span> <span class="nav-text">5、函数调用过程的参数传递和变量使用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6、面向对象和面向对象编程的定义和特点"><span class="nav-number">4.6.</span> <span class="nav-text">6、面向对象和面向对象编程的定义和特点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7、类的定义和实例化"><span class="nav-number">4.7.</span> <span class="nav-text">7、类的定义和实例化</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第五章-算法思想"><span class="nav-number">5.</span> <span class="nav-text">第五章 算法思想</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1、算法的五个重要特点"><span class="nav-number">5.1.</span> <span class="nav-text">1、算法的五个重要特点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2、常用的算法思想"><span class="nav-number">5.2.</span> <span class="nav-text">2、常用的算法思想</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第六章-简单了解操作系统"><span class="nav-number">6.</span> <span class="nav-text">第六章 简单了解操作系统</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#常见操作系统"><span class="nav-number">6.1.</span> <span class="nav-text">常见操作系统</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2、计算机的启动过程"><span class="nav-number">6.2.</span> <span class="nav-text">2、计算机的启动过程</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3、操作系统对硬件资源的管理"><span class="nav-number">6.3.</span> <span class="nav-text">3、操作系统对硬件资源的管理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4、操作系统对应用程序的服务：软件中断"><span class="nav-number">6.4.</span> <span class="nav-text">4、操作系统对应用程序的服务：软件中断</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5、进程的组成部分及状态转换图"><span class="nav-number">6.5.</span> <span class="nav-text">5、进程的组成部分及状态转换图</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6、进程调度的常用策略及性能衡量指标"><span class="nav-number">6.6.</span> <span class="nav-text">6、进程调度的常用策略及性能衡量指标</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7、目录树形结构，相对路径，绝对路径"><span class="nav-number">6.7.</span> <span class="nav-text">7、目录树形结构，相对路径，绝对路径</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第七章-计算机相关"><span class="nav-number">7.</span> <span class="nav-text">第七章 计算机相关</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1、大数据的四大特点"><span class="nav-number">7.1.</span> <span class="nav-text">1、大数据的四大特点</span></a></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
 
-            
-            
-            
-
-<article class="read-next-card" style="background-image: url(https://s2.ax1x.com/2019/06/06/Vdw0FH.jpg)">
-	<header class="read-next-card-header" style="padding-bottom: 20px">
-		<h3 class="read-next-card-header-title">Tag Cloud</h3>
-	</header>
-	<div class="read-next-card-content-ext">
-		<a href="/tags/2019/" style="font-size: 14px;">2019</a> <a href="/tags/Algorithm/" style="font-size: 14px;">Algorithm</a> <a href="/tags/C/" style="font-size: 14px;">C++</a> <a href="/tags/Docker/" style="font-size: 14px;">Docker</a> <a href="/tags/Git/" style="font-size: 14px;">Git</a> <a href="/tags/Java/" style="font-size: 24px;">Java</a> <a href="/tags/JavaEE/" style="font-size: 14px;">JavaEE</a> <a href="/tags/RISC/" style="font-size: 14px;">RISC</a> <a href="/tags/Redis/" style="font-size: 14px;">Redis</a> <a href="/tags/computer/" style="font-size: 14px;">computer</a> <a href="/tags/hexo/" style="font-size: 14px;">hexo</a> <a href="/tags/linux/" style="font-size: 14px;">linux</a> <a href="/tags/markdown/" style="font-size: 14px;">markdown</a> <a href="/tags/mysql/" style="font-size: 14px;">mysql</a> <a href="/tags/notes/" style="font-size: 14px;">notes</a> <a href="/tags/shell/" style="font-size: 14px;">shell</a> <a href="/tags/分享/" style="font-size: 24px;">分享</a> <a href="/tags/前端/" style="font-size: 14px;">前端</a> <a href="/tags/嵌入式/" style="font-size: 14px;">嵌入式</a> <a href="/tags/指令周期/" style="font-size: 14px;">指令周期</a> <a href="/tags/智博会/" style="font-size: 14px;">智博会</a> <a href="/tags/算法/" style="font-size: 14px;">算法</a> <a href="/tags/计算机/" style="font-size: 14px;">计算机</a>
-	</div>
-</article>
-
-            
-        </div>
-    </div>
-</aside>
-
-	
-
-
-
-
-<div id="search" class="search-overlay subscribe-overlay">
-    <div class="search-form">
-        
-        <img class="search-overlay-logo" src="https://s2.ax1x.com/2019/07/25/eZxb4O.th.jpg" alt="格子小七">
-        
-        <input id="local-search-input" class="search-input" type="text" name="search" placeholder="Search ...">
-        <a class="search-overlay-close" href="#"></a>
-    </div>
-    <div id="local-search-result"></div>
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <img class="site-author-image" itemprop="image" alt="YDLAN" src="/images/avatar.jpg">
+  <p class="site-author-name" itemprop="name">YDLAN</p>
+  <div class="site-description" itemprop="description">YDLAN的个人博客</div>
 </div>
-
-
-<footer class="site-footer outer">
-	<div class="site-footer-content inner">
-		<section class="copyright">
-			<a href="/" title="格子小七">格子小七</a>
-			&copy; 2019
-		</section>
-		<nav class="site-footer-nav">
-			
-            <a href="https://hexo.io" title="Hexo" target="_blank" rel="noopener">Hexo</a>
-            <a href="https://github.com/xzhih/hexo-theme-casper" title="Casper" target="_blank" rel="noopener">Casper</a>
-        </nav>
-    </div>
-</footer>
-	
-
-
-<script>
-    if(window.navigator && navigator.serviceWorker) {
-        navigator.serviceWorker.getRegistrations()
-        .then(function(registrations) {
-            for(let registration of registrations) {
-                registration.unregister();
-            }
-        });
-    }
-</script>
-
-
-
-
-
-
-
-<div class="floating-header">
-	<div class="floating-header-logo">
-        <a href="/" title="格子小七">
-			
-                <img src="https://s2.ax1x.com/2019/07/25/eZxb4O.th.jpg" alt="格子小七 icon">
-			
-            <span>格子小七</span>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">33</span>
+          <span class="site-state-item-name">日志</span>
         </a>
-    </div>
-    <span class="floating-header-divider">&mdash;</span>
-    <div class="floating-header-title">计算机导论——计算机入门篇</div>
-    <progress class="progress" value="0">
-        <div class="progress-container">
-            <span class="progress-bar"></span>
-        </div>
-    </progress>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">7</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">23</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
 </div>
 
 
 
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
 
 
-<script src="/js/mix/post-lazy-local.min.js"></script>
+      </div>
+    </main>
 
-<script>;(function() {var bLazy = new Blazy()})();</script>
+    <footer class="footer">
+      <div class="footer-inner">
+        
 
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">YDLAN</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.8.0
+  </div>
+  <span class="post-meta-divider">|</span>
+  <div class="theme-info">主题 – <a href="https://mist.theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Mist</a> v7.5.0
+  </div>
 
-
-
-<script src="/js/lightgallery.min.js"></script>
-<link rel="stylesheet" href="/css/lightgallery.min.css">
-<script>
-    lightGallery(document.getElementById('lightgallery'), {
-        selector: '.post-img'
-    });
-</script>
-
-
-
-
-<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
-<script src="//unpkg.com/valine/dist/Valine.min.js"></script>
-<script>
-    new Valine({
-        el: '#comment' ,
-        verify: false,
-        notify: false,
-        appId: '7WurRjcFYafHR5cOpPlavBcP-gzGzoHsz',
-        appKey: 'qvW4QooDLPpd6wQWc2AxN5dE',
-        placeholder: 'Just go go',
-        pageSize: 10,
-        avatar: 'mm',
-        visitor: true,
-    });
-</script>
+        
 
 
 
 
 
 
-<script>searchFunc("/")</script>
 
 
 
 
+
+
+        
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+<script src="/js/utils.js"></script><script src="/js/motion.js"></script>
+<script src="/js/schemes/muse.js"></script>
+<script src="/js/next-boot.js"></script>
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
 
 </body>
 </html>
