@@ -5,9 +5,9 @@
   <subtitle>一起来探索吧！</subtitle>
   <link href="/atom.xml" rel="self"/>
   
-  <link href="http://smallseven.top/"/>
+  <link href="https://ydlan.github.io/"/>
   <updated>2019-11-07T15:06:23.812Z</updated>
-  <id>http://smallseven.top/</id>
+  <id>https://ydlan.github.io/</id>
   
   <author>
     <name>YDLAN</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>Talk is cheap. Show me the code.</title>
-    <link href="http://smallseven.top/2019/11/07/2019-11-07-new-start/"/>
-    <id>http://smallseven.top/2019/11/07/2019-11-07-new-start/</id>
+    <link href="https://ydlan.github.io/2019/11/07/2019-11-07-new-start/"/>
+    <id>https://ydlan.github.io/2019/11/07/2019-11-07-new-start/</id>
     <published>2019-11-07T14:58:14.000Z</published>
     <updated>2019-11-07T15:06:23.812Z</updated>
     
@@ -27,15 +27,15 @@
     
     </summary>
     
-      <category term="随笔集" scheme="http://smallseven.top/categories/%E9%9A%8F%E7%AC%94%E9%9B%86/"/>
+      <category term="随笔集" scheme="https://ydlan.github.io/categories/%E9%9A%8F%E7%AC%94%E9%9B%86/"/>
     
     
   </entry>
   
   <entry>
     <title>关于NoSQL,Redis,CAP,分布式系统</title>
-    <link href="http://smallseven.top/2019/09/14/2019-09-14-redis-study/"/>
-    <id>http://smallseven.top/2019/09/14/2019-09-14-redis-study/</id>
+    <link href="https://ydlan.github.io/2019/09/14/2019-09-14-redis-study/"/>
+    <id>https://ydlan.github.io/2019/09/14/2019-09-14-redis-study/</id>
     <published>2019-09-14T14:31:06.000Z</published>
     <updated>2019-09-14T14:45:06.516Z</updated>
     
@@ -47,17 +47,17 @@
     
     </summary>
     
-      <category term="学习笔记" scheme="http://smallseven.top/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+      <category term="学习笔记" scheme="https://ydlan.github.io/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     
     
-      <category term="Redis" scheme="http://smallseven.top/tags/Redis/"/>
+      <category term="Redis" scheme="https://ydlan.github.io/tags/Redis/"/>
     
   </entry>
   
   <entry>
     <title>Java基础强化——Reflection</title>
-    <link href="http://smallseven.top/2019/09/02/2019-09-02-java-reflection/"/>
-    <id>http://smallseven.top/2019/09/02/2019-09-02-java-reflection/</id>
+    <link href="https://ydlan.github.io/2019/09/02/2019-09-02-java-reflection/"/>
+    <id>https://ydlan.github.io/2019/09/02/2019-09-02-java-reflection/</id>
     <published>2019-09-02T09:43:53.000Z</published>
     <updated>2019-09-02T13:44:48.678Z</updated>
     
@@ -69,17 +69,17 @@
     
     </summary>
     
-      <category term="学习笔记" scheme="http://smallseven.top/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+      <category term="学习笔记" scheme="https://ydlan.github.io/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     
     
-      <category term="Java" scheme="http://smallseven.top/tags/Java/"/>
+      <category term="Java" scheme="https://ydlan.github.io/tags/Java/"/>
     
   </entry>
   
   <entry>
     <title>基于SSM框架的秒杀系统开发过程</title>
-    <link href="http://smallseven.top/2019/09/02/2019-09-02-ssm-seckill/"/>
-    <id>http://smallseven.top/2019/09/02/2019-09-02-ssm-seckill/</id>
+    <link href="https://ydlan.github.io/2019/09/02/2019-09-02-ssm-seckill/"/>
+    <id>https://ydlan.github.io/2019/09/02/2019-09-02-ssm-seckill/</id>
     <published>2019-09-02T09:43:48.000Z</published>
     <updated>2019-11-07T14:57:22.317Z</updated>
     
@@ -91,15 +91,15 @@
     
     </summary>
     
-      <category term="JavaEE" scheme="http://smallseven.top/categories/JavaEE/"/>
+      <category term="JavaEE" scheme="https://ydlan.github.io/categories/JavaEE/"/>
     
     
   </entry>
   
   <entry>
     <title>2019中国国际智能产业博览会</title>
-    <link href="http://smallseven.top/2019/08/29/2019-08-29-cse2019/"/>
-    <id>http://smallseven.top/2019/08/29/2019-08-29-cse2019/</id>
+    <link href="https://ydlan.github.io/2019/08/29/2019-08-29-cse2019/"/>
+    <id>https://ydlan.github.io/2019/08/29/2019-08-29-cse2019/</id>
     <published>2019-08-29T08:18:29.000Z</published>
     <updated>2019-08-30T01:42:03.659Z</updated>
     
@@ -116,8 +116,8 @@
   
   <entry>
     <title>智力算法和一些有趣的算法题（LeetCode）</title>
-    <link href="http://smallseven.top/2019/08/21/2019-08-21-leetcode-ac/"/>
-    <id>http://smallseven.top/2019/08/21/2019-08-21-leetcode-ac/</id>
+    <link href="https://ydlan.github.io/2019/08/21/2019-08-21-leetcode-ac/"/>
+    <id>https://ydlan.github.io/2019/08/21/2019-08-21-leetcode-ac/</id>
     <published>2019-08-21T09:31:25.000Z</published>
     <updated>2019-08-21T11:49:48.582Z</updated>
     
@@ -129,17 +129,17 @@
     
     </summary>
     
-      <category term="算法" scheme="http://smallseven.top/categories/%E7%AE%97%E6%B3%95/"/>
+      <category term="算法" scheme="https://ydlan.github.io/categories/%E7%AE%97%E6%B3%95/"/>
     
     
-      <category term="算法" scheme="http://smallseven.top/tags/%E7%AE%97%E6%B3%95/"/>
+      <category term="算法" scheme="https://ydlan.github.io/tags/%E7%AE%97%E6%B3%95/"/>
     
   </entry>
   
   <entry>
     <title>利用Struts+Hibernate构建学生管理系统遇到的一些问题</title>
-    <link href="http://smallseven.top/2019/08/18/2019-08-18-ssh-test/"/>
-    <id>http://smallseven.top/2019/08/18/2019-08-18-ssh-test/</id>
+    <link href="https://ydlan.github.io/2019/08/18/2019-08-18-ssh-test/"/>
+    <id>https://ydlan.github.io/2019/08/18/2019-08-18-ssh-test/</id>
     <published>2019-08-18T13:51:56.000Z</published>
     <updated>2019-08-21T14:27:00.567Z</updated>
     
@@ -151,17 +151,17 @@
     
     </summary>
     
-      <category term="JavaEE" scheme="http://smallseven.top/categories/JavaEE/"/>
+      <category term="JavaEE" scheme="https://ydlan.github.io/categories/JavaEE/"/>
     
     
-      <category term="JavaEE" scheme="http://smallseven.top/tags/JavaEE/"/>
+      <category term="JavaEE" scheme="https://ydlan.github.io/tags/JavaEE/"/>
     
   </entry>
   
   <entry>
     <title>秋招之前</title>
-    <link href="http://smallseven.top/2019/08/12/2019-08-12-before-recruitment/"/>
-    <id>http://smallseven.top/2019/08/12/2019-08-12-before-recruitment/</id>
+    <link href="https://ydlan.github.io/2019/08/12/2019-08-12-before-recruitment/"/>
+    <id>https://ydlan.github.io/2019/08/12/2019-08-12-before-recruitment/</id>
     <published>2019-08-12T01:01:05.000Z</published>
     <updated>2019-08-12T03:21:39.933Z</updated>
     
@@ -173,15 +173,15 @@
     
     </summary>
     
-      <category term="随笔集" scheme="http://smallseven.top/categories/%E9%9A%8F%E7%AC%94%E9%9B%86/"/>
+      <category term="随笔集" scheme="https://ydlan.github.io/categories/%E9%9A%8F%E7%AC%94%E9%9B%86/"/>
     
     
   </entry>
   
   <entry>
     <title>Java Web开发入门总结篇</title>
-    <link href="http://smallseven.top/2019/07/24/2019-07-24-learn-spring/"/>
-    <id>http://smallseven.top/2019/07/24/2019-07-24-learn-spring/</id>
+    <link href="https://ydlan.github.io/2019/07/24/2019-07-24-learn-spring/"/>
+    <id>https://ydlan.github.io/2019/07/24/2019-07-24-learn-spring/</id>
     <published>2019-07-24T14:41:07.000Z</published>
     <updated>2019-08-12T03:21:36.129Z</updated>
     
@@ -193,15 +193,15 @@
     
     </summary>
     
-      <category term="学习笔记" scheme="http://smallseven.top/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+      <category term="学习笔记" scheme="https://ydlan.github.io/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     
     
   </entry>
   
   <entry>
     <title>Hash-Map-HashMap</title>
-    <link href="http://smallseven.top/2019/07/19/2019-07-19-hash-map/"/>
-    <id>http://smallseven.top/2019/07/19/2019-07-19-hash-map/</id>
+    <link href="https://ydlan.github.io/2019/07/19/2019-07-19-hash-map/"/>
+    <id>https://ydlan.github.io/2019/07/19/2019-07-19-hash-map/</id>
     <published>2019-07-19T03:02:45.000Z</published>
     <updated>2019-07-19T03:40:35.306Z</updated>
     
@@ -213,17 +213,17 @@
     
     </summary>
     
-      <category term="学习笔记" scheme="http://smallseven.top/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+      <category term="学习笔记" scheme="https://ydlan.github.io/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     
     
-      <category term="Java" scheme="http://smallseven.top/tags/Java/"/>
+      <category term="Java" scheme="https://ydlan.github.io/tags/Java/"/>
     
   </entry>
   
   <entry>
     <title>VMware-Linux</title>
-    <link href="http://smallseven.top/2019/07/11/2019-07-11-vmware-linux/"/>
-    <id>http://smallseven.top/2019/07/11/2019-07-11-vmware-linux/</id>
+    <link href="https://ydlan.github.io/2019/07/11/2019-07-11-vmware-linux/"/>
+    <id>https://ydlan.github.io/2019/07/11/2019-07-11-vmware-linux/</id>
     <published>2019-07-11T02:16:34.000Z</published>
     <updated>2019-07-11T12:59:50.814Z</updated>
     
@@ -235,17 +235,17 @@
     
     </summary>
     
-      <category term="学习笔记" scheme="http://smallseven.top/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+      <category term="学习笔记" scheme="https://ydlan.github.io/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     
     
-      <category term="linux" scheme="http://smallseven.top/tags/linux/"/>
+      <category term="linux" scheme="https://ydlan.github.io/tags/linux/"/>
     
   </entry>
   
   <entry>
     <title>Embedded-Hardware</title>
-    <link href="http://smallseven.top/2019/07/11/2019-07-11-embedded-hardware/"/>
-    <id>http://smallseven.top/2019/07/11/2019-07-11-embedded-hardware/</id>
+    <link href="https://ydlan.github.io/2019/07/11/2019-07-11-embedded-hardware/"/>
+    <id>https://ydlan.github.io/2019/07/11/2019-07-11-embedded-hardware/</id>
     <published>2019-07-11T02:16:10.000Z</published>
     <updated>2019-07-11T12:49:27.505Z</updated>
     
@@ -257,17 +257,17 @@
     
     </summary>
     
-      <category term="学习笔记" scheme="http://smallseven.top/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+      <category term="学习笔记" scheme="https://ydlan.github.io/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     
     
-      <category term="嵌入式" scheme="http://smallseven.top/tags/%E5%B5%8C%E5%85%A5%E5%BC%8F/"/>
+      <category term="嵌入式" scheme="https://ydlan.github.io/tags/%E5%B5%8C%E5%85%A5%E5%BC%8F/"/>
     
   </entry>
   
   <entry>
     <title>记录零碎技术栈</title>
-    <link href="http://smallseven.top/2019/06/29/2019-06-29-tech-stack/"/>
-    <id>http://smallseven.top/2019/06/29/2019-06-29-tech-stack/</id>
+    <link href="https://ydlan.github.io/2019/06/29/2019-06-29-tech-stack/"/>
+    <id>https://ydlan.github.io/2019/06/29/2019-06-29-tech-stack/</id>
     <published>2019-06-29T14:28:46.000Z</published>
     <updated>2019-07-24T14:38:33.328Z</updated>
     
@@ -284,8 +284,8 @@
   
   <entry>
     <title>初识Docker与简单使用</title>
-    <link href="http://smallseven.top/2019/06/17/2019-06-17-docker-study/"/>
-    <id>http://smallseven.top/2019/06/17/2019-06-17-docker-study/</id>
+    <link href="https://ydlan.github.io/2019/06/17/2019-06-17-docker-study/"/>
+    <id>https://ydlan.github.io/2019/06/17/2019-06-17-docker-study/</id>
     <published>2019-06-17T02:00:04.000Z</published>
     <updated>2019-07-13T12:19:54.954Z</updated>
     
@@ -297,17 +297,17 @@
     
     </summary>
     
-      <category term="学习笔记" scheme="http://smallseven.top/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+      <category term="学习笔记" scheme="https://ydlan.github.io/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     
     
-      <category term="Docker" scheme="http://smallseven.top/tags/Docker/"/>
+      <category term="Docker" scheme="https://ydlan.github.io/tags/Docker/"/>
     
   </entry>
   
   <entry>
     <title>软件工程：设计难于实现</title>
-    <link href="http://smallseven.top/2019/06/11/2019-06-11-software/"/>
-    <id>http://smallseven.top/2019/06/11/2019-06-11-software/</id>
+    <link href="https://ydlan.github.io/2019/06/11/2019-06-11-software/"/>
+    <id>https://ydlan.github.io/2019/06/11/2019-06-11-software/</id>
     <published>2019-06-11T02:27:32.000Z</published>
     <updated>2019-06-11T02:47:45.713Z</updated>
     
@@ -319,15 +319,15 @@
     
     </summary>
     
-      <category term="学习笔记" scheme="http://smallseven.top/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+      <category term="学习笔记" scheme="https://ydlan.github.io/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     
     
   </entry>
   
   <entry>
     <title>计算机：组成原理和体系结构</title>
-    <link href="http://smallseven.top/2019/06/09/2019-06-09-computer-summary/"/>
-    <id>http://smallseven.top/2019/06/09/2019-06-09-computer-summary/</id>
+    <link href="https://ydlan.github.io/2019/06/09/2019-06-09-computer-summary/"/>
+    <id>https://ydlan.github.io/2019/06/09/2019-06-09-computer-summary/</id>
     <published>2019-06-09T12:22:27.000Z</published>
     <updated>2019-06-11T02:43:26.006Z</updated>
     
@@ -339,17 +339,17 @@
     
     </summary>
     
-      <category term="学习笔记" scheme="http://smallseven.top/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+      <category term="学习笔记" scheme="https://ydlan.github.io/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     
     
-      <category term="计算机" scheme="http://smallseven.top/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA/"/>
+      <category term="计算机" scheme="https://ydlan.github.io/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA/"/>
     
   </entry>
   
   <entry>
     <title>Blog Plans</title>
-    <link href="http://smallseven.top/2019/06/07/2019-06-07-blog-planning/"/>
-    <id>http://smallseven.top/2019/06/07/2019-06-07-blog-planning/</id>
+    <link href="https://ydlan.github.io/2019/06/07/2019-06-07-blog-planning/"/>
+    <id>https://ydlan.github.io/2019/06/07/2019-06-07-blog-planning/</id>
     <published>2019-06-07T03:04:25.000Z</published>
     <updated>2019-06-14T10:53:49.084Z</updated>
     
@@ -366,8 +366,8 @@
   
   <entry>
     <title>六月，感想</title>
-    <link href="http://smallseven.top/2019/06/06/2019-06-06-my-feelings/"/>
-    <id>http://smallseven.top/2019/06/06/2019-06-06-my-feelings/</id>
+    <link href="https://ydlan.github.io/2019/06/06/2019-06-06-my-feelings/"/>
+    <id>https://ydlan.github.io/2019/06/06/2019-06-06-my-feelings/</id>
     <published>2019-06-06T13:03:00.000Z</published>
     <updated>2019-06-14T10:54:38.279Z</updated>
     
@@ -379,15 +379,15 @@
     
     </summary>
     
-      <category term="随笔集" scheme="http://smallseven.top/categories/%E9%9A%8F%E7%AC%94%E9%9B%86/"/>
+      <category term="随笔集" scheme="https://ydlan.github.io/categories/%E9%9A%8F%E7%AC%94%E9%9B%86/"/>
     
     
   </entry>
   
   <entry>
     <title>关于Navicat for MySQL 的使用小结</title>
-    <link href="http://smallseven.top/2019/05/30/2019-05-30-navicat-mysql/"/>
-    <id>http://smallseven.top/2019/05/30/2019-05-30-navicat-mysql/</id>
+    <link href="https://ydlan.github.io/2019/05/30/2019-05-30-navicat-mysql/"/>
+    <id>https://ydlan.github.io/2019/05/30/2019-05-30-navicat-mysql/</id>
     <published>2019-05-30T00:50:23.000Z</published>
     <updated>2019-06-14T10:57:29.962Z</updated>
     
@@ -399,17 +399,17 @@
     
     </summary>
     
-      <category term="学习笔记" scheme="http://smallseven.top/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+      <category term="学习笔记" scheme="https://ydlan.github.io/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     
     
-      <category term="mysql" scheme="http://smallseven.top/tags/mysql/"/>
+      <category term="mysql" scheme="https://ydlan.github.io/tags/mysql/"/>
     
   </entry>
   
   <entry>
     <title>关于前端学习的小总结</title>
-    <link href="http://smallseven.top/2019/05/02/2019-05-02-study-html/"/>
-    <id>http://smallseven.top/2019/05/02/2019-05-02-study-html/</id>
+    <link href="https://ydlan.github.io/2019/05/02/2019-05-02-study-html/"/>
+    <id>https://ydlan.github.io/2019/05/02/2019-05-02-study-html/</id>
     <published>2019-05-02T15:51:12.000Z</published>
     <updated>2019-06-14T10:52:02.625Z</updated>
     
@@ -421,10 +421,10 @@
     
     </summary>
     
-      <category term="学习笔记" scheme="http://smallseven.top/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+      <category term="学习笔记" scheme="https://ydlan.github.io/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     
     
-      <category term="前端" scheme="http://smallseven.top/tags/%E5%89%8D%E7%AB%AF/"/>
+      <category term="前端" scheme="https://ydlan.github.io/tags/%E5%89%8D%E7%AB%AF/"/>
     
   </entry>
   
