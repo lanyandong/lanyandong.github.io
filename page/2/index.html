@@ -1,55 +1,85 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
-<head>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="zh-CN">
+<head><meta name="generator" content="Hexo 3.8.0">
   <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 3.8.0">
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon16x16.png">
-
-<link rel="stylesheet" href="/css/main.css">
-
-<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Monda:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic|PT Mono:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
-<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
 
 
-<script id="hexo-configurations">
-  var NexT = window.NexT || {};
-  var CONFIG = {
-    root: '/',
-    scheme: 'Mist',
-    version: '7.5.0',
-    exturl: false,
-    sidebar: {"position":"right","display":"post","offset":12,"onmobile":false},
-    copycode: {"enable":false,"show_result":false,"style":null},
-    back2top: {"enable":true,"sidebar":false,"scrollpercent":false},
-    bookmark: {"enable":false,"color":"#222","save":"auto"},
-    fancybox: false,
-    mediumzoom: false,
-    lazyload: false,
-    pangu: false,
-    algolia: {
-      appID: '',
-      apiKey: '',
-      indexName: '',
-      hits: {"per_page":10},
-      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
-    },
-    localsearch: {"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
-    path: '',
-    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
-    translation: {
-      copy_button: '复制',
-      copy_success: '复制成功',
-      copy_failure: '复制失败'
-    },
-    sidebarPadding: 40
-  };
-</script>
 
-  <meta name="description" content="YDLAN的个人博客">
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon32x32.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon16x16.png?v=5.1.4">
+
+
+
+
+
+
+  <meta name="keywords" content="Hexo, NexT">
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="YDLAN" type="application/atom+xml">
+
+
+
+
+
+
+<meta name="description" content="YDLAN的个人博客">
 <meta property="og:type" content="website">
 <meta property="og:title" content="YDLAN">
 <meta property="og:url" content="https://ydlan.github.io/page/2/index.html">
@@ -60,19 +90,39 @@
 <meta name="twitter:title" content="YDLAN">
 <meta name="twitter:description" content="YDLAN的个人博客">
 
-<link rel="canonical" href="https://ydlan.github.io/page/2/">
 
 
-<script id="page-configurations">
-  // https://hexo.io/docs/variables.html
-  CONFIG.page = {
-    sidebar: "",
-    isHome: true,
-    isPost: false,
-    isPage: false,
-    isArchive: false
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
   };
 </script>
+
+
+
+  <link rel="canonical" href="https://ydlan.github.io/page/2/">
+
+
+
+
 
   <title>YDLAN</title>
   
@@ -82,155 +132,217 @@
 
 
 
-  <noscript>
-  <style>
-  .use-motion .brand,
-  .use-motion .menu-item,
-  .sidebar-inner,
-  .use-motion .post-block,
-  .use-motion .pagination,
-  .use-motion .comments,
-  .use-motion .post-header,
-  .use-motion .post-body,
-  .use-motion .collection-header { opacity: initial; }
 
-  .use-motion .site-title,
-  .use-motion .site-subtitle {
-    opacity: initial;
-    top: initial;
-  }
-
-  .use-motion .logo-line-before i { left: initial; }
-  .use-motion .logo-line-after i { right: initial; }
-  </style>
-</noscript>
 
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage">
-  <div class="container use-motion">
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left 
+  page-home">
     <div class="headband"></div>
 
-    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-brand-container">
-  <div class="site-meta">
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
 
-    <div>
+    <div class="custom-logo-site-title">
       <a href="/" class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
         <span class="site-title">YDLAN</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
+      
         <p class="site-subtitle">一起来探索吧！</p>
+      
   </div>
 
   <div class="site-nav-toggle">
-    <div class="toggle" aria-label="切换导航栏">
-      <span class="toggle-line toggle-line-first"></span>
-      <span class="toggle-line toggle-line-middle"></span>
-      <span class="toggle-line toggle-line-last"></span>
-    </div>
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
   </div>
 </div>
-
 
 <nav class="site-nav">
   
-  <ul id="menu" class="menu">
+
+  
+    <ul id="menu" class="menu">
+      
+        
         <li class="menu-item menu-item-home">
-
-    <a href="/" rel="section"><i class="fa fa-fw fa-home"></i>首页</a>
-
-  </li>
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            Home
+          </a>
+        </li>
+      
+        
         <li class="menu-item menu-item-archives">
-
-    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档</a>
-
-  </li>
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            Archives
+          </a>
+        </li>
+      
+        
         <li class="menu-item menu-item-categories">
-
-    <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>分类</a>
-
-  </li>
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            Categories
+          </a>
+        </li>
+      
+        
         <li class="menu-item menu-item-tags">
-
-    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>标签</a>
-
-  </li>
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            Tags
+          </a>
+        </li>
+      
+        
         <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            About
+          </a>
+        </li>
+      
 
-    <a href="/about/" rel="section"><i class="fa fa-fw fa-user"></i>关于</a>
+      
+    </ul>
+  
 
-  </li>
-  </ul>
-
+  
 </nav>
-</div>
+
+
+
+ </div>
     </header>
 
-    
-  <div class="back-to-top">
-    <i class="fa fa-arrow-up"></i>
-    <span>0%</span>
-  </div>
-
-
-    <main class="main">
+    <main id="main" class="main">
       <div class="main-inner">
         <div class="content-wrap">
-          
-
-          <div class="content">
+          <div id="content" class="content">
             
+  <section id="posts" class="posts-expand">
+    
+      
 
-  <div class="posts-expand">
-        
+  
+
   
   
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://ydlan.github.io/2019/08/18/2019-08-18-ssh-test/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jpg">
       <meta itemprop="name" content="YDLAN">
-      <meta itemprop="description" content="YDLAN的个人博客">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="YDLAN">
     </span>
+
+    
       <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            <a href="/2019/08/18/2019-08-18-ssh-test/" class="post-title-link" itemprop="url">利用Struts+Hibernate构建学生管理系统遇到的一些问题</a>
-        </h1>
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/08/18/2019-08-18-ssh-test/" itemprop="url">利用Struts+Hibernate构建学生管理系统遇到的一些问题</a></h1>
+        
 
         <div class="post-meta">
-            <span class="post-meta-item">
+          <span class="post-time">
+            
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
-              <span class="post-meta-item-text">发表于</span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-08-18T21:51:56+08:00">
+                2019-08-18
+              </time>
+            
 
-              <time title="创建时间：2019-08-18 21:51:56" itemprop="dateCreated datePublished" datetime="2019-08-18T21:51:56+08:00">2019-08-18</time>
-            </span>
-            <span class="post-meta-item">
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
-              <span class="post-meta-item-text">分类于</span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
                   <a href="/categories/JavaEE/" itemprop="url" rel="index">
                     <span itemprop="name">JavaEE</span>
                   </a>
                 </span>
+
+                
+                
+              
             </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
 
           
 
         </div>
       </header>
+    
 
     
     
@@ -238,75 +350,171 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <p>私以为在学习过程中多一些BUG是有好处的，通过BUG可以学习很多新的东西，以及解决问题方法。当然遇到BUG首先应该仔细看报错信息，然后准确定位问题，不要盲目的百度检索。下面就来记录一下利用Struts+Hibernate构建学生管理系统遇到的一些问题，如果以后出现类似问题，方便查阅。</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2019/08/18/2019-08-18-ssh-test/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
+      
+
+      
+        
+          
+            <p>私以为在学习过程中多一些BUG是有好处的，通过BUG可以学习很多新的东西，以及解决问题方法。当然遇到BUG首先应该仔细看报错信息，然后准确定位问题，不要盲目的百度检索。下面就来记录一下利用Struts+Hibernate构建学生管理系统遇到的一些问题，如果以后出现类似问题，方便查阅。</p>
+<h3 id="1-jar包配置问题"><a href="#1-jar包配置问题" class="headerlink" title="1. jar包配置问题"></a>1. jar包配置问题</h3><p>本次项目的开发环境为：Struts2.3 + hibernate3.0 + MySQL5.0，由于使用的是Eclipse，并没有使用Maven进行项目构建，所以所有的环境和需要的jar都需要手动配置。项目需要导入需要的核心jar包，包括：hibernate-core包，struts2-core包，mysql驱动包 junit单元测试包。</p>
+<p>所需要的jar包，大多可通过百度查的官方下载地址（<a href="https://mvnrepository.com/" target="_blank" rel="noopener">https://mvnrepository.com/</a>），下载需要的jar，然后导入到项目的WEB-INF目录下的lib目录中。</p>
+<h3 id="2-配置struts环境"><a href="#2-配置struts环境" class="headerlink" title="2. 配置struts环境"></a>2. 配置struts环境</h3><p>配置struts只需要简单的两部：</p>
+<ol>
+<li>修改web.xml, 配置过滤器。这里需要弄清楚struts使用的版本。</li>
+<li>创建struts.xml 并将文件保存在Java Resources 下的src目录下，struts.xml 是用来拦截请求转发至对应Action的，所以要完成Action注册。</li>
+</ol>
+<p>下面是一个简单的struts.xml配置例子：</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span></span><br><span class="line"><span class="meta">&lt;!DOCTYPE struts PUBLIC</span></span><br><span class="line"><span class="meta">        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"</span></span><br><span class="line"><span class="meta">        "http://struts.apache.org/dtds/struts-2.0.dtd"&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">struts</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- Struts xml的配置文件 --&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- 所有匹配*.action的请求都由struts2处理 --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">constant</span> <span class="attr">name</span>=<span class="string">"struts.action.extension"</span> <span class="attr">value</span>=<span class="string">"action,,"</span> /&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- 是否启用开发模式 --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">constant</span> <span class="attr">name</span>=<span class="string">"struts.devMode"</span> <span class="attr">value</span>=<span class="string">"true"</span> /&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">package</span> <span class="attr">name</span>=<span class="string">"default"</span> <span class="attr">extends</span>=<span class="string">"struts-default"</span> <span class="attr">namespace</span>=<span class="string">"/"</span>&gt;</span></span><br><span class="line">        <span class="comment">&lt;!-- 如果不指定method，那么默认方法是execute--&gt;</span></span><br><span class="line">        <span class="comment">&lt;!--name:Action类的名字，具有唯一性，页面上通过name来访问Action类 --&gt;</span></span><br><span class="line"></span><br><span class="line">        <span class="tag">&lt;<span class="name">action</span> <span class="attr">name</span>=<span class="string">"test"</span> <span class="attr">class</span>=<span class="string">"test"</span> <span class="attr">method</span>=<span class="string">"test"</span>&gt;</span></span><br><span class="line">            <span class="comment">&lt;!-- 配置结果集 :name属性的值一定要与execute方法的返回值一致--&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">result</span> <span class="attr">name</span>=<span class="string">"test"</span>&gt;</span>test.jsp<span class="tag">&lt;/<span class="name">result</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">action</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">package</span>&gt;</span></span><br><span class="line">    </span><br><span class="line"><span class="tag">&lt;/<span class="name">struts</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h3 id="3-hibernate相关配置"><a href="#3-hibernate相关配置" class="headerlink" title="3. hibernate相关配置"></a>3. hibernate相关配置</h3><p>创建hibernate.cfg.xml文件,并将文件保存在Java Resources 下的src目录下。配置文件包括两个核心部分：一个是property属性，主要配置的是数据库的链接。另外一个是mapping属性，指定关联的 .hbm.xml文件。</p>
+<p>另外指定currentSession()方法所得到的Session由谁来跟踪管理，thread指Session由当前线程来跟踪管理，这是一种事务配置的方式，实质上是只当前session通过当前执行的线程来跟踪和界定。</p>
+<p>hibernate还有一个很牛的feature就是可以用HQL，这是完全可以把查询映射到你OO模型的查询语言，我们可以不用过多关注SQL的编写，而更关注于数据和数据、对象和对象之间的关系。</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span></span><br><span class="line"><span class="meta">&lt;!DOCTYPE hibernate-configuration PUBLIC</span></span><br><span class="line"><span class="meta">		"-//Hibernate/Hibernate Configuration DTD 3.0//EN"</span></span><br><span class="line"><span class="meta">		"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd"&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">hibernate-configuration</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">session-factory</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"connection.username"</span>&gt;</span>root<span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"connection.password"</span>&gt;</span>root<span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"connection.driver_class"</span>&gt;</span>com.mysql.jdbc.Driver<span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"connection.url"</span>&gt;</span>jdbc:mysql://localhost:3306/studentms?useUnicode=true&amp;amp;characterEncoding=utf-8<span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"dialect"</span>&gt;</span>org.hibernate.dialect.MySQLDialect<span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br><span class="line">		<span class="comment">&lt;!-- 执行操作时是否在控制台打印SQL --&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"show_sql"</span>&gt;</span>true<span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"format_sql"</span>&gt;</span>true<span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br><span class="line">        	<span class="comment">&lt;!-- 指定自动生成数据表的策略 --&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"hbm2ddl.auto"</span>&gt;</span>update<span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br><span class="line">        	<span class="comment">&lt;!-- 指定currentSession()方法所得到的Session由谁来跟踪管理，thread指Session由当前线程来跟踪管理 --&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"hibernate.current_session_context_class"</span>&gt;</span>thread<span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br><span class="line">		<span class="comment">&lt;!-- 指定关联的 .hbm.xml文件 --&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">mapping</span> <span class="attr">resource</span>=<span class="string">"entity/Students.hbm.xml"</span>/&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">mapping</span> <span class="attr">resource</span>=<span class="string">"entity/Users.hbm.xml"</span>/&gt;</span></span><br><span class="line">	<span class="tag">&lt;/<span class="name">session-factory</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">hibernate-configuration</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>关于实体和表的映射，需要生成相关.hbm.xml映射文件，用于向Hibernate提供关于将对象持久化到关系数据库中的信息，持久化对象的映射定义可全部存储在同一个映射文件中，也可将每个对象的映射定义存储在独立的文件中。后一种方法较好，因为将大量持久化类的映射定义存储在一个文件中比较麻烦，而且将难以调试和隔离特定类的映射定义错误。</p>
+<h3 id="4-设计接口和实现类"><a href="#4-设计接口和实现类" class="headerlink" title="4. 设计接口和实现类"></a>4. 设计接口和实现类</h3><p>面向接口编程是OOP的设计原则之一，目的是就是降低程序的耦合性，接口定义统一的编程规范，实现类可以根据具体的业务逻辑实现特定的功能，既利于程序的扩展，也利于程序的维护。</p>
+<p>在对数据库进行管理时，可以利用Hibernate的 SessionFactroy接口，创建会话工厂对象，它充当数据存储源的代理，并负责创建Session对象。一般情况下，一个项目通常只需要一个SessionFactory就够，然后在其他类中调用其中的方法就OK了。下面就是一个简单的创建会话对象的类方法。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> org.hibernate.SessionFactory;</span><br><span class="line"><span class="keyword">import</span> org.hibernate.boot.registry.StandardServiceRegistryBuilder;</span><br><span class="line"><span class="keyword">import</span> org.hibernate.cfg.Configuration;</span><br><span class="line"><span class="keyword">import</span> org.hibernate.service.ServiceRegistry;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">// 会话工厂类,目的获得SessionFactory对象</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MyHibernateSessionFactory</span> </span>&#123;</span><br><span class="line">	</span><br><span class="line">	<span class="keyword">private</span> <span class="keyword">static</span> SessionFactory sessionFactory; <span class="comment">//会话工厂属性</span></span><br><span class="line">	<span class="comment">// 构造函数保证单例模式</span></span><br><span class="line">	<span class="function"><span class="keyword">private</span> <span class="title">MyHibernateSessionFactory</span><span class="params">()</span></span>&#123;</span><br><span class="line">		</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="comment">//共有的静态方法，获得会话工厂对象</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> SessionFactory <span class="title">getSessionFactory</span><span class="params">()</span></span>&#123;</span><br><span class="line">		<span class="keyword">if</span>(sessionFactory==<span class="keyword">null</span>)&#123;</span><br><span class="line">			<span class="comment">//创建配置对象</span></span><br><span class="line">			Configuration config = <span class="keyword">new</span> Configuration().configure();</span><br><span class="line">			<span class="comment">//创建服务注册对象  </span></span><br><span class="line">			ServiceRegistry serviceRegistry = <span class="keyword">new</span> StandardServiceRegistryBuilder().applySettings(config.getProperties()).build();</span><br><span class="line">			<span class="comment">//创建sessionFactory</span></span><br><span class="line">			sessionFactory = config.buildSessionFactory(serviceRegistry);</span><br><span class="line">			<span class="keyword">return</span> sessionFactory;</span><br><span class="line">		&#125;<span class="keyword">else</span>&#123;</span><br><span class="line">			<span class="keyword">return</span> sessionFactory;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>利用Hibernate的Query，Transaction和Session可以完成数据库事务的管理操作，Query负责执行各种数据库查询。它可以使用HQL语言或SQL语句两种表达方式。它的返回值一般是List，需要自己转换。Transaction接口负责事务相关的操作，一般在Hibernate的增删改中出现，但是使用Hibernate的人一般使用spring)去管理事务。</p>
+<p>这里值得注意的是Hibernate的Session接口， Session可以看作介于数据连接与事务管理一种中间接口，有时也称Session是一个持久层管理器，因为它包含这一些持久层相关的操作，如存储持久对象至数据库，以及从数据库从获得它们。</p>
+<p>在Hibernate中，实例化的Session是一个轻量级的类，创建和销毁它都不会占用很多资源，这不同于JSP 应用中的HttpSession，一般情况我们会会HttpSesion 对象称为用户session。</p>
+<h3 id="5-设计Action控制器"><a href="#5-设计Action控制器" class="headerlink" title="5.  设计Action控制器"></a>5.  设计Action控制器</h3><p>在项目中Action承担着一个控制业务调度和管理跳转的功能，Action就像是服务员，顾客点什么菜，菜上给几号桌，都是ta的职责；所以当实现功能后，需要在struts.xml 中进行注册，与JSP的请求相对应，并完成相应的界面调用。</p>
+<p>Struts接受的表单数据的方式有几种方式，分别是实体类对象，属性驱动，模型驱动的方式和表达式驱动等，具体采用哪种需要根据具体的业务逻辑来选择，没有最好的，只有最合适的。</p>
+<p>可以直接使用Validator(验证器)框架对表单数据进行验证，而不需要用户编写代码去验证，拦截器是在Action提交之前，动态的拦截Action，然后查询配置文件，如果当前的Action配置了拦截器，那么就相应的实例化出拦截器对象，并串联成表，最后一个一个调用拦截器。</p>
+<p>拦截器只对Action进行处理，对其余的不进行处理。拦截器可以读取值栈中的东西，就像登录验证时，拦截器可以读取Session的内容。拦截器一次创建可以多次被调用，只要是使用拦截器的Action，Action执行几次，拦截器就同样执行几次。</p>
+<h3 id="6-项目框架"><a href="#6-项目框架" class="headerlink" title="6. 项目框架"></a>6. 项目框架</h3><p>项目中没有使用spring进行解耦，而是将hibernate和struts进行整合，项目也基本上符合MVC的一个设计理念：</p>
+<p>Entity对应数据库表的实体类，Dao层是使用hibernate连接数据库、操作数据库（增删改查）定义了一些列操作数据库的接口，Service层：引用对应的Dao数据库操作。在一定程度上Dao层和Service可以写在一起。以上几层综合起来类似于MVC的模型层。</p>
+<p>Action层：处理业务调度和管理跳转，引用对应的Service层，结合Struts的配置文件，跳转到指定的页面。起到一个控制层的作用。</p>
+<p>最后是JSP表现的视图层，可以通过编写JSP进行请求和数据显示，这里可以使用struts的一些标签，通过用户session读出数据。JSP真的太难写了ORZ…前后端分离是相当有必要的，使用页面模板也是很有必要的。</p>
+<p>整个项目的调用流程基本上是：<strong>JSP—Action—Service—DAO—Hibernate</strong>。整个项目框架的优点是：利用Struts负责Web层，进行请求拦截。利用Hibernate负责持久化层，完成对数据库的crud操作。</p>
+<h3 id="7-问题总结"><a href="#7-问题总结" class="headerlink" title="7. 问题总结"></a>7. 问题总结</h3><p>通过上面的总结，把项目构建的重要步骤和项目的框架流程都进行分析，从零开始，一步步的构建一个完整项目，真的能够学到很多东西。熟能生巧，多看多思多动手，技术能力自然就有增长咯。</p>
+
+          
         
       
     </div>
+    
+    
+    
 
     
+
     
+
     
-      <footer class="post-footer">
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
         <div class="post-eof"></div>
-      </footer>
+      
+    </footer>
+  </div>
+  
+  
+  
   </article>
+
+
+    
+      
+
+  
+
   
   
   
 
-        
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
   
   
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://ydlan.github.io/2019/07/24/2019-07-24-learn-spring/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jpg">
       <meta itemprop="name" content="YDLAN">
-      <meta itemprop="description" content="YDLAN的个人博客">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="YDLAN">
     </span>
+
+    
       <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            <a href="/2019/07/24/2019-07-24-learn-spring/" class="post-title-link" itemprop="url">Java Web开发入门总结篇</a>
-        </h1>
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/07/24/2019-07-24-learn-spring/" itemprop="url">Java Web开发入门总结篇</a></h1>
+        
 
         <div class="post-meta">
-            <span class="post-meta-item">
+          <span class="post-time">
+            
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
-              <span class="post-meta-item-text">发表于</span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-07-24T22:41:07+08:00">
+                2019-07-24
+              </time>
+            
 
-              <time title="创建时间：2019-07-24 22:41:07" itemprop="dateCreated datePublished" datetime="2019-07-24T22:41:07+08:00">2019-07-24</time>
-            </span>
-            <span class="post-meta-item">
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
-              <span class="post-meta-item-text">分类于</span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
                   <a href="/categories/学习笔记/" itemprop="url" rel="index">
                     <span itemprop="name">学习笔记</span>
                   </a>
                 </span>
+
+                
+                
+              
             </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
 
           
 
         </div>
       </header>
+    
 
     
     
@@ -314,75 +522,214 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h3 id="Java-Web-相关概念"><a href="#Java-Web-相关概念" class="headerlink" title="Java Web 相关概念"></a>Java Web 相关概念</h3><p>在Java开发中很多概念性的名词，对于一个开发人员来说，是有必要了解它们的基本概念和含义的，要不然在看一些技术文章时会很懵，或者会混淆一些基础概念性的东西。就此，我对自己所理解的一些概念性的东西进行简单的梳理。</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2019/07/24/2019-07-24-learn-spring/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
+      
+
+      
+        
+          
+            <h3 id="Java-Web-相关概念"><a href="#Java-Web-相关概念" class="headerlink" title="Java Web 相关概念"></a>Java Web 相关概念</h3><p>在Java开发中很多概念性的名词，对于一个开发人员来说，是有必要了解它们的基本概念和含义的，要不然在看一些技术文章时会很懵，或者会混淆一些基础概念性的东西。就此，我对自己所理解的一些概念性的东西进行简单的梳理。</p>
+<p><strong>Java EE</strong>：(Java Platform Enterprise Edition)是Java面向企业应用的一个平台，类似于一种标准规范，就目前的各种表达如J2EE，JavaEE，JEE其实说的都是同一个东西。JavaEE 比JavaSE (Java Platform, Standard Edition)增加面向企业的开发支持，包括Servlet，WebSocket，EL，EJB 等。</p>
+<p><strong>Servlet</strong>：是Web开发离不开的组件，Servlet 是一套用于处理 HTTP 请求的 API 标准，也可以理解为运行在Server端的小程序，用于响应客户端的HTTP请求。和Servlet对应的有一个Applet，这是运行于客户端的一种小程序组件，主要应用于web浏览器端。</p>
+<p>另外，不得不提的是<strong>JSP</strong>（Java Server Pages），它是一种高度抽象的Servlet，JSP在运行期间会被编译成Servlet，其实本质上Servlet和JSP没啥区别，但JSP写起来要方便的多。</p>
+<p><strong>EJB</strong>： （Enterprise JavaBean）也是JavaEE的一个组件，面向更加复杂的企业业务，对于Web开发来说，EJB不是必须的。对于上面提到的Servlet，如果要运行的话需要Servlet Container，而常用的Container包括Tomcat，JBoss，Jetty等。对于EJB而言，同一样也需要EJB Container，JBoss提供了EJB的支持，但Tomcat并不支持EJB。</p>
+<p><strong>SSH</strong>：（Struts+Spring +Hibernate）是一个Java Web开发的合成框架。Struts进行流程控制，Spring进行业务流转，Hibernate进行数据库操作的封装。事实上JavaEE开发可以仅使用Servlet和JSP技术，在JSP上构建View，实现业务逻辑。但随着技术的进步和发展，纯JSP技术可能并不能满足业务需求和开发效率的要求，所以衍生了一些列如SSH的结合框架。</p>
+<p>Struts更多的是面向JSP和View，而Spring则是一个非常庞大的框架，其中包括了SpringMVC，SpringBoot 以及 SpringCloud 等用于 Web 开发的工具。而Hibernate则是一种ORM框架，是一种对象关系映射关系，简化了数据的处理和访问。</p>
+<p><strong>SSM</strong>：（Spring+SpringMVC+MyBatis）同样是一个Java Web开发的合成框架，是标准的MVC模式，将整个系统划分为表现层，controller层，service层，dao层四层。Spring实现业务对象管理，Spring MVC负责请求的转发和视图管理，MyBatis作为数据对象的持久化引擎。</p>
+<p>至此，关于Java Web开发的一些概念词汇大致梳理了一遍，但都没有详细讲解它们的基本原理和架构，这需要在具体的实践中去体验。另外需要注意的是区分JavaEE，Java Web，Spring它们的关系，<strong>JavaEE可以理解为是一种Java的标准，而Java Web则是指Java的应用开发方向，而Spring则是Java Web开发的框架。</strong></p>
+<h3 id="Spring-框架模块"><a href="#Spring-框架模块" class="headerlink" title="Spring 框架模块"></a>Spring 框架模块</h3><p><strong>Spring有七大功能模块，分别是Spring Core，AOP，ORM，DAO，WEB，Context，MVC。</strong></p>
+<p><img src="https://s2.ax1x.com/2019/07/25/eZjFC4.gif" alt="spring"></p>
+<p>每个模块的作用如下：</p>
+<ul>
+<li><p><strong>核心容器（Spring Core）</strong>：核心容器提供 Spring 框架的基本功能。核心容器的主要组件是 BeanFactory，它是工厂模式的实现。BeanFactory 使用<em>控制反转</em> （IoC） 模式将应用程序的配置和依赖性规范与实际的应用程序代码分开。</p>
+</li>
+<li><p><strong>Spring AOP</strong>：通过配置管理特性，Spring AOP 模块直接将面向方面的编程功能集成到了 Spring 框架中。所以，可以很容易地使 Spring 框架管理的任何对象支持 AOP。Spring AOP 模块为基于 Spring 的应用程序中的对象提供了事务管理服务。通过使用 Spring AOP，不用依赖 EJB 组件，就可以将声明性事务管理集成到应用程序中。</p>
+</li>
+<li><p><strong>Spring DAO</strong>：JDBC DAO 抽象层提供了有意义的异常层次结构，可用该结构来管理异常处理和不同数据库供应商抛出的错误消息。异常层次结构简化了错误处理，并且极大地降低了需要编写的异常代码数量（例如打开和关闭连接）。Spring DAO 的面向 JDBC 的异常遵从通用的 DAO 异常层次结构。</p>
+</li>
+<li><p><strong>Spring ORM</strong>：Spring 框架插入了若干个 ORM 框架，从而提供了 ORM 的对象关系工具，其中包括 JDO、Hibernate 和 iBatis SQL Map。所有这些都遵从 Spring 的通用事务和 DAO 异常层次结构。</p>
+</li>
+<li><p><strong>Spring Context</strong>：Spring 上下文是一个配置文件，向 Spring 框架提供上下文信息。Spring 上下文包括企业服务，例如 JNDI、EJB、电子邮件、国际化、校验和调度功能。</p>
+</li>
+<li><p><strong>Spring Web 模块</strong>：Web 上下文模块建立在应用程序上下文模块之上，为基于 Web 的应用程序提供了上下文。所以，Spring 框架支持与 Jakarta Struts 的集成。Web 模块还简化了处理多部分请求以及将请求参数绑定到域对象的工作。</p>
+</li>
+<li><p><strong>Spring MVC 框架</strong>：MVC 框架是一个全功能的构建 Web 应用程序的 MVC 实现。通过策略接口，MVC 框架变成为高度可配置的，MVC 容纳了大量视图技术，其中包括 JSP、Velocity、Tiles、iText 和 POI。</p>
+</li>
+</ul>
+<p><strong>Ioc Container</strong>：反转控制模式它是Spring的一个基础，也是最重要的。它不创建对象，但是描述创建对象的方式，在代码中也不直接与对象和服务连接，但在配置文件中描述了哪一个组件需要哪一项服务。在Spring框架中，IoC容器的实现模式主要有两种是：</p>
+<ol>
+<li>通过JavaBean属性（例如 setter 方法）分配依赖性。</li>
+<li>依赖性以构造函数的形式提供，不以JavaBean 属性的形式公开。</li>
+</ol>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**IoC容器创建 HelloWorldService 对象，是通过 setter 方法传递 HelloWorld 对象到HelloWorldService。**/</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">HelloWorldService</span> </span>&#123;</span><br><span class="line">  </span><br><span class="line">    <span class="keyword">private</span> HelloWorld helloWorld;</span><br><span class="line">  </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">HelloWorldService</span><span class="params">()</span> </span>&#123;</span><br><span class="line">  </span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// 依赖注入</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setHelloWorld</span><span class="params">(HelloWorld helloWorld)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.helloWorld = helloWorld;</span><br><span class="line">    &#125;</span><br><span class="line">  </span><br><span class="line">    <span class="function"><span class="keyword">public</span> HelloWorld <span class="title">getHelloWorld</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">this</span>.helloWorld;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="Spring-MVC"><a href="#Spring-MVC" class="headerlink" title="Spring MVC"></a>Spring MVC</h3><p>Spring web MVC框架提供了MVC(模型 - 视图 - 控制器)架构和用于开发灵活和松散耦合的Web应用程序的组件。 MVC模式导致应用程序的不同方面(输入逻辑，业务逻辑和UI逻辑)分离，同时提供这些元素之间的松散耦合。</p>
+<ul>
+<li>模型(Model)封装了应用程序数据，通常它们将由<code>POJO</code>类组成。</li>
+<li>视图(View)负责渲染模型数据，一般来说它生成客户端浏览器可以解释HTML输出。</li>
+<li>控制器(Controller)负责处理用户请求并构建适当的模型，并将其传递给视图进行渲染。</li>
+</ul>
+<p>模型 - 视图 - 控制器(MVC)框架是围绕DispatcherServlet设计的，它处理所有的HTTP请求和响应。</p>
+<p><img src="https://s2.ax1x.com/2019/07/25/eZjk8J.png" alt="DispatcherServlet"></p>
+<p><strong>DispatcherServlet</strong>的请求处理工作流：</p>
+<ol>
+<li><p>在接收到HTTP请求后，DispatcherServlet会查询HandlerMapping以调用相应的Controller。</p>
+</li>
+<li><p>Controlle接受请求并根据使用的<code>GET</code>或<code>POST</code>方法调用相应的服务方法。 服务方法将基于定义的业务逻辑设置模型数据，并将视图名称返回给DispatcherServlet。</p>
+</li>
+<li>DispatcherServlet将从ViewResolver获取请求的定义视图。</li>
+<li>当视图完成，DispatcherServlet将模型数据传递到最终的视图，并在浏览器上呈现。</li>
+</ol>
+<h3 id="Spring-Boot"><a href="#Spring-Boot" class="headerlink" title="Spring Boot"></a>Spring Boot</h3><p>SpringBoot 是构建在 SpringMVC 基础上的新一代 Web 开发框架。相比 SpringMVC，SpringBoot 的配置更简单，上手更容易。在纯的Spring MVC配置中，要启动一个web程序demo，需要进行很多配置，包括一些复杂的Annotation，Controller是需要理解和明白的。但是在Spring Boot中，减少了大量的配置，提供了一种简单应用程序入门的方式。</p>
+<p>Spring Boot会根据使用<code>@EnableAutoConfiguration</code>批注添加到项目中的依赖项自动配置应用程序。spring boot应用程序的入口点是包含<code>@SpringBootApplication</code>注释和<code>main</code>方法的类。<br>Spring Boot使用<code>@ComponentScan</code>注释自动扫描项目中包含的所有组件。为了更好的适应包扫描机制，避免一些特殊的配置工作，可以参考下面的工程结构。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">com</span><br><span class="line">  +- example</span><br><span class="line">    +- myproject</span><br><span class="line">      +- Application.java</span><br><span class="line">      |</span><br><span class="line">      +- domain</span><br><span class="line">      |  +- Customer.java</span><br><span class="line">      |  +- CustomerRepository.java</span><br><span class="line">      |</span><br><span class="line">      +- service</span><br><span class="line">      |  +- CustomerService.java</span><br><span class="line">      |</span><br><span class="line">      +- web</span><br><span class="line">      |  +- CustomerController.java</span><br><span class="line">      |</span><br></pre></td></tr></table></figure>
+<ul>
+<li><p><code>root package</code>：<code>com.example.myproject</code>，所有的类和其他package都在root package之下。</p>
+</li>
+<li><p>应用主类：<code>Application.java</code>，该类直接位于<code>root package</code>下。通常我们会在应用主类中做一些框架配置扫描等配置，我们放在root package下可以帮助程序减少手工配置来加载到我们希望被Spring加载的内容</p>
+</li>
+<li><p><code>com.example.myproject.domain</code>包：用于定义实体映射关系与数据访问相关的接口和实现</p>
+</li>
+<li><p><code>com.example.myproject.service</code>包：用于编写业务逻辑相关的接口与实现</p>
+</li>
+<li><p><code>com.example.myproject.web</code>：用于编写Web层相关的实现，比如：Spring MVC的Controller等</p>
+</li>
+</ul>
+<p><strong>使用IDEA Spring Boot工程的两种方法</strong></p>
+<ol>
+<li><p>使用Maven构建项目：通过访问<a href="https://start.spring.io/" target="_blank" rel="noopener">https://start.spring.io/</a> 生成一个基础项目下载解压，用IDE 以Maven项目导入。</p>
+</li>
+<li><p>使用Intellij IDEA中的Spring Initializr工具，直接创建生成。</p>
+</li>
+</ol>
+<h3 id="简单总结"><a href="#简单总结" class="headerlink" title="简单总结"></a>简单总结</h3><p>以上就是我关于Java Web，以及Spring框架的了解，至于Spring Cloud还没来得及去仔细学习，最开始自己是使用Eclipse构建项目，觉得Eclipse是世界上最好的IDE，但自从入坑Java web项目后，需要配置Tomcat，编写Servlet和JSP，进行各种Annotation以及SSH和SSM环境的搭建，真的是太麻烦了，常常在深夜红着眼睛和各种配置BUG做斗争，也时常因为环境配置问题而导致心态奔溃选择了放弃。但自从使用了IDEA，使用了Spring Boot，搭建应用分分钟搞定，再也不会因为环境配置的问题而烦恼，终于可以快乐地写代码了，于是我就已经知道我再也回不到Eclipse时代了。</p>
+
+          
         
       
     </div>
+    
+    
+    
 
     
+
     
+
     
-      <footer class="post-footer">
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
         <div class="post-eof"></div>
-      </footer>
+      
+    </footer>
+  </div>
+  
+  
+  
   </article>
+
+
+    
+      
+
+  
+
   
   
   
 
-        
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
   
   
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://ydlan.github.io/2019/07/19/2019-07-19-hash-map/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jpg">
       <meta itemprop="name" content="YDLAN">
-      <meta itemprop="description" content="YDLAN的个人博客">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="YDLAN">
     </span>
+
+    
       <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            <a href="/2019/07/19/2019-07-19-hash-map/" class="post-title-link" itemprop="url">Hash-Map-HashMap</a>
-        </h1>
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/07/19/2019-07-19-hash-map/" itemprop="url">Hash-Map-HashMap</a></h1>
+        
 
         <div class="post-meta">
-            <span class="post-meta-item">
+          <span class="post-time">
+            
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
-              <span class="post-meta-item-text">发表于</span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-07-19T11:02:45+08:00">
+                2019-07-19
+              </time>
+            
 
-              <time title="创建时间：2019-07-19 11:02:45" itemprop="dateCreated datePublished" datetime="2019-07-19T11:02:45+08:00">2019-07-19</time>
-            </span>
-            <span class="post-meta-item">
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
-              <span class="post-meta-item-text">分类于</span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
                   <a href="/categories/学习笔记/" itemprop="url" rel="index">
                     <span itemprop="name">学习笔记</span>
                   </a>
                 </span>
+
+                
+                
+              
             </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
 
           
 
         </div>
       </header>
+    
 
     
     
@@ -390,75 +737,168 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <p>在平时coding时虽然经常会用到<code>HashMap</code>，但没有仔细思考它的实现原理，也常常将<code>HashTable</code>，<code>HashMap</code>，<code>TreeMap</code>等概念特性混淆，最主要原因是不太理解它们的底层逻辑，后面仔细思考了一下，发现自己竟然分不太清Hash和Map，后面查了一些资料，总算是弄明白了一些，记录一下。</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2019/07/19/2019-07-19-hash-map/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
+      
+
+      
+        
+          
+            <p>在平时coding时虽然经常会用到<code>HashMap</code>，但没有仔细思考它的实现原理，也常常将<code>HashTable</code>，<code>HashMap</code>，<code>TreeMap</code>等概念特性混淆，最主要原因是不太理解它们的底层逻辑，后面仔细思考了一下，发现自己竟然分不太清Hash和Map，后面查了一些资料，总算是弄明白了一些，记录一下。</p>
+<h3 id="Hash是啥？"><a href="#Hash是啥？" class="headerlink" title="Hash是啥？"></a>Hash是啥？</h3><p><code>Hash又</code>称散列，它表示的是通过一个输入值，通过装换算法输出一个对应的值，这个装换算法是一种映射关系，又叫做<code>Hash函数</code>，hash函数能够使对一个数据的访问过程更加有效，通过hash函数，数据元素可以快速的被定位。hash算法也并不是唯一的，在不同的应用中有不同的hash算法，比如常见的的<code>FNK</code>算法，<code>CRC</code>系列算法，<code>MD5</code>，<code>SHA-1</code>等。</p>
+<h3 id="HashTable是啥？"><a href="#HashTable是啥？" class="headerlink" title="HashTable是啥？"></a>HashTable是啥？</h3><p><code>HashTable</code>是hash函数的一个主要应用，使用散列表能够快速的查找数据记录，是一种可以根据键值对直接访问的数据结构，它通过把关键码映射到表中的一个位置来访问记录，从而加快了查找的速度，<code>HashTable</code>是数组和链表的结合，使用Hash函数将被查找的键转化为数组的索引，然后根据索引就可以定位到数据记录，当然在进行转化时会发生hash冲突，如果单桶存储的数据条目过多，将会导致性能下降，这时候就需要考虑是否要使用rehash方法进行扩容了。</p>
+<h3 id="Map是啥？"><a href="#Map是啥？" class="headerlink" title="Map是啥？"></a>Map是啥？</h3><p><code>Map</code>是一种关联容器，它提供了一对一的数据处理能力，这与上面所述的hash好像是一个东西，但其实并非这样，在网上也很难找到这两者的具体定义和区别，我个人理解的是Hash更强调的是一种算法，而<code>Map</code>则是一种数据结构（容器），维基百科中是这样定义Map的：</p>
+<blockquote>
+<p> <strong>map</strong>：In computer science, an associative array, map, symbol table, or dictionary is an abstract data type composed of a collection of (key, value) pairs, such that each possible key appears at most once in the collection.</p>
+</blockquote>
+<p>在C++的STL中<code>Map</code>是一个标准容器，在Java中<code>Map</code>是定义的一个接口，我们常用的<code>HashMap</code>，<code>LinkedHashMap</code>都实现了该接口。</p>
+<h3 id="HashMap是啥？"><a href="#HashMap是啥？" class="headerlink" title="HashMap是啥？"></a>HashMap是啥？</h3><p><code>HashMap</code>存储数据采用的是散列表结构（数组+链表的结构），在JDK8中<code>HashMap</code>的底层数据结构已经变为数组+链表+红黑树的结构，这主要原因是为了减少之前提到的hash冲突带来的影响。</p>
+<p><strong><code>HashMap</code>的基本原理</strong>是散列表+拉链法，就是在往<code>HashMap</code>中put元素时，会先根据key的hash值得到这个元素在数组中的位置（即下标），然后把这个元素放到对应的位置中。如果这个元素所在的位子上已经存放有其他元素了，那么在同一个位子上的元素将以链表的形式存放，新加入的放在链头，最先加入的放在链尾。</p>
+<p>实际情况下，我们希望HashMap里面的元素位置尽量的分布均匀些，尽量使得每个位置上的元素数量只有一个，那么当我们用hash算法求得这个位置的时候，马上就可以知道对应位置的元素是我们想要元素，而不用再去遍历链表。最容易的做法就是把hashcode对数组长度取模运算，这样一来，元素的分布相对来说是比较均匀的。但是“模”运算的消耗是比较大的，在Java中选择了另外一种更快速，消耗更小的方式：<strong>首先算得key得hashcode值，然后跟数组的长度-1做一次“与”运算（&amp;）</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">static</span> <span class="keyword">int</span> <span class="title">indexFor</span><span class="params">(<span class="keyword">int</span> h, <span class="keyword">int</span> length)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">return</span> h &amp; (length-<span class="number">1</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>在<code>HashMap</code>中get()方法的执行过程是：首先计算key的<code>hashcode</code>，找到数组中对应位置的某一元素，然后通过key的equals方法在对应位置的链表中找到需要的元素。所以<code>hashcode</code>与<code>equals</code>方法是找到对应元素的两个关键方法，通过改写key对象的<code>equals</code>和<code>hashcode</code>方法，我们就可以将任意的业务对象作为map的key。在判断两个对象是否真的相等时，必须保证它们的<code>hashcode</code>相同，且保证调用 <code>equals()</code>方法返回true。</p>
+<h3 id="TreeMap是啥？"><a href="#TreeMap是啥？" class="headerlink" title="TreeMap是啥？"></a>TreeMap是啥？</h3><p><code>TreeMap</code>在存储数据时是安装特定顺序存储的，并非像<code>HashMap</code>那样无明显顺序，最主要的原因是其底层原理不同，<code>TreeMap</code>的本质是红黑树，红黑树理解起来是比较复杂的，在此就不做展开了。</p>
+<h3 id="补充1：HashMap扩容"><a href="#补充1：HashMap扩容" class="headerlink" title="补充1：HashMap扩容"></a>补充1：HashMap扩容</h3><p>在JDK7中，<code>HashMap</code>数据结构是数组+链表的方式，<code>HashMap</code>内存储数据的Entry数组默认是16，如果没有对Entry扩容机制的话，当存储的数据一多，Entry内部的链表会很长，这就失去了<code>HashMap</code>的存储意义了，所以<code>HasnMap</code>内部有扩容机制来进行处理。</p>
+<p>在<code>HashMap</code>内部有：变量size，记录<code>HashMap</code>的底层数组中已用槽的数量；变量threshold，它是<code>HashMap</code>的阈值，用于判断是否需要调整<code>HashMap</code>的容量（threshold = 容量*加载因子）；变量DEFAULT_LOAD_FACTOR = 0.75f，默认加载因子为0.75。</p>
+<p><code>HashMap</code>扩容的条件是：当size大于threshold时，对<code>HashMap</code>进行扩容。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//举个例子假如现在有三个元素（3,5,7）要放入map里面，table的的容量是2，如下</span></span><br><span class="line">[<span class="number">0</span>]=<span class="keyword">null</span>  </span><br><span class="line">[<span class="number">1</span>]=<span class="number">3</span>-&gt;<span class="number">5</span>-&gt;<span class="number">7</span>  </span><br><span class="line"></span><br><span class="line"><span class="comment">//现在将table的大小扩容成4，分布如下：</span></span><br><span class="line">[<span class="number">0</span>]=<span class="keyword">null</span>  </span><br><span class="line">[<span class="number">1</span>]=<span class="number">5</span>-&gt;<span class="number">7</span>  </span><br><span class="line">[<span class="number">2</span>]=<span class="keyword">null</span>  </span><br><span class="line">[<span class="number">3</span>]=<span class="number">3</span></span><br></pre></td></tr></table></figure>
+<p>在JDK8里面，<code>HashMap</code>的底层数据结构已经变为数组+链表+红黑树的结构了，因为在hash冲突严重的情况下，链表的查询效率是O(n），所以JDK8做了优化对于单个链表的个数大于8的链表，会直接转为红黑树结构算是以空间换时间，这样以来查询的效率就变为O(logN)。</p>
+<p>简单总结就是，JDK7里面是先判断table的存储元素的数量是否超过当前的<code>threshold=table.length*loadFactor（默认0.75）</code>，如果超过就先扩容，在JDK8里面是先插入数据，插入之后在判断下一次<code>++size</code>的大小是否会超过当前的阈值，如果超过就扩容。 </p>
+<h3 id="补充2：区别Collection和Map"><a href="#补充2：区别Collection和Map" class="headerlink" title="补充2：区别Collection和Map"></a>补充2：区别Collection和Map</h3><p>Collection 和Map 是Java容器类库的两种主要类型，最主要的区别在于Collection保存的是单个元素，而Map保存的是一个键值对。</p>
+<p>下面例子展示了一些基本类型的容器，第一个 fill() 可以用于所用类型的Collection，这些类型都实现了用来添加新元素的 add() 方法。而第二个 fill()  使用与Map，它们都实现了添加键值对的 put()  方法。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.*;</span><br><span class="line"><span class="comment">// 容器的打印</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">PrintingContainers</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">static</span> Collection <span class="title">fill</span><span class="params">(Collection&lt;String&gt; collection)</span></span>&#123;</span><br><span class="line">        collection.add(<span class="string">"rat"</span>);</span><br><span class="line">        collection.add(<span class="string">"cat"</span>);</span><br><span class="line">        collection.add(<span class="string">"dog"</span>);</span><br><span class="line">        collection.add(<span class="string">"dog"</span>);</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> collection;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">static</span> Map <span class="title">fill</span><span class="params">(Map&lt;String, String&gt; map)</span></span>&#123;</span><br><span class="line">        map.put(<span class="string">"rat"</span>, <span class="string">"Fuzzy"</span>);</span><br><span class="line">        map.put(<span class="string">"cat"</span>, <span class="string">"Rags"</span>);</span><br><span class="line">        map.put(<span class="string">"dog"</span>, <span class="string">"Bosco"</span>);</span><br><span class="line">        map.put(<span class="string">"dog"</span>, <span class="string">"Spot"</span>);</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> map;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String args[])</span></span>&#123;</span><br><span class="line">        <span class="comment">// List 类型</span></span><br><span class="line">        System.out.println(fill(<span class="keyword">new</span> ArrayList&lt;String&gt;()));</span><br><span class="line">        System.out.println(fill(<span class="keyword">new</span> LinkedList&lt;String&gt;()));</span><br><span class="line"></span><br><span class="line">        <span class="comment">// Set 类型</span></span><br><span class="line">        System.out.println(fill(<span class="keyword">new</span> HashSet&lt;String&gt;()));</span><br><span class="line">        System.out.println(fill(<span class="keyword">new</span> TreeSet&lt;String&gt;()));</span><br><span class="line">        System.out.println(fill(<span class="keyword">new</span> LinkedHashSet&lt;String&gt;()));</span><br><span class="line"></span><br><span class="line">        <span class="comment">// Map 类型</span></span><br><span class="line">        System.out.println(fill(<span class="keyword">new</span> HashMap&lt;String, String&gt;()));</span><br><span class="line">        System.out.println(fill(<span class="keyword">new</span> TreeMap&lt;String, String&gt;()));</span><br><span class="line">        System.out.println(fill(<span class="keyword">new</span> LinkedHashMap&lt;String, String&gt;()));</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><code>ArrayList</code> 和 <code>LinkedList</code> 都是List类型，都是按照插入了顺序保存元素，<code>ArrayList</code>可以理解为动态数组，<code>LinkedList</code>可以理解为链表，两者最主要的区别在于执行某些类型的操作时的性能。</p>
+<p><code>HashSet</code>，<code>TreeSet</code> 和<code>LinkedHashSet</code>都是Set类型，在Set类型中每个元素只不留一次，不会出现相同的项，它们的一个主要区别是存储元素的方式不同，<code>HashSet</code>是以散列的形式保存元素，所以是无序的，而<code>TreeSet</code>是以树的形式存储数据，是按照一定的顺序要求保存的。而LinkedHashSet则是按照添加的顺序保存对象的。</p>
+<p><code>HashMap</code>，<code>TreeMap</code>和<code>LinkedHashMap</code>都是Map类型，保存都是键值对（key—value），<code>HashMap</code>没有按照任何明显的顺序来保存其元素，但查找效率是比较快的，它有自己的算法来控制顺序，<code>TreeMap</code>则是按照某种特定顺序来保存键的，<code>LinkedHashMap</code>则是按照插入顺序保存键，并且保存了<code>HashMap</code>的查询速度。</p>
+<p><strong>Tips：</strong></p>
+<p> <strong>1、越底层的东西越复杂,当然也越有用！2、专业的书比网上的资料更全面更详细。3、好奇心和求知欲是第一驱动力。</strong></p>
+
+          
         
       
     </div>
+    
+    
+    
 
     
+
     
+
     
-      <footer class="post-footer">
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
         <div class="post-eof"></div>
-      </footer>
+      
+    </footer>
+  </div>
+  
+  
+  
   </article>
+
+
+    
+      
+
+  
+
   
   
   
 
-        
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
   
   
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://ydlan.github.io/2019/07/11/2019-07-11-vmware-linux/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jpg">
       <meta itemprop="name" content="YDLAN">
-      <meta itemprop="description" content="YDLAN的个人博客">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="YDLAN">
     </span>
+
+    
       <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            <a href="/2019/07/11/2019-07-11-vmware-linux/" class="post-title-link" itemprop="url">VMware-Linux</a>
-        </h1>
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/07/11/2019-07-11-vmware-linux/" itemprop="url">VMware-Linux</a></h1>
+        
 
         <div class="post-meta">
-            <span class="post-meta-item">
+          <span class="post-time">
+            
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
-              <span class="post-meta-item-text">发表于</span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-07-11T10:16:34+08:00">
+                2019-07-11
+              </time>
+            
 
-              <time title="创建时间：2019-07-11 10:16:34" itemprop="dateCreated datePublished" datetime="2019-07-11T10:16:34+08:00">2019-07-11</time>
-            </span>
-            <span class="post-meta-item">
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
-              <span class="post-meta-item-text">分类于</span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
                   <a href="/categories/学习笔记/" itemprop="url" rel="index">
                     <span itemprop="name">学习笔记</span>
                   </a>
                 </span>
+
+                
+                
+              
             </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
 
           
 
         </div>
       </header>
+    
 
     
     
@@ -466,75 +906,210 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h3 id="0x00-前言"><a href="#0x00-前言" class="headerlink" title="0x00 前言"></a>0x00 前言</h3><p>对于Linux系统，现在基本上属于能够熟练使用常用命令，做一些配置的水平，还是不太熟悉其开发，对于底层原理也不是很了解，自己使用Linux系统主要是VMware安装的Ubuntu，和阿里云的CentOS，这篇文章主要记录一下使用Ubuntu的一些操作，熟悉的就不赘述，记录一些我自己不熟的。</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2019/07/11/2019-07-11-vmware-linux/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
+      
+
+      
+        
+          
+            <h3 id="0x00-前言"><a href="#0x00-前言" class="headerlink" title="0x00 前言"></a>0x00 前言</h3><p>对于Linux系统，现在基本上属于能够熟练使用常用命令，做一些配置的水平，还是不太熟悉其开发，对于底层原理也不是很了解，自己使用Linux系统主要是VMware安装的Ubuntu，和阿里云的CentOS，这篇文章主要记录一下使用Ubuntu的一些操作，熟悉的就不赘述，记录一些我自己不熟的。</p>
+<h3 id="0x01-安装使用"><a href="#0x01-安装使用" class="headerlink" title="0x01 安装使用"></a>0x01 安装使用</h3><p>想要使用Linux 系统，可以安装虚拟机，然后安装Linux系统（Ubuntu还不错）。</p>
+<p>1、首先安装 VMware，找到安装包，不需要啥配置，傻瓜式操作。</p>
+<p><img src="https://s2.ax1x.com/2019/07/11/Z2kVyR.md.png" alt="img"></p>
+<p>安装好，就可以安装系统了，这时候需要一个系统镜像，也很容易找到，可以安装Ubuntu，CentOS，看自己需求吧。</p>
+<p>2、这时候就需要一些配置了，包括安装路径，给系统进行个性化配置以及分配存储空间，按照安装向导弄就成了，这个安装可能需要一点时间。</p>
+<p><img src="https://s2.ax1x.com/2019/07/11/Z2kQYD.md.png" alt="img"></p>
+<p>安装好就使用之前设置的用户和密码登录就成了。这前我安装过VMware，也安装过Ubuntu系统，不知道什么原因用着有点卡，而且联网也总是出问题，体验不是很好，这次重新安装了一下，感觉好用了很多，所以如果发现软件不好用，卸载重装可能也是一种解决办法吧。</p>
+<p>要是想联网的话把网络适配改成桥接模式（主机和虚拟使用同一IP）。</p>
+<h3 id="0x02-常用命令"><a href="#0x02-常用命令" class="headerlink" title="0x02 常用命令"></a>0x02 常用命令</h3><p>总结一些Linux常用命令，主要是这前不太熟悉的：</p>
+<p>可以通过查找打开终端，也可以使用快捷键 <code>ctrl+alt+T</code>打开。</p>
+<p>查看主机名：<code>hostname</code></p>
+<p>查看IP信息：<code>ifconfig</code></p>
+<p>查看网络端口：<code>netstat -ntlp</code></p>
+<p>查看CPU信息：<code>cat /proc/cpuinfo</code></p>
+<p>查看进程信息：<code>ps aux</code></p>
+<p>使用<code>ps aux |grep xxx</code>可以过滤</p>
+<p>结束某个进程：<code>kill -9</code> 进程ID</p>
+<p>查看目录文件详细信息：<code>ls -al</code></p>
+<p>(cdl)rwx r-x r-x 文件相关权限显示的标识</p>
+<p>创建一个文件：<code>touch filename</code></p>
+<p>可以使用vi 进行编辑，也可以使用gedit 命令编辑，当然有些目录或文件是有权限限制的，可以使用sudo 来进行一些操作。</p>
+<p>查看文件详细信息可以使用 <code>file filename</code></p>
+<p>删除文件 <code>rm</code></p>
+<p>删除目录<code>rm rf</code></p>
+<p>查找文件：<code>find ./ -name filename</code>（find 查找目录 文件名）</p>
+<p>也可以进行匹配查找：<code>find ./ -name *.c</code></p>
+<p>安装软件可以是使用：<code>sudo apt-get install</code>软件名</p>
+<p>比如安装git，可以使用<code>sudo apt-get install git</code></p>
+<h3 id="0x03-源码安装"><a href="#0x03-源码安装" class="headerlink" title="0x03 源码安装"></a>0x03 源码安装</h3><p>源码编译安装nginx 并进行相关配置</p>
+<p>首先去官网下载源码安装，安装包很小，很快就能下载好。</p>
+<p>然后进行解压</p>
+<p><code>tar -zxvf nginx-1.17.1.tar.gz</code></p>
+<p>这是直接解压到当前目录下，也可以指定解压目录。</p>
+<p>进入解压好的目录里cd nginx-1.17.1/ 可以查看到一个configure 文件，在这个目录下执行configure文件：<code>./ configure --prefix=/usr/local/nginx</code>并指定安装的路径，这里表示安装在local/nginx路径下。运行时可能会报错说缺少一些模块，可以根据实际情况添加或或者不添加，在运行命令后追加配置，重新执行就行。</p>
+<p><img src="https://s2.ax1x.com/2019/07/11/Z2kEl9.png" alt="img"> </p>
+<p>然后编译nginx，使用make命令，这里make会查找执行Makefile文件。（Makefile 定义整个工程的编译规则，可实现自动化编译，make命令是解释Makefile中的指令）。</p>
+<p>编译完成后可以使用<code>make install</code>进行安装，安装完成后就可以在之前设置的目录里看到用nginx的文件。</p>
+<p><img src="https://s2.ax1x.com/2019/07/11/Z2kmex.md.png" alt="img"></p>
+<p>到此位置nginx就编译安装成功了，但为了使用nginx方便一些，我们可以配置环境或者是设置软连接，就可以直接通过 nginx命令来启用后禁用服务器了。</p>
+<p>配置环境变量<code>sudo gedit /etc/profile</code></p>
+<p>将你的解解压好的目录添加进去</p>
+<p><code>export PATH=&quot;$PATH:/usr/local/nginx/sbin&quot;</code></p>
+<p>设置软连接，其实就将一个文件下的文件连接到另一个文件夹，达到简化切换目录的麻烦。</p>
+<p><code>ln -s /usr/local/nginx/sbin/nginx /usr/bin/nginx</code></p>
+<p>配置好以后就可以使用nginx了。</p>
+<p>使用<code>sudo nginx</code>启动nginx，使用<code>sudo nginx -s stop</code>命令关闭nginx。</p>
+<p>可以测试一下：nginx 默认端口是80，在浏览器中输入localhost:80</p>
+<p><img src="https://s2.ax1x.com/2019/07/11/Z2kASJ.png" alt="img"></p>
+<h3 id="0x04-交叉编译"><a href="#0x04-交叉编译" class="headerlink" title="0x04 交叉编译"></a>0x04 交叉编译</h3><p>交叉编译器（Linux Ubuntu编译程序–在开发板上运行）</p>
+<p>下载安装包</p>
+<p>解压/解压路径（设置路径 -C 要大写）</p>
+<p><code>sudo tar jxvf  XXXXXX  -C /usr/local/</code></p>
+<p>配置环境变量<code>sudo gedit /etc/profile</code></p>
+<p>将你的解解压好的目录添加进去</p>
+<p><code>export PATH=&quot;$PATH:/usr/local/arm-2009q3/bin&quot;</code></p>
+<p><img src="https://s2.ax1x.com/2019/07/11/Z2kZO1.md.png" alt="img"></p>
+<p> 测试一下看成不成，或者直接使用env命令 查看环境变量有没有配好</p>
+<p><code>env |grep PATH</code></p>
+<p>如果没有的话，使用source让它立刻生效</p>
+<p><code>source /etc/profile</code></p>
+<p>现在应该就可以</p>
+<p><img src="https://s2.ax1x.com/2019/07/11/ZRJEHf.md.png" alt="img"></p>
+<p>在用户目录下创建一个.c 文件，可以先用gcc 编译一哈。比如 <code>gcc hello.c -o hello</code></p>
+<p>现在使用arm 编译一哈，就成了</p>
+<p><code>arm-none-linux-gnueabi-gcc hello.c -o arm_hello</code></p>
+<p><img src="https://s2.ax1x.com/2019/07/11/Z2kMFO.png" alt="img"></p>
+<p>然后就生成了两个版本的执行程序了。</p>
+<p><img src="https://s2.ax1x.com/2019/07/11/Z2knw6.md.png" alt="img"></p>
+<p><img src="https://s2.ax1x.com/2019/07/11/Z2kuTK.md.png" alt="img"></p>
+
+          
         
       
     </div>
+    
+    
+    
 
     
+
     
+
     
-      <footer class="post-footer">
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
         <div class="post-eof"></div>
-      </footer>
+      
+    </footer>
+  </div>
+  
+  
+  
   </article>
+
+
+    
+      
+
+  
+
   
   
   
 
-        
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
   
   
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://ydlan.github.io/2019/07/11/2019-07-11-embedded-hardware/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jpg">
       <meta itemprop="name" content="YDLAN">
-      <meta itemprop="description" content="YDLAN的个人博客">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="YDLAN">
     </span>
+
+    
       <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            <a href="/2019/07/11/2019-07-11-embedded-hardware/" class="post-title-link" itemprop="url">Embedded-Hardware</a>
-        </h1>
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/07/11/2019-07-11-embedded-hardware/" itemprop="url">Embedded-Hardware</a></h1>
+        
 
         <div class="post-meta">
-            <span class="post-meta-item">
+          <span class="post-time">
+            
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
-              <span class="post-meta-item-text">发表于</span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-07-11T10:16:10+08:00">
+                2019-07-11
+              </time>
+            
 
-              <time title="创建时间：2019-07-11 10:16:10" itemprop="dateCreated datePublished" datetime="2019-07-11T10:16:10+08:00">2019-07-11</time>
-            </span>
-            <span class="post-meta-item">
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
-              <span class="post-meta-item-text">分类于</span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
                   <a href="/categories/学习笔记/" itemprop="url" rel="index">
                     <span itemprop="name">学习笔记</span>
                   </a>
                 </span>
+
+                
+                
+              
             </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
 
           
 
         </div>
       </header>
+    
 
     
     
@@ -542,34 +1117,59 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h3 id="0x00-前言"><a href="#0x00-前言" class="headerlink" title="0x00 前言"></a>0x00 前言</h3><p>终于有时间了，整理一下嵌入式硬件的东西，在过去的一个学期里选修了嵌入式课程，然后相对完整的了解了嵌入式开发过程，咱物联网专业比较好的一点就是可以结合软硬件，都可以了解，上学期还做了一些WSN ZigBee，RFID 的实验，当时觉得用不到，没想到，这次实训竟然也做嵌入式开发，也使用了ZigBee模块完成一些功能，感觉所有东西并不是绝对没用，多了解一点总是好的。</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2019/07/11/2019-07-11-embedded-hardware/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
+      
+
+      
+        
+          
+            <h3 id="0x00-前言"><a href="#0x00-前言" class="headerlink" title="0x00 前言"></a>0x00 前言</h3><p>终于有时间了，整理一下嵌入式硬件的东西，在过去的一个学期里选修了嵌入式课程，然后相对完整的了解了嵌入式开发过程，咱物联网专业比较好的一点就是可以结合软硬件，都可以了解，上学期还做了一些WSN ZigBee，RFID 的实验，当时觉得用不到，没想到，这次实训竟然也做嵌入式开发，也使用了ZigBee模块完成一些功能，感觉所有东西并不是绝对没用，多了解一点总是好的。</p>
+<h3 id="0x01-嵌入式入门"><a href="#0x01-嵌入式入门" class="headerlink" title="0x01 嵌入式入门"></a>0x01 嵌入式入门</h3><p>关于硬件的东西，之前几乎是从来没有接触，完全不懂什么SOC，也不知道什么MCU，更别说是做开发了，之前唯一对硬件感兴趣的就是树莓派，听说是一块很不错的板子，但由于各种情况，也没有入坑。知道这个学期选了嵌入式，然后因为要完成实验所以入坑了一块EK-TM4C123GXL 开发板，麻雀虽小五脏俱全，这块板子基本能够满足所有嵌入式的基本开发，用来学习还是很不错的。</p>
+<p>关于硬件的学习，其实最主要还是要了解硬件资源，熟悉硬件提供的功能，包括GPIO，时钟，中断等，这些都是最基本的，另外就是一些ADC，DAC，时钟频率，高低电平，这些也是要十分熟悉才行。硬件开发有很多东西是记不住的，所以学会查文档很重要的，学习路线可以大致为：看文档了解硬件资源–找案例照葫芦画瓢–网上查阅资料–查开发文档；有些东西不用刻意去记，用的时候去查就行。但构建思路，开发步骤是需要明确的，比如说要使用GPIO时要初始化寄存器，使用模块功能时要考虑时钟的影响，使用中断时要了解如何调用中断处理函数，如果有要连接传感器的话，还要参考传感器的资料，了解其电气特性等。总之，查资料，阅读资料，理解资料在硬件开发中尤为重要。</p>
+<h3 id="0x02-实训硬件开发"><a href="#0x02-实训硬件开发" class="headerlink" title="0x02 实训硬件开发"></a>0x02 实训硬件开发</h3><p>实训时使用的是CC2530，搭载了ZigBee模块，在开发中都是使用IAR软件，刚好和我们wsn实验ZigBee联系上了，不过我们在wsn实验中我只使用了ZigBee协议栈组网通信，而这次我是利用ZigBee通信来控制硬件功能，而硬件功能实现就是需要嵌入式开发的知识了，刚好把所学内容进行了结合，在嵌入式开发中，不同的硬件资源可能开发就有所不同，但大多数底层逻辑是相同的，所以重点是理解思路。但嵌入式开发仍然有很多烦人的问题，这些Bug出现的原因各种各样，有的是硬件本身故障，有的程序错误，甚至可能的电路连接错误，所以在开发中遇到Bug，排查问题方式方法很关键，我个人认为先从硬件开始检查，最后再检查软件程序，逐层排查是一个相对较好的思路。</p>
+<p>当将嵌入式硬件和网络连接起来后，功能开始就更强大了，当然问题出现几率也开始变大了，在物联网传感器硬件开发中，一般使用ZigBee进行硬件组网，网络协议是单独的且复杂的，很多时候我们在开发过程中是不允许修改协议栈的，都已经封装好的，我们需要的是理解代码，了解功能实现思路，然后再做简单的自定义开发，所以读代码也物联网硬件开发需要的能力。</p>
+<p>在硬件开发中调试是一个不得不进行的过程，而硬件开发的调试不像软件那么方便，它需要在开发板或是硬件资源中运行，这是一个比较繁琐的过程，构建，编译，烧录，运行，测试输出这是一个最基本的流程，也是一个相对花费时间的过程，所以想要提升开发效率，最好的办法是理解问题本质并细心的修改问题，而不是盲目的测试，企图用巧合来达到成功。</p>
+<h3 id="0x03-总结"><a href="#0x03-总结" class="headerlink" title="0x03 总结"></a>0x03 总结</h3><p>本来是准备写一篇详细嵌入式硬件开发的文章，把自己使用的TM4C123GXL 开发和CC2530开发时使用的核心技术，关键代码总结一下，后面发现硬件开发这玩意儿，只要理解了解很简单，实现起来也是多变的，没有一个很固定的标准，所以也不太好总结，也没太必要，下一次遇到是查资料就行。这次在完成项目时参考了很多网上的资料，学到很多东西，比如博客园的小蜜蜂老师和csdn的Bruceoxl老师，他们的博文很全面也很详细，给了我很大的帮助，同时也挺佩服他们能够输出那么多优质内容，应该向他们学习。</p>
+<p>写到这也要告一段落了，关于硬件嵌入式ZigBee开发，我究竟理解多少，掌握了多少，过段时间后我是否还能记起，这些都是无法量化和衡量的，只希望自己总结的方法能够适用于以后的问题。</p>
+
+          
         
       
     </div>
+    
+    
+    
 
     
+
     
+
     
-      <footer class="post-footer">
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
         <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
+      
+    </footer>
   </div>
+  
+  
+  
+  </article>
+
+
+    
+  </section>
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/6/">6</a><a class="extend next" rel="next" href="/page/3/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
+    <a class="extend prev" rel="prev" href="/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/6/">6</a><a class="extend next" rel="next" href="/page/3/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
@@ -577,107 +1177,134 @@
           </div>
           
 
+
+          
+
         </div>
+        
           
   
-  <div class="toggle sidebar-toggle">
-    <span class="toggle-line toggle-line-first"></span>
-    <span class="toggle-line toggle-line-middle"></span>
-    <span class="toggle-line toggle-line-last"></span>
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
   </div>
 
-  <aside class="sidebar">
+  <aside id="sidebar" class="sidebar">
+    
     <div class="sidebar-inner">
 
-      <ul class="sidebar-nav motion-element">
-        <li class="sidebar-nav-toc">
-          文章目录
-        </li>
-        <li class="sidebar-nav-overview">
-          站点概览
-        </li>
-      </ul>
+      
 
-      <!--noindex-->
-      <div class="post-toc-wrap sidebar-panel">
-      </div>
-      <!--/noindex-->
+      
 
-      <div class="site-overview-wrap sidebar-panel">
-        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-  <img class="site-author-image" itemprop="image" alt="YDLAN" src="/images/avatar.jpg">
-  <p class="site-author-name" itemprop="name">YDLAN</p>
-  <div class="site-description" itemprop="description">YDLAN的个人博客</div>
-</div>
-<div class="site-state-wrap motion-element">
-  <nav class="site-state">
-      <div class="site-state-item site-state-posts">
-          <a href="/archives/">
-        
-          <span class="site-state-item-count">29</span>
-          <span class="site-state-item-name">日志</span>
-        </a>
-      </div>
-      <div class="site-state-item site-state-categories">
-            <a href="/categories/">
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">YDLAN</p>
+              <p class="site-description motion-element" itemprop="description">YDLAN的个人博客</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">29</span>
+                  <span class="site-state-item-name">posts</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">7</span>
+                  <span class="site-state-item-name">categories</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">23</span>
+                  <span class="site-state-item-name">tags</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
           
-        <span class="site-state-item-count">7</span>
-        <span class="site-state-item-name">分类</span></a>
-      </div>
-      <div class="site-state-item site-state-tags">
-            <a href="/tags/">
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
           
-        <span class="site-state-item-count">23</span>
-        <span class="site-state-item-name">标签</span></a>
-      </div>
-  </nav>
-</div>
-  <div class="links-of-author motion-element">
-      <span class="links-of-author-item">
-        <a href="https://github.com/ydlan" title="GitHub &rarr; https://github.com/ydlan" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
-      </span>
-      <span class="links-of-author-item">
-        <a href="mailto:lanyd1997@qq.com" title="E-Mail &rarr; mailto:lanyd1997@qq.com" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
-      </span>
-  </div>
 
+          
 
+          
+          
 
-      </div>
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+
+      
 
     </div>
   </aside>
-  <div id="sidebar-dimmer"></div>
 
 
+        
       </div>
     </main>
 
-    <footer class="footer">
+    <footer id="footer" class="footer">
       <div class="footer-inner">
-        
-
-<div class="copyright">
-  
-  &copy; 
-  <span itemprop="copyrightYear">2019</span>
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
   <span class="with-love">
     <i class="fa fa-user"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">YDLAN</span>
+
+  
 </div>
-  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.8.0
-  </div>
+
+
+  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
+
+
+
   <span class="post-meta-divider">|</span>
-  <div class="theme-info">主题 – <a href="https://mist.theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Mist</a> v7.5.0
-  </div>
+
+
+
+  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Mist</a> v5.1.4</div>
+
+
+
 
         
-
-
-
-
-
 
 
 
@@ -688,15 +1315,31 @@
         
       </div>
     </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
   </div>
 
   
-  <script src="/lib/anime.min.js"></script>
-  <script src="/lib/velocity/velocity.min.js"></script>
-  <script src="/lib/velocity/velocity.ui.min.js"></script>
-<script src="/js/utils.js"></script><script src="/js/motion.js"></script>
-<script src="/js/schemes/muse.js"></script>
-<script src="/js/next-boot.js"></script>
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
 
 
 
@@ -713,9 +1356,107 @@
 
 
 
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
 
 
 
+  
+  
+
+  
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
 
   
 
