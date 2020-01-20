@@ -5,7 +5,7 @@
   
 
 
-<html class="theme-next mist use-motion" lang="zh-CN">
+<html class="theme-next mist use-motion" lang="zh-Hans">
 <head><meta name="generator" content="Hexo 3.8.0">
   <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -86,7 +86,7 @@
 <meta property="og:url" content="https://ydlan.github.io/2019/07/11/2019-07-11-embedded-hardware/index.html">
 <meta property="og:site_name" content="YDLAN">
 <meta property="og:description" content="0x00 前言终于有时间了，整理一下嵌入式硬件的东西，在过去的一个学期里选修了嵌入式课程，然后相对完整的了解了嵌入式开发过程，咱物联网专业比较好的一点就是可以结合软硬件，都可以了解，上学期还做了一些WSN ZigBee，RFID 的实验，当时觉得用不到，没想到，这次实训竟然也做嵌入式开发，也使用了ZigBee模块完成一些功能，感觉所有东西并不是绝对没用，多了解一点总是好的。 0x01 嵌入式入门关">
-<meta property="og:locale" content="zh-CN">
+<meta property="og:locale" content="zh-Hans">
 <meta property="og:updated_time" content="2019-07-11T12:49:27.505Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Embedded-Hardware">
@@ -106,7 +106,7 @@
     motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
     duoshuo: {
       userId: '0',
-      author: 'Author'
+      author: '博主'
     },
     algolia: {
       applicationID: '',
@@ -138,7 +138,7 @@
 
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
 
   
   
@@ -186,7 +186,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
             
-            Home
+            首页
           </a>
         </li>
       
@@ -196,7 +196,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
             
-            Archives
+            归档
           </a>
         </li>
       
@@ -206,7 +206,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
             
-            Categories
+            分类
           </a>
         </li>
       
@@ -216,7 +216,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
             
-            Tags
+            标签
           </a>
         </li>
       
@@ -226,7 +226,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
             
-            About
+            关于
           </a>
         </li>
       
@@ -268,7 +268,7 @@
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="YDLAN">
       <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="image" content="/images/avatar.jpg">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -290,9 +290,9 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Posted on</span>
+                <span class="post-meta-item-text">发表于</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-07-11T10:16:10+08:00">
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-07-11T10:16:10+08:00">
                 2019-07-11
               </time>
             
@@ -311,7 +311,7 @@
                 <i class="fa fa-folder-o"></i>
               </span>
               
-                <span class="post-meta-item-text">In</span>
+                <span class="post-meta-item-text">分类于</span>
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
@@ -456,10 +456,10 @@
       
         <ul class="sidebar-nav motion-element">
           <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            Table of Contents
+            文章目录
           </li>
           <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            Overview
+            站点概览
           </li>
         </ul>
       
@@ -467,6 +467,8 @@
       <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/images/avatar.jpg" alt="YDLAN">
             
               <p class="site-author-name" itemprop="name">YDLAN</p>
               <p class="site-description motion-element" itemprop="description">YDLAN的个人博客</p>
@@ -480,7 +482,7 @@
                 <a href="/archives/">
               
                   <span class="site-state-item-count">29</span>
-                  <span class="site-state-item-name">posts</span>
+                  <span class="site-state-item-name">日志</span>
                 </a>
               </div>
             
@@ -491,7 +493,7 @@
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
                   <span class="site-state-item-count">7</span>
-                  <span class="site-state-item-name">categories</span>
+                  <span class="site-state-item-name">分类</span>
                 </a>
               </div>
             
@@ -502,7 +504,7 @@
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
                   <span class="site-state-item-count">23</span>
-                  <span class="site-state-item-name">tags</span>
+                  <span class="site-state-item-name">标签</span>
                 </a>
               </div>
             
@@ -518,6 +520,22 @@
             </div>
           
 
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/ydlan" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:lanyd1997@qq.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+            </div>
           
 
           
@@ -571,7 +589,7 @@
 </div>
 
 
-  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
 
 
 
@@ -579,7 +597,7 @@
 
 
 
-  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Mist</a> v5.1.4</div>
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Mist</a> v5.1.4</div>
 
 
 

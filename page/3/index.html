@@ -5,7 +5,7 @@
   
 
 
-<html class="theme-next mist use-motion" lang="zh-CN">
+<html class="theme-next mist use-motion" lang="zh-Hans">
 <head><meta name="generator" content="Hexo 3.8.0">
   <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -85,7 +85,7 @@
 <meta property="og:url" content="https://ydlan.github.io/page/3/index.html">
 <meta property="og:site_name" content="YDLAN">
 <meta property="og:description" content="YDLAN的个人博客">
-<meta property="og:locale" content="zh-CN">
+<meta property="og:locale" content="zh-Hans">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="YDLAN">
 <meta name="twitter:description" content="YDLAN的个人博客">
@@ -104,7 +104,7 @@
     motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
     duoshuo: {
       userId: '0',
-      author: 'Author'
+      author: '博主'
     },
     algolia: {
       applicationID: '',
@@ -136,7 +136,7 @@
 
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
 
   
   
@@ -185,7 +185,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
             
-            Home
+            首页
           </a>
         </li>
       
@@ -195,7 +195,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
             
-            Archives
+            归档
           </a>
         </li>
       
@@ -205,7 +205,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
             
-            Categories
+            分类
           </a>
         </li>
       
@@ -215,7 +215,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
             
-            Tags
+            标签
           </a>
         </li>
       
@@ -225,7 +225,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
             
-            About
+            关于
           </a>
         </li>
       
@@ -267,7 +267,7 @@
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="YDLAN">
       <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="image" content="/images/avatar.jpg">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -291,9 +291,9 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Posted on</span>
+                <span class="post-meta-item-text">发表于</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-06-29T22:28:46+08:00">
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-06-29T22:28:46+08:00">
                 2019-06-29
               </time>
             
@@ -333,26 +333,15 @@
       
         
           
-            <h3 id="0x00-前言"><a href="#0x00-前言" class="headerlink" title="0x00 前言"></a>0x00 前言</h3><p>好久没有写东西做总结了，应该时时更新，日日总结，保持对新事物的好奇心，回顾所学旧的知识，融汇贯通。因为实训接触了一些新的玩意儿，如: Vuejs，Flutter, Kotlin 等，也刚好有时间，就干脆多了解一些，顺便做了一点笔记，丰富一下自己的认知。没有实际干货，也不算是技术栈，不管以后会不会深入学习，先记录一下吧。</p>
-<h3 id="0x01-Vue-js"><a href="#0x01-Vue-js" class="headerlink" title="0x01 Vue.js"></a>0x01 Vue.js</h3><p>Vue.js 是以数据驱动和组件化思想构建的一个JavaScript MVVM库，提供了简洁和易于理解的的API，能够快速上手。</p>
-<p>什么是MVVM（Model-View-ViewModel），简单来说就是一种设计模式，借鉴了MVC的思想，在前端页面中，将Model用纯JavaScript对象表示，View负责显示，两者做到了最大限度的分离，对于现在多功能的前端和复杂业务逻辑的后端，以及技术分工的划分，这其实是技术发展的一个必然趋势。把Model和View关联起来的就是ViewModel。ViewModel负责把Model的数据同步到View显示出来，还负责把View的修改同步回Model。对于MVVM，我们并不用关注DOM，而是直接操作JavaScript对象，去除操作DOM的繁琐步骤。</p>
-<p>使用Vue其实就是一个定义MVVM各个组成部分的过程，可以归结为：定义View，定义Model，创建Vue实例（连接View 和Model）。目前只是做一个简单了解，要是想要更深入的了解或是使用，还得好好学习一番。下面是一个简单例子：</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">!DOCTYPE html&gt;</span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">title</span>&gt;</span><span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">        <span class="comment">&lt;!--这是View--&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"app"</span>&gt;</span></span><br><span class="line">            &#123;&#123; message &#125;&#125;</span><br><span class="line">        <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line">    </span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"js/vue.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="undefined">        // 这是Model</span></span><br><span class="line"><span class="undefined">        var exampleData = &#123;</span></span><br><span class="line"><span class="undefined">            message: 'Hello World!'</span></span><br><span class="line"><span class="undefined">        &#125;</span></span><br><span class="line"><span class="undefined"></span></span><br><span class="line"><span class="undefined">        // 创建一个 Vue 实例或 "ViewModel"</span></span><br><span class="line"><span class="undefined">        // 它连接 View 与 Model</span></span><br><span class="line"><span class="undefined">        new Vue(&#123;</span></span><br><span class="line"><span class="undefined">            el: '#app',</span></span><br><span class="line"><span class="undefined">            data: exampleData</span></span><br><span class="line"><span class="undefined">        &#125;)</span></span><br><span class="line"><span class="undefined">    </span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">    </span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<h3 id="0x01-Flutter框架"><a href="#0x01-Flutter框架" class="headerlink" title="0x01 Flutter框架"></a>0x01 Flutter框架</h3><p>Flutter 是 Google推出并开源的移动应用开发框架，开发者可以通过 Dart语言开发 App，一套代码同时运行在 iOS 和 Android平台。</p>
-<p>之前一直没有了解和关注移动开发这一块，最近也是因为实训内容涉及到Android开发，所以特意去了解了一下。对于移动开发需要区分原生开发和跨平台技术，原生应用程序是指某一移动平台（比如iOS 和安卓）所特有的应用，使用相应平台支持的开发工具和语音，并直接调用系统提供的SDK API。比如Android原生应用就是指使用Java或Kotlin语言直接调用Android SDK开发的应用程序；而iOS原生应用就是指通过Objective-C或Swift语言直接调用iOS SDK开发的应用程序。</p>
-<p>原生开发的优势在于速度快、性能高、可以实现复杂动画及绘制，整体用户体验好，但存在动态化和开发成本较大的问题，因此诞生了一些跨平台的动态化框架，而Flutter就是其中之一，可以看一下官网给的框架图：</p>
-<p><img src="https://s2.ax1x.com/2019/06/29/ZlJWbn.md.png" alt="flutter"></p>
-<p>属于一种自绘UI+原生的技术模式，性能比较好，开发效率也比较高，而且也是一种很新的框架，由Google在2017年的 I/O 大会上首次推出，至今短短两年的时间，其生态系统快速增长，相信未来发展也很值得期待。</p>
-<p>由于目前Flutter仍处于快速发展的阶段，其应用场景的资讯和参考资料并不是很多，想要深入了解可以通过官网和源码等渠道进行学习，包括Dart 语言，这些对于我个人来说都是很陌生的东西，现在发现可以学习的东西太多了，需要学习的东西也很多，保持一颗好奇心，不断去尝试，技术人就是要不断学习的。</p>
-<h3 id="0x02-Kotlin-语言"><a href="#0x02-Kotlin-语言" class="headerlink" title="0x02 Kotlin 语言"></a>0x02 Kotlin 语言</h3><p>是一种在 Java 虚拟机上运行的静态类型编程语言，被称之为 Android 世界的Swift，由 JetBrains 设计开发并开源。Kotlin 可以编译成Java字节码，也可以编译成 JavaScript，方便在没有 JVM 的设备上运行。</p>
-<p>在Google I/O 2017中，Google 宣布 Kotlin 成为 Android 官方开发语言，主要原因可能还是因为Google 和 Oracle 的官司纠纷，导致Google不得不推出Kotlin，当然作为Android开发的核心语言Java，在未来的发展中依然具有巨大影响力。</p>
-<p>另外值得一提的是Oracle公司，近些年对于开源界并不友好，收购了Sun公司（Java，MySQL），开源社区因为担心MySQL被闭源，另外维护了MariaDB作为其分支，之前在数据库课程实验时使用的就是MariaDB，因此顺便了解了Sun公司及其整个发展历程，从兴起到巅峰再到衰亡，也是十分感叹，信息技术行业真的是一个不断更新变换的行业，无论是技术还是产业，整个生态都是快节奏的，真的需要把握时机，顺应变换，更新迭代，否则将会被淘汰。</p>
-<p>对于开源，在计算机行业也只有在计算机行业才能实现和发展的，这是一种行业特性，对于传统行业是无法做到的，开源是一种精神，开源不等于免费，知识产权也是需要保护，在现实利益的趋势下，到底该如何定义开源，真的不是一两句能够说清楚的，对于开发者来讲当然应高喊开源万岁。</p>
-<h3 id="0x03-Gradle-工具"><a href="#0x03-Gradle-工具" class="headerlink" title="0x03 Gradle 工具"></a>0x03 Gradle 工具</h3><p>Gradle是一个基于Apache Ant和Apache Maven概念的项目自动化构建开源工具。面向Java应用为主。当前其支持的语言限于Java、Groovy、Kotlin和Scala，计划未来将支持更多的语言。</p>
-<p>这个东西主要是在使用Android Studio开发应用时，发现在使用Gradle构建项目，不太清楚到底是个啥就查了一下，简单来说gradle就是一个基于JVM的构建工具，支持局部构建，支持多方式依赖管理，与ant、maven、ivy有良好的相容相关性，gradle适用于任何结构的工程。</p>
-<h3 id="0x04-小结一下"><a href="#0x04-小结一下" class="headerlink" title="0x04 小结一下"></a>0x04 小结一下</h3><p>唉~搞计算机的要学的东西还真多啊，关于硬件嵌入式Linux的学习还没有总结呢，那个好像也很多，等下一篇更新吧。</p>
-
-          
+          0x00 前言好久没有写东西做总结了，应该时时更新，日日总结，保持对新事物的好奇心，回顾所学旧的知识，融汇贯通。因为实训接触了一些新的玩意儿，如: Vuejs，Flutter, Kotlin 等，也刚好有时间，就干脆多了解一些，顺便做了一点
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2019/06/29/2019-06-29-tech-stack/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -404,7 +393,7 @@
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="YDLAN">
       <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="image" content="/images/avatar.jpg">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -428,9 +417,9 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Posted on</span>
+                <span class="post-meta-item-text">发表于</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-06-17T10:00:04+08:00">
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-06-17T10:00:04+08:00">
                 2019-06-17
               </time>
             
@@ -449,7 +438,7 @@
                 <i class="fa fa-folder-o"></i>
               </span>
               
-                <span class="post-meta-item-text">In</span>
+                <span class="post-meta-item-text">分类于</span>
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
@@ -492,114 +481,16 @@
       
         
           
-            <h3 id="0x00-容器与虚拟机"><a href="#0x00-容器与虚拟机" class="headerlink" title="0x00 容器与虚拟机"></a>0x00 容器与虚拟机</h3><p>我们用的传统虚拟机如 <code>VMware</code> ， <code>VisualBox</code> 之类的需要模拟整台机器包括硬件，每台虚拟机都需要有自己的操作系统，虚拟机一旦被开启，预分配给它的资源将全部被占用。</p>
-<p>而容器技术是和我们的宿主机共享硬件资源及操作系统，可以实现资源的动态分配。容器包含应用和其所有的依赖包，但是与其他容器共享内核。容器在宿主机操作系统中，在用户空间以分离的进程运行。容器技术是实现操作系统虚拟化的一种途径，可以让您在资源受到隔离的进程中运行应用程序及其依赖关系。</p>
-<p><img src="https://s2.ax1x.com/2019/07/13/Z4tsgS.md.png" alt="img"></p>
-<p><code>Docker</code> 将应用程序与该程序的依赖，打包在一个文件里面。运行这个文件，就会生成一个虚拟容器。程序在这个虚拟容器里运行，就好像在真实的物理机上运行一样。有了 <code>Docker</code> ，就不用担心环境问题。</p>
-<h3 id="0x01-Docker的优势"><a href="#0x01-Docker的优势" class="headerlink" title="0x01 Docker的优势"></a>0x01 Docker的优势</h3><p><strong>Docker相比于传统虚拟化方式具有更多的优势：</strong></p>
-<ul>
-<li><p><code>docker</code> 启动快速属于秒级别。虚拟机通常需要几分钟去启动。<code>docker</code> 需要的资源更少， <code>docker</code> 在操作系统级别进行虚拟化， <code>docker</code> 容器和内核交互，几乎没有性能损耗，性能优于通过 <code>Hypervisor</code> 层与内核层的虚拟化。</p>
-<p><img src="https://s2.ax1x.com/2019/07/13/Z4twNt.md.png" alt="img"></p>
-</li>
-<li><p><code>docker</code> 更轻量， <code>docker</code> 的架构可以共用一个内核与共享应用程序库，所占内存极小。同样的硬件环境， <code>Docker</code> 运行的镜像数远多于虚拟机数量，对系统的利用率非常高。</p>
-</li>
-<li><p>高可用和可恢复性： <code>docker</code> 对业务的高可用支持是通过快速重新部署实现的。虚拟化具备负载均衡，高可用，容错，迁移和数据保护等经过生产实践检验的成熟保障机制， <code>VMware</code> 可承诺虚拟机 <code>99.999%</code> 高可用，保证业务连续性。</p>
-</li>
-<li><p>快速创建、删除：虚拟化创建是分钟级别的， <code>Docker</code> 容器创建是秒级别的， <code>Docker</code> 的快速迭代性，决定了无论是开发、测试、部署都可以节约大量时间。</p>
-</li>
-<li><p>交付、部署：虚拟机可以通过镜像实现环境交付的一致性，但镜像分发无法体系化。 <code>Docker</code> 在 <code>Dockerfile</code> 中记录了容器构建过程，可在集群中实现快速分发和快速部署。</p>
-</li>
-</ul>
-<h3 id="0x02-Docker基础架构"><a href="#0x02-Docker基础架构" class="headerlink" title="0x02 Docker基础架构"></a>0x02 Docker基础架构</h3><p>Docker 使用客户端-服务器 (C/S) 架构模式，使用远程API来管理和创建Docker容器。Docker 包括是三个最基本的概念：Image(镜像)，Container(容器)，Repository(仓库)。</p>
-<table>
-<thead>
-<tr>
-<th>Docker 镜像(Images)</th>
-<th>Docker 镜像是用于创建 Docker 容器的模板。</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Docker 容器(Container)</td>
-<td>容器是独立运行的一个或一组应用。</td>
-</tr>
-<tr>
-<td>Docker 仓库(Registry)</td>
-<td>Docker 仓库用来保存镜像，可以理解为代码仓库。</td>
-</tr>
-</tbody>
-</table>
-<p><img src="https://s2.ax1x.com/2019/07/13/Z4tr38.png" alt="img"></p>
-<p>Docker镜像是一个特殊的文件系统，除了提供容器运行时所需的程序、库、资源、配置等文件外，还包含了一些为运行时准备的一些配置参数（如匿名卷、环境变量、用户等）。Docker 设计时，就充分利用 Union FS 的技术，将其设计为分层存储的架构。镜像实际是由多层文件系统联合组成。镜像构建时，会一层层构建，前一层是后一层的基础。每一层构建完就不会再发生改变，后一层上的任何改变只发生在自己这一层。</p>
-<p>镜像（Image）和容器（Container）的关系，就像是面向对象程序设计中的类和实例一样，镜像是静态的定义，容器是镜像运行时的实体。容器可以被创建、启动、停止、删除、暂停等，容器的实质是进程，但与直接在宿主执行的进程不同，容器进程运行于属于自己的独立的命名空间。</p>
-<p>镜像构建完成后，可以很容易的在当前宿主上运行，但是，如果需要在其他服务器上使用这个镜像，我们就需要一个集中的存储、分发镜像的服务，Docker Registry 就是这样的服务。一个 Docker Registry中可以包含多个仓库（Repository）；每个仓库可以包含多个标签（Tag）；每个标签对应一个镜像。</p>
-<p>在上面分别介绍了docker的三个基本概念：Image(镜像)，Container(容器)，Repository(仓库)和C/S的架构。现在在详细记录一下这些组件协作运行容器的过程：</p>
-<ol>
-<li><code>Docker</code> 客户端执行 <code>docker run</code> 命令</li>
-<li><code>Dockerdaemon</code> 发现本地没有我们需要的镜像</li>
-<li><code>daemon</code> 从 <code>DockerHub</code> 下载镜像</li>
-<li>下载完成后，镜像被保存到本地</li>
-<li><code>Dockerdaemon</code> 启动容器</li>
-</ol>
-<p><code>Dockerdaemon</code> 是服务器组件，以 <code>Linux</code> 后台服务的方式运行，是 <code>Docker</code> 最核心的后台进程，我们也把它称为守护进程。它负责响应来自 <code>Docker Client</code> 的请求，然后将这些请求翻译成系统调用完成容器管理操作。</p>
-<h3 id="0x03-Docker-安装与使用"><a href="#0x03-Docker-安装与使用" class="headerlink" title="0x03 Docker 安装与使用"></a>0x03 Docker 安装与使用</h3><p>LXC （Linux Container）内核虚拟化技术，可以提供轻量级虚拟化，以便隔离进程和资源。</p>
-<p>Ubuntu12.04 安装Docker需要升级内核（Docker 在3.8内核下运行最佳，Ubuntu1204内核版本为3.2）</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span> install the backported kernel</span><br><span class="line">sudo apt-get update</span><br><span class="line">sudo apt-get install linux-image-generic-lts-raring linux-headers-generic-lts-raring</span><br><span class="line"><span class="meta">#</span> reboot</span><br><span class="line">sudo reboot</span><br></pre></td></tr></table></figure>
-<p>安装Docker</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"># 添加Docker库的密钥</span><br><span class="line">sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 36A1D7869245C8950F966E92D8576A8BA88D21E9</span><br><span class="line"></span><br><span class="line"># 把Docker的库添加到apt的源列表中，更新并安装lxc-docker包。</span><br><span class="line">sudo sh -c &quot;echo deb http://get.docker.io/ubuntu docker main\</span><br><span class="line">&gt; /etc/apt/sources.list.d/docker.list&quot;</span><br><span class="line">sudo apt-get update</span><br><span class="line">sudo apt-get install lxc-docker</span><br></pre></td></tr></table></figure>
-<p>按照这个步骤安装后，发现报了很多错误，调试了半天也没能解决，后来发现自己的Ubuntu12.04 是32位的，Docker需要运行在64位的机子上，所以失败了。后面查了一下说docker也可以安装在32位的系统，不过pull下来的镜像也必须是32位的，这个有点麻烦，所以放弃了。</p>
-<p>在安装docker或者其他软件时记得要使用命令<code>uname -a</code> 、<code>uname -r</code> 、<code>lsb_release -a</code> 查看系统相关信息，来避免一些不必要的麻烦。另外注意通过<code>uname -a</code>命令查看内核和版本显示系统版本为i386和i686的为 32位系统；显示为X86_64的，才是64位系统。</p>
-<p>后面选择了我的<strong>阿里云CentOS 安装Docker</strong>，一路pass，没有遇到任何bug，大致步骤如下：</p>
-<p>1、清理原有的docker目录和文件，确保安装环境的干净：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">sudo yum remove docker \</span><br><span class="line">                  docker-client \</span><br><span class="line">                  docker-client-latest \</span><br><span class="line">                  docker-common \</span><br><span class="line">                  docker-latest \</span><br><span class="line">                  docker-latest-logrotate \</span><br><span class="line">                  docker-logrotate \</span><br><span class="line">                  docker-selinux \</span><br><span class="line">                  docker-engine-selinux \</span><br><span class="line">                  docker-engine</span><br></pre></td></tr></table></figure>
-<p>2、使用yum安装docker</p>
-<p>安装一些必要的工具，设备映射器存储驱动程序需要设备映射器-持久数据和lvm2。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo yum install -y yum-utils \</span><br><span class="line">device-mapper-persistent-data \</span><br><span class="line">lvm2</span><br></pre></td></tr></table></figure>
-<p>设定软件源地址，国外慢的可怜，我这里使用国内源：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo yum-config-manager --add-repo http://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo</span><br></pre></td></tr></table></figure>
-<p>更新源信息</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo yum makecache fast</span><br></pre></td></tr></table></figure>
-<p>下载docker，直接下载最新版：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo yum install docker-ce</span><br></pre></td></tr></table></figure>
-<p>也可以选择下载指定版本：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">yum list docker-ce --showduplicates | sort -r</span><br><span class="line">sudo yum install docker-ce-&lt;VERSION STRING&gt;</span><br></pre></td></tr></table></figure>
-<p>至此docker就下载安装成功了，可以直接使用命令docker -v 查看docker版本。</p>
-<p>通过网上查资料说还有更简单的安装方法，直接使用脚本安装，只需要简单的两条命令就可以，我没有测试，应该是可以的。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">curl -fsSL get.docker.com -o get-docker.sh</span><br><span class="line"></span><br><span class="line">sudo sh get-docker.sh --mirror Aliyun</span><br></pre></td></tr></table></figure>
-<p>3、安装成功后可以进行一些配置和测试。可以设置系统启动时同时启动docker</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo systemctl enable docker</span><br></pre></td></tr></table></figure>
-<p>启动docker并测试</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo systemctl start docker</span><br><span class="line">sudo docker run hello-world</span><br></pre></td></tr></table></figure>
-<p><img src="https://s2.ax1x.com/2019/07/13/Z4tD9f.md.png" alt="img"></p>
-<h3 id="0x04-Docker-常用命令"><a href="#0x04-Docker-常用命令" class="headerlink" title="0x04 Docker 常用命令"></a>0x04 Docker 常用命令</h3><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1</span>.docker images ls                             <span class="comment"># 列出本地docker镜像</span></span><br><span class="line"><span class="number">2</span>.docker rmi -f &#123;image id&#125;                     <span class="comment"># 删除docker镜像</span></span><br><span class="line"></span><br><span class="line"><span class="number">3</span>.docker stop [docker_names]|[docker_id]       <span class="comment"># 停止容器运行</span></span><br><span class="line"><span class="number">4</span>.docker rename [docker_names] [newname]       <span class="comment"># 重命名容器</span></span><br><span class="line"><span class="number">5</span>.docker rm [docker_names]                     <span class="comment"># 删除容器</span></span><br><span class="line"><span class="number">6</span>.docker ps -a                                 <span class="comment"># 已创建docker image列表</span></span><br></pre></td></tr></table></figure>
-<p><strong>以创建Nginx容器为例</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"># 查找 Docker Hub 上的 nginx 镜像</span><br><span class="line">docker search nginx</span><br><span class="line"></span><br><span class="line"># 拉取镜像</span><br><span class="line">docker pull nginx</span><br><span class="line"></span><br><span class="line"># 查看本地镜像</span><br><span class="line">docker images nginx</span><br><span class="line"></span><br><span class="line"># 启动一个Nginx容器实例</span><br><span class="line"># --name(容器名)、-p(端口映射)、-d(后台执行)</span><br><span class="line">docker run --name nginx-test -p 8080:80 -d nginx</span><br><span class="line"></span><br><span class="line"># 查看容器是否有在运行</span><br><span class="line">docker ps</span><br></pre></td></tr></table></figure>
-<p><img src="https://s2.ax1x.com/2019/07/13/Z4DLhd.md.png" alt="img"></p>
-<p>创建Nginx容器成功后，可以使用 ip + 端口号进行访问，Ubuntu系统可以直接使用127.0.0.1:端口号，如果是云服务器的话就是 ip+端口号，注意端口号要进行防火墙设置以保证可用。</p>
-<h3 id="0x05-Dockerfile"><a href="#0x05-Dockerfile" class="headerlink" title="0x05 Dockerfile"></a>0x05 Dockerfile</h3><p>除了上述的拉取镜像生成容器实例的基本方法，还可以使用<code>Dockerfile</code>来定义镜像创建容器，这里的<code>Dockerfile</code>非常类似Makefile 和 Linux下shell。<code>Dockerfile</code> 是由一行行命令语句组成，并且支持已 <code>#</code> 开头的注释行。一般来说，可以将 <code>Dockerfile</code> 分为四个部分：</p>
-<ol>
-<li><p>基础镜像(父镜像)信息指令 FROM</p>
-</li>
-<li><p>维护者信息指令 MAINTAINER</p>
-</li>
-<li><p>镜像操作指令 RUN 、 EVN 、 ADD 和 WORKDIR 等</p>
-</li>
-<li><p>容器启动指令 CMD 、 ENTRYPOINT 和 USER 等</p>
-</li>
-</ol>
-<p><strong>通过Dockerfile 构建Tomcat 镜像</strong></p>
-<p>创建目录tomcat,用于存放后面的相关东西</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"># webapps目录将映射为tomcat容器配置的应用程序目录、logs目录将映射为tomcat容器的日# 志目录、conf目录里的配置文件将映射为tomcat容器的配置文件</span><br><span class="line"></span><br><span class="line">mkdir -p ~/tomcat/webapps ~/tomcat/logs ~/tomcat/conf</span><br></pre></td></tr></table></figure>
-<p>进入创建的tomcat目录，创建Dockerfile</p>
-<figure class="highlight docker"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">FROM</span> openjdk:<span class="number">8</span>-jre</span><br><span class="line"></span><br><span class="line"><span class="keyword">ENV</span> CATALINA_HOME /usr/local/tomcat</span><br><span class="line"><span class="keyword">ENV</span> PATH $CATALINA_HOME/bin:$PATH</span><br><span class="line"><span class="keyword">RUN</span> mkdir -p "$CATALINA_HOME"</span><br><span class="line"><span class="keyword">WORKDIR</span> $CATALINA_HOME</span><br><span class="line"></span><br><span class="line"><span class="comment"># 可以直接访问 https://hub.docker.com/_/tomcat/</span></span><br><span class="line"><span class="comment"># 选择代码仓库，里面就有Dockerfile，</span></span><br><span class="line"><span class="comment"># 自己复制下来然后自定义修改就行</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">EXPOSE</span> <span class="number">8080</span></span><br><span class="line"><span class="keyword">CMD</span> ["catalina.sh", "run"]</span><br></pre></td></tr></table></figure>
-<p>通过Dockerfile创建一个镜像，并命名。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker build -t tomcat2.</span><br></pre></td></tr></table></figure>
-<p>创建完成后，我们可以在本地的镜像列表里查找到刚刚创建的镜像</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker images|grep tomcat2</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"># 运行容器</span><br><span class="line"># 将主机中当前目录下的test挂载到容器的/test</span><br><span class="line">docker run --name tomcat -p 8080:8080 -v $PWD/test:/usr/local/tomcat/webapps/test -d tomcat</span><br></pre></td></tr></table></figure>
-<h3 id="0x06-总结"><a href="#0x06-总结" class="headerlink" title="0x06 总结"></a>0x06 总结</h3><p>至此就把Docker的一些基本的概念和使用进行了简单总结，看了一些资料，自己对Docker也有了一些了解和认识，特别是它设计一个理念和架构，对于复杂的应用开发部署真的做到了简单高效，上面总结了Docker应用的优势和基础的架构，自己也亲自装了Docker并创建了一些容器实例，熟悉了Docker的一些常用指令和使用Dockerfile创建Image，也算是一个简单的入门吧。因为接触并不是很多，至于它的具体应用场景个人还是不太清楚，但个人认为应该是很有应用前景的。</p>
-
-          
+          0x00 容器与虚拟机我们用的传统虚拟机如 VMware ， VisualBox 之类的需要模拟整台机器包括硬件，每台虚拟机都需要有自己的操作系统，虚拟机一旦被开启，预分配给它的资源将全部被占用。
+而容器技术是和我们的宿主机共享硬件资源及操
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2019/06/17/2019-06-17-docker-study/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -651,7 +542,7 @@
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="YDLAN">
       <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="image" content="/images/avatar.jpg">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -675,9 +566,9 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Posted on</span>
+                <span class="post-meta-item-text">发表于</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-06-11T10:27:32+08:00">
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-06-11T10:27:32+08:00">
                 2019-06-11
               </time>
             
@@ -696,7 +587,7 @@
                 <i class="fa fa-folder-o"></i>
               </span>
               
-                <span class="post-meta-item-text">In</span>
+                <span class="post-meta-item-text">分类于</span>
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
@@ -739,14 +630,15 @@
       
         
           
-            <h3 id="0x00-前言"><a href="#0x00-前言" class="headerlink" title="0x00 前言"></a>0x00 前言</h3><p>记录一下我对软件工程的理解，说实话在校学习期间很难接触到真正意义上的软件开发，更别提会参考或采用软件工程的解决办法。更多的是编写一些很小很小而且漏洞百出的小程序，锻炼的只不过是对编程语言的熟悉和对一些算法的理解和掌握。而真正的软件开发应该不是这样的，虽然我目前还没接触到，但我知道肯定不是简单的编码，而是有一整套设计思路和开发流程的，因为这是质量和效率的保证。</p>
-<h3 id="0x01-设计与实现"><a href="#0x01-设计与实现" class="headerlink" title="0x01 设计与实现"></a>0x01 设计与实现</h3><p>对于软件的开发，我认为设计远比实现复杂，首先我们先忽略对需求的分析，就单纯从一个简单功能来看，设计对于整个开发都是十分重要的，设计不仅要考虑程序的整个流程和部署，还要考虑到最终结果是否是有意义的。就我个人而言，常常会因为设计而苦恼，首先是没有一个很好解决办法的思路，其次是设计不合理导致后续的实现异常复杂。也常因为自己写了一手好bug而感到奔溃，这些都不是实现的问题，更多的是设计不合理或者对于问题本身理解的偏差造成的。实现对于设计是相对容易的，无非就是编码，这和自己对编程语言掌握的程度有关，还有就是算法与数据结构的熟练程度有关。</p>
-<h3 id="0x02-理论的意义"><a href="#0x02-理论的意义" class="headerlink" title="0x02 理论的意义"></a>0x02 理论的意义</h3><p>理论的最大意义就是起到要个引导和规范作用，通过软件工程可以规范整个软件开发的流程和实施步骤，这也是为什么软件工程可以单独作为一门学科而存在的原因之一。软件工程把软件放在了一个产品的角度，从最开始的分析设计，开发实现，测试运维以及质量管理都提出了较为规范和通用的实施步骤和方法策略，从而使软件的开发难度降低，提高了生产效率。以前一直认为理论是无用的，实践才是硬道理，后来才发现自己对于理论的认知是有偏差的，理论并非夸夸奇谈，它的意义也并非限于其字面含义，而重要的是其提出的方法和理念。理论更像是人们总结出的经验，它并非局限于某个问题本身，而是针对某类问题的一个通用解决方案。理论研究和良好的理论体系对于一个行业的发展是至关重要的，我认为没有理论的支持，所有的设计和实现都是没有太大价值的。</p>
-<h3 id="0x03-软件开发困境"><a href="#0x03-软件开发困境" class="headerlink" title="0x03 软件开发困境"></a>0x03 软件开发困境</h3><p>软件开发其实是一种实施细节，即使有很多理论的支持，还是抵不过多变复杂的技术，现在越来越多的框架，虽然免去了重复造轮子，但对于程序员来讲也并没减少负担，反而程序员需要去学习和了解这些框架和技术，完成开发任务。这些开发任务并非其他行业那样只要掌握了足够理论就可以解决多数问题，相反软件开发更多像是一种技术实施细节，这种实施细节只针对某个特定问题有用，换一个场景就未必有用了，所以在程序员行业，只有不断学习汲取新的东西才不会被淘汰。特别是这种实施细节对于软件开发是一种无法规避的难题，如果不了解是无法完成开发任务的，技术的更新迭代远比我们学习新技术的速度快，这是软件开发无法避免的问题，也是我们程序员不得不面对的难题。</p>
-<h3 id="0x04-敏捷开发"><a href="#0x04-敏捷开发" class="headerlink" title="0x04 敏捷开发"></a>0x04 敏捷开发</h3><p>敏捷开发算是一种很好的开发策略针在目前状况下，我理解的敏捷开发是一种小而快的开发，适用于多变的小项。这种开发策略是一种可以针对具体需求进行随机应变的，可以理解为专注于某个需求进行精准开发。对于当下社会情形，精准显得越来越重要，随着社会分工越来越完善，协同合作也显得越来越重要，只有把工作划分到不同领域，才能提高生产效率，就像流水线一样；然后通过协同合作把各个领域的能力进行汇聚，才能发挥真正的价值，简单来说就是利用分工合作，提高效率汇聚价值。敏捷，我理解的就是高度的分工，互联网企业是分工合作体现的最明显的一类企业，无论从技术还是管理层都涉及到多个部门领域，而针对技术展开的部门和部门内部的工作组，都是分工的体现，在计算机行业想要完成任何一款产品研发都是要分工合作的，因为它涉及到多种各样的技术栈，而科技公司很难找到什么都精通的人才。为了适应市场需求，我们可能也只能进行精准学习，想要成为大牛，可能得不断学习，不断精进了。</p>
-<h3 id="0x05-总结"><a href="#0x05-总结" class="headerlink" title="0x05 总结"></a>0x05 总结</h3><p>以上就是自己对于软件工程，对于软件开发以及将要投身于的IT行业的理解，自己写下这些东西可能毫无价值，但它代表的是当前的一些理解和思考，这可能是学生时期才会有的想法。多年以后，自己对于行业有了更深的接触和了解后，一定会有有一些不一样理解和思考的，那就等以后再说吧。</p>
-
-          
+          0x00 前言记录一下我对软件工程的理解，说实话在校学习期间很难接触到真正意义上的软件开发，更别提会参考或采用软件工程的解决办法。更多的是编写一些很小很小而且漏洞百出的小程序，锻炼的只不过是对编程语言的熟悉和对一些算法的理解和掌握。而真正的
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2019/06/11/2019-06-11-software/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -798,7 +690,7 @@
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="YDLAN">
       <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="image" content="/images/avatar.jpg">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -822,9 +714,9 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Posted on</span>
+                <span class="post-meta-item-text">发表于</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-06-09T20:22:27+08:00">
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-06-09T20:22:27+08:00">
                 2019-06-09
               </time>
             
@@ -843,7 +735,7 @@
                 <i class="fa fa-folder-o"></i>
               </span>
               
-                <span class="post-meta-item-text">In</span>
+                <span class="post-meta-item-text">分类于</span>
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
@@ -886,23 +778,16 @@
       
         
           
-            <h3 id="0x00-前言"><a href="#0x00-前言" class="headerlink" title="0x00 前言"></a>0x00 前言</h3><p>大三这一年学习了组成原理和体系结构这两门偏底层的专业课程，虽然学的不怎么样，但还是或多或少有些不一样的感受，下面就梳理一下自己学到的东西，记录一下自己理解一些的东西。</p>
-<h3 id="0x01-抽象"><a href="#0x01-抽象" class="headerlink" title="0x01 抽象"></a>0x01 抽象</h3><p>对于计算机科班生来说计算机不再只是一台用于办公或计算的机器，而更多的是一种抽象的概念。计算机最核心的能力就是计算，而处理计算需要的是对数据的理解能力，在计算机的世界只有0和1，更准确的说是只有高低电平，这种脉冲信号才是真实存在的，这就是一种抽象。使用0和1来代表脉冲信号的高低电平，当然这种对应关系也只是相对的，这涉及的正是之前模电和数字逻辑课程所学的东西。有了数模电，其中的二极管，三极管，门电路才是构成计算机最基础最底层的东西。而计算机也正是通过这些器件一层一层的抽象，形成多种复杂的数据处理单元和数据通路，最终封装成为一个我们容易理解和使用的机器。</p>
-<h3 id="0x02-集成电路"><a href="#0x02-集成电路" class="headerlink" title="0x02 集成电路"></a>0x02 集成电路</h3><p>计算机可以处理信息的方式就是将信息转化为0和1，在逻辑上表现为True 和 False，而在硬件上则是高低电平，在最开始的计算机计算就是通过这种高低电平的打孔计算，这处理起来是非常麻烦的，而且能够处理的数据量非常有限，甚至还没普通算术来的快。但随着硬件和集成电路的发展，计算机底层电路经过几代的更换后，计算机性能得到了飞速的发展，对于硬件的优化是对计算机至关重要的，集成电路的发展对计算各个硬件设计至关重要，从第一台计算诞生到至今，集成电路设计几乎一直是计算发展的核心，而这种最底层的设计需要多个领域技术的结合，包括电子，材料，物理等，所以技术难度很大，需要投入的成本也是巨大的，如果没有原始的技术积累是很难做到的。</p>
-<h3 id="0x03-编码"><a href="#0x03-编码" class="headerlink" title="0x03 编码"></a>0x03 编码</h3><p>编码是计算机最有意思的地方，如何让程序成为计算机可以执行的指令，而指令又是如何装换为机器码的，这种机器码是怎么控制计算机电路的呢，这都是一些有趣的问题。对于计算机程序指令，最开始的认识是高级语言转换为汇编语言，而汇编由转换为可执行的机器码。那为何需要将高级语言转为汇编再转为机器码，而不是高级语言直接转为机器码呢？其实这个设计是为方便程序的优化和调试，高级语言转为汇编是需要编译器的，编译器可以处理好高级语言到汇编这一过程，而真正复杂的是汇编程序转换为机器码，这是需要物理电路实现的，通过机器码01序列来控制对应的寄存器和电路，来进行相应状态的切换，这就是计算机最基础的实现，但这种实现到底怎么实现的呢，我现在还是不太清楚，这可能涉及到EE的内容，但作为CS方向应该有一定的了解，之前也找了《编码:隐匿在计算机软硬件背后的语言》书来看，但只看了部分，等有时间在看一看深入了解一下。</p>
-<h3 id="0x04-指令和程序"><a href="#0x04-指令和程序" class="headerlink" title="0x04 指令和程序"></a>0x04 指令和程序</h3><p>指令简单理解就是控制计算机执行的命令，指令说到还是一串01的序列，只是将这串指令意义化了，就像给寄存器命名，而实际上指向的还是一个地址而已，这是我个人理解的，指令本身含义不大，关键的是它对电路的控制和状态转移的操作，这才是指令真正的意义，除了指令外，还有程序，命令，操作等概念，记得当时计组课上讲过，微程序是一组微指令的集合，微指令是一个单位时间内出现的一组微操作的描述语句，在微指令的控制字段中，每一位代表一个微命令。这些大概就是它们的具体区别吧。</p>
-<h3 id="0x05-数据通路"><a href="#0x05-数据通路" class="headerlink" title="0x05 数据通路"></a>0x05 数据通路</h3><p>这是我们实验实现过的东西，当时使用Verilog编程实现简单MIPS数据通路，如果将实验拆分为各个模块那到并不是很难，分别实现存储器，运算器，控制单元，然后将这些模块组合，在加上程序计算器，IO模块，基本上就可以实现简单的数据通路，而且是单周期的所以理解起来相对比较容易。数据通路是CPU的核心框架，基本上就是实现了一个简单的CPU，比较复杂的是PC的寻址，指令的译码，以及IO操作，这种对于硬件的操作虽然实现是有一定难度的，但也是能一种更好理解计算机的方式。</p>
-<h3 id="0x06-体系结构"><a href="#0x06-体系结构" class="headerlink" title="0x06 体系结构"></a>0x06 体系结构</h3><p>说到体系结构自然想到的就是冯诺依曼体系结构，现代计算机，大部分是基于冯诺依曼体系结构的，其核心就是存储程序和顺序执行，它定义了整个计算的基础框架，无论计算机怎么发展其基本原理都基本相同。体系结构特点包括了计算机处理的数据和指令用二进制表示，指令和数据都存储在同一个存储器中，顺序执行程序的每一条指令，硬件组成包括运算器，控制器，存储器，输入设备和输出设备。我们平时所接触的和学习都是围绕着这个体系所展开的，而其中的每一个部分想要将它理解透都是要花费很多精力的，后面计算机设计都是在这个基础上改进优化，对于后学者而言，能改进的东西越来越少，需要学习的是越来越多，就当下计算机的能力而言，硬件和体系结构的性能几乎已经达到了一个比较高的水平，如果想突破这种极限，可能需要一种新的体系结构来定义计算机了。</p>
-<h3 id="0x07-处理器"><a href="#0x07-处理器" class="headerlink" title="0x07 处理器"></a>0x07 处理器</h3><p>广义上处理器就是指平时所说的CPU，简单理解CPU就是控制程序执行，处理数据的一个单元，也可以理解为个集成电路，和上面提到的集成电路和数据通路类似，CPU是计算机的核心是必不可少的组成部分。微处理器的发展几乎代表了计算机的发展，而这里不得不提就是Intel(英特尔)，这个公司的发展史可以说是代表了这个微处理器的发展历程，包括8x86，奔腾等都是处理器发展的代表，包括后面发展起来的AMD, 高通等公司都是目前芯片领域的巨头，当然芯片不仅包括了处理器芯片，还包括了其他的功能芯片。说到这些，自己其实了解的真的太少了，关于芯片这部分其实我自己还是挺感兴趣的，对于这个设计流程包括功能特性以及工作原理其实还都想去了解一下的，有机会还得多看看书和找找资料。</p>
-<h3 id="0x08-ISA"><a href="#0x08-ISA" class="headerlink" title="0x08 ISA"></a>0x08 ISA</h3><p>指令集架构，说到这里又得感叹自己了解的太少了，对于指令集架构最主要分为CISC和RISC，当时老师讲课一直提到了，因为书上也没提到，所以感觉很懵，都不知道在讲什么，好多课都荒废了，后面还是查了资料才知道的。对于指令集架构无非就是涉及到指令寻址方式，操作数类型和表示方法，以及指令的编码等，还提到一个编译优化等，对于这些东西真的只是学个概念，想要真的弄明白还是要花费一些时间和精力的，况且就单纯老师上课讲的东西，也只是让我们了解一个大概。还有就是MIPS指令结构，这稍微了解的多一些，包括一些指令类型，寻址等，但平时用的太少所以也不熟。</p>
-<h3 id="0x09-流水线"><a href="#0x09-流水线" class="headerlink" title="0x09 流水线"></a>0x09 流水线</h3><p>流水线几乎是体系结构整本书的重点，其实就是讲的是调高程序并行度的一种方法，流水线主要是体现的是指令级的并行，通过流水线来提高程序效率，流水线虽然可以提高效率，但还是存在一些问题，比如一些数据冒险，控制冒险，结构冒险等，这些都是可以进行优化的，所以提出了一系列改进措施和调度策略，包括了scoreboard，tomasulo，分支预测等。其实只要理解了，其实并不复杂，我们也都是以传统5级流水线作为例子，几乎又把之前提到的东西重复了一遍，包括取指，译码，执行，访存和回写。当然比较难的还是对于汇编指令的不太熟悉，因为完全没有好好的去学习汇编，都是在例子上接触的一些，所以，有些时候弄起来很难得心应手。</p>
-<h3 id="0x0A-Cache"><a href="#0x0A-Cache" class="headerlink" title="0x0A Cache"></a>0x0A Cache</h3><p>cache是一个很重要的结构对于计算机来说，它位于是连接CPU和主存的一种高速缓存，由于空间局部性和时间局部性原理，所以可以通过cache缓存来提高CPU对于数据的访问效率，从而提高计算机性能，主存和cache的映射方式包括全相关，直接映射和组相连，连接方式不同效率和复杂度也不同。cache也是可以进行优化的包括多级cache，还有TLB，以及相关的替换策略都是为了提高计算机的性能。</p>
-<h3 id="0x0B-线程级并行"><a href="#0x0B-线程级并行" class="headerlink" title="0x0B 线程级并行"></a>0x0B 线程级并行</h3><p>包括SISD，SIMD，MISD、MIMD，还包括向量机，GPU等，这部分了解的并不是太多。</p>
-<h3 id="0x0C-量化方法"><a href="#0x0C-量化方法" class="headerlink" title="0x0C 量化方法"></a>0x0C 量化方法</h3><p>量化方法就比较好理解了，主要就是对性能进行评估，使用一些指标比如说CPU时间，CPI，加速比，平均访存时间，还有功耗能耗等，其目的就还是可以量化计算机CPU的执行效率，以及性能提升，是衡量性能优化的指标。</p>
-<h3 id="0x0D-总结"><a href="#0x0D-总结" class="headerlink" title="0x0D 总结"></a>0x0D 总结</h3><p>大体上把计组和体系结构的学到东西梳理了一遍，才发现自己学到的东西几乎是碎片化的，自己的知识体系结构根本没有很清楚的逻辑，如果不去记录或者输出，真的不知道自己理解那些东西，其实大学学习更多的是了解一个概念，形成一个大体的知识架构，架构内部的东西是要靠我们自己填补的。</p>
-<p>想要去深入了解一个领域的知识是需要花费很多时间的，获取到的信息如果不进行加工处理内化到自己的知识体系里是无用的。这也是我在进行梳理时真正体会到的。很多东西很难通过三言两语叙述清楚，首先是自己对内容的不太熟悉，其次是没有一个清楚的表达目的。关于计组和体系结构，本身内容就比较抽象，其次就是练习的时间太少，还有就是学这些东西可能对自己意义不大，但学习这个事还是不能太功利，也不能太心急，对于我来说这两门课还算有些兴趣的，或多或少也算是了解了一些东西，至于考试成绩什么的那又是后话了。</p>
-
-          
+          0x00 前言大三这一年学习了组成原理和体系结构这两门偏底层的专业课程，虽然学的不怎么样，但还是或多或少有些不一样的感受，下面就梳理一下自己学到的东西，记录一下自己理解一些的东西。
+0x01 抽象对于计算机科班生来说计算机不再只是一台用于办
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2019/06/09/2019-06-09-computer-summary/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -954,7 +839,7 @@
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="YDLAN">
       <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="image" content="/images/avatar.jpg">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -978,9 +863,9 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Posted on</span>
+                <span class="post-meta-item-text">发表于</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-05-30T08:50:23+08:00">
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-05-30T08:50:23+08:00">
                 2019-05-30
               </time>
             
@@ -999,7 +884,7 @@
                 <i class="fa fa-folder-o"></i>
               </span>
               
-                <span class="post-meta-item-text">In</span>
+                <span class="post-meta-item-text">分类于</span>
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
@@ -1042,72 +927,15 @@
       
         
           
-            <p>最近都在做数据库的实验，通过实验了解了一些SQL的语法，也更加熟悉了mysql的使用，实验从最开始数据库的创建，表的创建，包括添加一些条件约束，创建索引触发器等都涉及到了。到后面有关mysql的权限管理，以及通过powerdesigner进行数据库建模设计，和使用Java 编程对数据库进行增删改查，几乎包含了所有数据库基础操作。通过实验，不仅是熟悉一些操作，更多的是了解认识更多东西。实验我使用的是Navicat，mysql，sql的基础语法太多，用到去查就行，这里主要记录一些偏实践性的东西，算是一个小总结吧。</p>
-<h4 id="1-、命令行界面查看mysql-版本"><a href="#1-、命令行界面查看mysql-版本" class="headerlink" title="1 、命令行界面查看mysql 版本"></a>1 、命令行界面查看mysql 版本</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">mysql&gt; select version();</span><br><span class="line">+-----------------+</span><br><span class="line">| version()       |</span><br><span class="line">+-----------------+</span><br><span class="line">| 10.1.32-MariaDB |</span><br><span class="line">+-----------------+</span><br><span class="line">1 row in set</span><br></pre></td></tr></table></figure>
-<p>也可以使用<code>select version() from dual；</code>命令，这里的 dual  是数据库里的一个默认表，在没有引用表的情况下，允许将dual指定为虚拟表名。在Oracle中使用的比较多，是一个oracle内部表，它仅包含一行一列，不论我们做什么操作（不要删除记录）它都只有一条记录。<br>在Mysql，SQL Server 等数据库中也都有dual 表，不过在mysql中的dual表没有值，<code>select * from dual</code> 这种语句会报错。</p>
-<h4 id="2、MySQL-和-MariaDB"><a href="#2、MySQL-和-MariaDB" class="headerlink" title="2、MySQL 和 MariaDB"></a>2、MySQL 和 MariaDB</h4><p>我使用的xmapp的一个工具包，里面包括了mysql，但是在使用时我发现了我是MariaDB，不是mysql，然后就简单了解了一下mariaDB 和 mysql 的区别。</p>
-<p>MariaDB数据库管理系统是MySQL的一个分支，主要由开源社区在维护，采用GPL授权许可。MariaDB的目的是完全兼容MySQL，包括API和命令行，使之能轻松成为MySQL的代替品。</p>
-<p>MariaDB的API和协议兼容MySQL，另外又添加了一些功能，以支持本地的非阻塞操作和进度报告，所以所有使用MySQL的连接器、程序库和应用程序也将可以在MariaDB下工作。</p>
-<p>但两者之间也存在不兼容性，MariaDB 的文档中列出了 MySQL 和 MariaDB 之间的数百个不兼容问题。因此，我们无法通过简单的方案在这两个数据库之间进行迁移。</p>
-<h4 id="3、数据库存储引擎"><a href="#3、数据库存储引擎" class="headerlink" title="3、数据库存储引擎"></a>3、数据库存储引擎</h4><p>数据库管理系统（DBMS）使用数据引擎进行创建、查询、更新和删除数据。不同的存储引擎提供不同的存储机制、索引技巧、锁定水平等功能，使用不同的存储引擎，还可以 获得特定的功能。</p>
-<p>可以使用<code>show engines</code> 命令查看MySQL 使用的引擎；</p>
-<blockquote>
-<p>MySQL 支持的存储引擎包括：InnoDB、MyISAM、Memory、CSV、Archive、Blackhole、Merge、Federated、Example等</p>
-<p>MariaDB 支持的存储引擎包括：XtraDB、InnoDB、MariaDB ColumnStore、Aria、Archive、Blackhole、Cassandra Storage Engine、Connect、CSV、FederatedX、Memory、Merge、Mroonga、MyISAM、MyRocks等</p>
-</blockquote>
-<p>数据库可以支持多少个存储引擎其实并不太重要，满足需求才是最重要的。如果想了解不同数据库存储引擎的区别可以参考这篇文章 <a href="https://www.cnblogs.com/domi22/p/8059403.html" target="_blank" rel="noopener">数据库—四种存储引擎</a>。</p>
-<h4 id="4、Navicat的帮助文档"><a href="#4、Navicat的帮助文档" class="headerlink" title="4、Navicat的帮助文档"></a>4、Navicat的帮助文档</h4><p>Navicat提供了特别详细的帮助文档可以点击帮助菜单打开，也可以直接使用按<code>f1</code>打开。下面是Navicat for MySQL 一些常用的快捷键。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">ctrl+q            打开查询窗口</span><br><span class="line">ctrl+/            注释sql语句</span><br><span class="line">ctrl+shift +/     解除注释</span><br><span class="line">ctrl+r            运行查询窗口的sql语句</span><br><span class="line">ctrl+shift+r      只运行选中的sql语句</span><br><span class="line">F6                打开一个mysql命令行窗口</span><br><span class="line">ctrl+d            查看表结构详情，包括索引 触发器，存储过程，外键，唯一键</span><br><span class="line">ctrl+l            删除一行</span><br><span class="line">ctrl+n            打开一个新的查询窗口</span><br><span class="line">ctrl+w            关闭一个查询窗口</span><br><span class="line">ctrl+tab          多窗口切换</span><br></pre></td></tr></table></figure>
-<h4 id="5、sql-脚本的导入导出"><a href="#5、sql-脚本的导入导出" class="headerlink" title="5、sql 脚本的导入导出"></a>5、sql 脚本的导入导出</h4><ol>
-<li><p>可以直接点击右键点击数据库，运行SQL文件 或者转储SQL文件，就可以将已有的sql 文件导入数据库和将数据库保存为sql文件。也可以右键单击数据库，选择文件传输，这里可以选择不同的连接和数据格式，可以有选择的导入导出传输。</p>
-</li>
-<li><p>通过命令行导出sql文件</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysqldump -h 127.0.0.1 -uroot -ppassword databasename &gt;D:/back_databasename.sql</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>使用命令行，先进入mysql的安装目录。我这里是xmapp安装的，所以切换到C:\xampp\mysql\bin</p>
-<p>mysqldump -h 127.0.0.1 -uroot -ppassword databasename &gt;D:/back_databasename.sql</p>
-<p>用户名为：root，与-u之间可有空格（-h后也可由空格）密码为：password（你自己的密码），注意！-p后面不可有空格，直接跟密码。数据库名称为：databasename（你自己要导入导出的数据库名），导出路径为：D:/back_databasename.sql（根据自己实际情况修改）</p>
-</blockquote>
-</li>
-<li><p>通过命令行还原sql文件，上面步骤相似</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysql -h 127.0.0.1 -u root -ppassword -f databasename &lt;D:/back_databasename.sql --default-character-set=gbk</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>使用命令将数据库下表中的数据导出成文本文件</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">mysql&gt; use hhh;  // 使用hhh数据库</span><br><span class="line">mysql&gt; show tables; //查看数据库中的表</span><br><span class="line">mysql&gt;select * from user into outfile &apos;out.txt&apos;; //将user表保存为文本文件out.txt</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-<h4 id="6、使用xmapp启动mysql"><a href="#6、使用xmapp启动mysql" class="headerlink" title="6、使用xmapp启动mysql"></a>6、使用xmapp启动mysql</h4><ol>
-<li><p>命令行进入，先在Xampp的控制面板(shell)开启MYSQL，直接进入路径启动</p>
-<blockquote>
-<p>命令行切换至xmapp安装目录下的mysql目录下的bin目录</p>
-<p>比如：C:\xampp\mysql\bin</p>
-<p>mysql -u root -p 回车 </p>
-<p>要求输入密码（如果是第一次登陆，直接回车，默认密码 “”）修改密码</p>
-</blockquote>
-</li>
-<li><p>修改密码</p>
-<blockquote>
-<p>命令行切换至xmapp安装目录下的mysql目录下的bin目录</p>
-<p>比如：C:\xampp\mysql\bin</p>
-<p>使用命令修改密码：mysqladmin -u root -p password 新密码</p>
-<p>修改密码后 mysql -u root -p 登录时就需要输入密码了</p>
-</blockquote>
-</li>
-<li><p>配置环境变量</p>
-<blockquote>
-<p>Path变量中加入C:\xampp\mysql\bin </p>
-<p>win+R -&gt; cmd回车</p>
-<p>mysql -u root -p 回车 </p>
-<p>要求输入密码（如果是第一次登陆，直接回车，默认密码 “”）</p>
-</blockquote>
-</li>
-</ol>
-<h4 id="7、root-和-非root的区别"><a href="#7、root-和-非root的区别" class="headerlink" title="7、root 和 非root的区别"></a>7、root 和 非root的区别</h4><p>我在使用xmapp时，启动mysql，并通过Navicat连接了数据库后，创建了一些数据库，在Navicat里面的命令行界面可以查看到我创建的数据库，但是在xmapp shell 里面进入mysql 却没有显示我创建的数据库。</p>
-<p><strong>原因</strong>：是我在使用Navicat连接mysql时，使用的是root身份，但通过xmapp shell 进入mysql，我是直接启动的mysql，并没有使用root 进登录的。所以无法查看root身份下的创建的数据库，只是有几个系统默认的数据库。</p>
-<p><strong>解决方法</strong>：使用命令 mysql -u root -p 进入mysql。这时就可以通过查看自己创建的数据库了。</p>
-<p><strong>重要</strong>：以后在使用数据库时要区分以什么身份登录root 和非root有很大区别，对于数据库的管理权限也有所不同，具体情况具体分析。</p>
-
-          
+          最近都在做数据库的实验，通过实验了解了一些SQL的语法，也更加熟悉了mysql的使用，实验从最开始数据库的创建，表的创建，包括添加一些条件约束，创建索引触发器等都涉及到了。到后面有关mysql的权限管理，以及通过powerdesigner进
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2019/05/30/2019-05-30-navicat-mysql/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -1180,6 +1008,8 @@
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
+              <img class="site-author-image" itemprop="image" src="/images/avatar.jpg" alt="YDLAN">
+            
               <p class="site-author-name" itemprop="name">YDLAN</p>
               <p class="site-description motion-element" itemprop="description">YDLAN的个人博客</p>
           </div>
@@ -1192,7 +1022,7 @@
                 <a href="/archives/">
               
                   <span class="site-state-item-count">29</span>
-                  <span class="site-state-item-name">posts</span>
+                  <span class="site-state-item-name">日志</span>
                 </a>
               </div>
             
@@ -1203,7 +1033,7 @@
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
                   <span class="site-state-item-count">7</span>
-                  <span class="site-state-item-name">categories</span>
+                  <span class="site-state-item-name">分类</span>
                 </a>
               </div>
             
@@ -1214,7 +1044,7 @@
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
                   <span class="site-state-item-count">23</span>
-                  <span class="site-state-item-name">tags</span>
+                  <span class="site-state-item-name">标签</span>
                 </a>
               </div>
             
@@ -1230,6 +1060,22 @@
             </div>
           
 
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/ydlan" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:lanyd1997@qq.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+            </div>
           
 
           
@@ -1267,7 +1113,7 @@
 </div>
 
 
-  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
 
 
 
@@ -1275,7 +1121,7 @@
 
 
 
-  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Mist</a> v5.1.4</div>
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Mist</a> v5.1.4</div>
 
 
 
