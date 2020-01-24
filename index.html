@@ -424,12 +424,18 @@
       
         
           
-            <p>人总是逃不过”真香定理”，之前博客主题从NexT换为Casper，说过不会再换了，这次又把主题换回到NexT，真香啊。这次更换主题最主要的原因还是回归简洁，重新开始。使用最原始的github page，也不想再去弄啥域名映射，反而增加了访问延迟。</p>
-<p>Talk is cheap. Show me the code是 Linux 的创始人 Linus Torvalds提到的，我觉得也十分有道理，反观现在各种开源社区的Markdown项目，内容杂乱，有些甚至存在一些错误，就这样传播开来，这样的信息不对称对于初学者无疑是不友好的。我一直认为学习过程中一直存在维度打击，怎么说呢，就是我们对于一个未知的东西是无法甄别其是正确还是错误的，能够规避这个问题的方法也只有以往的知识积累和经验，还有就是书本和官方说明。对于他人的经验和总结，就需要甄别自己受不受用了。</p>
-<p>我觉得编程语言只是编程思想的承载者和软件项目开发的工具，熟悉语言就是熟悉工具，而编程更需要的是一种思维训练，很多人都偏向于去学习工具，这无可厚非，毕竟工欲善其事必先利其器。但熟悉了语言用法和特性也不一定写得出代码，了解原理未必能够轻易实现，两者互通有无。思考方式和实现方式需要进行关联，那就是动手实践，我一直认为计算机是一门实践出真知的学科，Talk is cheap. Show me the code. 平时多实践既能够熟悉语言特性也能够了解编程思想，岂不美哉。</p>
-<p>我一直苦恼于经常忘记学过的了解过的东西，仔细分析可能有几个原因，一是没有理解其本质，二是没有复习进行反馈，三是没有实践和应用。太急于求成了，输入了大量的信息但没有进行处理和整合，没有积累更没有产出，属于一种空耗，而这正是需要去克服和解决的问题啊。</p>
-
+          人总是逃不过”真香定理”，之前博客主题从NexT换为Casper，说过不会再换了，这次又把主题换回到NexT，真香啊。这次更换主题最主要的原因还是回归简洁，重新开始。使用最原始的github page，也不想再去弄啥域名映射，反而增加了访问延迟。
+Talk is cheap. Show me the
+          ...
+          <!--noindex-->
           
+            <div class="post-button text-center">
+              <a class="btn" href="/2019/11/07/2019-11-07-new-start/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
         
       
     </div>
@@ -585,50 +591,17 @@
       
         
           
-            <h3 id="Redis与NoSQL"><a href="#Redis与NoSQL" class="headerlink" title="Redis与NoSQL"></a>Redis与NoSQL</h3><p>Redis 是一个开源（BSD许可）的，内存中的数据结构存储系统，它可以用作数据库、缓存和消息中间件。区别与传统的数据库系统，是NoSQL(Not Only SQL )的其中一种，除此之外常用NoSQL还有MongoDB, Elasticsearch, Solr和Cassandra等。</p>
-<h3 id="Redis支持的数据结构"><a href="#Redis支持的数据结构" class="headerlink" title="Redis支持的数据结构"></a>Redis支持的数据结构</h3><p>Redis允许的value数据结构类型有5种：String（字符串）、List（列表）、Set（集合）、Hash（哈希）、Zset（有序集合）。</p>
-<ul>
-<li><strong>String类型</strong>：是最简单的类型（内部看是一个byte数组，最大上限是1G），用于存储二进制序列字符串，整数数据，浮点数据。</li>
-<li><strong>List类型</strong>：简单的字符串列表，按照插入顺序排序。可以添加一个元素到列表的头部（左边）或者尾部（右边）。</li>
-<li><strong>Set类型</strong>：是String类型的无序集合，集合是通过哈希表实现的，所以添加，删除，查找的复杂度都是O(1)。</li>
-<li><strong>Hash类型</strong>：是一个键值(key=&gt;value)对集合，是一个String类型的field和value的映射表，hash特别适合用于存储对象。</li>
-<li><strong>Zset类型</strong>：zset 和 set 一样也是String类型元素的集合,且不允许重复的成员。不同的是每个元素都会关联一个double类型的分数。redis正是通过分数来为集合中的成员进行从小到大的排序。zset的成员是唯一的,但分数(score)却可以重复。</li>
-</ul>
-<p>操作命令：增加，删除，查询，返回长度。</p>
-<ul>
-<li><strong>增加操作</strong>：String（set、mset），List（lpush 、rpush），Set（sadd），Hash（hset、hmset），Zset（zadd）</li>
-<li><strong>删除操作</strong>：String（del），List（lpop、rpop），Set（srem，spop），Hash（Hdel），Zset（zrem）</li>
-<li><strong>查询操作</strong>：String（get），List（lrange），Set（smembers），Hash（hkeys，hvals，hgetall），Zset（zrange）</li>
-<li><strong>返回长度操作</strong>：List（llen），Set（scard），Hash（hlen），Zset（zcard）。</li>
-</ul>
-<h3 id="Redis持久化"><a href="#Redis持久化" class="headerlink" title="Redis持久化"></a>Redis持久化</h3><p>持久化就是把内存的数据写到磁盘中去，防止服务宕机了内存数据丢失。Redis 提供了两种持久化方式:RDB（默认） 和AOF 。</p>
-<ul>
-<li><strong>RDB</strong>：Redis DataBase缩写，功能核心函数rdbSave(生成RDB文件)和rdbLoad（从文件加载内存）两个函数。</li>
-<li><strong>AOF</strong>：Append-only file缩写，每当执行服务器(定时)任务或者函数时flushAppendOnlyFile 函数都会被调用，AOF写入保存，根据条件将 aof_buf 中的缓存写入到 AOF 文件，根据条件调用 fsync 或 fdatasync 函数，将 AOF 文件保存到磁盘中。</li>
-<li><strong>比较</strong>：AOF文件比RDB更新频率高，优先使用AOF还原数据。AOF比RDB更安全也更大，但RDB性能比AOF要好。</li>
-</ul>
-<p><img src="https://s2.ax1x.com/2019/09/14/n6jL9K.png" alt="redis"></p>
-<h3 id="缓存穿透"><a href="#缓存穿透" class="headerlink" title="缓存穿透"></a>缓存穿透</h3><p>一般的缓存系统，都是按照key去缓存查询，如果不存在对应的value，就应该去后端系统查找（比如DB）。一些恶意的请求会故意查询不存在的key,请求量很大，就会对后端系统造成很大的压力。这就叫做缓存穿透。如何避免：</p>
-<ul>
-<li>对查询结果为空的情况也进行缓存，缓存时间设置短一点，或者该key对应的数据insert了之后清理缓存。</li>
-<li>对一定不存在的key进行过滤。可以把所有的可能存在的key放到一个大的Bitmap中，查询时通过该bitmap过滤。</li>
-</ul>
-<p><strong>缓存雪崩</strong>：当缓存服务器重启或者大量缓存集中在某一个时间段失效，这样在失效的时候，会给后端系统带来很大压力。导致系统崩溃。应该使用加锁或者队列控制读写缓存线程的数量，或者使用二级缓存，让缓存失效的时间点尽量均匀。</p>
-<h3 id="CAP理论与分布式系统"><a href="#CAP理论与分布式系统" class="headerlink" title="CAP理论与分布式系统"></a>CAP理论与分布式系统</h3><p>CAP原则又称CAP定理，指的是在分布式系统的设计中，没有一种设计可以同时满足 Consistency（一致性）、 Availability（可用性）、Partition tolerance（分区容错性）3个特性。</p>
-<ul>
-<li>一致性（C）：在分布式系统中的所有数据备份，在同一时刻是否同样的值。（等同于所有节点访问同一份最新的数据副本）</li>
-<li>可用性（A）：在集群中一部分节点故障后，集群整体是否还能响应客户端的读写请求。（对数据更新具备高可用性）</li>
-<li>分区容忍性（P）：以实际效果而言，分区相当于对通信的时限要求。系统如果不能在时限内达成数据一致性，就意味着发生了分区的情况，必须就当前操作在C和A之间做出选择。</li>
-</ul>
-<p>分区容错无法避免，因此可以认为 CAP 的 P 总是成立。CAP 定理告诉我们，剩下的 C 和 A 无法同时做到。</p>
-<ol>
-<li>对于单机单库系统，数据一致性可通过关系型数据库的事务来满足，而且ACID特性中的C是指强一致性，各数据库本身都支持，而且很成熟。</li>
-<li>分布式系统则需要以BASE理论作为指导，即以基本可用性和最终一致性作为目标。</li>
-<li>远程RPC调用是一致性问题主要原因，异步解耦+消息队列可作为分布式系统满足最终一致性的优秀方案。</li>
-</ol>
-<h3 id="补充"><a href="#补充" class="headerlink" title="补充"></a>补充</h3><p>MongoDB是一个基于分布式文件存储的数据库，它是一个介于关系数据库和非关系数据库之间的产品，其主要目标是在键/值存储方式（提供了高性能和高度伸缩性）和传统的RDBMS系统（具有丰富的功能）之间架起一座桥梁，它集两者的优势于一身。</p>
-
+          Redis与NoSQLRedis 是一个开源（BSD许可）的，内存中的数据结构存储系统，它可以用作数据库、缓存和消息中间件。区别与传统的数据库系统，是NoSQL(Not Only SQL )的其中一种，除此之外常用NoSQL还有MongoDB, Elasticsearch, Solr和Cassand
+          ...
+          <!--noindex-->
           
+            <div class="post-button text-center">
+              <a class="btn" href="/2019/09/14/2019-09-14-redis-study/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
         
       
     </div>
@@ -796,146 +769,18 @@
       
         
           
-            <p>利用 Spring + SpringMVC + Mybatis框架完成的的商品秒杀系统API，通过对SSM框架配置整合，实现商品秒杀功能。主要分为数据库的设计与实现，开发环境的搭建，编程实现秒杀功能接口，利用Redis完成后端缓存优化，通过事务控制完成并发优化等过程，下面是的详细记录。</p>
-<h3 id="1、数据库的设计"><a href="#1、数据库的设计" class="headerlink" title="1、数据库的设计"></a>1、数据库的设计</h3><p>根据对功能的分析，主要实现的是的秒杀商品的展示，以及秒杀成功的一个明细表。所以只需要创建两个表，用于数据存储。</p>
-<p>秒杀商品表设计：</p>
-<table>
-<thead>
-<tr>
-<th>秒杀id</th>
-<th>秒杀商品名</th>
-<th>商品库存</th>
-<th>秒杀开始时间</th>
-<th>秒杀结束时间</th>
-<th>记录创建时间</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<p>秒杀成功表设计：</p>
-<p>因为每个秒杀商品的秒杀id是不同的，所以根据id可以定位到商品，然后根据id和用户电话复合主键，来保证每一个用户只能够秒杀一件商品，并且创建秒杀成功明细单。</p>
-<table>
-<thead>
-<tr>
-<th>秒杀id</th>
-<th>用户电话</th>
-<th>秒杀状态</th>
-<th>记录创建时间</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<p>将数据库表的定义和操作写成规范的sql脚本，方便维护和更新。SQL脚本如下：</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">-- 数据库初始化脚本</span></span><br><span class="line"><span class="comment">-- 创建数据库</span></span><br><span class="line"><span class="keyword">CREATE</span> <span class="keyword">DATABASE</span> seckill;</span><br><span class="line"><span class="comment">-- 使用数据库</span></span><br><span class="line"><span class="keyword">use</span> seckill;</span><br><span class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> seckill(</span><br><span class="line">  <span class="string">`seckill_id`</span> <span class="built_in">BIGINT</span> <span class="keyword">NOT</span> <span class="literal">NUll</span> AUTO_INCREMENT <span class="keyword">COMMENT</span> <span class="string">'商品库存ID'</span>,</span><br><span class="line">  <span class="string">`name`</span> <span class="built_in">VARCHAR</span>(<span class="number">120</span>) <span class="keyword">NOT</span> <span class="literal">NULL</span> <span class="keyword">COMMENT</span> <span class="string">'商品名称'</span>,</span><br><span class="line">  <span class="string">`number`</span> <span class="built_in">int</span> <span class="keyword">NOT</span> <span class="literal">NULL</span> <span class="keyword">COMMENT</span> <span class="string">'库存数量'</span>,</span><br><span class="line">  <span class="string">`start_time`</span> <span class="built_in">TIMESTAMP</span>  <span class="keyword">NOT</span> <span class="literal">NULL</span> <span class="keyword">COMMENT</span> <span class="string">'秒杀开始时间'</span>,</span><br><span class="line">  <span class="string">`end_time`</span>   <span class="built_in">TIMESTAMP</span>   <span class="keyword">NOT</span> <span class="literal">NULL</span> <span class="keyword">COMMENT</span> <span class="string">'秒杀结束时间'</span>,</span><br><span class="line">  <span class="string">`create_time`</span> <span class="built_in">TIMESTAMP</span> <span class="keyword">NOT</span> <span class="literal">NULL</span> <span class="keyword">DEFAULT</span> <span class="keyword">CURRENT_TIMESTAMP</span> <span class="keyword">COMMENT</span> <span class="string">'创建时间'</span>,</span><br><span class="line">  PRIMARY <span class="keyword">KEY</span> (seckill_id),</span><br><span class="line">  <span class="keyword">key</span> idx_start_time(start_time),</span><br><span class="line">  <span class="keyword">key</span> idx_end_time(end_time),</span><br><span class="line">  <span class="keyword">key</span> idx_create_time(create_time)</span><br><span class="line">)<span class="keyword">ENGINE</span>=<span class="keyword">INNODB</span> AUTO_INCREMENT=<span class="number">1000</span> <span class="keyword">DEFAULT</span> <span class="keyword">CHARSET</span>=utf8 <span class="keyword">COMMENT</span>=<span class="string">'秒杀库存表'</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">-- 初始化数据</span></span><br><span class="line"><span class="keyword">INSERT</span> <span class="keyword">into</span> seckill(<span class="keyword">name</span>,<span class="built_in">number</span>,start_time,end_time)</span><br><span class="line"><span class="keyword">VALUES</span></span><br><span class="line">  (<span class="string">'2000元秒杀iphone6'</span>,<span class="number">100</span>,<span class="string">'2019-08-21 00:00:00'</span>,<span class="string">'2019-08-22 00:00:00'</span>),</span><br><span class="line">  (<span class="string">'1000元秒杀小米9'</span>,<span class="number">100</span>,<span class="string">'2019-08-21 00:00:00'</span>,<span class="string">'2019-08-22 00:00:00'</span>),</span><br><span class="line">  (<span class="string">'2000元秒杀华为P30'</span>,<span class="number">100</span>,<span class="string">'2019-08-21 00:00:00'</span>,<span class="string">'2019-08-22 00:00:00'</span>),</span><br><span class="line">  (<span class="string">'2000元秒杀OPPO Reno'</span>,<span class="number">100</span>,<span class="string">'2019-08-21 00:00:00'</span>,<span class="string">'2019-08-22 00:00:00'</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">-- 秒杀成功明细表</span></span><br><span class="line"><span class="comment">-- 用户登录认证相关信息(简化为手机号)</span></span><br><span class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> success_killed(</span><br><span class="line">  <span class="string">`seckill_id`</span> <span class="built_in">BIGINT</span> <span class="keyword">NOT</span> <span class="literal">NULL</span> <span class="keyword">COMMENT</span> <span class="string">'秒杀商品ID'</span>,</span><br><span class="line">  <span class="string">`user_phone`</span> <span class="built_in">BIGINT</span> <span class="keyword">NOT</span> <span class="literal">NULL</span> <span class="keyword">COMMENT</span> <span class="string">'用户手机号'</span>,</span><br><span class="line">  <span class="string">`state`</span> <span class="built_in">TINYINT</span> <span class="keyword">NOT</span> <span class="literal">NULL</span> <span class="keyword">DEFAULT</span> <span class="number">-1</span> <span class="keyword">COMMENT</span> <span class="string">'状态标识:-1:无效 0:成功 1:已付款 2:已发货'</span>,</span><br><span class="line">  <span class="string">`create_time`</span> <span class="built_in">TIMESTAMP</span> <span class="keyword">NOT</span> <span class="literal">NULL</span> <span class="keyword">COMMENT</span> <span class="string">'创建时间'</span>,</span><br><span class="line">  PRIMARY <span class="keyword">KEY</span>(seckill_id,user_phone),<span class="comment">/*联合主键*/</span></span><br><span class="line">  <span class="keyword">KEY</span> idx_create_time(create_time)</span><br><span class="line">)<span class="keyword">ENGINE</span>=<span class="keyword">INNODB</span> <span class="keyword">DEFAULT</span> <span class="keyword">CHARSET</span>=utf8 <span class="keyword">COMMENT</span>=<span class="string">'秒杀成功明细表'</span>;</span><br><span class="line"></span><br><span class="line">  <span class="comment">-- SHOW CREATE TABLE seckill;#显示表的创建信息</span></span><br></pre></td></tr></table></figure>
-<h3 id="2、开发环境的搭建"><a href="#2、开发环境的搭建" class="headerlink" title="2、开发环境的搭建"></a>2、开发环境的搭建</h3><p>maven项目构建：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mvn archetype:generate -DgroupId=cn.ydlan.seckill -DartifactId=seckill -Dpackage=cn.ydlan.seckill -Dversion=1.0-SNAPSHOT -DarchetypeArtifactId=maven-archetype-webapp</span><br></pre></td></tr></table></figure>
-<p>关于maven构建项目：</p>
-<p>archetype是指maven的项目模板，有（cocoon-22-archetype-webapp，maven-archetype-quickstart，maven-archetype-webapp）三种，maven-archetype-webapp模板，生成的项目包WEB-INF目录，并且有web.xml和一个index.jsp。</p>
-<p>pom.xml相关依赖配置：</p>
-<ul>
-<li><p>junit依赖，junit是使用编程的方式来进行测试，而junit4是使用注解的方式来运行junit。</p>
-</li>
-<li><p>日志管理输出依赖，slf4j,log4j,logback,common-logging。</p>
-</li>
-<li><p>数据库相关依赖，数据库连接与数据池配置。</p>
-</li>
-<li><p>MyBatis依赖，实现dao框架与mybatis自身实现的spring整合依赖。</p>
-</li>
-<li><p>Servlet web相关依赖。</p>
-</li>
-<li><p>spring依赖，包括spring核心依赖，dao依赖，web依赖，以及test依赖。</p>
-</li>
-</ul>
-<h3 id="3、DAO层的设计与开发"><a href="#3、DAO层的设计与开发" class="headerlink" title="3、DAO层的设计与开发"></a>3、DAO层的设计与开发</h3><p>创建实体类和DAO接口：</p>
-<ul>
-<li>创建Seckill.java和SuccessKilled.java 两个实体类</li>
-<li>分别创建这个两个类对应的DAO接口SeckillDao.java和SuccessKilledDao.java</li>
-<li>创建映射文件SeckillDao.xml和SuccessKilledDao.xml</li>
-</ul>
-<p>mybatis与spring的整合：</p>
-<ul>
-<li>创建mybatis-config.xml配置文件，主要负责mybatis的配置。</li>
-<li>创建一个jdbc.properties文件，保存jdbc数据库连接的配置。</li>
-<li>创建一个spring文件夹存放spring的相关配置（spring-dao.xml）。</li>
-</ul>
-<p>Junit测试：</p>
-<ul>
-<li>分别创建SeckillDao.java和SuccessKilledDao.java两个接口的单元测试</li>
-<li>单元测试需要使用注解进行配置，以及使用@Resource完成依赖注入。</li>
-</ul>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//配置spring和junit整合，这样junit在启动时就会加载spring容器</span></span><br><span class="line"><span class="meta">@RunWith</span>(SpringJUnit4ClassRunner.class)</span><br><span class="line"><span class="comment">//告诉junit spring的配置文件</span></span><br><span class="line"><span class="meta">@ContextConfiguration</span>(&#123;<span class="string">"classpath:spring/spring-dao.xml"</span>&#125;)</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">SeckillDaoTest</span> </span>&#123;&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="4、Service层的设计与开发"><a href="#4、Service层的设计与开发" class="headerlink" title="4、Service层的设计与开发"></a>4、Service层的设计与开发</h3><p>接口设计：（如无必要，勿增实体）</p>
-<ul>
-<li>创建SeckillService接口，提供四个功能分别是查询全部秒杀记录，查询单个秒杀记录，获取秒杀接口，执行秒杀功能。</li>
-<li>使用DTO来承接返回结果，创建Exposer实体类封装暴露的秒杀接口，创建SeckillExecution实体类封装秒杀执行情况。</li>
-<li>处理秒杀重复和秒杀关闭异常，跳过编译期异常，适当的处理运行期异常情况。</li>
-</ul>
-<p>接口实现：</p>
-<ul>
-<li>根据秒杀id以及系统时间，判断秒杀接口是否暴露，并通过MD5对秒杀接口进行加密处理。</li>
-<li>执行秒杀过程，验证消息，执行秒杀逻辑，修改数据库信息，处理异常情况。</li>
-<li>创建枚举型保存常量字典，替换代码中的常量。</li>
-</ul>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">enum</span> SeckillStatEnum &#123;</span><br><span class="line"></span><br><span class="line">    SUCCESS(<span class="number">1</span>,<span class="string">"秒杀成功"</span>),</span><br><span class="line">    END(<span class="number">0</span>,<span class="string">"秒杀结束"</span>),</span><br><span class="line">    REPEAT_KILL(-<span class="number">1</span>,<span class="string">"重复秒杀"</span>),</span><br><span class="line">    INNER_ERROR(-<span class="number">2</span>,<span class="string">"系统异常"</span>),</span><br><span class="line">    DATE_REWRITE(-<span class="number">3</span>,<span class="string">"数据篡改"</span>);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span> state;</span><br><span class="line">    <span class="keyword">private</span> String info;</span><br><span class="line"></span><br><span class="line">    SeckillStatEnum(<span class="keyword">int</span> state, String info) &#123;</span><br><span class="line">        <span class="keyword">this</span>.state = state;</span><br><span class="line">        <span class="keyword">this</span>.info = info;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
-<p>配置spring托管service：</p>
-<ul>
-<li>创建spring-service.xml文件，扫描service包下所有使用注解的类型。</li>
-<li>配置事务管理器，注入数据库连接池，配置基于注解的声明式事务，默认使用注解来管理事务行为。</li>
-</ul>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!--扫描service包下所有使用注解的类型--&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">context:component-scan</span> <span class="attr">base-package</span>=<span class="string">"cn.ydlan.seckill.service"</span>/&gt;</span></span><br><span class="line">   <span class="comment">&lt;!--配置事务管理器--&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">bean</span> <span class="attr">id</span>=<span class="string">"transactionManager"</span> <span class="attr">class</span>=<span class="string">"org.springframework.jdbc.datasource.DataSourceTransactionManager"</span>&gt;</span></span><br><span class="line">       <span class="comment">&lt;!--注入数据库连接池--&gt;</span></span><br><span class="line">       <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"dataSource"</span> <span class="attr">ref</span>=<span class="string">"dataSource"</span>/&gt;</span></span><br><span class="line">   <span class="tag">&lt;/<span class="name">bean</span>&gt;</span></span><br><span class="line">   <span class="comment">&lt;!--配置基于注解的声明式事务</span></span><br><span class="line"><span class="comment">   默认使用注解来管理事务行为--&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">tx:annotation-driven</span> <span class="attr">transaction-manager</span>=<span class="string">"transactionManager"</span>/&gt;</span></span><br></pre></td></tr></table></figure>
-<ul>
-<li>采用注解的方式将Service的实现类加入到Spring IOC容器中。</li>
-</ul>
-<p>创建service层的单元测试：</p>
-<ul>
-<li>创建SeckillServiceTest Junit测试，自动注入对象，测试接口中每个方法的正确性。</li>
-</ul>
-<h3 id="5、Web层的设计与开发"><a href="#5、Web层的设计与开发" class="headerlink" title="5、Web层的设计与开发"></a>5、Web层的设计与开发</h3><p>SpringMVC 的理论部分：</p>
-<ul>
-<li>SpringMVC的运行流程（Handler和Controller）</li>
-<li>HTTP请求地址映射原理，设计优雅的RESTful</li>
-<li>注解映射技巧（RequestMapp注解），请求方法细节处理</li>
-</ul>
-<p>配置SpringMVC 的整合：</p>
-<ul>
-<li>在web.xml 中配置DispatcherServlet，将配置文件加载到DispatcherServlet里，完成Mybites -&gt; spring -&gt; springMVC的无法整合。</li>
-<li>创建spring-web.xml文件，配置spring MVC（开启springmvc注解模式，静态资源默认servlet配置，配置JSP 显示ViewResolver，扫描web相关的bean）。</li>
-<li>实现SeckillController，使用注解将方法注入容器，通过@RequestMapping注解定义URL 请求和Controller 方法之间的映射，使Controller 就能够被外界访问到。</li>
-</ul>
-<p>前端交互过程：</p>
-<ul>
-<li>Bootstrap开发界面，利用开发框架提供的CSS样式，可以完成简单而漂亮的前端界面。</li>
-<li>jQuery开发交互界面，使用CDN 获取公共js，获取jQuery Cookie操作插件和countDown倒计时插件，自定义交互逻辑脚本。</li>
-<li>交互逻辑脚本实现，封装秒杀相关ajax的url，模块化JS，执行交互逻辑以及数据回传显示。</li>
-</ul>
-<h3 id="6、高性能优化"><a href="#6、高性能优化" class="headerlink" title="6、高性能优化"></a>6、高性能优化</h3><p>使用Redis缓存：</p>
-<ul>
-<li>Redis的使用：下载解压，进入解压文件里，使用命令行执行make，然后在启动Redis server，然后使用执行命令’redis-cli -p 6379’查看运行情况，这里的端口需要自己设置。</li>
-<li>项目中使用Redis：添加相关的依赖，包括jedis和protostuff-core以及protostuff-runtime序列化的依赖。</li>
-<li>在DAO层设计一个RedisDao,作为数据的缓冲cache。并通过序列化和反序列化操作，实现对象的存取。改造exportSeckillUrl方法,一定要先注入redisDao。</li>
-<li>写存储过程,然后去，Mysql控制台执行储存过程。</li>
-</ul>
-<p>事务控制优化：</p>
-<ul>
-<li>调整事务的执行顺序（SQL的顺序），通过的事务的调整控制，减少虚拟机的GC操作，提高系统的运行效率。</li>
-<li>改造SeckillController中的execute方法调用,把一开始调用普通方法的改成调用储存过程的那个方法。</li>
-</ul>
-
+          利用 Spring + SpringMVC + Mybatis框架完成的的商品秒杀系统API，通过对SSM框架配置整合，实现商品秒杀功能。主要分为数据库的设计与实现，开发环境的搭建，编程实现秒杀功能接口，利用Redis完成后端缓存优化，通过事务控制完成并发优化等过程，下面是的详细记录。
+1、数据库的
+          ...
+          <!--noindex-->
           
+            <div class="post-button text-center">
+              <a class="btn" href="/2019/09/02/2019-09-02-ssm-seckill/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
         
       
     </div>
@@ -1085,25 +930,18 @@
       
         
           
-            <p>今年的智博会还是有一些亮点的，去年作为志愿者没有时间参观会展，今年作为一名观众，花了了大概三四个小时把展馆走了一圈，发现还是有一些亮点的。我就对比看一下，就能感受到科技和产业的发展的一个简单趋势了。</p>
-<h3 id="5G是今年最大的亮点"><a href="#5G是今年最大的亮点" class="headerlink" title="5G是今年最大的亮点"></a>5G是今年最大的亮点</h3><p>虽然去年也有类似5G的展但都没有实实在在的产品落地，今年不一样，有很多产品已经落地了。虽然上半年已经有报道关于5G产品，但在咱这地方确实没有机会体验到，这次刚好有机会可以体验一下。</p>
-<p>5G手机，5G芯片，5G视频传输，反正5G带动的整个生态是非常强大的，5G的赋能让AI大数据，物联网和工业互联网的应用更加可行和可靠。三大运营商都推出了5g的解决方案。中兴亮相了5G的机站还有刚发布的中兴天机Axon10 Pro，体验感十足。</p>
-<p><img src="https://s2.ax1x.com/2019/08/29/mqyaG9.jpg" alt="5g"></p>
-<p>由5G带动的一系列产业也慢慢有起色，像比物联网，5G传输应用在展会中也有出现。除此之外还有5G芯片，物联网芯片，手机芯片也都亮相了。</p>
-<p><img src="https://s2.ax1x.com/2019/08/29/mqyBKx.jpg" alt="5gcore"></p>
-<h3 id="AI技术广泛应用"><a href="#AI技术广泛应用" class="headerlink" title="AI技术广泛应用"></a>AI技术广泛应用</h3><p>除了5G以外，还有一些看点的就是AI，今年AI的产品应用比去年多了很多，AI的产品和应用基本成为现在大公司的基本布局。展会上有AI作画，AI语音识别，以及广受欢迎的图像识别，现在的图像识别已经能够做到又快又准，而且还能结合大数据进行分析，基本上已经比较成熟了。不过很多公司的产品都大同小异没啥看点。在我看来AI的最重要的还是算法PK吧。</p>
-<p><img src="https://s2.ax1x.com/2019/08/29/mqyd2R.jpg" alt="ai"></p>
-<h3 id="工业互联网和自动化"><a href="#工业互联网和自动化" class="headerlink" title="工业互联网和自动化"></a>工业互联网和自动化</h3><p>工业互联网产业化基本已经定型，自动化水平越来越高，使用工业机器人来完成一系列工作已经成为提高生产力的重要方法。在展会上各种各样的工业机器人实操演示，还有各种应用解决方案在，只有我们想不到的，没有啥是做不到的。技术真的能改变生活！</p>
-<p><img src="https://s2.ax1x.com/2019/08/29/mqyt54.jpg" alt="gongye"></p>
-<p><img src="https://s2.ax1x.com/2019/08/29/mqyUPJ.jpg" alt="gongye2"></p>
-<h3 id="技术带来的生活体验"><a href="#技术带来的生活体验" class="headerlink" title="技术带来的生活体验"></a>技术带来的生活体验</h3><p>通过参展我发现了一些新的东西，就是目前一些大型互联网科技公司，做产品越来越注重用户的个人体验了，无论是从整个生态来讲还是单一的产品来说，大公司对于用户的体验和审美都有导向做作用，产品的设计更加的人性化，产品的理念更加新颖有创造力。</p>
-<p><img src="https://s2.ax1x.com/2019/08/29/mqyrqK.jpg" alt="google"></p>
-<p><img src="https://s2.ax1x.com/2019/08/29/mqyJVU.jpg" alt="8k"></p>
-<h3 id="高校科研和国际合作"><a href="#高校科研和国际合作" class="headerlink" title="高校科研和国际合作"></a>高校科研和国际合作</h3><p>展区还有高校的科研展区，国际展区，以及全国个省展区，还有重庆本地各县区展区，我都仔细的逛了一圈，有亮眼的黑科技，也有很平常的应用，虽然参差不齐，但却很全面。我们可以预见重庆发展会越来越迅速的。</p>
-<p><img src="https://s2.ax1x.com/2019/08/29/mqyYaF.jpg" alt="gaoxiao"></p>
-<p><img src="https://s2.ax1x.com/2019/08/29/mqyDr6.jpg" alt="gouji"></p>
-
+          今年的智博会还是有一些亮点的，去年作为志愿者没有时间参观会展，今年作为一名观众，花了了大概三四个小时把展馆走了一圈，发现还是有一些亮点的。我就对比看一下，就能感受到科技和产业的发展的一个简单趋势了。
+5G是今年最大的亮点虽然去年也有类似5G的展但都没有实实在在的产品落地，今年不一样，有很多产品已经落
+          ...
+          <!--noindex-->
           
+            <div class="post-button text-center">
+              <a class="btn" href="/2019/08/29/2019-08-29-cse2019/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
         
       
     </div>
@@ -1259,88 +1097,21 @@
       
         
           
-            <p>记录一些有意思的智力算法和一些有趣的算法题。</p>
-<h2 id="除数博弈"><a href="#除数博弈" class="headerlink" title="除数博弈"></a><a href="https://leetcode-cn.com/problems/divisor-game/" target="_blank" rel="noopener">除数博弈</a></h2><p><strong>题目描述：</strong></p>
-<p>爱丽丝和鲍勃一起玩游戏，他们轮流行动。爱丽丝先手开局。</p>
-<p>最初，黑板上有一个数字 N 。在每个玩家的回合，玩家需要执行以下操作：</p>
-<p>选出任一 x，满足 0 &lt; x &lt; N 且 N % x == 0 。<br>用 N - x 替换黑板上的数字 N 。<br>如果玩家无法执行这些操作，就会输掉游戏。</p>
-<p>只有在爱丽丝在游戏中取得胜利时才返回 True，否则返回 false。假设两个玩家都以最佳状态参与游戏。</p>
-<p><strong>题解思路：</strong></p>
-<p>可以依次举例数字N的值，以及爱丽丝获胜的的情况，比如：</p>
-<table>
-<thead>
-<tr>
-<th>N的值</th>
-<th>1</th>
-<th>2</th>
-<th>3</th>
-<th>4</th>
-<th>5</th>
-<th>6</th>
-<th>7</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>A先手</td>
-<td>x</td>
-<td>(2)1</td>
-<td>(3)1</td>
-<td>(4)1-(2)1</td>
-<td>(5)1-(3)1</td>
-<td>(6)1</td>
-<td>(7)1</td>
-</tr>
-<tr>
-<td>B后手</td>
-<td>x</td>
-<td>x</td>
-<td>(2)1</td>
-<td>(3)1</td>
-<td>(4)1</td>
-<td>(5)1</td>
-<td>(6)1</td>
-</tr>
-<tr>
-<td>A获胜</td>
-<td>false</td>
-<td>true</td>
-<td>false</td>
-<td>true</td>
-<td>false</td>
-<td>true</td>
-<td>false</td>
-</tr>
-</tbody>
-</table>
-<p>由已知的数学规律：奇数的因子（约数）只能是奇数，偶数的因子（约数）可以是奇数或偶数。然后举几个例子就能够发现一些其他规律：当N为奇数的时候，先手(A)只能够选择奇数，此时<code>奇数-奇数=偶数</code>，则一下个玩家面对的数据就为偶数，当玩家面对偶数时，可能会选择偶数因子也可能选择奇数因子，由规律发现只有先手数据为偶数时，A才能够获胜，相反情况则B获胜，所以在玩家最佳状态选择除数因子都会遵循：<code>N-除数因子 = 奇数</code>，这样对手就不会获胜了。</p>
-<p><strong>代码实现：</strong></p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">divisorGame</span><span class="params">(<span class="keyword">int</span> N)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> N % <span class="number">2</span> == <span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="2的幂"><a href="#2的幂" class="headerlink" title="2的幂"></a><a href="https://leetcode-cn.com/problems/power-of-two/" target="_blank" rel="noopener">2的幂</a></h2><p><strong>题目描述：</strong></p>
-<p>给定一个整数，编写一个函数来判断它是否是 2 的幂次方。</p>
-<p><strong>解题思路：</strong></p>
-<p>传统解法：不停地去除以 2，看最后的迭代商是否为 1。</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">isPowerOfTwo</span><span class="params">(<span class="keyword">int</span> n)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(n ==<span class="number">1</span>)</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">        <span class="keyword">while</span>(n % <span class="number">2</span>==<span class="number">0</span>)&#123;</span><br><span class="line">            n=n/<span class="number">2</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span>(n == <span class="number">1</span>)</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">        <span class="keyword">else</span> </span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>利用二进制的解法：如果一个数是 2 的次方数的话，那么它的二进数必然是最高位为 1，其它都为 0 ，那么如果此时我们减 1 的话，则最高位会降一位，其余为 0 的位现在都为变为 1，那么我们把两数相与，就会得到 0。</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">     <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">isPowerOfTwo</span><span class="params">(<span class="keyword">int</span> n)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> n &gt; <span class="number">0</span> &amp;&amp; ((n &amp; (n - <span class="number">1</span>)) == <span class="number">0</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="3的幂"><a href="#3的幂" class="headerlink" title="3的幂"></a><a href="https://leetcode-cn.com/problems/power-of-three/" target="_blank" rel="noopener">3的幂</a></h2><p><strong>题目描述：</strong></p>
-<p>给定一个整数，写一个函数来判断它是否是 3 的幂次方。</p>
-<p><strong>解题思路：</strong></p>
-<p>与上面2的幂的解法类似，第一个方法是不停地去除以 3，看最后的迭代商是否为 1。</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">isPowerOfThree</span><span class="params">(<span class="keyword">int</span> n)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">if</span> (n &lt;= <span class="number">0</span>)&#123;</span><br><span class="line">			<span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">if</span> (n == <span class="number">1</span>)&#123;</span><br><span class="line">			<span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">while</span> (<span class="keyword">true</span>)&#123;</span><br><span class="line">			<span class="keyword">if</span> (n == <span class="number">1</span>)&#123;</span><br><span class="line">				<span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="keyword">else</span> <span class="keyword">if</span> (n % <span class="number">3</span> &gt; <span class="number">0</span>)&#123;</span><br><span class="line">				<span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">			&#125;</span><br><span class="line">	        <span class="keyword">else</span>&#123;</span><br><span class="line">				n = n / <span class="number">3</span>;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>另外一种思路是将整数转换为3进制数的字符串，然后判断最高是否为1，其余位为0，但是3进制转换需要写一个转换方法，有点麻烦。</p>
-<p>所以可以再换一个思路，因为<code>3的次幂的质因子只有3</code>，因为根据数论相关定理，不考虑排列顺序的情况下，每个正整数都能够以唯一的方式表示成它的质因数的乘积。比如：1没有质因子。2、4、8、16等只有1个质因子：2（2是质数，4 = 2^2，8 = 2^3，如此类推），3的次幂的质因子只有3（3、9、27、81…）。</p>
-<p>又因为给定的是整数，故而题目中所给整数范围内最大的 3 的幂次的因子只能是 3 的幂次，而1162261467 是 3 的 19 次幂，是整数范围内最大的3的幂次。</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">isPowerOfThree</span><span class="params">(<span class="keyword">int</span> n)</span> </span>&#123;</span><br><span class="line">         <span class="keyword">return</span> n &gt; <span class="number">0</span> &amp;&amp; <span class="number">1162261467</span> % n == <span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="4的幂"><a href="#4的幂" class="headerlink" title="4的幂"></a><a href="https://leetcode-cn.com/problems/power-of-four/" target="_blank" rel="noopener">4的幂</a></h2><p><strong>题目描述：</strong></p>
-<p>给定一个整数 (32 位有符号整数)，请编写一个函数来判断它是否是 4 的幂次方。</p>
-<p><strong>解题思路：</strong></p>
-<p>直观思路，循环num=num/4检测num%4是否为0，直到num为1为止。注意，需考虑num为0的情况，否则会陷入死循环，码代码多考虑一些边界特殊情况.</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">isPowerOfFour</span><span class="params">(<span class="keyword">int</span> n)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">if</span>(num == <span class="number">0</span>)</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line"> </span><br><span class="line">        <span class="keyword">while</span>(num != <span class="number">1</span>)&#123;</span><br><span class="line">            <span class="keyword">if</span>(num%<span class="number">4</span> != <span class="number">0</span>)</span><br><span class="line">                <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">            num = num/<span class="number">4</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>不使用循环的解法：我们知道num &amp; (num - 1)可以用来判断一个数是否为2的幂，其中4的幂是2的幂的一个子集，所以对2的幂做一些限制条件，4的幂都是在16进制下的第1和4位，即0101，所以我们只需和数(0x55555555) 进按位与，得到的数还是其本身，则可以肯定其为4的次方数。</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">isPowerOfFour</span><span class="params">(<span class="keyword">int</span> num)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> num &gt; <span class="number">0</span> &amp;&amp; (num&amp;(num-<span class="number">1</span>)) == <span class="number">0</span> &amp;&amp; ((num&amp;<span class="number">0x55555555</span>)==num); </span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
+          记录一些有意思的智力算法和一些有趣的算法题。
+除数博弈题目描述：
+爱丽丝和鲍勃一起玩游戏，他们轮流行动。爱丽丝先手开局。
+最初，黑板上有一个数字 N 。在每个玩家的回合，玩家需要执行以下操作：
+选出任一 x，满足 0 &lt; x &lt; N 且 N % x == 0 。用 N - x 替换黑板上
+          ...
+          <!--noindex-->
           
+            <div class="post-button text-center">
+              <a class="btn" href="/2019/08/21/2019-08-21-leetcode-ac/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
         
       
     </div>
@@ -1546,8 +1317,6 @@
           
           
 		  
-		  <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=77159&auto=1&height=66"></iframe>
-
           
           
 

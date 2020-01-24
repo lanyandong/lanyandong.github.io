@@ -1767,22 +1767,6 @@ pre .javascript .function {
   border: 2px solid #333;
   opacity: 1;
 }
-.site-author-image {
-  -webkit-transition: -webkit-transform 1s ease-out;
-  -moz-transition: -moz-transform 1s ease-out;
-  -ms-transition: -ms-transform 1s ease-out;
-  transition: transform 1s ease-out;
-}
-.site-author-image:hover {
-  -webkit-transform: rotateZ(360deg);
-  -moz-transform: rotateZ(360deg);
-  -ms-transform: rotate(360deg);
-  -webkit-transform: rotateZ(360deg);
-  -moz-transform: rotateZ(360deg);
-  -ms-transform: rotateZ(360deg);
-  -o-transform: rotateZ(360deg);
-  transform: rotateZ(360deg);
-}
 .site-author-name {
   margin: 5px 0 0;
   text-align: center;
@@ -1865,7 +1849,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #71e43e;
+  background: #4da346;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2848,12 +2832,12 @@ hr {
 }
 .post {
   margin-top: 10px;
-  margin-bottom: 0px;
-  padding: 30px;
-  -webkit-box-shadow: 0 0 10px rgba(202,203,203,0.8);
-  -moz-box-shadow: 0 0 10px rgba(202,203,204,0.8);
+  margin-bottom: 10px;
+  padding: 45px;
+  -webkit-box-shadow: 0 0 15px rgba(202,203,203,0.9);
+  -moz-box-shadow: 0 0 15px rgba(202,203,204,0.9);
 }
-@media screen and (min-width: 1500px) {
+@media screen and (min-width: 1200px) {
   body {
     background-image: url("/images/background.jpg");
     background-repeat: no-repeat;
@@ -2865,9 +2849,4 @@ hr {
     background: #fff;
     opacity: 0.9;
   }
-}
-.site-title {
-  font-size: 24px;
-  font-weight: 400;
-  font-family: 'Damion', "PingFang SC", "Microsoft YaHei", sans-serif;
 }
