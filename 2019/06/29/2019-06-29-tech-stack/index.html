@@ -1,131 +1,81 @@
 <!DOCTYPE html>
-
-
-
-  
-
-
-<html class="theme-next mist use-motion" lang="zh-Hans">
-<head><meta name="generator" content="Hexo 3.8.0">
+<html lang="zh-CN">
+<head>
   <meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 3.8.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon16x16.png">
+
+<link rel="stylesheet" href="/css/main.css">
 
 
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
 
 
-
-
-
-
-
-<meta http-equiv="Cache-Control" content="no-transform">
-<meta http-equiv="Cache-Control" content="no-siteapp">
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-  
-  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
-
-
-
-
-
-
-
-<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
-
-<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
-
-
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch.png?v=5.1.4">
-
-
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon32x32.png?v=5.1.4">
-
-
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon16x16.png?v=5.1.4">
-
-
-
-
-
-
-  <meta name="keywords" content="Hexo, NexT">
-
-
-
-
-
-  <link rel="alternate" href="/atom.xml" title="YDLAN" type="application/atom+xml">
-
-
-
-
-
-
-<meta name="description" content="0x00 前言好久没有写东西做总结了，应该时时更新，日日总结，保持对新事物的好奇心，回顾所学旧的知识，融汇贯通。因为实训接触了一些新的玩意儿，如: Vuejs，Flutter, Kotlin 等，也刚好有时间，就干脆多了解一些，顺便做了一点笔记，丰富一下自己的认知。没有实际干货，也不算是技术栈，不管以后会不会深入学习，先记录一下吧。 0x01 Vue.jsVue.js 是以数据驱动和组件化思想构建">
-<meta property="og:type" content="article">
-<meta property="og:title" content="记录零碎技术栈">
-<meta property="og:url" content="https://ydlan.github.io/2019/06/29/2019-06-29-tech-stack/index.html">
-<meta property="og:site_name" content="YDLAN">
-<meta property="og:description" content="0x00 前言好久没有写东西做总结了，应该时时更新，日日总结，保持对新事物的好奇心，回顾所学旧的知识，融汇贯通。因为实训接触了一些新的玩意儿，如: Vuejs，Flutter, Kotlin 等，也刚好有时间，就干脆多了解一些，顺便做了一点笔记，丰富一下自己的认知。没有实际干货，也不算是技术栈，不管以后会不会深入学习，先记录一下吧。 0x01 Vue.jsVue.js 是以数据驱动和组件化思想构建">
-<meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="https://s2.ax1x.com/2019/06/29/ZlJWbn.md.png">
-<meta property="og:updated_time" content="2019-07-24T14:38:33.328Z">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="记录零碎技术栈">
-<meta name="twitter:description" content="0x00 前言好久没有写东西做总结了，应该时时更新，日日总结，保持对新事物的好奇心，回顾所学旧的知识，融汇贯通。因为实训接触了一些新的玩意儿，如: Vuejs，Flutter, Kotlin 等，也刚好有时间，就干脆多了解一些，顺便做了一点笔记，丰富一下自己的认知。没有实际干货，也不算是技术栈，不管以后会不会深入学习，先记录一下吧。 0x01 Vue.jsVue.js 是以数据驱动和组件化思想构建">
-<meta name="twitter:image" content="https://s2.ax1x.com/2019/06/29/ZlJWbn.md.png">
-
-
-
-<script type="text/javascript" id="hexo.configurations">
+<script id="hexo-configurations">
   var NexT = window.NexT || {};
   var CONFIG = {
     root: '/',
     scheme: 'Mist',
-    version: '5.1.4',
-    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
-    fancybox: true,
-    tabs: true,
-    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
-    duoshuo: {
-      userId: '0',
-      author: '博主'
-    },
+    version: '7.5.0',
+    exturl: false,
+    sidebar: {"position":"right","display":"post","offset":12,"onmobile":false},
+    copycode: {"enable":false,"show_result":false,"style":null},
+    back2top: {"enable":true,"sidebar":false,"scrollpercent":false},
+    bookmark: {"enable":false,"color":"#222","save":"auto"},
+    fancybox: false,
+    mediumzoom: false,
+    lazyload: false,
+    pangu: false,
     algolia: {
-      applicationID: '',
+      appID: '',
       apiKey: '',
       indexName: '',
       hits: {"per_page":10},
       labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
-    }
+    },
+    localsearch: {"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
+    path: '',
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    translation: {
+      copy_button: '复制',
+      copy_success: '复制成功',
+      copy_failure: '复制失败'
+    },
+    sidebarPadding: 40
   };
 </script>
 
+  <meta name="description" content="0x00 前言好久没有写东西做总结了，应该时时更新，日日总结，保持对新事物的好奇心，回顾所学旧的知识，融汇贯通。因为实训接触了一些新的玩意儿，如: Vuejs，Flutter, Kotlin 等，也刚好有时间，就干脆多了解一些，顺便做了一点笔记，丰富一下自己的认知。没有实际干货，也不算是技术栈，不管以后会不会深入学习，先记录一下吧。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="记录零碎技术栈">
+<meta property="og:url" content="https://ydlan.github.io/2019/06/29/2019-06-29-tech-stack/index.html">
+<meta property="og:site_name" content="YDLAN">
+<meta property="og:description" content="0x00 前言好久没有写东西做总结了，应该时时更新，日日总结，保持对新事物的好奇心，回顾所学旧的知识，融汇贯通。因为实训接触了一些新的玩意儿，如: Vuejs，Flutter, Kotlin 等，也刚好有时间，就干脆多了解一些，顺便做了一点笔记，丰富一下自己的认知。没有实际干货，也不算是技术栈，不管以后会不会深入学习，先记录一下吧。">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https://s2.ax1x.com/2019/06/29/ZlJWbn.md.png">
+<meta property="og:updated_time" content="2019-07-24T14:38:33.328Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="记录零碎技术栈">
+<meta name="twitter:description" content="0x00 前言好久没有写东西做总结了，应该时时更新，日日总结，保持对新事物的好奇心，回顾所学旧的知识，融汇贯通。因为实训接触了一些新的玩意儿，如: Vuejs，Flutter, Kotlin 等，也刚好有时间，就干脆多了解一些，顺便做了一点笔记，丰富一下自己的认知。没有实际干货，也不算是技术栈，不管以后会不会深入学习，先记录一下吧。">
+<meta name="twitter:image" content="https://s2.ax1x.com/2019/06/29/ZlJWbn.md.png">
+
+<link rel="canonical" href="https://ydlan.github.io/2019/06/29/2019-06-29-tech-stack/">
 
 
-  <link rel="canonical" href="https://ydlan.github.io/2019/06/29/2019-06-29-tech-stack/">
-
-
-
-
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome: false,
+    isPost: true,
+    isPage: false,
+    isArchive: false
+  };
+</script>
 
   <title>记录零碎技术栈 | YDLAN</title>
   
@@ -135,192 +85,138 @@
 
 
 
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
 
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
 
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
-
-  
-  
-    
-  
-
-  <div class="container sidebar-position-left page-post-detail">
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
     <div class="headband"></div>
 
-    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-brand-wrapper">
-  <div class="site-meta ">
-    
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-meta">
 
-    <div class="custom-logo-site-title">
+    <div>
       <a href="/" class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
         <span class="site-title">YDLAN</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
-      
         <p class="site-subtitle">一起来探索吧！</p>
-      
   </div>
 
   <div class="site-nav-toggle">
-    <button>
-      <span class="btn-bar"></span>
-      <span class="btn-bar"></span>
-      <span class="btn-bar"></span>
-    </button>
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
   </div>
 </div>
 
+
 <nav class="site-nav">
   
-
-  
-    <ul id="menu" class="menu">
-      
-        
+  <ul id="menu" class="menu">
         <li class="menu-item menu-item-home">
-          <a href="/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
-            
-            首页
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-archives">
-          <a href="/archives/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
-            
-            归档
-          </a>
-        </li>
-      
-        
+
+    <a href="/" rel="section"><i class="fa fa-fw fa-home"></i>首页</a>
+
+  </li>
         <li class="menu-item menu-item-categories">
-          <a href="/categories/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
-            
-            分类
-          </a>
-        </li>
-      
-        
+
+    <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>分类</a>
+
+  </li>
         <li class="menu-item menu-item-tags">
-          <a href="/tags/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
-            
-            标签
-          </a>
-        </li>
-      
-        
+
+    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>标签</a>
+
+  </li>
         <li class="menu-item menu-item-about">
-          <a href="/about/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
-            
-            关于
-          </a>
-        </li>
-      
 
-      
-    </ul>
-  
+    <a href="/about/" rel="section"><i class="fa fa-fw fa-user"></i>关于</a>
 
-  
+  </li>
+  </ul>
+
 </nav>
-
-
-
- </div>
+</div>
     </header>
 
-    <main id="main" class="main">
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
       <div class="main-inner">
         <div class="content-wrap">
-          <div id="content" class="content">
+          
+
+          <div class="content">
             
 
-  <div id="posts" class="posts-expand">
-    
-
-  
-
+  <div class="posts-expand">
+      
   
   
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
+  <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="https://ydlan.github.io/2019/06/29/2019-06-29-tech-stack/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="YDLAN">
-      <meta itemprop="description" content>
       <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="YDLAN">
+      <meta itemprop="description" content="YDLAN的个人博客">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="YDLAN">
     </span>
-
-    
       <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">记录零碎技术栈</h1>
-        
+        <h1 class="post-title" itemprop="name headline">
+          记录零碎技术栈
+        </h1>
 
         <div class="post-meta">
-          <span class="post-time">
-            
+            <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-06-29T22:28:46+08:00">
-                2019-06-29
-              </time>
-            
+              <span class="post-meta-item-text">发表于</span>
 
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
+              <time title="创建时间：2019-06-29 22:28:46" itemprop="dateCreated datePublished" datetime="2019-06-29T22:28:46+08:00">2019-06-29</time>
+            </span>
 
           
 
         </div>
       </header>
-    
 
     
     
@@ -328,10 +224,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-      
-
-      
-        <h3 id="0x00-前言"><a href="#0x00-前言" class="headerlink" title="0x00 前言"></a>0x00 前言</h3><p>好久没有写东西做总结了，应该时时更新，日日总结，保持对新事物的好奇心，回顾所学旧的知识，融汇贯通。因为实训接触了一些新的玩意儿，如: Vuejs，Flutter, Kotlin 等，也刚好有时间，就干脆多了解一些，顺便做了一点笔记，丰富一下自己的认知。没有实际干货，也不算是技术栈，不管以后会不会深入学习，先记录一下吧。</p>
+        <h3 id="0x00-前言"><a href="#0x00-前言" class="headerlink" title="0x00 前言"></a>0x00 前言</h3><p>好久没有写东西做总结了，应该时时更新，日日总结，保持对新事物的好奇心，回顾所学旧的知识，融汇贯通。因为实训接触了一些新的玩意儿，如: Vuejs，Flutter, Kotlin 等，也刚好有时间，就干脆多了解一些，顺便做了一点笔记，丰富一下自己的认知。没有实际干货，也不算是技术栈，不管以后会不会深入学习，先记录一下吧。</p><a id="more"></a>
 <h3 id="0x01-Vue-js"><a href="#0x01-Vue-js" class="headerlink" title="0x01 Vue.js"></a>0x01 Vue.js</h3><p>Vue.js 是以数据驱动和组件化思想构建的一个JavaScript MVVM库，提供了简洁和易于理解的的API，能够快速上手。</p>
 <p>什么是MVVM（Model-View-ViewModel），简单来说就是一种设计模式，借鉴了MVC的思想，在前端页面中，将Model用纯JavaScript对象表示，View负责显示，两者做到了最大限度的分离，对于现在多功能的前端和复杂业务逻辑的后端，以及技术分工的划分，这其实是技术发展的一个必然趋势。把Model和View关联起来的就是ViewModel。ViewModel负责把Model的数据同步到View显示出来，还负责把View的修改同步回Model。对于MVVM，我们并不用关注DOM，而是直接操作JavaScript对象，去除操作DOM的繁琐步骤。</p>
 <p>使用Vue其实就是一个定义MVVM各个组成部分的过程，可以归结为：定义View，定义Model，创建Vue实例（连接View 和Model）。目前只是做一个简单了解，要是想要更深入的了解或是使用，还得好好学习一番。下面是一个简单例子：</p>
@@ -350,242 +243,145 @@
 <p>这个东西主要是在使用Android Studio开发应用时，发现在使用Gradle构建项目，不太清楚到底是个啥就查了一下，简单来说gradle就是一个基于JVM的构建工具，支持局部构建，支持多方式依赖管理，与ant、maven、ivy有良好的相容相关性，gradle适用于任何结构的工程。</p>
 <h3 id="0x04-小结一下"><a href="#0x04-小结一下" class="headerlink" title="0x04 小结一下"></a>0x04 小结一下</h3><p>唉~搞计算机的要学的东西还真多啊，关于硬件嵌入式Linux的学习还没有总结呢，那个好像也很多，等下一篇更新吧。</p>
 
-      
     </div>
-    
-    
-    
 
     
-
+    
     
 
-    
+      <footer class="post-footer">
 
-    <footer class="post-footer">
-      
-
-      
-      
-      
-
-      
-        <div class="post-nav">
-          <div class="post-nav-next post-nav-item">
-            
-              <a href="/2019/06/17/2019-06-17-docker-study/" rel="next" title="初识Docker与简单使用">
-                <i class="fa fa-chevron-left"></i> 初识Docker与简单使用
-              </a>
-            
-          </div>
-
-          <span class="post-nav-divider"></span>
-
-          <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/07/11/2019-07-11-embedded-hardware/" rel="prev" title="Embedded-Hardware">
-                Embedded-Hardware <i class="fa fa-chevron-right"></i>
-              </a>
-            
-          </div>
-        </div>
-      
-
-      
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-
-    <div class="post-spread">
-      
-    </div>
-  </div>
-
-
-          </div>
-          
-
-
-          
-
-  
-
-
-
-        </div>
         
-          
+
+          <div class="post-nav">
+            <div class="post-nav-next post-nav-item">
+                <a href="/2019/06/17/2019-06-17-docker-study/" rel="next" title="初识Docker与简单使用">
+                  <i class="fa fa-chevron-left"></i> 初识Docker与简单使用
+                </a>
+            </div>
+
+            <span class="post-nav-divider"></span>
+
+            <div class="post-nav-prev post-nav-item">
+                <a href="/2019/07/11/2019-07-11-embedded-hardware/" rel="prev" title="Embedded-Hardware">
+                  Embedded-Hardware <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+      </footer>
+    
+  </article>
   
-  <div class="sidebar-toggle">
-    <div class="sidebar-toggle-line-wrap">
-      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
-    </div>
+  
+  
+
   </div>
 
-  <aside id="sidebar" class="sidebar">
-    
+
+          </div>
+          
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
     <div class="sidebar-inner">
 
-      
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
 
-      
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            站点概览
-          </li>
-        </ul>
-      
-
-      <section class="site-overview-wrap sidebar-panel">
-        <div class="site-overview">
-          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-            
-              <img class="site-author-image" itemprop="image" src="/images/avatar.jpg" alt="YDLAN">
-            
-              <p class="site-author-name" itemprop="name">YDLAN</p>
-              <p class="site-description motion-element" itemprop="description">YDLAN的个人博客</p>
-          </div>
-
-          <nav class="site-state motion-element">
-
-            
-              <div class="site-state-item site-state-posts">
-              
-                <a href="/archives/">
-              
-                  <span class="site-state-item-count">29</span>
-                  <span class="site-state-item-name">日志</span>
-                </a>
-              </div>
-            
-
-            
-              
-              
-              <div class="site-state-item site-state-categories">
-                <a href="/categories/index.html">
-                  <span class="site-state-item-count">7</span>
-                  <span class="site-state-item-name">分类</span>
-                </a>
-              </div>
-            
-
-            
-              
-              
-              <div class="site-state-item site-state-tags">
-                <a href="/tags/index.html">
-                  <span class="site-state-item-count">23</span>
-                  <span class="site-state-item-name">标签</span>
-                </a>
-              </div>
-            
-
-          </nav>
-
-          
-            <div class="feed-link motion-element">
-              <a href="/atom.xml" rel="alternate">
-                <i class="fa fa-rss"></i>
-                RSS
-              </a>
-            </div>
-          
-
-          
-            <div class="links-of-author motion-element">
-                
-                  <span class="links-of-author-item">
-                    <a href="https://github.com/ydlan" target="_blank" title="GitHub">
-                      
-                        <i class="fa fa-fw fa-github"></i>GitHub</a>
-                  </span>
-                
-                  <span class="links-of-author-item">
-                    <a href="mailto:lanyd1997@qq.com" target="_blank" title="E-Mail">
-                      
-                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
-                  </span>
-                
-            </div>
-          
-
-          
-          
-
-          
-          
-
-          
-
-        </div>
-      </section>
-
-      
       <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#0x00-前言"><span class="nav-number">1.</span> <span class="nav-text">0x00 前言</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#0x01-Vue-js"><span class="nav-number">2.</span> <span class="nav-text">0x01 Vue.js</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#0x01-Flutter框架"><span class="nav-number">3.</span> <span class="nav-text">0x01 Flutter框架</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#0x02-Kotlin-语言"><span class="nav-number">4.</span> <span class="nav-text">0x02 Kotlin 语言</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#0x03-Gradle-工具"><span class="nav-number">5.</span> <span class="nav-text">0x03 Gradle 工具</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#0x04-小结一下"><span class="nav-number">6.</span> <span class="nav-text">0x04 小结一下</span></a></li></ol></div>
-            
-
-          </div>
-        </section>
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#0x00-前言"><span class="nav-number">1.</span> <span class="nav-text">0x00 前言</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#0x01-Vue-js"><span class="nav-number">2.</span> <span class="nav-text">0x01 Vue.js</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#0x01-Flutter框架"><span class="nav-number">3.</span> <span class="nav-text">0x01 Flutter框架</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#0x02-Kotlin-语言"><span class="nav-number">4.</span> <span class="nav-text">0x02 Kotlin 语言</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#0x03-Gradle-工具"><span class="nav-number">5.</span> <span class="nav-text">0x03 Gradle 工具</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#0x04-小结一下"><span class="nav-number">6.</span> <span class="nav-text">0x04 小结一下</span></a></li></ol></div>
+      </div>
       <!--/noindex-->
-      
 
-      
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <img class="site-author-image" itemprop="image" alt="YDLAN" src="/images/avatar.jpg">
+  <p class="site-author-name" itemprop="name">YDLAN</p>
+  <div class="site-description" itemprop="description">YDLAN的个人博客</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives">
+          <span class="site-state-item-count">29</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">7</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">23</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/ydlan" title="GitHub &rarr; https://github.com/ydlan" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:lanyd1997@qq.com" title="E-Mail &rarr; mailto:lanyd1997@qq.com" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+      </span>
+  </div>
+
+
+
+      </div>
 
     </div>
   </aside>
+  <div id="sidebar-dimmer"></div>
 
 
-        
       </div>
     </main>
 
-    <footer id="footer" class="footer">
+    <footer class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2020</span>
   <span class="with-love">
     <i class="fa fa-user"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">YDLAN</span>
-
-  
 </div>
-
-
-  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
-
-
-
+  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.8.0
+  </div>
   <span class="post-meta-divider">|</span>
-
-
-
-  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Mist</a> v5.1.4</div>
-
-
-
+  <div class="theme-info">主题 – <a href="https://mist.theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Mist</a> v7.5.0
+  </div>
 
         
+
+
+
+
+
 
 
 
@@ -596,31 +392,15 @@
         
       </div>
     </footer>
-
-    
-      <div class="back-to-top">
-        <i class="fa fa-arrow-up"></i>
-        
-      </div>
-    
-
-    
-
   </div>
 
   
-
-<script type="text/javascript">
-  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
-    window.Promise = null;
-  }
-</script>
-
-
-
-
-
-
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+<script src="/js/utils.js"></script><script src="/js/motion.js"></script>
+<script src="/js/schemes/muse.js"></script>
+<script src="/js/next-boot.js"></script>
 
 
 
@@ -637,111 +417,9 @@
 
 
 
-  
-  
-    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
-  
-
-
-  
-
-
-  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
-
-  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
 
 
 
-  
-  
-
-  
-  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
-<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
-
-
-
-  
-
-
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
-
-
-
-  
-
-
-  
-
-
-
-
-	
-
-
-
-
-
-  
-
-
-
-
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
-  
-
-
-
-
-
-  
-
-  
-
-  
-
-  
-  
-
-  
 
   
 

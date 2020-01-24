@@ -1,130 +1,80 @@
 <!DOCTYPE html>
-
-
-
-  
-
-
-<html class="theme-next mist use-motion" lang="zh-Hans">
-<head><meta name="generator" content="Hexo 3.8.0">
+<html lang="zh-CN">
+<head>
   <meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 3.8.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon16x16.png">
+
+<link rel="stylesheet" href="/css/main.css">
 
 
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
 
 
+<script id="hexo-configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    version: '7.5.0',
+    exturl: false,
+    sidebar: {"position":"right","display":"post","offset":12,"onmobile":false},
+    copycode: {"enable":false,"show_result":false,"style":null},
+    back2top: {"enable":true,"sidebar":false,"scrollpercent":false},
+    bookmark: {"enable":false,"color":"#222","save":"auto"},
+    fancybox: false,
+    mediumzoom: false,
+    lazyload: false,
+    pangu: false,
+    algolia: {
+      appID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    },
+    localsearch: {"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
+    path: '',
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    translation: {
+      copy_button: '复制',
+      copy_success: '复制成功',
+      copy_failure: '复制失败'
+    },
+    sidebarPadding: 40
+  };
+</script>
 
-
-
-
-
-<meta http-equiv="Cache-Control" content="no-transform">
-<meta http-equiv="Cache-Control" content="no-siteapp">
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-  
-  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
-
-
-
-
-
-
-
-<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
-
-<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
-
-
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch.png?v=5.1.4">
-
-
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon32x32.png?v=5.1.4">
-
-
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon16x16.png?v=5.1.4">
-
-
-
-
-
-
-  <meta name="keywords" content="前端,">
-
-
-
-
-
-  <link rel="alternate" href="/atom.xml" title="YDLAN" type="application/atom+xml">
-
-
-
-
-
-
-<meta name="description" content="记录一下近期的学习心得，由于参加一个比赛需要一个简单的web页面来展示结果，所以需要取学习一些前端的开发的技术。之前也看过一些 web 页面的知识，但没有亲自去尝试过，这次正好有机会去进行更深入的了解。 0x01 前端基本功要说前端开发，首先得有一些基本功，就是我们平时说的 HTML CSS JavaScript。这些是构建一个网页的基础，之前搭博客我了解过一些HTML和JS的东西，只限于看得懂，">
+  <meta name="description" content="记录一下近期的学习心得，由于参加一个比赛需要一个简单的web页面来展示结果，所以需要取学习一些前端的开发的技术。之前也看过一些 web 页面的知识，但没有亲自去尝试过，这次正好有机会去进行更深入的了解。">
 <meta name="keywords" content="前端">
 <meta property="og:type" content="article">
 <meta property="og:title" content="关于前端学习的小总结">
 <meta property="og:url" content="https://ydlan.github.io/2019/05/02/2019-05-02-study-html/index.html">
 <meta property="og:site_name" content="YDLAN">
-<meta property="og:description" content="记录一下近期的学习心得，由于参加一个比赛需要一个简单的web页面来展示结果，所以需要取学习一些前端的开发的技术。之前也看过一些 web 页面的知识，但没有亲自去尝试过，这次正好有机会去进行更深入的了解。 0x01 前端基本功要说前端开发，首先得有一些基本功，就是我们平时说的 HTML CSS JavaScript。这些是构建一个网页的基础，之前搭博客我了解过一些HTML和JS的东西，只限于看得懂，">
-<meta property="og:locale" content="zh-Hans">
+<meta property="og:description" content="记录一下近期的学习心得，由于参加一个比赛需要一个简单的web页面来展示结果，所以需要取学习一些前端的开发的技术。之前也看过一些 web 页面的知识，但没有亲自去尝试过，这次正好有机会去进行更深入的了解。">
+<meta property="og:locale" content="zh-CN">
 <meta property="og:updated_time" content="2019-06-14T10:52:02.625Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="关于前端学习的小总结">
-<meta name="twitter:description" content="记录一下近期的学习心得，由于参加一个比赛需要一个简单的web页面来展示结果，所以需要取学习一些前端的开发的技术。之前也看过一些 web 页面的知识，但没有亲自去尝试过，这次正好有机会去进行更深入的了解。 0x01 前端基本功要说前端开发，首先得有一些基本功，就是我们平时说的 HTML CSS JavaScript。这些是构建一个网页的基础，之前搭博客我了解过一些HTML和JS的东西，只限于看得懂，">
+<meta name="twitter:description" content="记录一下近期的学习心得，由于参加一个比赛需要一个简单的web页面来展示结果，所以需要取学习一些前端的开发的技术。之前也看过一些 web 页面的知识，但没有亲自去尝试过，这次正好有机会去进行更深入的了解。">
+
+<link rel="canonical" href="https://ydlan.github.io/2019/05/02/2019-05-02-study-html/">
 
 
-
-<script type="text/javascript" id="hexo.configurations">
-  var NexT = window.NexT || {};
-  var CONFIG = {
-    root: '/',
-    scheme: 'Mist',
-    version: '5.1.4',
-    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
-    fancybox: true,
-    tabs: true,
-    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
-    duoshuo: {
-      userId: '0',
-      author: '博主'
-    },
-    algolia: {
-      applicationID: '',
-      apiKey: '',
-      indexName: '',
-      hits: {"per_page":10},
-      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
-    }
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome: false,
+    isPost: true,
+    isPage: false,
+    isArchive: false
   };
 </script>
-
-
-
-  <link rel="canonical" href="https://ydlan.github.io/2019/05/02/2019-05-02-study-html/">
-
-
-
-
 
   <title>关于前端学习的小总结 | YDLAN</title>
   
@@ -134,214 +84,149 @@
 
 
 
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
 
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
 
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
-
-  
-  
-    
-  
-
-  <div class="container sidebar-position-left page-post-detail">
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
     <div class="headband"></div>
 
-    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-brand-wrapper">
-  <div class="site-meta ">
-    
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-meta">
 
-    <div class="custom-logo-site-title">
+    <div>
       <a href="/" class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
         <span class="site-title">YDLAN</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
-      
         <p class="site-subtitle">一起来探索吧！</p>
-      
   </div>
 
   <div class="site-nav-toggle">
-    <button>
-      <span class="btn-bar"></span>
-      <span class="btn-bar"></span>
-      <span class="btn-bar"></span>
-    </button>
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
   </div>
 </div>
 
+
 <nav class="site-nav">
   
-
-  
-    <ul id="menu" class="menu">
-      
-        
+  <ul id="menu" class="menu">
         <li class="menu-item menu-item-home">
-          <a href="/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
-            
-            首页
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-archives">
-          <a href="/archives/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
-            
-            归档
-          </a>
-        </li>
-      
-        
+
+    <a href="/" rel="section"><i class="fa fa-fw fa-home"></i>首页</a>
+
+  </li>
         <li class="menu-item menu-item-categories">
-          <a href="/categories/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
-            
-            分类
-          </a>
-        </li>
-      
-        
+
+    <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>分类</a>
+
+  </li>
         <li class="menu-item menu-item-tags">
-          <a href="/tags/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
-            
-            标签
-          </a>
-        </li>
-      
-        
+
+    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>标签</a>
+
+  </li>
         <li class="menu-item menu-item-about">
-          <a href="/about/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
-            
-            关于
-          </a>
-        </li>
-      
 
-      
-    </ul>
-  
+    <a href="/about/" rel="section"><i class="fa fa-fw fa-user"></i>关于</a>
 
-  
+  </li>
+  </ul>
+
 </nav>
-
-
-
- </div>
+</div>
     </header>
 
-    <main id="main" class="main">
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
       <div class="main-inner">
         <div class="content-wrap">
-          <div id="content" class="content">
+          
+
+          <div class="content">
             
 
-  <div id="posts" class="posts-expand">
-    
-
-  
-
+  <div class="posts-expand">
+      
   
   
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
+  <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="https://ydlan.github.io/2019/05/02/2019-05-02-study-html/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="YDLAN">
-      <meta itemprop="description" content>
       <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="YDLAN">
+      <meta itemprop="description" content="YDLAN的个人博客">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="YDLAN">
     </span>
-
-    
       <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">关于前端学习的小总结</h1>
-        
+        <h1 class="post-title" itemprop="name headline">
+          关于前端学习的小总结
+        </h1>
 
         <div class="post-meta">
-          <span class="post-time">
-            
+            <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-05-02T23:51:12+08:00">
-                2019-05-02
-              </time>
-            
+              <span class="post-meta-item-text">发表于</span>
 
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
+              <time title="创建时间：2019-05-02 23:51:12" itemprop="dateCreated datePublished" datetime="2019-05-02T23:51:12+08:00">2019-05-02</time>
+            </span>
+            <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
+              <span class="post-meta-item-text">分类于</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
                   <a href="/categories/学习笔记/" itemprop="url" rel="index">
                     <span itemprop="name">学习笔记</span>
                   </a>
                 </span>
-
-                
-                
-              
             </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
 
           
 
         </div>
       </header>
-    
 
     
     
@@ -349,10 +234,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-      
-
-      
-        <p>记录一下近期的学习心得，由于参加一个比赛需要一个简单的web页面来展示结果，所以需要取学习一些前端的开发的技术。之前也看过一些 web 页面的知识，但没有亲自去尝试过，这次正好有机会去进行更深入的了解。</p>
+        <p>记录一下近期的学习心得，由于参加一个比赛需要一个简单的web页面来展示结果，所以需要取学习一些前端的开发的技术。之前也看过一些 web 页面的知识，但没有亲自去尝试过，这次正好有机会去进行更深入的了解。</p><a id="more"></a>
 <h3 id="0x01-前端基本功"><a href="#0x01-前端基本功" class="headerlink" title="0x01 前端基本功"></a>0x01 前端基本功</h3><p>要说前端开发，首先得有一些基本功，就是我们平时说的 HTML CSS JavaScript。这些是构建一个网页的基础，之前搭博客我了解过一些HTML和JS的东西，只限于看得懂，也做过一些页面的修改，但是亲手编写的话，还是有一定的困难，不过好在可以查资料，照葫芦画瓢，还是能做出来一些。</p>
 <p>之前尝试过开发一款微信小程序，好多东西都是参考着网上的教程一步一步的做，其中也涉及了大量的网页前端的知识，业务逻辑实现都是用的 JS 当时主要是参考了微信小程序的开发文档，它提供很多可以直接使用的API，如果是实现简单功能的话，会调用就行，当时做的是一款天气预报的小程序，数据来源是百度地图的API，比较有挑战的是 WXSS 样式设计，类比于Web页面的CSS，可以这么说页面好不好看取决于你的样式表设计和布局，因为没有系统学习过，当时还是花了很长时间去设计CSS，尽管如此，最后的页面还是惨目忍睹。</p>
 <p>再说这次页面的编写，有了之前的基础，这次在JS 和 CSS 的设计和实现上感觉容易多了，也更加了解了一个页面的构成。一个 HTML 页面定义了整个网页的结构，把所有CSS 和 JS 都包含起来。当然大多数开发者是很少会直接在HTML里面定义CSS 和JS的，通常是将它们放在单独的文件夹，通过引入进行调用。</p>
@@ -383,248 +265,148 @@
 <p>解决问题的能力很重要，要把学习和解决问题划分开，学习需要的循序渐进，系统掌握。而解决问题更重的是针对问题本身，找到其解决的办法，最常用的方法莫过于搜索查找。前者是理论基础，后者是实践经验，二者都需要培养提高。</p>
 <p>差不多根据自己了解的前端开发做了一个总结，内容都是很基础很简单的，如果深入的学习了解可能会有更多的发现和感悟。</p>
 
-      
     </div>
+
     
     
     
 
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-        <div class="post-tags">
-          
-            <a href="/tags/前端/" rel="tag"># 前端</a>
-          
-        </div>
-      
-
-      
-      
-      
-
-      
-        <div class="post-nav">
-          <div class="post-nav-next post-nav-item">
-            
-              <a href="/2019/04/12/2019-04-12-hexo-blog/" rel="next" title="选择blog主题为Hexo-Casper">
-                <i class="fa fa-chevron-left"></i> 选择blog主题为Hexo-Casper
-              </a>
-            
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/前端/" rel="tag"># 前端</a>
           </div>
 
-          <span class="post-nav-divider"></span>
-
-          <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/05/30/2019-05-30-navicat-mysql/" rel="prev" title="关于Navicat for MySQL 的使用小结">
-                关于Navicat for MySQL 的使用小结 <i class="fa fa-chevron-right"></i>
-              </a>
-            
-          </div>
-        </div>
-      
-
-      
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-
-    <div class="post-spread">
-      
-    </div>
-  </div>
-
-
-          </div>
-          
-
-
-          
-
-  
-
-
-
-        </div>
         
-          
+
+          <div class="post-nav">
+            <div class="post-nav-next post-nav-item">
+                <a href="/2019/04/12/2019-04-12-hexo-blog/" rel="next" title="选择blog主题为Hexo-Casper">
+                  <i class="fa fa-chevron-left"></i> 选择blog主题为Hexo-Casper
+                </a>
+            </div>
+
+            <span class="post-nav-divider"></span>
+
+            <div class="post-nav-prev post-nav-item">
+                <a href="/2019/05/30/2019-05-30-navicat-mysql/" rel="prev" title="关于Navicat for MySQL 的使用小结">
+                  关于Navicat for MySQL 的使用小结 <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+      </footer>
+    
+  </article>
   
-  <div class="sidebar-toggle">
-    <div class="sidebar-toggle-line-wrap">
-      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
-    </div>
+  
+  
+
   </div>
 
-  <aside id="sidebar" class="sidebar">
-    
+
+          </div>
+          
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
     <div class="sidebar-inner">
 
-      
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
 
-      
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            站点概览
-          </li>
-        </ul>
-      
-
-      <section class="site-overview-wrap sidebar-panel">
-        <div class="site-overview">
-          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-            
-              <img class="site-author-image" itemprop="image" src="/images/avatar.jpg" alt="YDLAN">
-            
-              <p class="site-author-name" itemprop="name">YDLAN</p>
-              <p class="site-description motion-element" itemprop="description">YDLAN的个人博客</p>
-          </div>
-
-          <nav class="site-state motion-element">
-
-            
-              <div class="site-state-item site-state-posts">
-              
-                <a href="/archives/">
-              
-                  <span class="site-state-item-count">29</span>
-                  <span class="site-state-item-name">日志</span>
-                </a>
-              </div>
-            
-
-            
-              
-              
-              <div class="site-state-item site-state-categories">
-                <a href="/categories/index.html">
-                  <span class="site-state-item-count">7</span>
-                  <span class="site-state-item-name">分类</span>
-                </a>
-              </div>
-            
-
-            
-              
-              
-              <div class="site-state-item site-state-tags">
-                <a href="/tags/index.html">
-                  <span class="site-state-item-count">23</span>
-                  <span class="site-state-item-name">标签</span>
-                </a>
-              </div>
-            
-
-          </nav>
-
-          
-            <div class="feed-link motion-element">
-              <a href="/atom.xml" rel="alternate">
-                <i class="fa fa-rss"></i>
-                RSS
-              </a>
-            </div>
-          
-
-          
-            <div class="links-of-author motion-element">
-                
-                  <span class="links-of-author-item">
-                    <a href="https://github.com/ydlan" target="_blank" title="GitHub">
-                      
-                        <i class="fa fa-fw fa-github"></i>GitHub</a>
-                  </span>
-                
-                  <span class="links-of-author-item">
-                    <a href="mailto:lanyd1997@qq.com" target="_blank" title="E-Mail">
-                      
-                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
-                  </span>
-                
-            </div>
-          
-
-          
-          
-
-          
-          
-
-          
-
-        </div>
-      </section>
-
-      
       <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#0x01-前端基本功"><span class="nav-number">1.</span> <span class="nav-text">0x01 前端基本功</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#0x02-浅谈-JavaScript"><span class="nav-number">2.</span> <span class="nav-text">0x02 浅谈 JavaScript</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#0x03-Bootstrap-框架"><span class="nav-number">3.</span> <span class="nav-text">0x03 Bootstrap 框架</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#0x04-XML和JSON"><span class="nav-number">4.</span> <span class="nav-text">0x04 XML和JSON</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#0x05-PHP-真好！"><span class="nav-number">5.</span> <span class="nav-text">0x05 PHP 真好！</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#0x06-小结一下"><span class="nav-number">6.</span> <span class="nav-text">0x06 小结一下</span></a></li></ol></div>
-            
-
-          </div>
-        </section>
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#0x01-前端基本功"><span class="nav-number">1.</span> <span class="nav-text">0x01 前端基本功</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#0x02-浅谈-JavaScript"><span class="nav-number">2.</span> <span class="nav-text">0x02 浅谈 JavaScript</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#0x03-Bootstrap-框架"><span class="nav-number">3.</span> <span class="nav-text">0x03 Bootstrap 框架</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#0x04-XML和JSON"><span class="nav-number">4.</span> <span class="nav-text">0x04 XML和JSON</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#0x05-PHP-真好！"><span class="nav-number">5.</span> <span class="nav-text">0x05 PHP 真好！</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#0x06-小结一下"><span class="nav-number">6.</span> <span class="nav-text">0x06 小结一下</span></a></li></ol></div>
+      </div>
       <!--/noindex-->
-      
 
-      
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <img class="site-author-image" itemprop="image" alt="YDLAN" src="/images/avatar.jpg">
+  <p class="site-author-name" itemprop="name">YDLAN</p>
+  <div class="site-description" itemprop="description">YDLAN的个人博客</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives">
+          <span class="site-state-item-count">29</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">7</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">23</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/ydlan" title="GitHub &rarr; https://github.com/ydlan" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:lanyd1997@qq.com" title="E-Mail &rarr; mailto:lanyd1997@qq.com" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+      </span>
+  </div>
+
+
+
+      </div>
 
     </div>
   </aside>
+  <div id="sidebar-dimmer"></div>
 
 
-        
       </div>
     </main>
 
-    <footer id="footer" class="footer">
+    <footer class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2020</span>
   <span class="with-love">
     <i class="fa fa-user"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">YDLAN</span>
-
-  
 </div>
-
-
-  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
-
-
-
+  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.8.0
+  </div>
   <span class="post-meta-divider">|</span>
-
-
-
-  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Mist</a> v5.1.4</div>
-
-
-
+  <div class="theme-info">主题 – <a href="https://mist.theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Mist</a> v7.5.0
+  </div>
 
         
+
+
+
+
+
 
 
 
@@ -635,31 +417,15 @@
         
       </div>
     </footer>
-
-    
-      <div class="back-to-top">
-        <i class="fa fa-arrow-up"></i>
-        
-      </div>
-    
-
-    
-
   </div>
 
   
-
-<script type="text/javascript">
-  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
-    window.Promise = null;
-  }
-</script>
-
-
-
-
-
-
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+<script src="/js/utils.js"></script><script src="/js/motion.js"></script>
+<script src="/js/schemes/muse.js"></script>
+<script src="/js/next-boot.js"></script>
 
 
 
@@ -676,111 +442,9 @@
 
 
 
-  
-  
-    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
-  
-
-
-  
-
-
-  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
-
-  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
 
 
 
-  
-  
-
-  
-  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
-<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
-
-
-
-  
-
-
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
-
-
-
-  
-
-
-  
-
-
-
-
-	
-
-
-
-
-
-  
-
-
-
-
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
-  
-
-
-
-
-
-  
-
-  
-
-  
-
-  
-  
-
-  
 
   
 
