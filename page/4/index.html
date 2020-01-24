@@ -1,81 +1,144 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
-<head>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="en">
+<head><meta name="generator" content="Hexo 3.8.0">
   <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 3.8.0">
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon16x16.png">
-
-<link rel="stylesheet" href="/css/main.css">
 
 
-<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
 
 
-<script id="hexo-configurations">
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=6.5.0" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch.png?v=6.5.0">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon32x32.png?v=6.5.0">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon16x16.png?v=6.5.0">
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" id="hexo.configurations">
   var NexT = window.NexT || {};
   var CONFIG = {
     root: '/',
     scheme: 'Mist',
-    version: '7.5.0',
-    exturl: false,
-    sidebar: {"position":"right","display":"post","offset":12,"onmobile":false},
-    copycode: {"enable":false,"show_result":false,"style":null},
-    back2top: {"enable":true,"sidebar":false,"scrollpercent":false},
-    bookmark: {"enable":false,"color":"#222","save":"auto"},
+    version: '6.5.0',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
     fancybox: false,
-    mediumzoom: false,
+    fastclick: false,
     lazyload: false,
-    pangu: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
     algolia: {
-      appID: '',
+      applicationID: '',
       apiKey: '',
       indexName: '',
       hits: {"per_page":10},
       labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
-    },
-    localsearch: {"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
-    path: '',
-    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
-    translation: {
-      copy_button: '复制',
-      copy_success: '复制成功',
-      copy_failure: '复制失败'
-    },
-    sidebarPadding: 40
+    }
   };
 </script>
 
-  <meta name="description" content="YDLAN的个人博客">
+
+  
+
+
+
+
+  <meta name="description" content="记录学习和日常">
 <meta property="og:type" content="website">
-<meta property="og:title" content="YDLAN">
+<meta property="og:title" content="YDLAN&#39;S BLOG">
 <meta property="og:url" content="https://ydlan.github.io/page/4/index.html">
-<meta property="og:site_name" content="YDLAN">
-<meta property="og:description" content="YDLAN的个人博客">
-<meta property="og:locale" content="zh-CN">
+<meta property="og:site_name" content="YDLAN&#39;S BLOG">
+<meta property="og:description" content="记录学习和日常">
+<meta property="og:locale" content="en">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="YDLAN">
-<meta name="twitter:description" content="YDLAN的个人博客">
-
-<link rel="canonical" href="https://ydlan.github.io/page/4/">
+<meta name="twitter:title" content="YDLAN&#39;S BLOG">
+<meta name="twitter:description" content="记录学习和日常">
 
 
-<script id="page-configurations">
-  // https://hexo.io/docs/variables.html
+
+
+
+
+  <link rel="canonical" href="https://ydlan.github.io/page/4/">
+
+
+
+<script type="text/javascript" id="page.configurations">
   CONFIG.page = {
     sidebar: "",
-    isHome: true,
-    isPost: false,
-    isPage: false,
-    isArchive: false
   };
 </script>
 
-  <title>YDLAN</title>
+  <title>YDLAN'S BLOG</title>
   
+
+
+
+
+
 
 
 
@@ -83,149 +146,272 @@
 
 
   <noscript>
-  <style>
-  .use-motion .brand,
-  .use-motion .menu-item,
-  .sidebar-inner,
-  .use-motion .post-block,
-  .use-motion .pagination,
-  .use-motion .comments,
-  .use-motion .post-header,
-  .use-motion .post-body,
-  .use-motion .collection-header { opacity: initial; }
+  <style type="text/css">
+    .use-motion .motion-element,
+    .use-motion .brand,
+    .use-motion .menu-item,
+    .sidebar-inner,
+    .use-motion .post-block,
+    .use-motion .pagination,
+    .use-motion .comments,
+    .use-motion .post-header,
+    .use-motion .post-body,
+    .use-motion .collection-title { opacity: initial; }
 
-  .use-motion .site-title,
-  .use-motion .site-subtitle {
-    opacity: initial;
-    top: initial;
-  }
+    .use-motion .logo,
+    .use-motion .site-title,
+    .use-motion .site-subtitle {
+      opacity: initial;
+      top: initial;
+    }
 
-  .use-motion .logo-line-before i { left: initial; }
-  .use-motion .logo-line-after i { right: initial; }
+    .use-motion {
+      .logo-line-before i { left: initial; }
+      .logo-line-after i { right: initial; }
+    }
   </style>
 </noscript>
 
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage">
-  <div class="container use-motion">
+<body itemscope itemtype="http://schema.org/WebPage" lang="en">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left 
+  page-home">
     <div class="headband"></div>
 
-    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-brand-container">
-  <div class="site-meta">
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
 
-    <div>
+    <div class="custom-logo-site-title">
       <a href="/" class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
-        <span class="site-title">YDLAN</span>
+        <span class="site-title">YDLAN'S BLOG</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
+    
+      
         <p class="site-subtitle">一起来探索吧！</p>
+      
+    
   </div>
 
   <div class="site-nav-toggle">
-    <div class="toggle" aria-label="切换导航栏">
-      <span class="toggle-line toggle-line-first"></span>
-      <span class="toggle-line toggle-line-middle"></span>
-      <span class="toggle-line toggle-line-last"></span>
-    </div>
+    <button aria-label="Toggle navigation bar">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
   </div>
 </div>
+
 
 
 <nav class="site-nav">
   
-  <ul id="menu" class="menu">
-        <li class="menu-item menu-item-home">
-
-    <a href="/" rel="section"><i class="fa fa-fw fa-home"></i>首页</a>
-
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+          
+          <li class="menu-item menu-item-home">
+    <a href="/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-home"></i> <br>Home</a>
   </li>
-        <li class="menu-item menu-item-categories">
-
-    <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>分类</a>
-
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+    <a href="/archives/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>Archives</a>
   </li>
-        <li class="menu-item menu-item-tags">
-
-    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>标签</a>
-
+        
+        
+        
+          
+          <li class="menu-item menu-item-categories">
+    <a href="/categories/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-th"></i> <br>Categories</a>
   </li>
-        <li class="menu-item menu-item-about">
-
-    <a href="/about/" rel="section"><i class="fa fa-fw fa-user"></i>关于</a>
-
+        
+        
+        
+          
+          <li class="menu-item menu-item-tags">
+    <a href="/tags/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>Tags</a>
   </li>
-  </ul>
+        
+        
+        
+          
+          <li class="menu-item menu-item-about">
+    <a href="/about/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-user"></i> <br>About</a>
+  </li>
 
+      
+      
+    </ul>
+  
+
+  
+    
+
+  
+
+  
 </nav>
+
+
+
+  
+
+
+
 </div>
     </header>
 
     
-  <div class="back-to-top">
-    <i class="fa fa-arrow-up"></i>
-    <span>0%</span>
-  </div>
 
 
-    <main class="main">
+    <main id="main" class="main">
       <div class="main-inner">
         <div class="content-wrap">
           
-
-          <div class="content">
+          <div id="content" class="content">
             
+  <section id="posts" class="posts-expand">
+    
+      
 
-  <div class="posts-expand">
-        
+  
+
   
   
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://ydlan.github.io/2019/05/02/2019-05-02-study-html/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jpg">
       <meta itemprop="name" content="YDLAN">
-      <meta itemprop="description" content="YDLAN的个人博客">
+      <meta itemprop="description" content="记录学习和日常">
+      <meta itemprop="image" content="/images/avatar.jpg">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="YDLAN">
+      <meta itemprop="name" content="YDLAN'S BLOG">
     </span>
+
+    
       <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            <a href="/2019/05/02/2019-05-02-study-html/" class="post-title-link" itemprop="url">关于前端学习的小总结</a>
-        </h1>
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/05/02/2019-05-02-study-html/" itemprop="url">
+                  关于前端学习的小总结
+                </a>
+              
+            
+          </h1>
+        
 
         <div class="post-meta">
-            <span class="post-meta-item">
+          <span class="post-time">
+
+            
+            
+            
+
+            
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
-              <span class="post-meta-item-text">发表于</span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
 
-              <time title="创建时间：2019-05-02 23:51:12" itemprop="dateCreated datePublished" datetime="2019-05-02T23:51:12+08:00">2019-05-02</time>
-            </span>
-            <span class="post-meta-item">
+              
+                
+              
+
+              <time title="Created: 2019-05-02 23:51:12" itemprop="dateCreated datePublished" datetime="2019-05-02T23:51:12+08:00">2019-05-02</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2019-06-14 18:52:02" itemprop="dateModified" datetime="2019-06-14T18:52:02+08:00">2019-06-14</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/学习笔记/" itemprop="url" rel="index">
-                    <span itemprop="name">学习笔记</span>
-                  </a>
-                </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/学习笔记/" itemprop="url" rel="index"><span itemprop="name">学习笔记</span></a></span>
+
+                
+                
+              
             </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
 
           
 
         </div>
       </header>
+    
 
     
     
@@ -233,75 +419,198 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <p>记录一下近期的学习心得，由于参加一个比赛需要一个简单的web页面来展示结果，所以需要取学习一些前端的开发的技术。之前也看过一些 web 页面的知识，但没有亲自去尝试过，这次正好有机会去进行更深入的了解。</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2019/05/02/2019-05-02-study-html/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
+      
+
+      
+        
+          
+            <p>记录一下近期的学习心得，由于参加一个比赛需要一个简单的web页面来展示结果，所以需要取学习一些前端的开发的技术。之前也看过一些 web 页面的知识，但没有亲自去尝试过，这次正好有机会去进行更深入的了解。</p>
+<h3 id="0x01-前端基本功"><a href="#0x01-前端基本功" class="headerlink" title="0x01 前端基本功"></a>0x01 前端基本功</h3><p>要说前端开发，首先得有一些基本功，就是我们平时说的 HTML CSS JavaScript。这些是构建一个网页的基础，之前搭博客我了解过一些HTML和JS的东西，只限于看得懂，也做过一些页面的修改，但是亲手编写的话，还是有一定的困难，不过好在可以查资料，照葫芦画瓢，还是能做出来一些。</p>
+<p>之前尝试过开发一款微信小程序，好多东西都是参考着网上的教程一步一步的做，其中也涉及了大量的网页前端的知识，业务逻辑实现都是用的 JS 当时主要是参考了微信小程序的开发文档，它提供很多可以直接使用的API，如果是实现简单功能的话，会调用就行，当时做的是一款天气预报的小程序，数据来源是百度地图的API，比较有挑战的是 WXSS 样式设计，类比于Web页面的CSS，可以这么说页面好不好看取决于你的样式表设计和布局，因为没有系统学习过，当时还是花了很长时间去设计CSS，尽管如此，最后的页面还是惨目忍睹。</p>
+<p>再说这次页面的编写，有了之前的基础，这次在JS 和 CSS 的设计和实现上感觉容易多了，也更加了解了一个页面的构成。一个 HTML 页面定义了整个网页的结构，把所有CSS 和 JS 都包含起来。当然大多数开发者是很少会直接在HTML里面定义CSS 和JS的，通常是将它们放在单独的文件夹，通过引入进行调用。</p>
+<p>下面这个例子就是个简单的HTML页面，其中包含了页面布局的定义，CSS的定义，以及一个简单 JS 脚本。在HTML页面里CSS是通过<code>&lt;style&gt;&lt;/style&gt;</code>标签定义引用的，一般在HTML的<code>&lt;head&gt;&lt;/head&gt;</code>内引入，也可以直接在标签内进行定义，CSS 样式多变难记，不过十分容易理解，在使用时可以查找相关资料。JS脚本实现的逻辑功能，在页面里 JS 是通过<code>&lt;script&gt;&lt;/script&gt;</code> 标签定义引入的，一般情况  JS 在页面内定义位置不影响，是全局的，通过使用JavaScript 能够大大增强HTML的交互性。</p>
+<p>对于HTML页面来说，整体结构就是head、body；整个页面需要<code>&lt;div&gt;&lt;/div&gt;</code>等各种标签进行组合，一个功能完善并且好看的页面是需要HTML，CSS，JS 共同协调构建的。</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">title</span>&gt;</span>这个是标题<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">style</span> <span class="attr">type</span>=<span class="string">"text/css"</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="undefined">		body&#123;</span></span><br><span class="line"><span class="undefined">		    height: 100%;</span></span><br><span class="line"><span class="undefined">			width: 100%;</span></span><br><span class="line"><span class="undefined">			background-color: yellow;</span></span><br><span class="line"><span class="undefined">		</span></span><br><span class="line"><span class="undefined">		&#125;</span></span><br><span class="line"><span class="undefined">        /*标签选择器*/</span></span><br><span class="line"><span class="undefined">        p&#123;</span></span><br><span class="line"><span class="undefined">            color:red;</span></span><br><span class="line"><span class="undefined">        &#125;</span></span><br><span class="line"><span class="undefined">        /*类选择器*/</span></span><br><span class="line"><span class="undefined">        .first&#123;</span></span><br><span class="line"><span class="undefined">            color:red;</span></span><br><span class="line"><span class="undefined">        &#125;</span></span><br><span class="line"><span class="undefined">        /*id选择器*/</span></span><br><span class="line"><span class="undefined">        #first&#123;</span></span><br><span class="line"><span class="undefined">            color:green;</span></span><br><span class="line"><span class="undefined">        &#125;</span></span><br><span class="line"><span class="undefined">    </span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">h1</span>&gt;</span>这是一个一个简单的HTML,h1</span><br><span class="line">            <span class="tag">&lt;<span class="name">p</span> <span class="attr">id</span>=<span class="string">"test"</span>&gt;</span>Hello World！<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">h2</span>&gt;</span>这是一个一个简单的HTML,h2<span class="tag">&lt;/<span class="name">h2</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">p</span> <span class="attr">style</span>=<span class="string">"color:orange;font-size:18px"</span>&gt;</span>在HTML中使用css样式<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line">    </span><br><span class="line">     <span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="undefined">        var mystr = document.getElementById("test")</span></span><br><span class="line"><span class="xml">        document.write("p标签修改之前："+mystr.innerHTML+ "<span class="tag">&lt;/<span class="name">br</span>&gt;</span>");</span></span><br><span class="line"><span class="undefined">        mystr.innerHTML="hello web!"</span></span><br><span class="line"><span class="xml">        document.write("p标签修改之前："+mystr.innerHTML + "<span class="tag">&lt;/<span class="name">br</span>&gt;</span>");</span></span><br><span class="line"><span class="undefined">    </span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h3 id="0x02-浅谈-JavaScript"><a href="#0x02-浅谈-JavaScript" class="headerlink" title="0x02 浅谈 JavaScript"></a>0x02 浅谈 JavaScript</h3><p>对于前端开发来说，应该比较复杂的就是业务功能实现这部分了，我在刚接触 JS 的时候也是摸不着头脑，最开始连代码都看不太懂，更别说写。不过接触多了，慢慢的也就熟悉了。</p>
+<p>首先需要了解什么是DOM（文档对象模型），它定义了访问 HTML 和 XML 文档的标准， 是中立于平台和语言的接口，它允许程序和脚本动态地访问和更新文档的内容、结构和样式。其中包含了大量的对象，通过对象调用可以实现一些特定的功能，比如常用的Document、Event 事件、Form表单等。</p>
+<p>在这次网页编写时我还使用了 jQuery，它属于 JavaScript 的一个库，可以极大的简化 JS 编程，功能也十分强大，如果有前面说的基础，那也很容易学。在使用 jQuery 的时候需要使用<code>&lt;script&gt;</code> 标签将 jQuery 添加到网页中，<code>&lt;script&gt;</code> 标签应该位于页面的<code>&lt;head&gt;</code>部分。src 可以是下载到本地js，也可以是远程当然 jquery.js 链接。</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span> <span class="attr">src</span>=<span class="string">"/jquery/jquery.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="undefined">    $(document).ready(function()&#123;</span></span><br><span class="line"><span class="undefined">    $("button").click(function()&#123;</span></span><br><span class="line"><span class="undefined">    $("p").hide();</span></span><br><span class="line"><span class="undefined">    &#125;);</span></span><br><span class="line"><span class="undefined">    &#125;);</span></span><br><span class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">h2</span>&gt;</span>This is a heading<span class="tag">&lt;/<span class="name">h2</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>This is a paragraph.<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>This is another paragraph.<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">button</span> <span class="attr">type</span>=<span class="string">"button"</span>&gt;</span>Click me<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>为实现与服务器交换数据并更新部分网页，我还去了解一些 AJAX。异步的 JavaScript 和 XML，这是一种用于创建快速动态网页的技术，其最主要的优势是可以在不重新加载整个网页的情况下，对网页的某部分进行更新，更能体现 Web 应用的动态性和实时性。</p>
+<p>AJAX 虽然看起来比较复杂，但还是比较容易理解，整个创建过程的格式都是固定的，需要考虑的主要是事件的触发以及元素的更改，也就是什么时候调用 ajax，以及修改那些数据，通常使用的方法是使用 document.querySelector() 属性选择器来进行操作的。</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> &gt;</span><span class="undefined"></span></span><br><span class="line"><span class="undefined">	//1.建立xmlHttpRequest对象</span></span><br><span class="line"><span class="undefined">	//2.使用OPEN方法与服务器建立连接此步注意设置http的请求方式（post/get）</span></span><br><span class="line"><span class="undefined">	//3.设置回调函数，在回调函数中针对不同的响应状态进行处理</span></span><br><span class="line"><span class="undefined">	//4.向服务器端发送数据， 如果是POST方式就不为空</span></span><br><span class="line"><span class="undefined"></span></span><br><span class="line"><span class="undefined">	// 可以简写为 var xmlHttp = new XMLHttpRequest();</span></span><br><span class="line"><span class="undefined">	if(window.XMLHttpRequest) &#123;</span></span><br><span class="line"><span class="undefined">		// 建立xmlHttpRequest对象</span></span><br><span class="line"><span class="undefined">		var xmlHttp = new XMLHttpRequest();</span></span><br><span class="line"><span class="undefined">		if(xmlHttp.overrideMimeType) &#123;</span></span><br><span class="line"><span class="undefined">			xmlHttp.overrideMimeType("text/xml");</span></span><br><span class="line"><span class="undefined">		&#125;</span></span><br><span class="line"><span class="undefined">	   &#125;</span></span><br><span class="line"><span class="undefined">    else if(window.ActiveXobject) &#123;</span></span><br><span class="line"><span class="undefined">		var activeName = ["MSXML2.XMLHTTP", "Microsoft.XMLHTTP"];</span></span><br><span class="line"><span class="undefined">		for(var i = 0; i &lt; activeName.length; i++) &#123;</span></span><br><span class="line"><span class="undefined">			try &#123;</span></span><br><span class="line"><span class="undefined">			  xmlHttp = new ActiveXobject(activeName[i]);</span></span><br><span class="line"><span class="undefined">			  break;</span></span><br><span class="line"><span class="undefined">			 &#125; catch(e) &#123;&#125;</span></span><br><span class="line"><span class="undefined">			&#125;</span></span><br><span class="line"><span class="undefined">	   &#125;</span></span><br><span class="line"><span class="undefined">	   if(!xmlHttp) &#123;</span></span><br><span class="line"><span class="undefined">		alert("创建xmlhttprequest对象失败");</span></span><br><span class="line"><span class="undefined">	   &#125;</span></span><br><span class="line"><span class="undefined">	else &#123;&#125;</span></span><br><span class="line"><span class="undefined">		</span></span><br><span class="line"><span class="undefined">	// 如果是POST方式，注意设置请求头信息, GET方式可以不设置</span></span><br><span class="line"><span class="undefined">	// xmlHttp.setRequestHeader("Content-Type","application/x-www-form-urlencoded")</span></span><br><span class="line"><span class="undefined">	xmlHttp.open("get","getData.php?name="+ name,true)</span></span><br><span class="line"><span class="undefined">		</span></span><br><span class="line"><span class="undefined">	// 设置回调函数</span></span><br><span class="line"><span class="undefined">	xmlHttp.onreadystatechange= callback;</span></span><br><span class="line"><span class="undefined">	function callback()&#123;</span></span><br><span class="line"><span class="undefined">	if(xmlHttp.readyState == 4 &amp;&amp; xmlHttp.status == 200)&#123;      </span></span><br><span class="line"><span class="undefined">		//判断交互是否成功获取服务器返回的数据 </span></span><br><span class="line"><span class="undefined">		var responseText =xmlHttp.responseText;</span></span><br><span class="line"><span class="undefined">		document.getElementById("info").innerHTML = responseText;</span></span><br><span class="line"><span class="undefined">	   &#125;</span></span><br><span class="line"><span class="undefined">	&#125;</span></span><br><span class="line"><span class="undefined">	//向服务器端发送数据</span></span><br><span class="line"><span class="undefined">	xmlHttp.send(null);</span></span><br><span class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>通过实际上手，自己也尝试了一些 JS 的编写，其实大多数编程的一个套路，只要思想了解了，稍微了解一些语法就能实现一些简单的功能，重要的是多尝试和多实践。</p>
+<h3 id="0x03-Bootstrap-框架"><a href="#0x03-Bootstrap-框架" class="headerlink" title="0x03 Bootstrap 框架"></a>0x03 Bootstrap 框架</h3><p>Bootstrap 是目前最受欢迎的前端框架，是基于HTML，CSS， JavaScript的。开发框架最主要的目的就是方便开发，提供一些列通过模板，开发者可以通过引用修改，完成自己的功能，不需要自己重复早轮子。</p>
+<p>之前我也重来没有接触过前端框架，也不知道该如何使用，通过这次亲手实践，对前端框架有了一个更深入的了解。在使用Bootstrap的时候只需要访问它的官网，可以下载源码，也可以直接使用BootstrapCDN将预编译的 CSS 或 JS 文件引入页面。网站还提供了一些样式，自己可以选择自己需要的进行修改使用。</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"utf-8"</span>&gt;</span> </span><br><span class="line">   <span class="tag">&lt;<span class="name">title</span>&gt;</span>在线尝试 Bootstrap 实例<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">"stylesheet"</span> <span class="attr">href</span>=<span class="string">"https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css"</span>&gt;</span>  </span><br><span class="line">   <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line"></span><br><span class="line">      <span class="tag">&lt;<span class="name">h1</span>&gt;</span>Hello, world!<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h3 id="0x04-XML和JSON"><a href="#0x04-XML和JSON" class="headerlink" title="0x04 XML和JSON"></a>0x04 XML和JSON</h3><p>在 Web 开发中不可避免需要与数据进行交互，最典型的两种数据格式是xml 和 json。xml 实际上是一种扩展性标记语言，可以标记数据和定义数据类型。而json则是一种轻量级的数据交换格式，可在不同平台之间进行数据交换。两者各有优缺点，但是在对数据进行解析时 json 要稍微容易些，可读性也更强。</p>
+<p>在实际开发中，包括后端开发中数据格式也常常为JSON。下面通过两个实例进行比较一下：</p>
+<p><1>.用XML表示中国部分省市数据如下：</1></p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?xml version="1.0" encoding="utf-8" ?&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">country</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">name</span>&gt;</span>中国<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">province</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">name</span>&gt;</span>云南<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">citys</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">city</span>&gt;</span>保山<span class="tag">&lt;/<span class="name">city</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">city</span>&gt;</span>昆明<span class="tag">&lt;/<span class="name">city</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">citys</span>&gt;</span>  　　</span><br><span class="line">  <span class="tag">&lt;/<span class="name">province</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">province</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">name</span>&gt;</span>四川<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">citys</span>&gt;</span></span><br><span class="line">      　<span class="tag">&lt;<span class="name">city</span>&gt;</span>成都<span class="tag">&lt;/<span class="name">city</span>&gt;</span></span><br><span class="line">      　<span class="tag">&lt;<span class="name">city</span>&gt;</span>乐山<span class="tag">&lt;/<span class="name">city</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">citys</span>&gt;</span>　</span><br><span class="line">  <span class="tag">&lt;/<span class="name">province</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">province</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">name</span>&gt;</span>新疆<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">citys</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">city</span>&gt;</span>乌鲁木齐<span class="tag">&lt;/<span class="name">city</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">citys</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">province</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">country</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p><2>.用JSON表示中国部分省市数据如下：</2></p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">var country =</span><br><span class="line">        &#123;</span><br><span class="line">            name: "中国",</span><br><span class="line">            provinces: [</span><br><span class="line">            &#123; name: "云南", citys: &#123; city: ["保山", "昆明"]&#125; &#125;, </span><br><span class="line">            &#123; name: "四川", citys: &#123; city: ["成都", "乐山"]&#125; &#125;,</span><br><span class="line">            &#123; name: "新疆", citys: &#123; city: ["乌鲁木齐"]&#125; &#125;</span><br><span class="line">            ]</span><br><span class="line">        &#125;</span><br></pre></td></tr></table></figure>
+<h3 id="0x05-PHP-真好！"><a href="#0x05-PHP-真好！" class="headerlink" title="0x05 PHP 真好！"></a>0x05 PHP 真好！</h3><p>在进行Web开发时，前端的问题解决了，就需要考虑后端服务器的问题，如果构建动态网页的话，不可避免的需要与服务器进行数据交互，一般情况下后端代码都是后端程序员编写，然后会留出一些接口给前端程序员调用。</p>
+<p>这次网页的编写因为需要进行数据交互，所以我尝试了最容易上手的服务器脚本语言PHP，毕竟它是最好的编程语言嘛，虽然之前一直在说这个梗，但一直没有去接触了解，现在尝试了一些，果然是好用啊。</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line">	<span class="comment">//第一个PHP代码</span></span><br><span class="line">	<span class="comment">//设置页面编码格式</span></span><br><span class="line">	header(<span class="string">'content-type:text/html;charset=utf-8'</span>);</span><br><span class="line"></span><br><span class="line">	<span class="keyword">echo</span> <span class="string">"hello PHP"</span>;</span><br><span class="line">	<span class="keyword">echo</span> <span class="string">'&lt;br&gt;'</span>;</span><br><span class="line">	</span><br><span class="line">	<span class="keyword">echo</span> <span class="string">"PHP 是世界上最好的语言！"</span>;</span><br><span class="line">	<span class="keyword">echo</span> <span class="string">'&lt;br&gt;'</span>;</span><br><span class="line">	</span><br><span class="line">	$name = <span class="string">"ppd"</span>;</span><br><span class="line">	<span class="keyword">echo</span> <span class="string">"name: $name"</span>;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">for</span>($i = <span class="number">0</span>; $i &lt; <span class="number">10</span>; $i++)&#123;</span><br><span class="line">		<span class="keyword">echo</span> <span class="string">"666"</span>;</span><br><span class="line">		<span class="keyword">echo</span> <span class="string">"&lt;br&gt;"</span>;</span><br><span class="line">	&#125;</span><br><span class="line"><span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure>
+<h3 id="0x06-小结一下"><a href="#0x06-小结一下" class="headerlink" title="0x06 小结一下"></a>0x06 小结一下</h3><p>经过不断踩坑尝试，了解和学到了很多东西，其实很多东西比想象中的要容易，在没有动手做之前总觉得什么都太难，也不想去尝试，其实迈出第一步，后面会好很多。</p>
+<p>解决问题的能力很重要，要把学习和解决问题划分开，学习需要的循序渐进，系统掌握。而解决问题更重的是针对问题本身，找到其解决的办法，最常用的方法莫过于搜索查找。前者是理论基础，后者是实践经验，二者都需要培养提高。</p>
+<p>差不多根据自己了解的前端开发做了一个总结，内容都是很基础很简单的，如果深入的学习了解可能会有更多的发现和感悟。</p>
+
+          
         
       
     </div>
 
     
+
     
     
-      <footer class="post-footer">
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
         <div class="post-eof"></div>
-      </footer>
+      
+    </footer>
+  </div>
+  
+  
+  
   </article>
+
+
+    
+      
+
+  
+
   
   
   
 
-        
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
   
   
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://ydlan.github.io/2019/04/12/2019-04-12-hexo-blog/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jpg">
       <meta itemprop="name" content="YDLAN">
-      <meta itemprop="description" content="YDLAN的个人博客">
+      <meta itemprop="description" content="记录学习和日常">
+      <meta itemprop="image" content="/images/avatar.jpg">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="YDLAN">
+      <meta itemprop="name" content="YDLAN'S BLOG">
     </span>
+
+    
       <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            <a href="/2019/04/12/2019-04-12-hexo-blog/" class="post-title-link" itemprop="url">选择blog主题为Hexo-Casper</a>
-        </h1>
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/04/12/2019-04-12-hexo-blog/" itemprop="url">
+                  选择blog主题为Hexo-Casper
+                </a>
+              
+            
+          </h1>
+        
 
         <div class="post-meta">
-            <span class="post-meta-item">
+          <span class="post-time">
+
+            
+            
+            
+
+            
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
-              <span class="post-meta-item-text">发表于</span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
 
-              <time title="创建时间：2019-04-12 10:28:08" itemprop="dateCreated datePublished" datetime="2019-04-12T10:28:08+08:00">2019-04-12</time>
-            </span>
-            <span class="post-meta-item">
+              
+                
+              
+
+              <time title="Created: 2019-04-12 10:28:08" itemprop="dateCreated datePublished" datetime="2019-04-12T10:28:08+08:00">2019-04-12</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2019-06-14 18:50:16" itemprop="dateModified" datetime="2019-06-14T18:50:16+08:00">2019-06-14</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/小把戏录/" itemprop="url" rel="index">
-                    <span itemprop="name">小把戏录</span>
-                  </a>
-                </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/小把戏录/" itemprop="url" rel="index"><span itemprop="name">小把戏录</span></a></span>
+
+                
+                
+              
             </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
 
           
 
         </div>
       </header>
+    
 
     
     
@@ -309,75 +618,175 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <p>选择 blog 主题 Hexo-Casper，这个主题的卡片样式我很喜欢，而起可以动态适应，page页可以添加摘要显示图片，可以让blog 避免了呆板，显得灵活有个性，page页内可以添加图片指定，可以为文章配图，能突出文章内容。</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2019/04/12/2019-04-12-hexo-blog/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
+      
+
+      
+        
+          
+            <p>选择 blog 主题 Hexo-Casper，这个主题的卡片样式我很喜欢，而起可以动态适应，page页可以添加摘要显示图片，可以让blog 避免了呆板，显得灵活有个性，page页内可以添加图片指定，可以为文章配图，能突出文章内容。</p>
+<p>recent post，category，tag 页以卡片样式置于页面底端，不影响文章的阅读，布局很合理也很美观，PC端和移动端适应都比较好。页面的 footer 设计的十分简洁，没有过多无意义的内容，看起来很舒服。</p>
+<p>之前尝试过的几个主题对评论功能适应的不是很好，这次使用<a href="https://valine.js.org/" target="_blank" rel="noopener">Valine</a>，开启了评论功能 ，适应的还不错，个人比较满意。</p>
+<p>social 链接提供了很多选项，像 Twitter，Facebook 支持但在国内也无法访问，微博太偏向娱乐化，所以我只贴了 github 链接。事实上social 功能对于博客其实作用不大，只需在about上加一个自己的联系方式就行，我认为。</p>
+<p>当然这个主题好像也存在一些问题，比如怎么开启 rss，还有其他一些可能存在的小问题，不过问题不大，对于blog的整体体验没什么影响。</p>
+<p>之前我试过一些主题，总是会因为一些问题感觉使用起来不方便，所以更换过好几次theme，这次Hexo-Casper，个人感觉还是比较满意的。顺便把之前的几篇文章迁移过来，看了一下也很适应，只是没有引入摘要图片，这篇文章是新主题的第一篇文章，把“黑洞”照片作为了摘要图片。</p>
+<p>关于blog主题Hexo-Casper，大概就这些吧。</p>
+
+          
         
       
     </div>
 
     
+
     
     
-      <footer class="post-footer">
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
         <div class="post-eof"></div>
-      </footer>
+      
+    </footer>
+  </div>
+  
+  
+  
   </article>
+
+
+    
+      
+
+  
+
   
   
   
 
-        
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
   
   
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://ydlan.github.io/2019/03/31/2019-03-31-mkdocs/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jpg">
       <meta itemprop="name" content="YDLAN">
-      <meta itemprop="description" content="YDLAN的个人博客">
+      <meta itemprop="description" content="记录学习和日常">
+      <meta itemprop="image" content="/images/avatar.jpg">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="YDLAN">
+      <meta itemprop="name" content="YDLAN'S BLOG">
     </span>
+
+    
       <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            <a href="/2019/03/31/2019-03-31-mkdocs/" class="post-title-link" itemprop="url">MkDocs构建项目文档流程</a>
-        </h1>
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/03/31/2019-03-31-mkdocs/" itemprop="url">
+                  MkDocs构建项目文档流程
+                </a>
+              
+            
+          </h1>
+        
 
         <div class="post-meta">
-            <span class="post-meta-item">
+          <span class="post-time">
+
+            
+            
+            
+
+            
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
-              <span class="post-meta-item-text">发表于</span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
 
-              <time title="创建时间：2019-03-31 18:59:22" itemprop="dateCreated datePublished" datetime="2019-03-31T18:59:22+08:00">2019-03-31</time>
-            </span>
-            <span class="post-meta-item">
+              
+                
+              
+
+              <time title="Created: 2019-03-31 18:59:22" itemprop="dateCreated datePublished" datetime="2019-03-31T18:59:22+08:00">2019-03-31</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2019-04-13 09:48:16" itemprop="dateModified" datetime="2019-04-13T09:48:16+08:00">2019-04-13</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/小把戏录/" itemprop="url" rel="index">
-                    <span itemprop="name">小把戏录</span>
-                  </a>
-                </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/小把戏录/" itemprop="url" rel="index"><span itemprop="name">小把戏录</span></a></span>
+
+                
+                
+              
             </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
 
           
 
         </div>
       </header>
+    
 
     
     
@@ -385,75 +794,196 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <p>发现很多开源的项目文档，技术说明文档都是使用 mkdocs 构建，自己也了解了一下，确实很简单，快速。它的主题也很简洁，大方，作为技术项目说明或者笔记文档是相当合适的。</p><p>构建部署流程大致如下，详细可以参考官方完整指南。</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2019/03/31/2019-03-31-mkdocs/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
+      
+
+      
+        
+          
+            <p>发现很多开源的项目文档，技术说明文档都是使用 mkdocs 构建，自己也了解了一下，确实很简单，快速。它的主题也很简洁，大方，作为技术项目说明或者笔记文档是相当合适的。</p>
+<p>构建部署流程大致如下，详细可以参考官方完整指南。</p>
+<p>环境：</p>
+<ul>
+<li>支持Windows/Linux/macOS</li>
+<li>需要安装 Python 2.7 +</li>
+<li>需要 pip</li>
+</ul>
+<p>1、安装MkDocs </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ pip install mkdocs</span><br></pre></td></tr></table></figure>
+<p>运行 <code>mkdocs help</code> 可以检查是否正确安装。</p>
+<p>2、输入以下命令构建项目</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ mkdocs new project</span><br></pre></td></tr></table></figure>
+<p><code>project</code> 是指项目名，你要在那个目录下创建，就切换到那个目录下  Windows的cmd 命令行和Linux的终端命令都是类似操作。</p>
+<p>构建好的项目里有一个配置文件 <code>mkdocs.yml</code>, 和一个包含文档源码的 <code>docs</code> 文件夹. 在 <code>docs</code> 文件夹里包含了一个名为 <code>index.md</code> 的文档. </p>
+<p>3、启动内建服务器，进行预览</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ mkdocs serve</span><br></pre></td></tr></table></figure>
+<p>它会自动使用8000 端口，在浏览器中打开<code>&lt;http://127.0.0.1:8000/&gt;</code>就可以完成效果的预览。</p>
+<p>之后就是修改配置文件 <code>mkdocs.yml</code> ，自己可以添加一些配置信息，包括站点名称，文档页面等，很简单。</p>
+<p>4、使用以下命令,创建新的页面</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ curl &apos;jaspervdj.be/lorem-markdownum/markdown.txt&apos; &gt; docs/about.md</span><br></pre></td></tr></table></figure>
+<p>其实根本不用那么麻烦，在Windows下只用像创建文件目录那样操作即可，所有的文件都在<code>docs</code> 文件目录内。</p>
+<p>5、主要是修改配置文件 <code>mkdocs.yml</code>，这个决定了你的站点结构。</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">site_name:</span> <span class="string">LYDSDOCS</span></span><br><span class="line"></span><br><span class="line"><span class="attr">nav:</span></span><br><span class="line"><span class="attr">- Home:</span> <span class="string">index.md</span></span><br><span class="line"><span class="attr">- CSDocs:</span></span><br><span class="line"><span class="bullet">        -</span> <span class="string">操作系统:</span> <span class="string">csdocs/OSNotes.md</span></span><br><span class="line"><span class="bullet">        -</span> <span class="string">数据结构:</span> <span class="string">csdocs/data-structure.md</span></span><br><span class="line"><span class="bullet">        -</span> <span class="string">软件工程:</span> <span class="string">csdocs/software.md</span></span><br><span class="line"></span><br><span class="line"><span class="attr">- About:</span> <span class="string">about.md</span></span><br><span class="line"></span><br><span class="line"><span class="attr">theme:</span> <span class="string">readthedocs</span></span><br></pre></td></tr></table></figure>
+<p>6、站点生成</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ mkdocs build</span><br></pre></td></tr></table></figure>
+<p>该命令创建了一个 <code>site</code> 新目录. 里面的文件就是你的站点资源文件，你可以把这些文件部署到服务器上或者github page上，就可以进行访问了。</p>
+<p>大概流程就这些，其实和 hexo 生成站点差不多，一些具体的细节可以参考官方文档。<a href="https://markdown-docs-zh.readthedocs.io/zh_CN/latest/" target="_blank" rel="noopener">MkDocs 中文文档</a></p>
+
+          
         
       
     </div>
 
     
+
     
     
-      <footer class="post-footer">
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
         <div class="post-eof"></div>
-      </footer>
+      
+    </footer>
+  </div>
+  
+  
+  
   </article>
+
+
+    
+      
+
+  
+
   
   
   
 
-        
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
   
   
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://ydlan.github.io/2019/03/28/2019-03-28-linux-shell/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jpg">
       <meta itemprop="name" content="YDLAN">
-      <meta itemprop="description" content="YDLAN的个人博客">
+      <meta itemprop="description" content="记录学习和日常">
+      <meta itemprop="image" content="/images/avatar.jpg">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="YDLAN">
+      <meta itemprop="name" content="YDLAN'S BLOG">
     </span>
+
+    
       <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            <a href="/2019/03/28/2019-03-28-linux-shell/" class="post-title-link" itemprop="url">认识 Shell Bash Cmd</a>
-        </h1>
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/03/28/2019-03-28-linux-shell/" itemprop="url">
+                  认识 Shell Bash Cmd
+                </a>
+              
+            
+          </h1>
+        
 
         <div class="post-meta">
-            <span class="post-meta-item">
+          <span class="post-time">
+
+            
+            
+            
+
+            
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
-              <span class="post-meta-item-text">发表于</span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
 
-              <time title="创建时间：2019-03-28 21:30:18" itemprop="dateCreated datePublished" datetime="2019-03-28T21:30:18+08:00">2019-03-28</time>
-            </span>
-            <span class="post-meta-item">
+              
+                
+              
+
+              <time title="Created: 2019-03-28 21:30:18" itemprop="dateCreated datePublished" datetime="2019-03-28T21:30:18+08:00">2019-03-28</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2019-04-13 09:47:56" itemprop="dateModified" datetime="2019-04-13T09:47:56+08:00">2019-04-13</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/学习笔记/" itemprop="url" rel="index">
-                    <span itemprop="name">学习笔记</span>
-                  </a>
-                </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/学习笔记/" itemprop="url" rel="index"><span itemprop="name">学习笔记</span></a></span>
+
+                
+                
+              
             </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
 
           
 
         </div>
       </header>
+    
 
     
     
@@ -461,75 +991,176 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <p>Windows 系统中的 cmd 的某些命令和 dos 中的命令相似，所以有很多人把二者混为一谈，dos 本身就是一个系统，我们大概几乎可能接触不到了，而我们平时使用的 cmd 命令行是属于Windows系统的一部分，是一种桌面应用。另外 cmd 也不是 shell，虽然都是命令解释器，但 bash 要比 cmd 强大的多，当然Windows也有强大的shell叫windows power shell。</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2019/03/28/2019-03-28-linux-shell/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
+      
+
+      
+        
+          
+            <p>Windows 系统中的 cmd 的某些命令和 dos 中的命令相似，所以有很多人把二者混为一谈，dos 本身就是一个系统，我们大概几乎可能接触不到了，而我们平时使用的 cmd 命令行是属于Windows系统的一部分，是一种桌面应用。另外 cmd 也不是 shell，虽然都是命令解释器，但 bash 要比 cmd 强大的多，当然Windows也有强大的shell叫windows power shell。</p>
+<p>对于我们常说的 Shell，它既是一种脚本语言，又是一种应用程序。Shell 是 UNIX/Linux 下的脚本编程语言，它无需编译，是解释执行的。另外 Shell 还是用户和应用程序与内核沟通的桥梁，它的一端连接着 UNIX/Linux 内核，它提供了用户与内核进行交互操作的一种接口，它接收用户输入的命令并把它送入内核去执行。</p>
+<p>Shell管理我们与操作系统之间的交互：等待我们输入，向操作系统解释我们的输入，并且处理各种各样的操作系统的输出结果。不同系统有不同的shell，如bash、C shell、windows power shell 等等；在linux系统中，通常是Bourne Again shell ( 即bash).</p>
+<p>Terminal 在Linux 系统中打开终端后，就可以输入Shell 命令了。</p>
+<p>Bash 是shell 的一种，最常用的shell之一。</p>
+<p>git Bash 方便在windows下使用git命令的模拟终端。</p>
+<p>PuTTY是一个Telnet、SSH、rlogin、纯TCP以及串行接口连接软件。</p>
+<p>Xshell是一款功能强大且安全的终端模拟器，支持SSH、SFTP、TELNET、RLOGIN和SERIAL。</p>
+
+          
         
       
     </div>
 
     
+
     
     
-      <footer class="post-footer">
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
         <div class="post-eof"></div>
-      </footer>
+      
+    </footer>
+  </div>
+  
+  
+  
   </article>
+
+
+    
+      
+
+  
+
   
   
   
 
-        
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
   
   
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://ydlan.github.io/2019/03/16/2019-03-16-rsic-instruction/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jpg">
       <meta itemprop="name" content="YDLAN">
-      <meta itemprop="description" content="YDLAN的个人博客">
+      <meta itemprop="description" content="记录学习和日常">
+      <meta itemprop="image" content="/images/avatar.jpg">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="YDLAN">
+      <meta itemprop="name" content="YDLAN'S BLOG">
     </span>
+
+    
       <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            <a href="/2019/03/16/2019-03-16-rsic-instruction/" class="post-title-link" itemprop="url">RISC指令集的五个周期</a>
-        </h1>
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/03/16/2019-03-16-rsic-instruction/" itemprop="url">
+                  RISC指令集的五个周期
+                </a>
+              
+            
+          </h1>
+        
 
         <div class="post-meta">
-            <span class="post-meta-item">
+          <span class="post-time">
+
+            
+            
+            
+
+            
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
-              <span class="post-meta-item-text">发表于</span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
 
-              <time title="创建时间：2019-03-16 15:29:44" itemprop="dateCreated datePublished" datetime="2019-03-16T15:29:44+08:00">2019-03-16</time>
-            </span>
-            <span class="post-meta-item">
+              
+                
+              
+
+              <time title="Created: 2019-03-16 15:29:44" itemprop="dateCreated datePublished" datetime="2019-03-16T15:29:44+08:00">2019-03-16</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2019-04-12 10:09:03" itemprop="dateModified" datetime="2019-04-12T10:09:03+08:00">2019-04-12</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/计算机/" itemprop="url" rel="index">
-                    <span itemprop="name">计算机</span>
-                  </a>
-                </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/计算机/" itemprop="url" rel="index"><span itemprop="name">计算机</span></a></span>
+
+                
+                
+              
             </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
 
           
 
         </div>
       </header>
+    
 
     
     
@@ -537,34 +1168,62 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <p>RISC(reduced instruction set computer,精简指令集计算机)简称为精简指令集。RISC把执行指令的精力主要放在了经常使用的指令上面。本文主要介绍了在RISC指令集中一条指令的五个主要执行CC（Clock Cycle，时钟周期）的主要涵义以及内容。</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2019/03/16/2019-03-16-rsic-instruction/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
+      
+
+      
+        
+          
+            <p>RISC(reduced instruction set computer,精简指令集计算机)简称为精简指令集。RISC把执行指令的精力主要放在了经常使用的指令上面。本文主要介绍了在RISC指令集中一条指令的五个主要执行CC（Clock Cycle，时钟周期）的主要涵义以及内容。</p>
+<p>这五个时钟周期分别为：IF(Instruction fetch，取指令)，ID(Instruction decode/register fetch cycle，指令解码)，EX（Execution/effective address cycle，执行），MEM(Memory access，内存访问)， WB(Write-back cycle，写回)。</p>
+<p><strong>IF</strong>：根据PC（program counter，程序计数器）中所存储的内存地址，在内存中找到该地址所指向的指令，并将该指令存储在寄存器中。同时，PC指向下一条指令，完成这个操作要求PC加4（以32位指令集为例，如果是64位则要加8）。</p>
+<p><strong>ID</strong> :  操作从IF阶段获取来的指令。将指令解码，最终找到指令所需要的寄存器中存储的数据。如果该指令只一条跳转指令，那么在这一阶段需要根据跳转指令的意义对获取的值进行比较，如果比较结果为true则执行跳转，如果比较结果为false则不执行跳转，继续下一条指令的执行；如果指令需要对指令中某些位进行填充，也在ID阶段完成，比如对高四位进行填充以满足指令结果是32位；计算可能跳转的指令的地址。   </p>
+<p><strong>EX</strong> : ALU（Arithmetic Logic Unit，算术逻辑单元）对ID阶段的结果进行计算。在ID阶段已经获得了指令计算所需要的寄存器的值，那么在EX阶段需要根据指令的意义对这些寄存器的值进行计算。计算根据指令的不同变得不同。主要有三种类型的ALU计算：1. ALU根据ID中补充的地址，对有效的地址单元进行计算，最终得到所需要的内存的地址；2. 根据指令的意义，对从寄存器中获取的值，进行操作，比如对两个寄存器的值进行相加；3. 根据寄存器的值以及补充的值，计算出立即数的结果。    </p>
+<p><strong>MEM</strong>：如果当前指令是Load指令，那么，根据EX计算出的内存地址，从内存中获取对应的值；如果当前指令是store，那么，根据EX计算出的内存地址和寄存器的值，将寄存器的值存入该内存地址中。其他的指令一般不会设计内存的访问。   </p>
+<p><strong>WB</strong>：将计算出来的最终的寄存器的值写入到register file（寄存器文件）中。这部操作包括从内存中获取的值以及通过算术运算得到的结果。 </p>
+<p>以上五个时钟周期便是一条RISC指令执行的主要步骤。</p>
+
+          
         
       
     </div>
 
     
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
 
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
   </div>
+  
+  
+  
+  </article>
+
+
+    
+  </section>
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/3/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span><a class="page-number" href="/page/5/">5</a><a class="page-number" href="/page/6/">6</a><a class="extend next" rel="next" href="/page/5/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
+    <a class="extend prev" rel="prev" href="/page/3/"><i class="fa fa-angle-left" aria-label="Previous page"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span><a class="page-number" href="/page/5/">5</a><a class="page-number" href="/page/6/">6</a><a class="extend next" rel="next" href="/page/5/"><i class="fa fa-angle-right" aria-label="Next page"></i></a>
   </nav>
 
 
@@ -573,104 +1232,217 @@
           
 
         </div>
+        
           
   
-  <div class="toggle sidebar-toggle">
-    <span class="toggle-line toggle-line-first"></span>
-    <span class="toggle-line toggle-line-middle"></span>
-    <span class="toggle-line toggle-line-last"></span>
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
   </div>
 
-  <aside class="sidebar">
+  <aside id="sidebar" class="sidebar">
+    
     <div class="sidebar-inner">
 
-      <ul class="sidebar-nav motion-element">
-        <li class="sidebar-nav-toc">
-          文章目录
-        </li>
-        <li class="sidebar-nav-overview">
-          站点概览
-        </li>
-      </ul>
+      
 
-      <!--noindex-->
-      <div class="post-toc-wrap sidebar-panel">
-      </div>
-      <!--/noindex-->
+      
 
-      <div class="site-overview-wrap sidebar-panel">
-        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-  <img class="site-author-image" itemprop="image" alt="YDLAN" src="/images/avatar.jpg">
-  <p class="site-author-name" itemprop="name">YDLAN</p>
-  <div class="site-description" itemprop="description">YDLAN的个人博客</div>
-</div>
-<div class="site-state-wrap motion-element">
-  <nav class="site-state">
-      <div class="site-state-item site-state-posts">
-          <a href="/archives">
-          <span class="site-state-item-count">29</span>
-          <span class="site-state-item-name">日志</span>
-        </a>
-      </div>
-      <div class="site-state-item site-state-categories">
-            <a href="/categories/">
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/images/avatar.jpg" alt="YDLAN">
+            
+              <p class="site-author-name" itemprop="name">YDLAN</p>
+              <p class="site-description motion-element" itemprop="description">记录学习和日常</p>
+          </div>
+
           
-        <span class="site-state-item-count">7</span>
-        <span class="site-state-item-name">分类</span></a>
-      </div>
-      <div class="site-state-item site-state-tags">
-            <a href="/tags/">
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">29</span>
+                    <span class="site-state-item-name">posts</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  <a href="/categories/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">7</span>
+                    <span class="site-state-item-name">categories</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  <a href="/tags/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">23</span>
+                    <span class="site-state-item-name">tags</span>
+                  </a>
+                </div>
+              
+            </nav>
           
-        <span class="site-state-item-count">23</span>
-        <span class="site-state-item-name">标签</span></a>
-      </div>
-  </nav>
-</div>
-  <div class="links-of-author motion-element">
-      <span class="links-of-author-item">
-        <a href="https://github.com/ydlan" title="GitHub &rarr; https://github.com/ydlan" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
-      </span>
-      <span class="links-of-author-item">
-        <a href="mailto:lanyd1997@qq.com" title="E-Mail &rarr; mailto:lanyd1997@qq.com" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
-      </span>
-  </div>
 
+          
 
+          
+            <div class="links-of-author motion-element">
+              
+                <span class="links-of-author-item">
+                  <a href="https://github.com/ydlan" target="_blank" title="GitHub"><i class="fa fa-fw fa-github"></i>GitHub</a>
+                  
+                </span>
+              
+                <span class="links-of-author-item">
+                  <a href="https://blog.csdn.net/lanyandong" target="_blank" title="CSDN"><i class="fa fa-fw fa-crosshairs"></i>CSDN</a>
+                  
+                </span>
+              
+                <span class="links-of-author-item">
+                  <a href="mailto:lanyd1997@qq.com" target="_blank" title="E-Mail"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  
+                </span>
+              
+            </div>
+          
 
-      </div>
+          
+          
+		  
+		  <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=77159&auto=1&height=66"></iframe>
+
+          
+          
+
+          
+            
+          
+          
+
+        </div>
+      </section>
+
+      
+
+      
 
     </div>
   </aside>
-  <div id="sidebar-dimmer"></div>
 
 
+        
       </div>
     </main>
 
-    <footer class="footer">
+    <footer id="footer" class="footer">
       <div class="footer-inner">
-        
-
-<div class="copyright">
-  
-  &copy; 
-  <span itemprop="copyrightYear">2020</span>
-  <span class="with-love">
+        <div class="copyright"> &copy; <span itemprop="copyrightYear">2020</span>
+  <span class="with-love" id="animate">
     <i class="fa fa-user"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">YDLAN</span>
+
+  
+
+  
 </div>
-  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.8.0
-  </div>
+
+
+
+
+  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> v3.8.0</div>
+
+
+
   <span class="post-meta-divider">|</span>
-  <div class="theme-info">主题 – <a href="https://mist.theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Mist</a> v7.5.0
-  </div>
+
+
+
+  <div class="theme-info">Theme – <a class="theme-link" target="_blank" href="https://theme-next.org">NexT.Mist</a> v6.5.0</div>
+
+
+
 
         
-
-
-
-
 
 
 
@@ -682,15 +1454,92 @@
         
       </div>
     </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+	
+    
+
+    
   </div>
 
   
-  <script src="/lib/anime.min.js"></script>
-  <script src="/lib/velocity/velocity.min.js"></script>
-  <script src="/lib/velocity/velocity.ui.min.js"></script>
-<script src="/js/utils.js"></script><script src="/js/motion.js"></script>
-<script src="/js/schemes/muse.js"></script>
-<script src="/js/next-boot.js"></script>
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=6.5.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=6.5.0"></script>
+
+
+
+  
+  
+
+  
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=6.5.0"></script>
+
+
+
+  
 
 
 
@@ -705,11 +1554,30 @@
 
 
 
+  
 
 
 
 
 
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
 
   
 

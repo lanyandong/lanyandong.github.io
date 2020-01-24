@@ -1,83 +1,146 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
-<head>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="en">
+<head><meta name="generator" content="Hexo 3.8.0">
   <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 3.8.0">
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon16x16.png">
-
-<link rel="stylesheet" href="/css/main.css">
 
 
-<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
 
 
-<script id="hexo-configurations">
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=6.5.0" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch.png?v=6.5.0">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon32x32.png?v=6.5.0">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon16x16.png?v=6.5.0">
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" id="hexo.configurations">
   var NexT = window.NexT || {};
   var CONFIG = {
     root: '/',
     scheme: 'Mist',
-    version: '7.5.0',
-    exturl: false,
-    sidebar: {"position":"right","display":"post","offset":12,"onmobile":false},
-    copycode: {"enable":false,"show_result":false,"style":null},
-    back2top: {"enable":true,"sidebar":false,"scrollpercent":false},
-    bookmark: {"enable":false,"color":"#222","save":"auto"},
+    version: '6.5.0',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
     fancybox: false,
-    mediumzoom: false,
+    fastclick: false,
     lazyload: false,
-    pangu: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
     algolia: {
-      appID: '',
+      applicationID: '',
       apiKey: '',
       indexName: '',
       hits: {"per_page":10},
       labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
-    },
-    localsearch: {"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
-    path: '',
-    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
-    translation: {
-      copy_button: '复制',
-      copy_success: '复制成功',
-      copy_failure: '复制失败'
-    },
-    sidebarPadding: 40
+    }
   };
 </script>
 
-  <meta name="description" content="0x00 前言终于有时间了，整理一下嵌入式硬件的东西，在过去的一个学期里选修了嵌入式课程，然后相对完整的了解了嵌入式开发过程，咱物联网专业比较好的一点就是可以结合软硬件，都可以了解，上学期还做了一些WSN ZigBee，RFID 的实验，当时觉得用不到，没想到，这次实训竟然也做嵌入式开发，也使用了ZigBee模块完成一些功能，感觉所有东西并不是绝对没用，多了解一点总是好的。">
+
+  
+
+
+
+
+  <meta name="description" content="0x00 前言终于有时间了，整理一下嵌入式硬件的东西，在过去的一个学期里选修了嵌入式课程，然后相对完整的了解了嵌入式开发过程，咱物联网专业比较好的一点就是可以结合软硬件，都可以了解，上学期还做了一些WSN ZigBee，RFID 的实验，当时觉得用不到，没想到，这次实训竟然也做嵌入式开发，也使用了ZigBee模块完成一些功能，感觉所有东西并不是绝对没用，多了解一点总是好的。 0x01 嵌入式入门关">
 <meta name="keywords" content="嵌入式">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Embedded-Hardware">
 <meta property="og:url" content="https://ydlan.github.io/2019/07/11/2019-07-11-embedded-hardware/index.html">
-<meta property="og:site_name" content="YDLAN">
-<meta property="og:description" content="0x00 前言终于有时间了，整理一下嵌入式硬件的东西，在过去的一个学期里选修了嵌入式课程，然后相对完整的了解了嵌入式开发过程，咱物联网专业比较好的一点就是可以结合软硬件，都可以了解，上学期还做了一些WSN ZigBee，RFID 的实验，当时觉得用不到，没想到，这次实训竟然也做嵌入式开发，也使用了ZigBee模块完成一些功能，感觉所有东西并不是绝对没用，多了解一点总是好的。">
-<meta property="og:locale" content="zh-CN">
+<meta property="og:site_name" content="YDLAN&#39;S BLOG">
+<meta property="og:description" content="0x00 前言终于有时间了，整理一下嵌入式硬件的东西，在过去的一个学期里选修了嵌入式课程，然后相对完整的了解了嵌入式开发过程，咱物联网专业比较好的一点就是可以结合软硬件，都可以了解，上学期还做了一些WSN ZigBee，RFID 的实验，当时觉得用不到，没想到，这次实训竟然也做嵌入式开发，也使用了ZigBee模块完成一些功能，感觉所有东西并不是绝对没用，多了解一点总是好的。 0x01 嵌入式入门关">
+<meta property="og:locale" content="en">
 <meta property="og:updated_time" content="2019-07-11T12:49:27.505Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Embedded-Hardware">
-<meta name="twitter:description" content="0x00 前言终于有时间了，整理一下嵌入式硬件的东西，在过去的一个学期里选修了嵌入式课程，然后相对完整的了解了嵌入式开发过程，咱物联网专业比较好的一点就是可以结合软硬件，都可以了解，上学期还做了一些WSN ZigBee，RFID 的实验，当时觉得用不到，没想到，这次实训竟然也做嵌入式开发，也使用了ZigBee模块完成一些功能，感觉所有东西并不是绝对没用，多了解一点总是好的。">
-
-<link rel="canonical" href="https://ydlan.github.io/2019/07/11/2019-07-11-embedded-hardware/">
+<meta name="twitter:description" content="0x00 前言终于有时间了，整理一下嵌入式硬件的东西，在过去的一个学期里选修了嵌入式课程，然后相对完整的了解了嵌入式开发过程，咱物联网专业比较好的一点就是可以结合软硬件，都可以了解，上学期还做了一些WSN ZigBee，RFID 的实验，当时觉得用不到，没想到，这次实训竟然也做嵌入式开发，也使用了ZigBee模块完成一些功能，感觉所有东西并不是绝对没用，多了解一点总是好的。 0x01 嵌入式入门关">
 
 
-<script id="page-configurations">
-  // https://hexo.io/docs/variables.html
+
+
+
+
+  <link rel="canonical" href="https://ydlan.github.io/2019/07/11/2019-07-11-embedded-hardware/">
+
+
+
+<script type="text/javascript" id="page.configurations">
   CONFIG.page = {
     sidebar: "",
-    isHome: false,
-    isPost: true,
-    isPage: false,
-    isArchive: false
   };
 </script>
 
-  <title>Embedded-Hardware | YDLAN</title>
+  <title>Embedded-Hardware | YDLAN'S BLOG</title>
   
+
+
+
+
+
 
 
 
@@ -85,148 +148,255 @@
 
 
   <noscript>
-  <style>
-  .use-motion .brand,
-  .use-motion .menu-item,
-  .sidebar-inner,
-  .use-motion .post-block,
-  .use-motion .pagination,
-  .use-motion .comments,
-  .use-motion .post-header,
-  .use-motion .post-body,
-  .use-motion .collection-header { opacity: initial; }
+  <style type="text/css">
+    .use-motion .motion-element,
+    .use-motion .brand,
+    .use-motion .menu-item,
+    .sidebar-inner,
+    .use-motion .post-block,
+    .use-motion .pagination,
+    .use-motion .comments,
+    .use-motion .post-header,
+    .use-motion .post-body,
+    .use-motion .collection-title { opacity: initial; }
 
-  .use-motion .site-title,
-  .use-motion .site-subtitle {
-    opacity: initial;
-    top: initial;
-  }
+    .use-motion .logo,
+    .use-motion .site-title,
+    .use-motion .site-subtitle {
+      opacity: initial;
+      top: initial;
+    }
 
-  .use-motion .logo-line-before i { left: initial; }
-  .use-motion .logo-line-after i { right: initial; }
+    .use-motion {
+      .logo-line-before i { left: initial; }
+      .logo-line-after i { right: initial; }
+    }
   </style>
 </noscript>
 
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage">
-  <div class="container use-motion">
+<body itemscope itemtype="http://schema.org/WebPage" lang="en">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
-    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-brand-container">
-  <div class="site-meta">
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
 
-    <div>
+    <div class="custom-logo-site-title">
       <a href="/" class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
-        <span class="site-title">YDLAN</span>
+        <span class="site-title">YDLAN'S BLOG</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
+    
+      
         <p class="site-subtitle">一起来探索吧！</p>
+      
+    
   </div>
 
   <div class="site-nav-toggle">
-    <div class="toggle" aria-label="切换导航栏">
-      <span class="toggle-line toggle-line-first"></span>
-      <span class="toggle-line toggle-line-middle"></span>
-      <span class="toggle-line toggle-line-last"></span>
-    </div>
+    <button aria-label="Toggle navigation bar">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
   </div>
 </div>
+
 
 
 <nav class="site-nav">
   
-  <ul id="menu" class="menu">
-        <li class="menu-item menu-item-home">
-
-    <a href="/" rel="section"><i class="fa fa-fw fa-home"></i>首页</a>
-
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+          
+          <li class="menu-item menu-item-home">
+    <a href="/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-home"></i> <br>Home</a>
   </li>
-        <li class="menu-item menu-item-categories">
-
-    <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>分类</a>
-
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+    <a href="/archives/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>Archives</a>
   </li>
-        <li class="menu-item menu-item-tags">
-
-    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>标签</a>
-
+        
+        
+        
+          
+          <li class="menu-item menu-item-categories">
+    <a href="/categories/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-th"></i> <br>Categories</a>
   </li>
-        <li class="menu-item menu-item-about">
-
-    <a href="/about/" rel="section"><i class="fa fa-fw fa-user"></i>关于</a>
-
+        
+        
+        
+          
+          <li class="menu-item menu-item-tags">
+    <a href="/tags/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>Tags</a>
   </li>
-  </ul>
+        
+        
+        
+          
+          <li class="menu-item menu-item-about">
+    <a href="/about/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-user"></i> <br>About</a>
+  </li>
 
+      
+      
+    </ul>
+  
+
+  
+    
+
+  
+
+  
 </nav>
+
+
+
+  
+
+
+
 </div>
     </header>
 
     
-  <div class="back-to-top">
-    <i class="fa fa-arrow-up"></i>
-    <span>0%</span>
-  </div>
 
 
-    <main class="main">
+    <main id="main" class="main">
       <div class="main-inner">
         <div class="content-wrap">
           
-
-          <div class="content">
+          <div id="content" class="content">
             
 
-  <div class="posts-expand">
-      
+  <div id="posts" class="posts-expand">
+    
+
+  
+
   
   
-  <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="zh-CN">
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://ydlan.github.io/2019/07/11/2019-07-11-embedded-hardware/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jpg">
       <meta itemprop="name" content="YDLAN">
-      <meta itemprop="description" content="YDLAN的个人博客">
+      <meta itemprop="description" content="记录学习和日常">
+      <meta itemprop="image" content="/images/avatar.jpg">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="YDLAN">
+      <meta itemprop="name" content="YDLAN'S BLOG">
     </span>
+
+    
       <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          Embedded-Hardware
-        </h1>
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">Embedded-Hardware
+              
+            
+          </h1>
+        
 
         <div class="post-meta">
-            <span class="post-meta-item">
+          <span class="post-time">
+
+            
+            
+            
+
+            
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
-              <span class="post-meta-item-text">发表于</span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
 
-              <time title="创建时间：2019-07-11 10:16:10" itemprop="dateCreated datePublished" datetime="2019-07-11T10:16:10+08:00">2019-07-11</time>
-            </span>
-            <span class="post-meta-item">
+              
+                
+              
+
+              <time title="Created: 2019-07-11 10:16:10 / Modified: 20:49:27" itemprop="dateCreated datePublished" datetime="2019-07-11T10:16:10+08:00">2019-07-11</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/学习笔记/" itemprop="url" rel="index">
-                    <span itemprop="name">学习笔记</span>
-                  </a>
-                </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/学习笔记/" itemprop="url" rel="index"><span itemprop="name">学习笔记</span></a></span>
+
+                
+                
+              
             </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
 
           
 
         </div>
       </header>
+    
 
     
     
@@ -234,7 +404,10 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h3 id="0x00-前言"><a href="#0x00-前言" class="headerlink" title="0x00 前言"></a>0x00 前言</h3><p>终于有时间了，整理一下嵌入式硬件的东西，在过去的一个学期里选修了嵌入式课程，然后相对完整的了解了嵌入式开发过程，咱物联网专业比较好的一点就是可以结合软硬件，都可以了解，上学期还做了一些WSN ZigBee，RFID 的实验，当时觉得用不到，没想到，这次实训竟然也做嵌入式开发，也使用了ZigBee模块完成一些功能，感觉所有东西并不是绝对没用，多了解一点总是好的。</p><a id="more"></a>
+      
+
+      
+        <h3 id="0x00-前言"><a href="#0x00-前言" class="headerlink" title="0x00 前言"></a>0x00 前言</h3><p>终于有时间了，整理一下嵌入式硬件的东西，在过去的一个学期里选修了嵌入式课程，然后相对完整的了解了嵌入式开发过程，咱物联网专业比较好的一点就是可以结合软硬件，都可以了解，上学期还做了一些WSN ZigBee，RFID 的实验，当时觉得用不到，没想到，这次实训竟然也做嵌入式开发，也使用了ZigBee模块完成一些功能，感觉所有东西并不是绝对没用，多了解一点总是好的。</p>
 <h3 id="0x01-嵌入式入门"><a href="#0x01-嵌入式入门" class="headerlink" title="0x01 嵌入式入门"></a>0x01 嵌入式入门</h3><p>关于硬件的东西，之前几乎是从来没有接触，完全不懂什么SOC，也不知道什么MCU，更别说是做开发了，之前唯一对硬件感兴趣的就是树莓派，听说是一块很不错的板子，但由于各种情况，也没有入坑。知道这个学期选了嵌入式，然后因为要完成实验所以入坑了一块EK-TM4C123GXL 开发板，麻雀虽小五脏俱全，这块板子基本能够满足所有嵌入式的基本开发，用来学习还是很不错的。</p>
 <p>关于硬件的学习，其实最主要还是要了解硬件资源，熟悉硬件提供的功能，包括GPIO，时钟，中断等，这些都是最基本的，另外就是一些ADC，DAC，时钟频率，高低电平，这些也是要十分熟悉才行。硬件开发有很多东西是记不住的，所以学会查文档很重要的，学习路线可以大致为：看文档了解硬件资源–找案例照葫芦画瓢–网上查阅资料–查开发文档；有些东西不用刻意去记，用的时候去查就行。但构建思路，开发步骤是需要明确的，比如说要使用GPIO时要初始化寄存器，使用模块功能时要考虑时钟的影响，使用中断时要了解如何调用中断处理函数，如果有要连接传感器的话，还要参考传感器的资料，了解其电气特性等。总之，查资料，阅读资料，理解资料在硬件开发中尤为重要。</p>
 <h3 id="0x02-实训硬件开发"><a href="#0x02-实训硬件开发" class="headerlink" title="0x02 实训硬件开发"></a>0x02 实训硬件开发</h3><p>实训时使用的是CC2530，搭载了ZigBee模块，在开发中都是使用IAR软件，刚好和我们wsn实验ZigBee联系上了，不过我们在wsn实验中我只使用了ZigBee协议栈组网通信，而这次我是利用ZigBee通信来控制硬件功能，而硬件功能实现就是需要嵌入式开发的知识了，刚好把所学内容进行了结合，在嵌入式开发中，不同的硬件资源可能开发就有所不同，但大多数底层逻辑是相同的，所以重点是理解思路。但嵌入式开发仍然有很多烦人的问题，这些Bug出现的原因各种各样，有的是硬件本身故障，有的程序错误，甚至可能的电路连接错误，所以在开发中遇到Bug，排查问题方式方法很关键，我个人认为先从硬件开始检查，最后再检查软件程序，逐层排查是一个相对较好的思路。</p>
@@ -243,147 +416,313 @@
 <h3 id="0x03-总结"><a href="#0x03-总结" class="headerlink" title="0x03 总结"></a>0x03 总结</h3><p>本来是准备写一篇详细嵌入式硬件开发的文章，把自己使用的TM4C123GXL 开发和CC2530开发时使用的核心技术，关键代码总结一下，后面发现硬件开发这玩意儿，只要理解了解很简单，实现起来也是多变的，没有一个很固定的标准，所以也不太好总结，也没太必要，下一次遇到是查资料就行。这次在完成项目时参考了很多网上的资料，学到很多东西，比如博客园的小蜜蜂老师和csdn的Bruceoxl老师，他们的博文很全面也很详细，给了我很大的帮助，同时也挺佩服他们能够输出那么多优质内容，应该向他们学习。</p>
 <p>写到这也要告一段落了，关于硬件嵌入式ZigBee开发，我究竟理解多少，掌握了多少，过段时间后我是否还能记起，这些都是无法量化和衡量的，只希望自己总结的方法能够适用于以后的问题。</p>
 
+      
     </div>
 
     
+
+    
     
     
 
-      <footer class="post-footer">
-          <div class="post-tags">
-              <a href="/tags/嵌入式/" rel="tag"># 嵌入式</a>
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/嵌入式/" rel="tag"># 嵌入式</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/06/29/2019-06-29-tech-stack/" rel="next" title="记录零碎技术栈">
+                <i class="fa fa-chevron-left"></i> 记录零碎技术栈
+              </a>
+            
           </div>
 
-        
+          <span class="post-nav-divider"></span>
 
-          <div class="post-nav">
-            <div class="post-nav-next post-nav-item">
-                <a href="/2019/06/29/2019-06-29-tech-stack/" rel="next" title="记录零碎技术栈">
-                  <i class="fa fa-chevron-left"></i> 记录零碎技术栈
-                </a>
-            </div>
-
-            <span class="post-nav-divider"></span>
-
-            <div class="post-nav-prev post-nav-item">
-                <a href="/2019/07/11/2019-07-11-vmware-linux/" rel="prev" title="VMware-Linux">
-                  VMware-Linux <i class="fa fa-chevron-right"></i>
-                </a>
-            </div>
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/07/11/2019-07-11-vmware-linux/" rel="prev" title="VMware-Linux">
+                VMware-Linux <i class="fa fa-chevron-right"></i>
+              </a>
+            
           </div>
-      </footer>
-    
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
   </article>
-  
-  
-  
+
 
   </div>
 
 
           </div>
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/images/avatar.jpg" alt="YDLAN">
+            
+              <p class="site-author-name" itemprop="name">YDLAN</p>
+              <p class="site-description motion-element" itemprop="description">记录学习和日常</p>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">29</span>
+                    <span class="site-state-item-name">posts</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  <a href="/categories/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">7</span>
+                    <span class="site-state-item-name">categories</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  <a href="/tags/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">23</span>
+                    <span class="site-state-item-name">tags</span>
+                  </a>
+                </div>
+              
+            </nav>
+          
+
+          
+
+          
+            <div class="links-of-author motion-element">
+              
+                <span class="links-of-author-item">
+                  <a href="https://github.com/ydlan" target="_blank" title="GitHub"><i class="fa fa-fw fa-github"></i>GitHub</a>
+                  
+                </span>
+              
+                <span class="links-of-author-item">
+                  <a href="https://blog.csdn.net/lanyandong" target="_blank" title="CSDN"><i class="fa fa-fw fa-crosshairs"></i>CSDN</a>
+                  
+                </span>
+              
+                <span class="links-of-author-item">
+                  <a href="mailto:lanyd1997@qq.com" target="_blank" title="E-Mail"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  
+                </span>
+              
+            </div>
+          
+
+          
+          
+		  
+		  <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=77159&auto=1&height=66"></iframe>
+
+          
+          
+
+          
+            
+          
           
 
         </div>
-          
-  
-  <div class="toggle sidebar-toggle">
-    <span class="toggle-line toggle-line-first"></span>
-    <span class="toggle-line toggle-line-middle"></span>
-    <span class="toggle-line toggle-line-last"></span>
-  </div>
+      </section>
 
-  <aside class="sidebar">
-    <div class="sidebar-inner">
-
-      <ul class="sidebar-nav motion-element">
-        <li class="sidebar-nav-toc">
-          文章目录
-        </li>
-        <li class="sidebar-nav-overview">
-          站点概览
-        </li>
-      </ul>
-
+      
       <!--noindex-->
-      <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#0x00-前言"><span class="nav-number">1.</span> <span class="nav-text">0x00 前言</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#0x01-嵌入式入门"><span class="nav-number">2.</span> <span class="nav-text">0x01 嵌入式入门</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#0x02-实训硬件开发"><span class="nav-number">3.</span> <span class="nav-text">0x02 实训硬件开发</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#0x03-总结"><span class="nav-number">4.</span> <span class="nav-text">0x03 总结</span></a></li></ol></div>
-      </div>
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#0x00-前言"><span class="nav-number">1.</span> <span class="nav-text">0x00 前言</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#0x01-嵌入式入门"><span class="nav-number">2.</span> <span class="nav-text">0x01 嵌入式入门</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#0x02-实训硬件开发"><span class="nav-number">3.</span> <span class="nav-text">0x02 实训硬件开发</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#0x03-总结"><span class="nav-number">4.</span> <span class="nav-text">0x03 总结</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
       <!--/noindex-->
+      
 
-      <div class="site-overview-wrap sidebar-panel">
-        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-  <img class="site-author-image" itemprop="image" alt="YDLAN" src="/images/avatar.jpg">
-  <p class="site-author-name" itemprop="name">YDLAN</p>
-  <div class="site-description" itemprop="description">YDLAN的个人博客</div>
-</div>
-<div class="site-state-wrap motion-element">
-  <nav class="site-state">
-      <div class="site-state-item site-state-posts">
-          <a href="/archives">
-          <span class="site-state-item-count">29</span>
-          <span class="site-state-item-name">日志</span>
-        </a>
-      </div>
-      <div class="site-state-item site-state-categories">
-            <a href="/categories/">
-          
-        <span class="site-state-item-count">7</span>
-        <span class="site-state-item-name">分类</span></a>
-      </div>
-      <div class="site-state-item site-state-tags">
-            <a href="/tags/">
-          
-        <span class="site-state-item-count">23</span>
-        <span class="site-state-item-name">标签</span></a>
-      </div>
-  </nav>
-</div>
-  <div class="links-of-author motion-element">
-      <span class="links-of-author-item">
-        <a href="https://github.com/ydlan" title="GitHub &rarr; https://github.com/ydlan" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
-      </span>
-      <span class="links-of-author-item">
-        <a href="mailto:lanyd1997@qq.com" title="E-Mail &rarr; mailto:lanyd1997@qq.com" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
-      </span>
-  </div>
-
-
-
-      </div>
+      
 
     </div>
   </aside>
-  <div id="sidebar-dimmer"></div>
 
 
+        
       </div>
     </main>
 
-    <footer class="footer">
+    <footer id="footer" class="footer">
       <div class="footer-inner">
-        
-
-<div class="copyright">
-  
-  &copy; 
-  <span itemprop="copyrightYear">2020</span>
-  <span class="with-love">
+        <div class="copyright"> &copy; <span itemprop="copyrightYear">2020</span>
+  <span class="with-love" id="animate">
     <i class="fa fa-user"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">YDLAN</span>
+
+  
+
+  
 </div>
-  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.8.0
-  </div>
+
+
+
+
+  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> v3.8.0</div>
+
+
+
   <span class="post-meta-divider">|</span>
-  <div class="theme-info">主题 – <a href="https://mist.theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Mist</a> v7.5.0
-  </div>
+
+
+
+  <div class="theme-info">Theme – <a class="theme-link" target="_blank" href="https://theme-next.org">NexT.Mist</a> v6.5.0</div>
+
+
+
 
         
-
-
-
-
 
 
 
@@ -395,15 +734,96 @@
         
       </div>
     </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+	
+    
+
+    
   </div>
 
   
-  <script src="/lib/anime.min.js"></script>
-  <script src="/lib/velocity/velocity.min.js"></script>
-  <script src="/lib/velocity/velocity.ui.min.js"></script>
-<script src="/js/utils.js"></script><script src="/js/motion.js"></script>
-<script src="/js/schemes/muse.js"></script>
-<script src="/js/next-boot.js"></script>
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=6.5.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=6.5.0"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.5.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=6.5.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=6.5.0"></script>
+
+
+
+  
 
 
 
@@ -418,11 +838,30 @@
 
 
 
+  
 
 
 
 
 
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
 
   
 

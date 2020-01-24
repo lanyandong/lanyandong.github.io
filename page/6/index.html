@@ -1,81 +1,144 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
-<head>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="en">
+<head><meta name="generator" content="Hexo 3.8.0">
   <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 3.8.0">
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon16x16.png">
-
-<link rel="stylesheet" href="/css/main.css">
 
 
-<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
 
 
-<script id="hexo-configurations">
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=6.5.0" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch.png?v=6.5.0">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon32x32.png?v=6.5.0">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon16x16.png?v=6.5.0">
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" id="hexo.configurations">
   var NexT = window.NexT || {};
   var CONFIG = {
     root: '/',
     scheme: 'Mist',
-    version: '7.5.0',
-    exturl: false,
-    sidebar: {"position":"right","display":"post","offset":12,"onmobile":false},
-    copycode: {"enable":false,"show_result":false,"style":null},
-    back2top: {"enable":true,"sidebar":false,"scrollpercent":false},
-    bookmark: {"enable":false,"color":"#222","save":"auto"},
+    version: '6.5.0',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
     fancybox: false,
-    mediumzoom: false,
+    fastclick: false,
     lazyload: false,
-    pangu: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
     algolia: {
-      appID: '',
+      applicationID: '',
       apiKey: '',
       indexName: '',
       hits: {"per_page":10},
       labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
-    },
-    localsearch: {"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
-    path: '',
-    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
-    translation: {
-      copy_button: '复制',
-      copy_success: '复制成功',
-      copy_failure: '复制失败'
-    },
-    sidebarPadding: 40
+    }
   };
 </script>
 
-  <meta name="description" content="YDLAN的个人博客">
+
+  
+
+
+
+
+  <meta name="description" content="记录学习和日常">
 <meta property="og:type" content="website">
-<meta property="og:title" content="YDLAN">
+<meta property="og:title" content="YDLAN&#39;S BLOG">
 <meta property="og:url" content="https://ydlan.github.io/page/6/index.html">
-<meta property="og:site_name" content="YDLAN">
-<meta property="og:description" content="YDLAN的个人博客">
-<meta property="og:locale" content="zh-CN">
+<meta property="og:site_name" content="YDLAN&#39;S BLOG">
+<meta property="og:description" content="记录学习和日常">
+<meta property="og:locale" content="en">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="YDLAN">
-<meta name="twitter:description" content="YDLAN的个人博客">
-
-<link rel="canonical" href="https://ydlan.github.io/page/6/">
+<meta name="twitter:title" content="YDLAN&#39;S BLOG">
+<meta name="twitter:description" content="记录学习和日常">
 
 
-<script id="page-configurations">
-  // https://hexo.io/docs/variables.html
+
+
+
+
+  <link rel="canonical" href="https://ydlan.github.io/page/6/">
+
+
+
+<script type="text/javascript" id="page.configurations">
   CONFIG.page = {
     sidebar: "",
-    isHome: true,
-    isPost: false,
-    isPage: false,
-    isArchive: false
   };
 </script>
 
-  <title>YDLAN</title>
+  <title>YDLAN'S BLOG</title>
   
+
+
+
+
+
 
 
 
@@ -83,149 +146,272 @@
 
 
   <noscript>
-  <style>
-  .use-motion .brand,
-  .use-motion .menu-item,
-  .sidebar-inner,
-  .use-motion .post-block,
-  .use-motion .pagination,
-  .use-motion .comments,
-  .use-motion .post-header,
-  .use-motion .post-body,
-  .use-motion .collection-header { opacity: initial; }
+  <style type="text/css">
+    .use-motion .motion-element,
+    .use-motion .brand,
+    .use-motion .menu-item,
+    .sidebar-inner,
+    .use-motion .post-block,
+    .use-motion .pagination,
+    .use-motion .comments,
+    .use-motion .post-header,
+    .use-motion .post-body,
+    .use-motion .collection-title { opacity: initial; }
 
-  .use-motion .site-title,
-  .use-motion .site-subtitle {
-    opacity: initial;
-    top: initial;
-  }
+    .use-motion .logo,
+    .use-motion .site-title,
+    .use-motion .site-subtitle {
+      opacity: initial;
+      top: initial;
+    }
 
-  .use-motion .logo-line-before i { left: initial; }
-  .use-motion .logo-line-after i { right: initial; }
+    .use-motion {
+      .logo-line-before i { left: initial; }
+      .logo-line-after i { right: initial; }
+    }
   </style>
 </noscript>
 
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage">
-  <div class="container use-motion">
+<body itemscope itemtype="http://schema.org/WebPage" lang="en">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left 
+  page-home">
     <div class="headband"></div>
 
-    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-brand-container">
-  <div class="site-meta">
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
 
-    <div>
+    <div class="custom-logo-site-title">
       <a href="/" class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
-        <span class="site-title">YDLAN</span>
+        <span class="site-title">YDLAN'S BLOG</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
+    
+      
         <p class="site-subtitle">一起来探索吧！</p>
+      
+    
   </div>
 
   <div class="site-nav-toggle">
-    <div class="toggle" aria-label="切换导航栏">
-      <span class="toggle-line toggle-line-first"></span>
-      <span class="toggle-line toggle-line-middle"></span>
-      <span class="toggle-line toggle-line-last"></span>
-    </div>
+    <button aria-label="Toggle navigation bar">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
   </div>
 </div>
+
 
 
 <nav class="site-nav">
   
-  <ul id="menu" class="menu">
-        <li class="menu-item menu-item-home">
-
-    <a href="/" rel="section"><i class="fa fa-fw fa-home"></i>首页</a>
-
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+          
+          <li class="menu-item menu-item-home">
+    <a href="/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-home"></i> <br>Home</a>
   </li>
-        <li class="menu-item menu-item-categories">
-
-    <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>分类</a>
-
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+    <a href="/archives/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>Archives</a>
   </li>
-        <li class="menu-item menu-item-tags">
-
-    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>标签</a>
-
+        
+        
+        
+          
+          <li class="menu-item menu-item-categories">
+    <a href="/categories/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-th"></i> <br>Categories</a>
   </li>
-        <li class="menu-item menu-item-about">
-
-    <a href="/about/" rel="section"><i class="fa fa-fw fa-user"></i>关于</a>
-
+        
+        
+        
+          
+          <li class="menu-item menu-item-tags">
+    <a href="/tags/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>Tags</a>
   </li>
-  </ul>
+        
+        
+        
+          
+          <li class="menu-item menu-item-about">
+    <a href="/about/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-user"></i> <br>About</a>
+  </li>
 
+      
+      
+    </ul>
+  
+
+  
+    
+
+  
+
+  
 </nav>
+
+
+
+  
+
+
+
 </div>
     </header>
 
     
-  <div class="back-to-top">
-    <i class="fa fa-arrow-up"></i>
-    <span>0%</span>
-  </div>
 
 
-    <main class="main">
+    <main id="main" class="main">
       <div class="main-inner">
         <div class="content-wrap">
           
-
-          <div class="content">
+          <div id="content" class="content">
             
+  <section id="posts" class="posts-expand">
+    
+      
 
-  <div class="posts-expand">
-        
+  
+
   
   
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://ydlan.github.io/2018/08/25/2018-08-25-chongqing-sce/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jpg">
       <meta itemprop="name" content="YDLAN">
-      <meta itemprop="description" content="YDLAN的个人博客">
+      <meta itemprop="description" content="记录学习和日常">
+      <meta itemprop="image" content="/images/avatar.jpg">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="YDLAN">
+      <meta itemprop="name" content="YDLAN'S BLOG">
     </span>
+
+    
       <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            <a href="/2018/08/25/2018-08-25-chongqing-sce/" class="post-title-link" itemprop="url">2018中国国际智能产业博览会</a>
-        </h1>
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/08/25/2018-08-25-chongqing-sce/" itemprop="url">
+                  2018中国国际智能产业博览会
+                </a>
+              
+            
+          </h1>
+        
 
         <div class="post-meta">
-            <span class="post-meta-item">
+          <span class="post-time">
+
+            
+            
+            
+
+            
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
-              <span class="post-meta-item-text">发表于</span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
 
-              <time title="创建时间：2018-08-25 00:00:00" itemprop="dateCreated datePublished" datetime="2018-08-25T00:00:00+08:00">2018-08-25</time>
-            </span>
-            <span class="post-meta-item">
+              
+                
+              
+
+              <time title="Created: 2018-08-25 00:00:00" itemprop="dateCreated datePublished" datetime="2018-08-25T00:00:00+08:00">2018-08-25</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2019-03-16 19:41:54" itemprop="dateModified" datetime="2019-03-16T19:41:54+08:00">2019-03-16</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/分享/" itemprop="url" rel="index">
-                    <span itemprop="name">分享</span>
-                  </a>
-                </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/分享/" itemprop="url" rel="index"><span itemprop="name">分享</span></a></span>
+
+                
+                
+              
             </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
 
           
 
         </div>
       </header>
+    
 
     
     
@@ -233,75 +419,174 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h2 id="2018中国国际智能产业博览会"><a href="#2018中国国际智能产业博览会" class="headerlink" title="2018中国国际智能产业博览会"></a>2018中国国际智能产业博览会</h2><h3 id="1-博览会概况"><a href="#1-博览会概况" class="headerlink" title="1.博览会概况"></a>1.博览会概况</h3><p>坐标：重庆<br>主题：智能化：为经济赋能，为生活添彩！<br>形式：“会、展、赛、系列活动”</p><h3 id="2-个人经历和感想"><a href="#2-个人经历和感想" class="headerlink" title="2.个人经历和感想"></a>2.个人经历和感想</h3><p>我很荣幸能够作为志愿者参与到这次智博会的活动中，能够更加直观的体验到智博会。能够近距离的接触到一些高端会议、旁听到一些技术论坛、亲身体验到一些高科技产品，对于我个人是一次难得而又难忘的体验。在这次活动中，自己也有一些所思所感，借此记录分享一下。   </p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2018/08/25/2018-08-25-chongqing-sce/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
+      
+
+      
+        
+          
+            <h2 id="2018中国国际智能产业博览会"><a href="#2018中国国际智能产业博览会" class="headerlink" title="2018中国国际智能产业博览会"></a>2018中国国际智能产业博览会</h2><h3 id="1-博览会概况"><a href="#1-博览会概况" class="headerlink" title="1.博览会概况"></a>1.博览会概况</h3><p>坐标：重庆<br>主题：智能化：为经济赋能，为生活添彩！<br>形式：“会、展、赛、系列活动”</p>
+<h3 id="2-个人经历和感想"><a href="#2-个人经历和感想" class="headerlink" title="2.个人经历和感想"></a>2.个人经历和感想</h3><p>我很荣幸能够作为志愿者参与到这次智博会的活动中，能够更加直观的体验到智博会。能够近距离的接触到一些高端会议、旁听到一些技术论坛、亲身体验到一些高科技产品，对于我个人是一次难得而又难忘的体验。在这次活动中，自己也有一些所思所感，借此记录分享一下。   </p>
+<p>首先是志愿服务方面，我从来没有参加过这样类似的志愿活动，平时主要是一些爱心公益，而这次不同，不但活动规格高，标准严，对于志愿者的选拨也都是仔细考核、认真挑选，所以很荣幸能够入选成为其中一员。为了活动的顺利举办，志愿服务更加到位，专门组织了长达一周的培训，从理论教学到场地彩排，为的就是办好这次智博会。经过培训，我自己的志愿服务水平得到很大的提高，礼貌礼仪、突发事件应急处置、应急救护常识、会务英语等这些方面的能力都得到很大提高，对于我个人而言是受益匪浅的。   </p>
+<p>第二是对大数据智能化时代的认知，这次活动开阔了我的眼界，能够近距离接触高端论坛，听专家学者院士做报告，听企业家阐述他们对智能化的认知，听大企业的未来行业发展规划。在这个互联网产业，数字经济的时代，机遇与挑战并存，我们这代人需要不断的学习新的知识，了解新的产物，才能不被这个社会淘汰。数字经济，大数据人工智能，云计算服务将是社会发展的动力，也是经济发展的动力。科技创新是提高国家综合国力的要素，商业模式的创新是满足社会需求，提高人们生活的水平的一大动力，也是企业生存发展的基本要素。总之，面对大数据智能化时代，对于社会个人能力显得尤为重要。   </p>
+<p>第三是对于科技产品的体验，智能化为生活添彩；科技给生活带来的改变体现到衣食住行方方面面，参观到许多大企业的科技产品，许多科技单位的研究成果，让人耳目一新；智能设备的智能体验成为了新的需求，有需求就会有产品，产品最终转化为利益和服务体验，这就是现代和未来的生活。好多高科技产品呈现在我的面前，有时候还不敢相信一个不可思议的idea竟成为现实。这次的科技体验，让我对未来生活有了新的憧憬。   </p>
+<p>最后，这次智博会对于重庆而言是相当有意义的，给重庆的经济发展注入新的动力，将人们的生活水平和生活质量。希望重庆发展得越来越好!<br><img src="http://wx1.sinaimg.cn/large/00709Ldkly1fyqxjf04euj30qo0k075m.jpg" alt="sce"></p>
+
+          
         
       
     </div>
 
     
+
     
     
-      <footer class="post-footer">
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
         <div class="post-eof"></div>
-      </footer>
+      
+    </footer>
+  </div>
+  
+  
+  
   </article>
+
+
+    
+      
+
+  
+
   
   
   
 
-        
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
   
   
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://ydlan.github.io/2018/07/11/2018-07-11-computer-introduction/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jpg">
       <meta itemprop="name" content="YDLAN">
-      <meta itemprop="description" content="YDLAN的个人博客">
+      <meta itemprop="description" content="记录学习和日常">
+      <meta itemprop="image" content="/images/avatar.jpg">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="YDLAN">
+      <meta itemprop="name" content="YDLAN'S BLOG">
     </span>
+
+    
       <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            <a href="/2018/07/11/2018-07-11-computer-introduction/" class="post-title-link" itemprop="url">计算机导论——计算机入门篇</a>
-        </h1>
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/07/11/2018-07-11-computer-introduction/" itemprop="url">
+                  计算机导论——计算机入门篇
+                </a>
+              
+            
+          </h1>
+        
 
         <div class="post-meta">
-            <span class="post-meta-item">
+          <span class="post-time">
+
+            
+            
+            
+
+            
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
-              <span class="post-meta-item-text">发表于</span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
 
-              <time title="创建时间：2018-07-11 00:00:00" itemprop="dateCreated datePublished" datetime="2018-07-11T00:00:00+08:00">2018-07-11</time>
-            </span>
-            <span class="post-meta-item">
+              
+                
+              
+
+              <time title="Created: 2018-07-11 00:00:00" itemprop="dateCreated datePublished" datetime="2018-07-11T00:00:00+08:00">2018-07-11</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2019-04-13 09:46:03" itemprop="dateModified" datetime="2019-04-13T09:46:03+08:00">2019-04-13</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/学习笔记/" itemprop="url" rel="index">
-                    <span itemprop="name">学习笔记</span>
-                  </a>
-                </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/学习笔记/" itemprop="url" rel="index"><span itemprop="name">学习笔记</span></a></span>
+
+                
+                
+              
             </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
 
           
 
         </div>
       </header>
+    
 
     
     
@@ -309,75 +594,311 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h2 id="第一章"><a href="#第一章" class="headerlink" title="第一章"></a>第一章</h2><h3 id="1、计算机系统的层次"><a href="#1、计算机系统的层次" class="headerlink" title="1、计算机系统的层次"></a>1、计算机系统的层次</h3><p>硬件层：包括计算机的各个部分，控制器，运算器（CPU）、存储器、输入设备和输出设备。  </p><p>软件层：包括由汇编及高级语言等开发出来的应用程序。  </p><p>操作系统层（OS）：是连接硬件和软件的中间桥梁，它由机器指令和广义指令组成。  </p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2018/07/11/2018-07-11-computer-introduction/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
+      
+
+      
+        
+          
+            <h2 id="第一章"><a href="#第一章" class="headerlink" title="第一章"></a>第一章</h2><h3 id="1、计算机系统的层次"><a href="#1、计算机系统的层次" class="headerlink" title="1、计算机系统的层次"></a>1、计算机系统的层次</h3><p>硬件层：包括计算机的各个部分，控制器，运算器（CPU）、存储器、输入设备和输出设备。  </p>
+<p>软件层：包括由汇编及高级语言等开发出来的应用程序。  </p>
+<p>操作系统层（OS）：是连接硬件和软件的中间桥梁，它由机器指令和广义指令组成。  </p>
+<blockquote>
+<p>. 机器指令：指的是CPU能够直接识别并执行的指令；<br>. 广义指令：是指系统定义和解释的软件指令;</p>
+</blockquote>
+<h3 id="2、高级语言与汇编语言的区别"><a href="#2、高级语言与汇编语言的区别" class="headerlink" title="2、高级语言与汇编语言的区别"></a>2、高级语言与汇编语言的区别</h3><p>汇编语言是一种功能很强的程序设计语言，也是利用计算机所有硬件特性并能直接控制硬件的语言。它是面向机器的程序设计语言；  </p>
+<p>高级语言是相对于汇编语言而言的，它是较接近自然语言数学公式的编程，基本脱离了机器的硬件系统，用人们更易理解的方式编写程序；包括很多种编程语言——常见的高级语言有：C语言、C++、VB、JAVA、C#等等<br>常用语句：表达式语句、函数调用语句、控制结构语句（for语句、while语句、if语句）。   </p>
+<h3 id="3、解释性语言和编译型语言的区别和各自的特点"><a href="#3、解释性语言和编译型语言的区别和各自的特点" class="headerlink" title="3、解释性语言和编译型语言的区别和各自的特点"></a>3、解释性语言和编译型语言的区别和各自的特点</h3><p><strong>编译型语言：</strong>用编译型语言写的程序执行之前需要一个专门的编译过程，通过编译系统（不仅仅是通过编译器，编译器只是编译系统的一部分）把高级语言翻译成机器语言，把源高级程序编译成机器语言文件，如Windows下的exe文件。以后就可以直接运行不需要编译；编译型语言有C/C++、Pascal/Object Pascal （Delphi）等。  </p>
+<p><strong>解释型语言：</strong>用解释型语言编写的程序不需要编译。解释型语言在运行的时候才翻译，比如VB语言在执行的时候专门有一个解释器能够将VB语言翻译成机器语言，每一个语句都是执行的时候翻译。这样解释型语言每执行一次就要翻译一次，效率比较低；（但解释器能够在运行时动态优化代码）；解释型语言有JavaScript、VBScript、Perl、Python、Ruby、MATLAB。  </p>
+<p><strong>JAVA</strong>是一种编译型-解释型语言；同时具备编译特性和解释特性（其实确切的说JAVA就是解释型语言，其所谓的编译过程只是将.Java文件编译成平台无关的字节代码.class文件，并不是C一样编译成可以执行机器语言）；  </p>
+<p><strong>Python</strong>是一种面向对象、解释型计算机程序设计语言；Python语法简洁而清晰，具有丰富和强大的类库。（由Guido van Rossum于1989年底发明，第一个公开版发行于1991年）。  </p>
+<h3 id="4、历代计算机的发展阶段和每个阶段的特点"><a href="#4、历代计算机的发展阶段和每个阶段的特点" class="headerlink" title="4、历代计算机的发展阶段和每个阶段的特点"></a>4、历代计算机的发展阶段和每个阶段的特点</h3><p>两类计算机：<br>1、通用型计算机(general purpose computers);<br>2、专用型计算机(special purpose computers);</p>
+<p>四代计算机：<br>第一代计算机所经历的时间为1946到1958年。处于这一时代的计算机的共同特点：体积较大；运算速度较低；存储容量不大；而且价格昂贵；使用也不方便。解决一个简单问题所编写的程序的复杂程度也难以表述。这一代计算机只在重要机构或科学领域研究部门使用，主要用于科学计算。   </p>
+<p>第二代计算机所经历的时间为1958年至1965年。这一时代的计算机全部采用晶体管作为电子器件，其运算速度比第一代计算机的提高了近百倍，体积为原来的几十分之一。在软件方面，开始使用计算机算法语言。这一代计算机不仅用于科学计算，还用于数据处理和事务处理及工业控制。   </p>
+<p>第三代计算机所经历的时间为1965年至1970年。这一时期的计算机的主要特征是以中、小规模集成电路为电子器件。一个重大突破是计算机出现了操作系统，计算机的功能越来越强，应用范围越来越广。它们不仅用于科学计算，还用于文字处理、企业管理、自动控制等事务。与此同时，还出现了计算机技术与通信技术相结合的信息管理系统，可用在市场管理、情报检索等领域。   </p>
+<p>第四代计算机是指1970以后采用大规模集成电路（LSI）和超大规模集成电路（VLSL）为主要电子器件制成的计算机。例如80386微处理器，面积约10mm*10mm的单个芯片上，可以集成大约32万个晶体管。第四代计算机的另一个重大分支是以大规模、超大规模集成电路为基础发展起来的微处理器和微计算机。</p>
+<h2 id="第二章-计算与存储"><a href="#第二章-计算与存储" class="headerlink" title="第二章  计算与存储"></a>第二章  计算与存储</h2><h3 id="1、进制的概念"><a href="#1、进制的概念" class="headerlink" title="1、进制的概念"></a>1、进制的概念</h3><p>二进制（二进制的一位称为一比特bit，把连续的八个比特称为一个字节）、八进制、十进制、十六进制；<br>基数和位权: 如果某一个进制采用R个基本符号，我们就称它为基R进制，R称为进制的‘基数’(base);进制中每一位的单位值称为‘位权’（weight）。  </p>
+<h3 id="2、计算机为什么采用二进制"><a href="#2、计算机为什么采用二进制" class="headerlink" title="2、计算机为什么采用二进制"></a>2、计算机为什么采用二进制</h3><ol>
+<li>技术实现简单：计算机是逻辑电路，逻辑电路通常只有两种状态，开关的接通和断开，这两种状态正好用‘1’和‘0’表示。  </li>
+<li>简化运算规则：两个二进制数和、积运算组合各有三种，运算规则简单，有利于简化计算机内部结构，提高运算速度</li>
+<li>适合逻辑运算：逻辑代数是逻辑运算的理论依据，二进制只有两个数码，正好与逻辑代数中的“真”和“假”相吻合。</li>
+<li>易于进行转转：二进制与十进制数易于相互转换。</li>
+<li>用二进制表示的数据具有抗干扰能力强，可靠性高等优点。因为每位数据只有高低两种状态，当受到一定程度的干扰时，仍能可靠地分辨出它是高是低。   </li>
+</ol>
+<h3 id="3、不同进制的快速转换"><a href="#3、不同进制的快速转换" class="headerlink" title="3、不同进制的快速转换"></a>3、不同进制的快速转换</h3><p>以十进制为中间流转(‘除R取余法’、‘乘R取整法’)；R进制数转换为十进制数时，将各位数与它的位权乘积相累加；  </p>
+<p>十进制整数转换为R进制整数：可用十进制整数连续地除以R，每次除法获得的余数即为相应R进制数一位，最后按逆序输出结果。“除R取整法”；<br>十进制小数转换成R进制小数：可用十进制的小数连续地乘以R，用得到的整数部分组成R进制的小数，最后按顺序输出结果。“乘R取整法”；</p>
+<p>对于二进制数和八进制数、十六进制数之间的转换，有简便快速的“三位一并”和“四位一并法”。</p>
+<h3 id="4、浮点数的表示方法"><a href="#4、浮点数的表示方法" class="headerlink" title="4、浮点数的表示方法"></a>4、浮点数的表示方法</h3><p>在计算机中整数以外的其他数（带小数的数）被称为浮点数；<br>浮点运算的规则和整数的运算规则相同；<br>计算机使用类似科学记数的方法表示浮点数，包括指数e和尾数m以及带符号数的符号位；<br>二进制浮点数1.011×2^010在计算机中存为：<br><img src="http://wx4.sinaimg.cn/large/00709Ldkly1fw4j8v1slej30b002mjr6.jpg" alt="img1"></p>
+<h3 id="5、逻辑运算"><a href="#5、逻辑运算" class="headerlink" title="5、逻辑运算"></a>5、逻辑运算</h3><p>基本运算是由0和1的逻辑运算衍生而来;</p>
+<blockquote>
+<p>. 真—假—&gt;1-0<br>. “与（AND）”、“或（OR）”、“非（NOT）”</p>
+</blockquote>
+<h3 id="6、存储设备的类型和各种存储设备的特点"><a href="#6、存储设备的类型和各种存储设备的特点" class="headerlink" title="6、存储设备的类型和各种存储设备的特点"></a>6、存储设备的类型和各种存储设备的特点</h3><p>计算机内部，各种信息都是以二进制编码的形式存储的。<br>计算机普通把单位信息分成以下三种：<br>位（bit）、字节（Byte）、字（Word）（字是字节的组合；字长是32位（4个字节））;<br>常用单位：bit、B（Byte）、KB、MB、GB、TB、PB、EB.  </p>
+<p>符号的编码方式：ASCII码（美国信息交换标准码）、GBK字符集（国家标准扩展字符集）、统一字符编码Unicode。  </p>
+<p>存储设备：存放0和1组成的二进制信息的物理载体称为存储介质，存储介质加上配套电路等组件组成存储设备。<br>现在计算机常用的存储设备：  </p>
+<ol>
+<li>寄存器（Register）  </li>
+<li>高速缓存（Cache）  </li>
+<li>内存（Main memory）  </li>
+<li>外存（Storage）  </li>
+<li>显存</li>
+</ol>
+<p><img src="http://wx1.sinaimg.cn/large/00709Ldkly1fw4j8vnenxj30jr0f4aex.jpg" alt="img2"></p>
+<p>图示是目前计算机系统最基础的存储层次</p>
+<blockquote>
+<p>.速度越快价格越高容量越小，离CPU越近;<br>.速度越慢价格越低容量越大，离CPU越远</p>
+</blockquote>
+<p>计算机常见的存储介质：SRAM、DRAM（断电丢失保存信息）、磁盘、闪存。<br><strong>注：</strong>RAM随机访问内存，这种存储器在断电时将丢失存储内容；ROM即只读内存，是一种能读出事先所存数据的固态半导体存储器。</p>
+<h2 id="第三章-指令与函数"><a href="#第三章-指令与函数" class="headerlink" title="第三章  指令与函数"></a>第三章  指令与函数</h2><h3 id="1、CPU的组成"><a href="#1、CPU的组成" class="headerlink" title="1、CPU的组成"></a>1、CPU的组成</h3><p>计算机两个核心部件分别是CPU（运算）和主存（存储）；<br>CPU的核心部件：程序计数器（PC）、指令寄存器（IR）、算术逻辑单元（ALU）。</p>
+<h3 id="2、常用汇编指令的功能及功能指令格式"><a href="#2、常用汇编指令的功能及功能指令格式" class="headerlink" title="2、常用汇编指令的功能及功能指令格式"></a>2、常用汇编指令的功能及功能指令格式</h3><p>汇编指令有“操作码”和“操作数”组成，操作码是指令执行的基本动作。<br>格式：load R1，（address）<br>注：address是内存地址，（address）表示这个地址内存储的值；</p>
+<blockquote>
+<p>“R赋值”操作——mov指令；<br>加法指令——add；<br>减法指令——sub；<br>左位移指令——shiftl；<br>右位移指令——shiftr；<br>“将R存回a的操作”——store指令；  </p>
+</blockquote>
+<p>控制结构的执行（if-else选择语句；分支跳转指令；while循环语句；for循环语句）；</p>
+<p>分支跳转：<br>比较x是否小于y——slt指令；格式：slt R4，R1，R2<br>“判断小于后等于”——sle指令;<br>“选择跳转到语句块”——beqz指令；<br>beqz R4，label2（如果R4为零则跳转到label2标记的指令块）。<br>“直接跳转到语句块”操作——goto指令；</p>
+<h3 id="4、函数调用的调用过程"><a href="#4、函数调用的调用过程" class="headerlink" title="4、函数调用的调用过程"></a>4、函数调用的调用过程</h3><p>程序语言中的函数和数学中的函数基本概念是相似的。程序语言中的函数也有参数，返回值，以及定义与调用。程序中的函数，就是将一些程序语句结合在一起的邮件，通过多次调用，函数可以不止一次的在程序中运行。   </p>
+<p>函数调用的好处：1.将大问题分成许多小问题；2.便于检测错误；3.实现封装和重用；4.便于维护。   </p>
+<p>函数调用的特点：（越早被调用的函数，越晚被返回）；因为程序在执行过程是是根据指令寄存器里的指令依次执行（除函数调用，调用后的返回以及控制结构），每次函数调用都有一个返回值，然后程序继续执行。   </p>
+<p>栈：栈是一种非常重要的数据结构，它按照先进后出的原则存储数据，即先进入的数据被压入栈底，最后的数据在栈顶，需要取数据的时候从栈顶开始弹出数据。所以它的特色是“先进后出”和“后进先出”；（只能从一端放数据和取数据）； </p>
+<h2 id="第四章-编程与python初识"><a href="#第四章-编程与python初识" class="headerlink" title="第四章  编程与python初识"></a>第四章  编程与python初识</h2><h3 id="1、Python优点"><a href="#1、Python优点" class="headerlink" title="1、Python优点"></a>1、Python优点</h3><p>软件质量高；提高开发效率；程序可一致性强；标准库的支持。  </p>
+<h3 id="2、LIST-STRING-DICTIONARY三种内置数据结构的使用。"><a href="#2、LIST-STRING-DICTIONARY三种内置数据结构的使用。" class="headerlink" title="2、LIST STRING DICTIONARY三种内置数据结构的使用。"></a>2、LIST STRING DICTIONARY三种内置数据结构的使用。</h3><p>数据类型结构图：<br><img src="http://wx2.sinaimg.cn/large/00709Ldkly1fw4j8w2651j30ky0d10t5.jpg" alt="img3">   </p>
+<p><strong>列表（list）：*</strong>不同于数组，列表的元素类型可以是不一样的，（可以是整型，浮点型，字符串，还可以是列表）；序列的通用操作主要包括：索引、分片、链接（加）、重复（乘）；以及检查某个元素是否属于序列。 遍历，即要依次对列表中的所有元素进行访问（操作），对列表这种线性数据结构最自然的遍历方式是循环。 </p>
+<p><strong>字符串（string）：</strong>同列表一样，字符串也实现了序列的通用操作和函数。但是字符串的内容是不可改变的；字符串对某一个索引所在位置进行赋值是不允许的。（字符串与数值型相互转化、字符串转化为列表）。   </p>
+<p><strong>字典（dictionary）：</strong>字典是Python中唯一的映射类型。字典中的每一个元素都是一个键值对（Key：Value），而Key在字典中只会出现一次，也就是大家知道函数是不可以有一对多的映射关系。键key是集合X中的一个元素，而Value指的是集合Y中的一个元素，如f（key）=value；   </p>
+<p>Python字典是符合数据库数据表格的概念，它能够表示基于关系模型的数据库，即关系数据库。而现在主流的数据库Oracle、db2、sqlserver、svbase、mysql等都是关系数据库。  </p>
+<h3 id="3、基本赋值语句和增强赋值语句的使用"><a href="#3、基本赋值语句和增强赋值语句的使用" class="headerlink" title="3、基本赋值语句和增强赋值语句的使用"></a>3、基本赋值语句和增强赋值语句的使用</h3><p>基本形式的赋值语句就是”变量X=值”；</p>
+<blockquote>
+<p>.序列赋值；扩张序列赋值；多目标赋值；增强赋值语句（从C语言借鉴）。</p>
+</blockquote>
+<h3 id="4、三种控制机构的熟练掌握"><a href="#4、三种控制机构的熟练掌握" class="headerlink" title="4、三种控制机构的熟练掌握"></a>4、三种控制机构的熟练掌握</h3><ol>
+<li><p>if语句（elif）严格以缩进区别语块；<br><strong>注：</strong>缩进反映代码逻辑性，缩进可由任意的空格和制表符组成，同一个语句块的缩进必须保持一致。一般来说，缩进的距离为4个空格键或者一个制表符。但是要注意，在同一段代码中，混合使用制表符和空格并不是·一个好习惯。因为不同的编辑器对制表符和空格混用的处理方式并不同，为了避免出错，最好采用同一形式的缩进。   </p>
+</li>
+<li><p>While循环语句：（判读bool，continue语句，break语句）；<br><strong>注：</strong>while循环语句也有else语句，只不过else一定要和while的break相结合考虑才有意义。  </p>
+</li>
+</ol>
+<ol start="3">
+<li>For循环语句：for循环通常用来遍历有序的序列对象内的元素。For循环语句——range函数的应用（Python的range函数通常用来生产整数列表）。</li>
+</ol>
+<h3 id="5、函数调用过程的参数传递和变量使用"><a href="#5、函数调用过程的参数传递和变量使用" class="headerlink" title="5、函数调用过程的参数传递和变量使用"></a>5、函数调用过程的参数传递和变量使用</h3><p>Python进行函数调用时，参数的传递都是通过赋值的方式。Python中的数据结构有两种类型：可变类型与不可变类型。<br>可变类型有列表，字典等，而不可变类型有数字、字符串等。<br>对参数的修改会影响到可变类型的数据结构，而不会影响到不可变类型的数据结构。（列表做参数是传递指针指向堆heap）。  </p>
+<h3 id="6、面向对象和面向对象编程的定义和特点"><a href="#6、面向对象和面向对象编程的定义和特点" class="headerlink" title="6、面向对象和面向对象编程的定义和特点"></a>6、面向对象和面向对象编程的定义和特点</h3><p>面向过程是一种以事件为中心的编程思想：就是把解决问题的步骤写出了，程序一步一步的执行就能解决问题。<br>面向对象是一种以事物为中心的编程思想：会把问题的相关数据提取出来，将具有相同属性的物体抽象为类，并给类设计相应的方法。程序执行时，通常就是创建这个类的一个对象，调用这个类的方法，就可以解决问题。   </p>
+<p>注：相比面向过程语言，面向对象编程有更好的扩展性，思维方式更加自然（封装，继承，多态，重用）。</p>
+<h3 id="7、类的定义和实例化"><a href="#7、类的定义和实例化" class="headerlink" title="7、类的定义和实例化"></a>7、类的定义和实例化</h3><p>类——对象：使用类生成对象的过程，叫做实例化。一个类可以包含多个已定义类型的变量，这些变量称为成员变量（也称属性），同时，还可以包含多个有该类实例化对象所使用的函数，这些函数称为成员函数。</p>
+<h2 id="第五章-算法思想"><a href="#第五章-算法思想" class="headerlink" title="第五章 算法思想"></a>第五章 算法思想</h2><h3 id="1、算法的五个重要特点"><a href="#1、算法的五个重要特点" class="headerlink" title="1、算法的五个重要特点"></a>1、算法的五个重要特点</h3><ol>
+<li>有限的运行步骤；</li>
+<li>具有确定的执行步骤；</li>
+<li>具有输入项；</li>
+<li>具有输出项；</li>
+<li>对于计算机系统的可行性；</li>
+</ol>
+<h3 id="2、常用的算法思想"><a href="#2、常用的算法思想" class="headerlink" title="2、常用的算法思想"></a>2、常用的算法思想</h3><p>点击查看 <a href="https://smallseven.top/2018/07/08/algorithm-summary/" target="_blank" rel="noopener">常用算法的思想</a></p>
+<h2 id="第六章-简单了解操作系统"><a href="#第六章-简单了解操作系统" class="headerlink" title="第六章 简单了解操作系统"></a>第六章 简单了解操作系统</h2><h3 id="常见操作系统"><a href="#常见操作系统" class="headerlink" title="常见操作系统"></a>常见操作系统</h3><p>生活中常见的操作系统有微软的Windows系列产品，Ubuntu、Fedora等Linux系统，苹果Mac OS系列产品，以及智能手机所使用的Android、IOS系统等等。   </p>
+<ol>
+<li>计算机操作系统：诞生CP/M；远古霸主DOS；当代大亨Windows；诱人的小企鹅Linux；神奇的精灵FreeBSD（Unix）；多才多艺的艺术大师BeOS。</li>
+<li>手机操作系统：Symbian（塞班）NOKIA、Linux（Android）、palm OS（Plam公司开发嵌入式操作系统）、BlackBerry（黑莓）、Windowsmobile，iOS（iPhone、iPodtouch、iPad）；   </li>
+<li>基于Android的二次开发：Sense（HTC）、LG Optimus（LG）、CyanogenMod、小米MIUI（小米）、Emotion UI（华为）、Blur（摩托罗拉）、Flyme OS （魅族）、中国移动OMS   </li>
+<li>Brew（CDMA高通公司开发的封闭式系统）、HP webOS、MeeGo（诺基亚和英特尔）、Firefox OS（谋智公司）、BADA系统（韩国三星电子）、Tizen（英特尔MeeGo系统和三星LiMo系统的混合体）、Ubuntu手机操作系统（开发商canonical）。</li>
+</ol>
+<p><strong>操作系统的主要职能：</strong><br>1、管理文件系统，管理各种硬件资源，例如U盘、网盘、键盘等。<br>2、管理程序共享的资源，例如CPU、主存等（一个计算机系统会有多个程序同时在执行或等待执行）。<br>3、管理和调度多个程序的执行；<br>4、提供程序和硬件的衔接，提供各种系统的服务和接口；<br>5、设法维护系统的安全，尽量防止病毒（恶意软件）有意或无意的入侵；</p>
+<h3 id="2、计算机的启动过程"><a href="#2、计算机的启动过程" class="headerlink" title="2、计算机的启动过程"></a>2、计算机的启动过程</h3><ol>
+<li>启动自检阶段</li>
+<li>初始化启动阶段</li>
+<li>启动加载阶段</li>
+<li>内核转载阶段</li>
+<li>登录阶段  </li>
+</ol>
+<p><strong>注：</strong>无论是台式机、笔记本、手机、所有设备开机启动过程中都会包括三个共同的阶段：启动自检阶段、初始化启动阶段、启动加载阶段；<br>这三个阶段主要由BIOS（Basic Input Output System）来完成的。BIOS是一组程序，包括基本输入输出程序，系统设置信息，开机后自检程序和系统自启动程序。  </p>
+<h3 id="3、操作系统对硬件资源的管理"><a href="#3、操作系统对硬件资源的管理" class="headerlink" title="3、操作系统对硬件资源的管理"></a>3、操作系统对硬件资源的管理</h3><p>操作系统管理计算机资源，是软件和硬件的中间接口。<br>CPU通常使用轮询和硬件中断两种方式检测设备的工作状态。 </p>
+<blockquote>
+<p>I/O设备  CPU ：硬件中断<br>存储设备：异常</p>
+</blockquote>
+<h3 id="4、操作系统对应用程序的服务：软件中断"><a href="#4、操作系统对应用程序的服务：软件中断" class="headerlink" title="4、操作系统对应用程序的服务：软件中断"></a>4、操作系统对应用程序的服务：软件中断</h3><p>操作系统中设置了一组用于实现系统功能的子程序，称为系统调用函数（运行于内核态）。</p>
+<p>常用的系统的调用： </p>
+<ol>
+<li>进程控制，如：fork（），exit（）等;  </li>
+<li>文件系统操作控制，如：read（）、write（）等;  </li>
+<li>系统控制，如：ioctl（）、time（）等;  </li>
+<li>内存管理，如mmap（）、mprotect（）等;  </li>
+<li>网络管理控制，如：sethostname（）、soket（）、bind（）等 ; </li>
+<li>用户管理，如：getuid（），getgid（）等;  </li>
+<li>进程间通信，如：signal（），kill（）等;  </li>
+</ol>
+<p><strong>(1)软件开发者如何统一的使用硬件资源？</strong><br>为了统一的使用硬件资源，软件开发者通过操作系统提供的用户接口程序，进入内核模式使用操作系统提供的服务来使用资源。也就是说，不论是QQ程序，或是Office程序，例如要读取一个文件的内容时，都可以调用read系统调用。这种统一接口的实现方式有利于开发者进行快速开发。只要开发者熟悉了操作系统所提供的系统调用后，便可进行不同上层软件的开发。   </p>
+<p><strong>(2)操作系统如何为硬件系统提供安全保证？</strong><br>对于硬件系统安全保证，则是因为控制硬件的底层程序均由操作系统提供，用户有理由相信操作系统不会做毁坏自己的事。所以，系统一旦进入内核态，就处于安全的状态。而上层应用软件运行自身代码段（非系统调用函数）时，不能切换到内核态，所以，程序无法通过自身代码段攻击下层硬件。</p>
+<h3 id="5、进程的组成部分及状态转换图"><a href="#5、进程的组成部分及状态转换图" class="headerlink" title="5、进程的组成部分及状态转换图"></a>5、进程的组成部分及状态转换图</h3><ol>
+<li>一个进程包含了代码段、数据段、栈、堆、BSS段以及进程控制块等部分。  </li>
+<li>代码段（Code segment/Text segment）通常是指用来存放程序执行代码的一块内存区域。  </li>
+<li>数据段（Data segment）通常是指用来存放程序中已经初始化的全局变量的一块内存区域。  </li>
+<li>栈（Stack）是用户存放程序临时创建的局部变量区域。除此以外，在函数被调用时，其参数也会被压入发起调用的进程栈中，并且等到函数调用结束后，函数的返回值也会被存放回栈中。由于栈这种数据结构具有先进后出特点，所以栈能够特别方便用于保存/恢复调用现场。  </li>
+<li>堆（Heap）是用于存放进程运行中动态分配的内存段，它的大小并不固定，可根据进程运行的需要动态扩张或缩减。例如所有的类对象（objects）是存放在这个区域的。  </li>
+<li>BSS段（Block Started by Symbol）通常是指用来存放程序中未初始化的全局变量的一块内存区域。  </li>
+<li>另外，操作系统为了统一管理进程，专门设置了一个数据结构，即进程控制块（Process Control Block，PCB），用来记录进程的特征信息，描述进程运动变化的过程。PCB是操作系统感知进程存在的唯一标识，进程与PCB是一一对应的。<br><img src="http://wx3.sinaimg.cn/large/00709Ldkly1fw4j8wid9ij30he07i74s.jpg" alt="img4">  </li>
+</ol>
+<h3 id="6、进程调度的常用策略及性能衡量指标"><a href="#6、进程调度的常用策略及性能衡量指标" class="headerlink" title="6、进程调度的常用策略及性能衡量指标"></a>6、进程调度的常用策略及性能衡量指标</h3><p><strong>性能衡量指标：</strong>  </p>
+<ol>
+<li>周转时间（进程首次进入就绪队列到完成的时间间隔，刻画了用户需要等待输出结果的时间）。  </li>
+<li>吞吐量（系统单位时间内完成任务的数量）。  </li>
+</ol>
+<p><strong>常用策略：</strong> 先来先服务（FCFS）、短作业优先（SJF）。  </p>
+<h3 id="7、目录树形结构，相对路径，绝对路径"><a href="#7、目录树形结构，相对路径，绝对路径" class="headerlink" title="7、目录树形结构，相对路径，绝对路径"></a>7、目录树形结构，相对路径，绝对路径</h3><p>文件基本概念：文件命名、文件类型（普通文件、目录文件、块设备文件、字符设备文件）。</p>
+<p>目录树结构：<br><img src="http://wx1.sinaimg.cn/large/00709Ldkly1fw4j8x2in7j30pk0c040d.jpg" alt="img5">  </p>
+<h2 id="第七章-计算机相关"><a href="#第七章-计算机相关" class="headerlink" title="第七章 计算机相关"></a>第七章 计算机相关</h2><h3 id="1、大数据的四大特点"><a href="#1、大数据的四大特点" class="headerlink" title="1、大数据的四大特点"></a>1、大数据的四大特点</h3><p><strong>数据：</strong>在计算机科学中，数据是指所有能输入到计算机并被计算机程序处理的，具有一点意义的数字、字母、符号和模拟量等通称。<br><strong>数据处理：</strong>是对数据的采集、存储、检索、加工、变换和传输。</p>
+<p><strong>大数据：</strong>大数据是一个广泛的概念，大数据的核心能力是发现规律和预测未来。<br>【高级数据公司IDC】 海量的数据规模（Volume）、快速的数据流转和动态的数据体系（Velovity）、多样的数据类型（Variety）、巨大的数据价值（Value）。<br>【亚马逊大数据科学家】 大数据是任何超过一台计算机处理能力的数据量。<br>【维基百科】 大数据（big data）指的是所涉及的资料量规模巨大到无法通过目前主流软件工具，在合理的时间内达到撷取、管理、处理并整理成帮助企业经营决策更积极目的的资讯。 </p>
+
+          
         
       
     </div>
 
     
+
     
     
-      <footer class="post-footer">
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
         <div class="post-eof"></div>
-      </footer>
+      
+    </footer>
+  </div>
+  
+  
+  
   </article>
+
+
+    
+      
+
+  
+
   
   
   
 
-        
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
   
   
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://ydlan.github.io/2018/07/08/2018-07-08-algorithm-summary/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jpg">
       <meta itemprop="name" content="YDLAN">
-      <meta itemprop="description" content="YDLAN的个人博客">
+      <meta itemprop="description" content="记录学习和日常">
+      <meta itemprop="image" content="/images/avatar.jpg">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="YDLAN">
+      <meta itemprop="name" content="YDLAN'S BLOG">
     </span>
+
+    
       <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            <a href="/2018/07/08/2018-07-08-algorithm-summary/" class="post-title-link" itemprop="url">Algorithm thought</a>
-        </h1>
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/07/08/2018-07-08-algorithm-summary/" itemprop="url">
+                  Algorithm thought
+                </a>
+              
+            
+          </h1>
+        
 
         <div class="post-meta">
-            <span class="post-meta-item">
+          <span class="post-time">
+
+            
+            
+            
+
+            
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
-              <span class="post-meta-item-text">发表于</span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
 
-              <time title="创建时间：2018-07-08 00:00:00" itemprop="dateCreated datePublished" datetime="2018-07-08T00:00:00+08:00">2018-07-08</time>
-            </span>
-            <span class="post-meta-item">
+              
+                
+              
+
+              <time title="Created: 2018-07-08 00:00:00" itemprop="dateCreated datePublished" datetime="2018-07-08T00:00:00+08:00">2018-07-08</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2019-04-13 09:45:50" itemprop="dateModified" datetime="2019-04-13T09:45:50+08:00">2019-04-13</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/学习笔记/" itemprop="url" rel="index">
-                    <span itemprop="name">学习笔记</span>
-                  </a>
-                </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/学习笔记/" itemprop="url" rel="index"><span itemprop="name">学习笔记</span></a></span>
+
+                
+                
+              
             </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
 
           
 
         </div>
       </header>
+    
 
     
     
@@ -385,79 +906,200 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <blockquote>
+      
+
+      
+        
+          
+            <blockquote>
 <ul>
 <li>算法在计算机的学习过程中是非常重要的，多对于一些常用的算法我们应该了解它的算法思想，所以，在此对一些常用算法思想做一个概念上的简单总结</li>
 </ul>
-</blockquote><h2 id="递归的基本概念"><a href="#递归的基本概念" class="headerlink" title="递归的基本概念"></a>递归的基本概念</h2><p>一般来说，递归是一个过程或函数在它的定义或说明中又直接或间接调用它自己的一种方法。</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2018/07/08/2018-07-08-algorithm-summary/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
+</blockquote>
+<h2 id="递归的基本概念"><a href="#递归的基本概念" class="headerlink" title="递归的基本概念"></a>递归的基本概念</h2><p>一般来说，递归是一个过程或函数在它的定义或说明中又直接或间接调用它自己的一种方法。</p>
+<p>递归本质是把一个复杂的大问题层层转化为一个与原问题相似的小问题，利用小问题的解来构筑大问题的解。学习用递归解决问题的关键就是找到问题的递归式，有了递归式就可以知道大问题与小问题之间的关系，从而解决问题了。</p>
+<p>递归只需少量的程序就可描述出解题过程所需要的多次重复计算，大大地减少了程序的代码量。它的能力在于用有限的语句来定义无限集合。正是如此，递归才能用很少的代码解决很复杂的问题。然而在使用递归解决问题时要特别注意，一定要有一个明确的递归结束条件，否则就会陷入无限循环中。例如在解决汉诺塔问题时，递归结束条件就是n=1。只要判断n=1，就停止继续调用Hanoi，开始返回值。</p>
+<p>习惯递归的思想后，可以在很短的时间里写出正确的程序。写递归程序的诀窍就是：（1）怎么分，怎么合；（2）怎么终止。</p>
+<blockquote>
+<p>（平面划分问题，汉诺塔问题）</p>
+</blockquote>
+<h2 id="分治法的基本思想"><a href="#分治法的基本思想" class="headerlink" title="分治法的基本思想"></a>分治法的基本思想</h2><p>分治法是我们计算机科学解决问题的一种基本方法。从字面上来理解就是是“分而治之”。它的基本思想是把一个复杂的问题分成两个或更多的相同或相似的互相独立的子问题，再把子问题分成更小的子问题，直到最后的子问题可以简单的直接求解，然后将这些子问题的解合并从而构造出原问题的解。而用分治法求解问题的时候，通常会用到递归的思想来求解子问题。</p>
+<blockquote>
+<p>（找假币的例子）</p>
+</blockquote>
+<h2 id="分治法与递归的联系与区别"><a href="#分治法与递归的联系与区别" class="headerlink" title="分治法与递归的联系与区别"></a>分治法与递归的联系与区别</h2><p>其实在我们用分治法解题时，往往能会用到递归的思想。分治法产生的子问题往往是原问题的较小模式，反复应用分治法，可以使子问题与原问题的类型保持一致，而其规模却不断缩小，最终使子问题缩小到很容易直接求出其解，这就为使用递归提供了方便。在分治法中用递归的思想求解问题是计算机科学解决问题时常有的一种手段，由此也产生了很多高效的算法。</p>
+<h2 id="贪心算法的基本概念"><a href="#贪心算法的基本概念" class="headerlink" title="贪心算法的基本概念"></a>贪心算法的基本概念</h2><p>贪心算法，又被称为贪婪算法，也是用来求解最优化问题的一种方法。一般来说，求解最优化问题的过程就是做一系列决定从而实现最优值的过程。最优解就是实现最优值的这些决定。动态规划考虑全局最优，得到的解一定是最优解。贪心算法是一种在每一步选择中都采取当前状态下最好或最优（即最有利）的选择，从而希望导致结果是最好或最优的算法。贪心算法考虑局部最优，每次都做当前看起来最优的决定，得到的解不一定是全局最优解。但是在有最优子结构的问题中，贪心算法能够得到最优解。最优子结构就是局部最优解能决定全局最优解。简单地说，问题能够分解成子问题来解决，子问题的最优解能递推到最终问题的最优解。虽然对于很多问题贪心算法不一定能得到最优解，但是它的效率高，所求得的答案比较接近最优结果。因此，贪心算法可以用作辅助算法或者直接解决一些要求结果不特别精确的问题。</p>
+<blockquote>
+<p>（找零钱问题）</p>
+</blockquote>
+<h2 id="动态规划的基本概念"><a href="#动态规划的基本概念" class="headerlink" title="动态规划的基本概念"></a>动态规划的基本概念</h2><p>动态规划是求解最优化问题的一种方法。通常这种问题有很多解，每个解都对应一个值，最优化问题是希望找到一个对应最优值（最大值或最小值）的解。动态规划与分治法类似，其基本思想也是将待求解问题分解成若干个子问题，先求解子问题，然后从这些子问题的解得到原问题的解。与分治法不同的是，适合于用动态规划求解的问题，经分解得到子问题往往不是互相独立的，即子问题之间具有重叠的部分。在这种情况下，如果用分治法求解就会重复的求解这些重叠的部分。而动态规划只会对这些重叠的部分求解一次并用表格保存这些解，如此一来就可以避免大量的重复计算。动态规划最特别的地方是自底向上的求解子问题并将这些子问题的解保存起来。这种用空间换取时间的方式大大提高了求解问题的效率。</p>
+<blockquote>
+<p>（求最优解，最长增长子数列，背包问题）</p>
+</blockquote>
+<h2 id="动态规划求解问题的4个步骤"><a href="#动态规划求解问题的4个步骤" class="headerlink" title="动态规划求解问题的4个步骤"></a>动态规划求解问题的4个步骤</h2><p>动态规划求解问题一般可以分为4个步骤：</p>
+<ol>
+<li>定义最优解的结构。</li>
+<li>递归的定义最优解的值。</li>
+<li>以自底向上的方式计算最优解的值。</li>
+<li>用第（3）步中计算过程的信息构造最优解。</li>
+</ol>
+
+          
         
       
     </div>
 
     
+
     
     
-      <footer class="post-footer">
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
         <div class="post-eof"></div>
-      </footer>
+      
+    </footer>
+  </div>
+  
+  
+  
   </article>
+
+
+    
+      
+
+  
+
   
   
   
 
-        
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
   
   
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://ydlan.github.io/2018/07/07/2018-07-07-letter-relay/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jpg">
       <meta itemprop="name" content="YDLAN">
-      <meta itemprop="description" content="YDLAN的个人博客">
+      <meta itemprop="description" content="记录学习和日常">
+      <meta itemprop="image" content="/images/avatar.jpg">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="YDLAN">
+      <meta itemprop="name" content="YDLAN'S BLOG">
     </span>
+
+    
       <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            <a href="/2018/07/07/2018-07-07-letter-relay/" class="post-title-link" itemprop="url">（转）给新手程序员的一封信</a>
-        </h1>
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/07/07/2018-07-07-letter-relay/" itemprop="url">
+                  （转）给新手程序员的一封信
+                </a>
+              
+            
+          </h1>
+        
 
         <div class="post-meta">
-            <span class="post-meta-item">
+          <span class="post-time">
+
+            
+            
+            
+
+            
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
-              <span class="post-meta-item-text">发表于</span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
 
-              <time title="创建时间：2018-07-07 00:00:00" itemprop="dateCreated datePublished" datetime="2018-07-07T00:00:00+08:00">2018-07-07</time>
-            </span>
-            <span class="post-meta-item">
+              
+                
+              
+
+              <time title="Created: 2018-07-07 00:00:00" itemprop="dateCreated datePublished" datetime="2018-07-07T00:00:00+08:00">2018-07-07</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2019-04-05 09:08:50" itemprop="dateModified" datetime="2019-04-05T09:08:50+08:00">2019-04-05</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/分享/" itemprop="url" rel="index">
-                    <span itemprop="name">分享</span>
-                  </a>
-                </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/分享/" itemprop="url" rel="index"><span itemprop="name">分享</span></a></span>
+
+                
+                
+              
             </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
 
           
 
         </div>
       </header>
+    
 
     
     
@@ -465,36 +1107,85 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h2 id="给新手程序员的一封信"><a href="#给新手程序员的一封信" class="headerlink" title="给新手程序员的一封信"></a>给新手程序员的一封信</h2><p>欢迎来到程序员的世界。在这个世界上，不是有很多人想创造软件并解决问题。你是一名hacker，属于那些愿意做一些有挑战性的事情的人。</p><blockquote>
+      
+
+      
+        
+          
+            <h2 id="给新手程序员的一封信"><a href="#给新手程序员的一封信" class="headerlink" title="给新手程序员的一封信"></a>给新手程序员的一封信</h2><p>欢迎来到程序员的世界。在这个世界上，不是有很多人想创造软件并解决问题。你是一名hacker，属于那些愿意做一些有挑战性的事情的人。</p>
+<blockquote>
 <p>“当你不创造东西时，你只会根据自己的感觉而不是能力去看待问题。” ——WhyTheLuckyStiff</p>
 </blockquote>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2018/07/07/2018-07-07-letter-relay/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
+<p>对于下面的文字你不必完全接受，所有这些来自一个其貌不扬的程序员。我喜欢把事情做到最好，而不是对原来的东西修修补补。</p>
+<p>仅仅是因为爱好开始做一些创新，这是一个很好的开始！如果你说“我要先学习一下再开始做”那么你永远不会真正开始。每个人都需要从某个地方开始，所以现在打开你的编辑器开始写代码吧。</p>
+<p>下面是一些很重要的建议，虽然有人并不认同，但我保证你看完我的分析以后会站在我这一边。一开始，先不要管算法和数据结构。大多数简单的程序不需要用到算法和数据结构，所以当你真正需要时再去学习。编程一段时间以后，你就会知道在哪些地方用到他们。这时知道算法的名字并了解它们的功能，然后找一些相关的论文去理解算法并动手编程实践。如果没有现成的函数库（其他程序员提供的可重用代码），你用自己喜欢的编程语言来实现它。</p>
+<ol>
+<li>选择一门好的编程语言，一门你自认为可以用它快速地做出一些有用东西的语言。</li>
+</ol>
+<p>不要选择C语言作为你第一门编程语言。也许选择C语言会给你一种过时的满足感。虽然它比早期的汇编语言提供了更好语法描述，但是今天C（或者C++）不是能够快速编写软件的语言。毫不偏袒的说，我建议你学习一种动态语言。选择一种你觉得语法（文档）让你使用起来更舒服的编程。为此，你可能需要花费一些时间来在几种不同的语言之间进行比较。这么做目的不是为了让你感觉更好或者让编程更容易。更快地完成自己的作品并且能够看到成果，才是激励你编程的源动力。不要选择一门需要某种重量级的IDE（IDE是一种能够帮助你编写并运行代码的工具）才能轻松编程的语言。你所需要的仅仅是一个文本编辑器。（注：原文并没有标号，是我们加上的，请大家别忘记了哦，我们是从零开始数数的。:) ）</p>
+<p>　　2. 选择一个好的编辑器。</p>
+<p>编辑器对程序员而言，就是像是弓对弓箭手一样重要。这里有一些推荐的编辑器：</p>
+<p>SublimeText 2 – 如果你刚开始编程，推荐使用SublimeText 2,Emacs – 学习曲线陡峭，快捷键复杂。如果你想定制自己的使用习惯，需要学习Emacs Lisp.Vim – 不仅操作简洁而且它默认包含在linux的发行版中，所以深受大家欢迎。我开始使用了2年Emacs。由于Emacs的快捷键操作过于复杂，我的双手开始经常疼痛，这迫使我转向了Vim阵营。了解Vim的快捷键是非常有必要的。当你在远程的服务器上编辑代码时，你唯一不需要安装的编辑器就是Vim。<br>注意！Emacs和Vim可能已经成为成为古董了。但是，它们都具备一些现代编辑器多不具备的功能。</p>
+<p>　　3. 选择一个你可以从中学到东西的操作系统</p>
+<p>Windows不会教会你任何东西。使用Windows你唯一学会的就是打开一个exe（可执行）文件来安装软件和使用它。可能刚开始的时候你会觉得很酷，但是长远来看，如果你立志成为一个web开发人员，可能还是要具备基本的linux知识，尤其是当你要发布程序的时候。Linux也允许你根据自己的要求来定制程序。Macs也很酷，但是我认为你现在经济上还负担不起。</p>
+<p>　　4. 不要通过复制粘贴来做备份</p>
+<p>一个新手程序员通常会把文件复制粘贴到一个临时目录下面来进行备份。这也许也是他们唯一知道的方法。不要那么做！你需要使用版本控制软件。我强烈推荐使用Git，它是个目前很流行的版本控制工具，而且使用起来非常简单。对一个Git新手，有一个良好的社区和很多参考资源来学习。（除了Git之外，还有mercurial, darcs, fossil等等。但是我还是建议从Git开始，我有很多的理由来支持Git，这里就不多费口舌了。）</p>
+<p>　　5. 知道去哪里寻求帮助</p>
+<p>参加一个和你相关的（你使用编程工具相关的）程序员社区。比如StackOverflow就是程序员的Facebook。那里没有消息状态和回复，取而代之的是问题和答案。除此之外还要学会使用IRC。IRC是一种老式的聊天室，现在还在被大多数开发人员用来分享技术信息和帮助解决问题。</p>
+<p>　　6. 培养你的礼仪</p>
+<p>知道什么时候问问题。你遇到的大多数问题都是别人碰到过并且在Internet上能够找到解答的。在IRC或者任何论坛里发问之前，先搜索一下google（或者blekko）来看看是不是有现成的答案。在IRC上问问题需要有耐心。永远记住，人们只是处于好心来免费帮助你。有时你发问以后需要几个小时才能有回复。所以，耐心等待。除此之外，记得问问题的时候要礼貌。世界很小，你怎么对待别人，别人就会怎么对待你。</p>
+<p>　　7. 结交朋友，技术书籍只能教你解决常见的问题（他们说：书是死的）</p>
+<p>当你在捣鼓一些程序或者从程序的作者那里学习，你能学到一些书本上没有的东西。当你散步的时候，请和遇到的朋友打招呼。你肯定不是唯一的程序员。和其他的程序员一起交朋友一起工作。你会注意到，当一群技术爱好者在一起的时候，不论话题是从什么地方开始，最后总是以技术话题收尾。这是必然的现象。所以你可以尽情参与。在你的黄金年龄努力编程，我能告诉你的是，我在开始6年前寻找朋友并开始讨论编程，从那时起才学到那些书本和文章不会我的东西。所以我总是说，我的编程经验有6年，因为只有那个时候开始，我才开始与人交流并开始感觉真正地开始学习编程。</p>
+<p>　　8. 参加开源项目</p>
+<p>为开源项目编写代码能带来回报。这不仅仅是帮助别人，你留下的代码会被其他人使用或（可能）改进。当别人给你的代码添加功能或者提出修改意见时，也是在提高你的编程水平。开源软件项目不一定要是一个大工程，编写一个下载youtube视频的小程序也是很有用的。更重要的是，你会惊奇地发现你编写的代码会成为与他人有效沟通的桥梁。</p>
+<p>最后，若干年之后如果本文的内容曾经对你有一点点的帮助，作为回报请写一封类似的信给希望开始编程并不知如何入手的朋友，有可能的话请纠正本文中过时的内容。</p>
+<p>智者说过，掌握某个东西需要10年或10000个小时，也就是汉语中的“十年磨一剑”，所以不用着急。</p>
+<pre><code>【原】月光博客 http://www.williamlong.info/archives/2700.html 
+</code></pre><p>   英文原文：An open letter to those who want to start programming</p>
+<p>   中文翻译：伯乐在线</p>
+
+          
         
       
     </div>
 
     
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
 
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
   </div>
+  
+  
+  
+  </article>
+
+
+    
+  </section>
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/5/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/5/">5</a><span class="page-number current">6</span>
+    <a class="extend prev" rel="prev" href="/page/5/"><i class="fa fa-angle-left" aria-label="Previous page"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/5/">5</a><span class="page-number current">6</span>
   </nav>
 
 
@@ -503,104 +1194,217 @@
           
 
         </div>
+        
           
   
-  <div class="toggle sidebar-toggle">
-    <span class="toggle-line toggle-line-first"></span>
-    <span class="toggle-line toggle-line-middle"></span>
-    <span class="toggle-line toggle-line-last"></span>
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
   </div>
 
-  <aside class="sidebar">
+  <aside id="sidebar" class="sidebar">
+    
     <div class="sidebar-inner">
 
-      <ul class="sidebar-nav motion-element">
-        <li class="sidebar-nav-toc">
-          文章目录
-        </li>
-        <li class="sidebar-nav-overview">
-          站点概览
-        </li>
-      </ul>
+      
 
-      <!--noindex-->
-      <div class="post-toc-wrap sidebar-panel">
-      </div>
-      <!--/noindex-->
+      
 
-      <div class="site-overview-wrap sidebar-panel">
-        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-  <img class="site-author-image" itemprop="image" alt="YDLAN" src="/images/avatar.jpg">
-  <p class="site-author-name" itemprop="name">YDLAN</p>
-  <div class="site-description" itemprop="description">YDLAN的个人博客</div>
-</div>
-<div class="site-state-wrap motion-element">
-  <nav class="site-state">
-      <div class="site-state-item site-state-posts">
-          <a href="/archives">
-          <span class="site-state-item-count">29</span>
-          <span class="site-state-item-name">日志</span>
-        </a>
-      </div>
-      <div class="site-state-item site-state-categories">
-            <a href="/categories/">
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/images/avatar.jpg" alt="YDLAN">
+            
+              <p class="site-author-name" itemprop="name">YDLAN</p>
+              <p class="site-description motion-element" itemprop="description">记录学习和日常</p>
+          </div>
+
           
-        <span class="site-state-item-count">7</span>
-        <span class="site-state-item-name">分类</span></a>
-      </div>
-      <div class="site-state-item site-state-tags">
-            <a href="/tags/">
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">29</span>
+                    <span class="site-state-item-name">posts</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  <a href="/categories/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">7</span>
+                    <span class="site-state-item-name">categories</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  <a href="/tags/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">23</span>
+                    <span class="site-state-item-name">tags</span>
+                  </a>
+                </div>
+              
+            </nav>
           
-        <span class="site-state-item-count">23</span>
-        <span class="site-state-item-name">标签</span></a>
-      </div>
-  </nav>
-</div>
-  <div class="links-of-author motion-element">
-      <span class="links-of-author-item">
-        <a href="https://github.com/ydlan" title="GitHub &rarr; https://github.com/ydlan" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
-      </span>
-      <span class="links-of-author-item">
-        <a href="mailto:lanyd1997@qq.com" title="E-Mail &rarr; mailto:lanyd1997@qq.com" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
-      </span>
-  </div>
 
+          
 
+          
+            <div class="links-of-author motion-element">
+              
+                <span class="links-of-author-item">
+                  <a href="https://github.com/ydlan" target="_blank" title="GitHub"><i class="fa fa-fw fa-github"></i>GitHub</a>
+                  
+                </span>
+              
+                <span class="links-of-author-item">
+                  <a href="https://blog.csdn.net/lanyandong" target="_blank" title="CSDN"><i class="fa fa-fw fa-crosshairs"></i>CSDN</a>
+                  
+                </span>
+              
+                <span class="links-of-author-item">
+                  <a href="mailto:lanyd1997@qq.com" target="_blank" title="E-Mail"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  
+                </span>
+              
+            </div>
+          
 
-      </div>
+          
+          
+		  
+		  <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=77159&auto=1&height=66"></iframe>
+
+          
+          
+
+          
+            
+          
+          
+
+        </div>
+      </section>
+
+      
+
+      
 
     </div>
   </aside>
-  <div id="sidebar-dimmer"></div>
 
 
+        
       </div>
     </main>
 
-    <footer class="footer">
+    <footer id="footer" class="footer">
       <div class="footer-inner">
-        
-
-<div class="copyright">
-  
-  &copy; 
-  <span itemprop="copyrightYear">2020</span>
-  <span class="with-love">
+        <div class="copyright"> &copy; <span itemprop="copyrightYear">2020</span>
+  <span class="with-love" id="animate">
     <i class="fa fa-user"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">YDLAN</span>
+
+  
+
+  
 </div>
-  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.8.0
-  </div>
+
+
+
+
+  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> v3.8.0</div>
+
+
+
   <span class="post-meta-divider">|</span>
-  <div class="theme-info">主题 – <a href="https://mist.theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Mist</a> v7.5.0
-  </div>
+
+
+
+  <div class="theme-info">Theme – <a class="theme-link" target="_blank" href="https://theme-next.org">NexT.Mist</a> v6.5.0</div>
+
+
+
 
         
-
-
-
-
 
 
 
@@ -612,15 +1416,92 @@
         
       </div>
     </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+	
+    
+
+    
   </div>
 
   
-  <script src="/lib/anime.min.js"></script>
-  <script src="/lib/velocity/velocity.min.js"></script>
-  <script src="/lib/velocity/velocity.ui.min.js"></script>
-<script src="/js/utils.js"></script><script src="/js/motion.js"></script>
-<script src="/js/schemes/muse.js"></script>
-<script src="/js/next-boot.js"></script>
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=6.5.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=6.5.0"></script>
+
+
+
+  
+  
+
+  
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=6.5.0"></script>
+
+
+
+  
 
 
 
@@ -635,11 +1516,30 @@
 
 
 
+  
 
 
 
 
 
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
 
   
 

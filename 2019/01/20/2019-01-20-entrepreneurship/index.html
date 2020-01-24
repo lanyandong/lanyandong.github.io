@@ -1,83 +1,146 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
-<head>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="en">
+<head><meta name="generator" content="Hexo 3.8.0">
   <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 3.8.0">
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon16x16.png">
-
-<link rel="stylesheet" href="/css/main.css">
 
 
-<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
 
 
-<script id="hexo-configurations">
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=6.5.0" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch.png?v=6.5.0">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon32x32.png?v=6.5.0">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon16x16.png?v=6.5.0">
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" id="hexo.configurations">
   var NexT = window.NexT || {};
   var CONFIG = {
     root: '/',
     scheme: 'Mist',
-    version: '7.5.0',
-    exturl: false,
-    sidebar: {"position":"right","display":"post","offset":12,"onmobile":false},
-    copycode: {"enable":false,"show_result":false,"style":null},
-    back2top: {"enable":true,"sidebar":false,"scrollpercent":false},
-    bookmark: {"enable":false,"color":"#222","save":"auto"},
+    version: '6.5.0',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
     fancybox: false,
-    mediumzoom: false,
+    fastclick: false,
     lazyload: false,
-    pangu: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
     algolia: {
-      appID: '',
+      applicationID: '',
       apiKey: '',
       indexName: '',
       hits: {"per_page":10},
       labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
-    },
-    localsearch: {"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
-    path: '',
-    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
-    translation: {
-      copy_button: '复制',
-      copy_success: '复制成功',
-      copy_failure: '复制失败'
-    },
-    sidebarPadding: 40
+    }
   };
 </script>
 
-  <meta name="description" content="今年寒假，花了十天时间筹备了一个简单的微创业项目，结果虽然并不理想，但还是有些收获，在此对整个项目做一个简单总结。项目发起这个项目主要是做一个线上的编程课外培训班，这个项目是好几个月前朋友就跟我提起过的，因为和我本人专业相关，而且出于朋友间的关系，我是比较支持的。朋友跟我简单讲了项目的一些立意和初期计划，我们达成了共识，而且寒假自己也能腾出手来弄，索性就尝试一下。">
+
+  
+
+
+
+
+  <meta name="description" content="今年寒假，花了十天时间筹备了一个简单的微创业项目，结果虽然并不理想，但还是有些收获，在此对整个项目做一个简单总结。 项目发起这个项目主要是做一个线上的编程课外培训班，这个项目是好几个月前朋友就跟我提起过的，因为和我本人专业相关，而且出于朋友间的关系，我是比较支持的。朋友跟我简单讲了项目的一些立意和初期计划，我们达成了共识，而且寒假自己也能腾出手来弄，索性就尝试一下。 项目运营因为是微创业项目，也不">
 <meta name="keywords" content="分享">
 <meta property="og:type" content="article">
 <meta property="og:title" content="This is my first micro-entrepreneurship">
 <meta property="og:url" content="https://ydlan.github.io/2019/01/20/2019-01-20-entrepreneurship/index.html">
-<meta property="og:site_name" content="YDLAN">
-<meta property="og:description" content="今年寒假，花了十天时间筹备了一个简单的微创业项目，结果虽然并不理想，但还是有些收获，在此对整个项目做一个简单总结。项目发起这个项目主要是做一个线上的编程课外培训班，这个项目是好几个月前朋友就跟我提起过的，因为和我本人专业相关，而且出于朋友间的关系，我是比较支持的。朋友跟我简单讲了项目的一些立意和初期计划，我们达成了共识，而且寒假自己也能腾出手来弄，索性就尝试一下。">
-<meta property="og:locale" content="zh-CN">
+<meta property="og:site_name" content="YDLAN&#39;S BLOG">
+<meta property="og:description" content="今年寒假，花了十天时间筹备了一个简单的微创业项目，结果虽然并不理想，但还是有些收获，在此对整个项目做一个简单总结。 项目发起这个项目主要是做一个线上的编程课外培训班，这个项目是好几个月前朋友就跟我提起过的，因为和我本人专业相关，而且出于朋友间的关系，我是比较支持的。朋友跟我简单讲了项目的一些立意和初期计划，我们达成了共识，而且寒假自己也能腾出手来弄，索性就尝试一下。 项目运营因为是微创业项目，也不">
+<meta property="og:locale" content="en">
 <meta property="og:updated_time" content="2019-11-08T00:44:22.426Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="This is my first micro-entrepreneurship">
-<meta name="twitter:description" content="今年寒假，花了十天时间筹备了一个简单的微创业项目，结果虽然并不理想，但还是有些收获，在此对整个项目做一个简单总结。项目发起这个项目主要是做一个线上的编程课外培训班，这个项目是好几个月前朋友就跟我提起过的，因为和我本人专业相关，而且出于朋友间的关系，我是比较支持的。朋友跟我简单讲了项目的一些立意和初期计划，我们达成了共识，而且寒假自己也能腾出手来弄，索性就尝试一下。">
-
-<link rel="canonical" href="https://ydlan.github.io/2019/01/20/2019-01-20-entrepreneurship/">
+<meta name="twitter:description" content="今年寒假，花了十天时间筹备了一个简单的微创业项目，结果虽然并不理想，但还是有些收获，在此对整个项目做一个简单总结。 项目发起这个项目主要是做一个线上的编程课外培训班，这个项目是好几个月前朋友就跟我提起过的，因为和我本人专业相关，而且出于朋友间的关系，我是比较支持的。朋友跟我简单讲了项目的一些立意和初期计划，我们达成了共识，而且寒假自己也能腾出手来弄，索性就尝试一下。 项目运营因为是微创业项目，也不">
 
 
-<script id="page-configurations">
-  // https://hexo.io/docs/variables.html
+
+
+
+
+  <link rel="canonical" href="https://ydlan.github.io/2019/01/20/2019-01-20-entrepreneurship/">
+
+
+
+<script type="text/javascript" id="page.configurations">
   CONFIG.page = {
     sidebar: "",
-    isHome: false,
-    isPost: true,
-    isPage: false,
-    isArchive: false
   };
 </script>
 
-  <title>This is my first micro-entrepreneurship | YDLAN</title>
+  <title>This is my first micro-entrepreneurship | YDLAN'S BLOG</title>
   
+
+
+
+
+
 
 
 
@@ -85,148 +148,267 @@
 
 
   <noscript>
-  <style>
-  .use-motion .brand,
-  .use-motion .menu-item,
-  .sidebar-inner,
-  .use-motion .post-block,
-  .use-motion .pagination,
-  .use-motion .comments,
-  .use-motion .post-header,
-  .use-motion .post-body,
-  .use-motion .collection-header { opacity: initial; }
+  <style type="text/css">
+    .use-motion .motion-element,
+    .use-motion .brand,
+    .use-motion .menu-item,
+    .sidebar-inner,
+    .use-motion .post-block,
+    .use-motion .pagination,
+    .use-motion .comments,
+    .use-motion .post-header,
+    .use-motion .post-body,
+    .use-motion .collection-title { opacity: initial; }
 
-  .use-motion .site-title,
-  .use-motion .site-subtitle {
-    opacity: initial;
-    top: initial;
-  }
+    .use-motion .logo,
+    .use-motion .site-title,
+    .use-motion .site-subtitle {
+      opacity: initial;
+      top: initial;
+    }
 
-  .use-motion .logo-line-before i { left: initial; }
-  .use-motion .logo-line-after i { right: initial; }
+    .use-motion {
+      .logo-line-before i { left: initial; }
+      .logo-line-after i { right: initial; }
+    }
   </style>
 </noscript>
 
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage">
-  <div class="container use-motion">
+<body itemscope itemtype="http://schema.org/WebPage" lang="en">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
-    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-brand-container">
-  <div class="site-meta">
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
 
-    <div>
+    <div class="custom-logo-site-title">
       <a href="/" class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
-        <span class="site-title">YDLAN</span>
+        <span class="site-title">YDLAN'S BLOG</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
+    
+      
         <p class="site-subtitle">一起来探索吧！</p>
+      
+    
   </div>
 
   <div class="site-nav-toggle">
-    <div class="toggle" aria-label="切换导航栏">
-      <span class="toggle-line toggle-line-first"></span>
-      <span class="toggle-line toggle-line-middle"></span>
-      <span class="toggle-line toggle-line-last"></span>
-    </div>
+    <button aria-label="Toggle navigation bar">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
   </div>
 </div>
+
 
 
 <nav class="site-nav">
   
-  <ul id="menu" class="menu">
-        <li class="menu-item menu-item-home">
-
-    <a href="/" rel="section"><i class="fa fa-fw fa-home"></i>首页</a>
-
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+          
+          <li class="menu-item menu-item-home">
+    <a href="/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-home"></i> <br>Home</a>
   </li>
-        <li class="menu-item menu-item-categories">
-
-    <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>分类</a>
-
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+    <a href="/archives/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>Archives</a>
   </li>
-        <li class="menu-item menu-item-tags">
-
-    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>标签</a>
-
+        
+        
+        
+          
+          <li class="menu-item menu-item-categories">
+    <a href="/categories/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-th"></i> <br>Categories</a>
   </li>
-        <li class="menu-item menu-item-about">
-
-    <a href="/about/" rel="section"><i class="fa fa-fw fa-user"></i>关于</a>
-
+        
+        
+        
+          
+          <li class="menu-item menu-item-tags">
+    <a href="/tags/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>Tags</a>
   </li>
-  </ul>
+        
+        
+        
+          
+          <li class="menu-item menu-item-about">
+    <a href="/about/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-user"></i> <br>About</a>
+  </li>
 
+      
+      
+    </ul>
+  
+
+  
+    
+
+  
+
+  
 </nav>
+
+
+
+  
+
+
+
 </div>
     </header>
 
     
-  <div class="back-to-top">
-    <i class="fa fa-arrow-up"></i>
-    <span>0%</span>
-  </div>
 
 
-    <main class="main">
+    <main id="main" class="main">
       <div class="main-inner">
         <div class="content-wrap">
           
-
-          <div class="content">
+          <div id="content" class="content">
             
 
-  <div class="posts-expand">
-      
+  <div id="posts" class="posts-expand">
+    
+
+  
+
   
   
-  <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="zh-CN">
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://ydlan.github.io/2019/01/20/2019-01-20-entrepreneurship/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jpg">
       <meta itemprop="name" content="YDLAN">
-      <meta itemprop="description" content="YDLAN的个人博客">
+      <meta itemprop="description" content="记录学习和日常">
+      <meta itemprop="image" content="/images/avatar.jpg">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="YDLAN">
+      <meta itemprop="name" content="YDLAN'S BLOG">
     </span>
+
+    
       <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          This is my first micro-entrepreneurship
-        </h1>
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">This is my first micro-entrepreneurship
+              
+            
+          </h1>
+        
 
         <div class="post-meta">
-            <span class="post-meta-item">
+          <span class="post-time">
+
+            
+            
+            
+
+            
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
-              <span class="post-meta-item-text">发表于</span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
 
-              <time title="创建时间：2019-01-20 23:41:17" itemprop="dateCreated datePublished" datetime="2019-01-20T23:41:17+08:00">2019-01-20</time>
-            </span>
-            <span class="post-meta-item">
+              
+                
+              
+
+              <time title="Created: 2019-01-20 23:41:17" itemprop="dateCreated datePublished" datetime="2019-01-20T23:41:17+08:00">2019-01-20</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2019-11-08 08:44:22" itemprop="dateModified" datetime="2019-11-08T08:44:22+08:00">2019-11-08</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/随笔集/" itemprop="url" rel="index">
-                    <span itemprop="name">随笔集</span>
-                  </a>
-                </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/随笔集/" itemprop="url" rel="index"><span itemprop="name">随笔集</span></a></span>
+
+                
+                
+              
             </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
 
           
 
         </div>
       </header>
+    
 
     
     
@@ -234,8 +416,11 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p>今年寒假，花了十天时间筹备了一个简单的微创业项目，结果虽然并不理想，但还是有些收获，在此对整个项目做一个简单总结。</p><h3 id="项目发起"><a href="#项目发起" class="headerlink" title="项目发起"></a>项目发起</h3><p>这个项目主要是做一个线上的编程课外培训班，这个项目是好几个月前朋友就跟我提起过的，因为和我本人专业相关，而且出于朋友间的关系，我是比较支持的。朋友跟我简单讲了项目的一些立意和初期计划，我们达成了共识，而且寒假自己也能腾出手来弄，索性就尝试一下。</p><a id="more"></a>
+      
 
+      
+        <p>今年寒假，花了十天时间筹备了一个简单的微创业项目，结果虽然并不理想，但还是有些收获，在此对整个项目做一个简单总结。</p>
+<h3 id="项目发起"><a href="#项目发起" class="headerlink" title="项目发起"></a>项目发起</h3><p>这个项目主要是做一个线上的编程课外培训班，这个项目是好几个月前朋友就跟我提起过的，因为和我本人专业相关，而且出于朋友间的关系，我是比较支持的。朋友跟我简单讲了项目的一些立意和初期计划，我们达成了共识，而且寒假自己也能腾出手来弄，索性就尝试一下。</p>
 <h3 id="项目运营"><a href="#项目运营" class="headerlink" title="项目运营"></a>项目运营</h3><p>因为是微创业项目，也不打算盈利，重在尝试体验。到了寒假我们就开始着手准备，经过朋友的联系，大多数合伙人都是高中要好的朋友。本身项目不大，所以团队人数不多，包括三个运营小姐姐，还要三个讲师小哥哥，我呢就是其中一个。</p>
 <p>项目运营之前朋友做过一些市场调查，了解到现在编程培训还是比较有市场的，我们的面向群众主要是小学初中零基础的同学，让他们来体验编程，接触编程，或者是通过课程培养一些有关编程的兴趣，这也是我的一个初衷，因为自己就是大学才开始接触编程，以至于后面学习起来稍显费劲。</p>
 <p>我们主要设置了三门语言的学习，其中包括 Scratch，Python还有 C++，我们的想法是让孩子有一定的选择。因此我们也安排了试讲环节，主要是让家长和孩子了解编程，鼓励他们来学习。</p>
@@ -259,147 +444,313 @@
 <p>合作交流是我最看重的东西，良好的交流合作可以让工作更加顺利，谦虚温和的态度更能加速合作进程，当然想法和建议也是不可缺少的，只有更新互补，才能共同进步。</p>
 <h4 id="未来战略"><a href="#未来战略" class="headerlink" title="未来战略"></a>未来战略</h4><p>通过这次简单的项目，我自己也思考了很多，对自己也有了一个新的定位。首先直接还是要苦练技术，把技术提高到一个档次，必须有一技之长。其次是向阔度发展，了解相关技术，熟悉掌握当下社会需要的技能，也应该多了解其他领域的东西，积累一些知识面或谈资。另外，就是保持好奇心，保持学习动力，积极学习新技术新知识，及时巩固基础知识和技能，完成知识闭环，形成自己的知识体系。当然最重要的是保持良好心态，保持纯真性格，做自己喜欢的事，做自己认为有意义的事。</p>
 
+      
     </div>
 
     
+
+    
     
     
 
-      <footer class="post-footer">
-          <div class="post-tags">
-              <a href="/tags/分享/" rel="tag"># 分享</a>
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/分享/" rel="tag"># 分享</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/01/12/2019-01-12-github-page/" rel="next" title="Hexo + github page + markdown 搭建静态博客">
+                <i class="fa fa-chevron-left"></i> Hexo + github page + markdown 搭建静态博客
+              </a>
+            
           </div>
 
-        
+          <span class="post-nav-divider"></span>
 
-          <div class="post-nav">
-            <div class="post-nav-next post-nav-item">
-                <a href="/2019/01/12/2019-01-12-github-page/" rel="next" title="Hexo + github page + markdown 搭建静态博客">
-                  <i class="fa fa-chevron-left"></i> Hexo + github page + markdown 搭建静态博客
-                </a>
-            </div>
-
-            <span class="post-nav-divider"></span>
-
-            <div class="post-nav-prev post-nav-item">
-                <a href="/2019/03/16/2019-03-16-rsic-instruction/" rel="prev" title="RISC指令集的五个周期">
-                  RISC指令集的五个周期 <i class="fa fa-chevron-right"></i>
-                </a>
-            </div>
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/03/16/2019-03-16-rsic-instruction/" rel="prev" title="RISC指令集的五个周期">
+                RISC指令集的五个周期 <i class="fa fa-chevron-right"></i>
+              </a>
+            
           </div>
-      </footer>
-    
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
   </article>
-  
-  
-  
+
 
   </div>
 
 
           </div>
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/images/avatar.jpg" alt="YDLAN">
+            
+              <p class="site-author-name" itemprop="name">YDLAN</p>
+              <p class="site-description motion-element" itemprop="description">记录学习和日常</p>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">29</span>
+                    <span class="site-state-item-name">posts</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  <a href="/categories/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">7</span>
+                    <span class="site-state-item-name">categories</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  <a href="/tags/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">23</span>
+                    <span class="site-state-item-name">tags</span>
+                  </a>
+                </div>
+              
+            </nav>
+          
+
+          
+
+          
+            <div class="links-of-author motion-element">
+              
+                <span class="links-of-author-item">
+                  <a href="https://github.com/ydlan" target="_blank" title="GitHub"><i class="fa fa-fw fa-github"></i>GitHub</a>
+                  
+                </span>
+              
+                <span class="links-of-author-item">
+                  <a href="https://blog.csdn.net/lanyandong" target="_blank" title="CSDN"><i class="fa fa-fw fa-crosshairs"></i>CSDN</a>
+                  
+                </span>
+              
+                <span class="links-of-author-item">
+                  <a href="mailto:lanyd1997@qq.com" target="_blank" title="E-Mail"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  
+                </span>
+              
+            </div>
+          
+
+          
+          
+		  
+		  <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=77159&auto=1&height=66"></iframe>
+
+          
+          
+
+          
+            
+          
           
 
         </div>
-          
-  
-  <div class="toggle sidebar-toggle">
-    <span class="toggle-line toggle-line-first"></span>
-    <span class="toggle-line toggle-line-middle"></span>
-    <span class="toggle-line toggle-line-last"></span>
-  </div>
+      </section>
 
-  <aside class="sidebar">
-    <div class="sidebar-inner">
-
-      <ul class="sidebar-nav motion-element">
-        <li class="sidebar-nav-toc">
-          文章目录
-        </li>
-        <li class="sidebar-nav-overview">
-          站点概览
-        </li>
-      </ul>
-
+      
       <!--noindex-->
-      <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#项目发起"><span class="nav-number">1.</span> <span class="nav-text">项目发起</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#项目运营"><span class="nav-number">2.</span> <span class="nav-text">项目运营</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#项目总结"><span class="nav-number">3.</span> <span class="nav-text">项目总结</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#遇到的问题"><span class="nav-number">3.1.</span> <span class="nav-text">遇到的问题</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#收获的东西"><span class="nav-number">3.2.</span> <span class="nav-text">收获的东西</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#个人总结"><span class="nav-number">4.</span> <span class="nav-text">个人总结</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#未来战略"><span class="nav-number">4.1.</span> <span class="nav-text">未来战略</span></a></li></ol></li></ol></div>
-      </div>
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#项目发起"><span class="nav-number">1.</span> <span class="nav-text">项目发起</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#项目运营"><span class="nav-number">2.</span> <span class="nav-text">项目运营</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#项目总结"><span class="nav-number">3.</span> <span class="nav-text">项目总结</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#遇到的问题"><span class="nav-number">3.1.</span> <span class="nav-text">遇到的问题</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#收获的东西"><span class="nav-number">3.2.</span> <span class="nav-text">收获的东西</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#个人总结"><span class="nav-number">4.</span> <span class="nav-text">个人总结</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#未来战略"><span class="nav-number">4.1.</span> <span class="nav-text">未来战略</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
       <!--/noindex-->
+      
 
-      <div class="site-overview-wrap sidebar-panel">
-        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-  <img class="site-author-image" itemprop="image" alt="YDLAN" src="/images/avatar.jpg">
-  <p class="site-author-name" itemprop="name">YDLAN</p>
-  <div class="site-description" itemprop="description">YDLAN的个人博客</div>
-</div>
-<div class="site-state-wrap motion-element">
-  <nav class="site-state">
-      <div class="site-state-item site-state-posts">
-          <a href="/archives">
-          <span class="site-state-item-count">29</span>
-          <span class="site-state-item-name">日志</span>
-        </a>
-      </div>
-      <div class="site-state-item site-state-categories">
-            <a href="/categories/">
-          
-        <span class="site-state-item-count">7</span>
-        <span class="site-state-item-name">分类</span></a>
-      </div>
-      <div class="site-state-item site-state-tags">
-            <a href="/tags/">
-          
-        <span class="site-state-item-count">23</span>
-        <span class="site-state-item-name">标签</span></a>
-      </div>
-  </nav>
-</div>
-  <div class="links-of-author motion-element">
-      <span class="links-of-author-item">
-        <a href="https://github.com/ydlan" title="GitHub &rarr; https://github.com/ydlan" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
-      </span>
-      <span class="links-of-author-item">
-        <a href="mailto:lanyd1997@qq.com" title="E-Mail &rarr; mailto:lanyd1997@qq.com" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
-      </span>
-  </div>
-
-
-
-      </div>
+      
 
     </div>
   </aside>
-  <div id="sidebar-dimmer"></div>
 
 
+        
       </div>
     </main>
 
-    <footer class="footer">
+    <footer id="footer" class="footer">
       <div class="footer-inner">
-        
-
-<div class="copyright">
-  
-  &copy; 
-  <span itemprop="copyrightYear">2020</span>
-  <span class="with-love">
+        <div class="copyright"> &copy; <span itemprop="copyrightYear">2020</span>
+  <span class="with-love" id="animate">
     <i class="fa fa-user"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">YDLAN</span>
+
+  
+
+  
 </div>
-  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.8.0
-  </div>
+
+
+
+
+  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> v3.8.0</div>
+
+
+
   <span class="post-meta-divider">|</span>
-  <div class="theme-info">主题 – <a href="https://mist.theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Mist</a> v7.5.0
-  </div>
+
+
+
+  <div class="theme-info">Theme – <a class="theme-link" target="_blank" href="https://theme-next.org">NexT.Mist</a> v6.5.0</div>
+
+
+
 
         
-
-
-
-
 
 
 
@@ -411,15 +762,96 @@
         
       </div>
     </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+	
+    
+
+    
   </div>
 
   
-  <script src="/lib/anime.min.js"></script>
-  <script src="/lib/velocity/velocity.min.js"></script>
-  <script src="/lib/velocity/velocity.ui.min.js"></script>
-<script src="/js/utils.js"></script><script src="/js/motion.js"></script>
-<script src="/js/schemes/muse.js"></script>
-<script src="/js/next-boot.js"></script>
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=6.5.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=6.5.0"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.5.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=6.5.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=6.5.0"></script>
+
+
+
+  
 
 
 
@@ -434,11 +866,30 @@
 
 
 
+  
 
 
 
 
 
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
 
   
 
