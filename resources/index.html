@@ -131,7 +131,7 @@
 <meta property="og:image" content="https://s2.ax1x.com/2020/01/25/1enteI.jpg">
 <meta property="og:image" content="https://s2.ax1x.com/2020/01/25/1enNwt.jpg">
 <meta property="og:image" content="https://s2.ax1x.com/2020/01/25/1endFf.jpg">
-<meta property="og:updated_time" content="2020-01-25T06:48:14.535Z">
+<meta property="og:updated_time" content="2020-01-29T01:48:24.037Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Resources">
 <meta name="twitter:description" content="📖-Notebooks CS Learning Notes IOT课程相关实验汇总  💼-Repositories IOT-Android：基于CC2530 + iTOP-4412 +Android 构建的物联网应用简单解决方案 Cicada-Weather：个人开发天气预报微信小程序（Version 1.0） Carousel-Figure：js 实现图片简单轮播效果 DNSLookupTo">
@@ -416,6 +416,9 @@
           </div>
           
 
+  
+    <div class="comments" id="comments">
+    </div>
   
   
   
@@ -792,6 +795,31 @@
 
 
 
+
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  
+  
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(function (item) {
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: false,
+        notify: false,
+        appId: '7WurRjcFYafHR5cOpPlavBcP-gzGzoHsz',
+        appKey: 'qvW4QooDLPpd6wQWc2AxN5dE',
+        placeholder: 'Just go go',
+        avatar:'mm',
+        meta:guest,
+        pageSize:'10' || 10,
+        visitor: false
+    });
+  </script>
 
 
   
