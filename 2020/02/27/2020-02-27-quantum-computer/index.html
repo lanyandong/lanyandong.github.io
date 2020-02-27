@@ -106,25 +106,30 @@
 
 
 
-  <meta name="description" content="0x00 前言终于有时间了，整理一下嵌入式硬件的东西，在过去的一个学期里选修了嵌入式课程，然后相对完整的了解了嵌入式开发过程，咱物联网专业比较好的一点就是可以结合软硬件，都可以了解，上学期还做了一些WSN ZigBee，RFID 的实验，当时觉得用不到，没想到，这次实训竟然也做嵌入式开发，也使用了ZigBee模块完成一些功能，感觉所有东西并不是绝对没用，多了解一点总是好的。 0x01 嵌入式入门关">
-<meta name="keywords" content="嵌入式">
+  <meta name="description" content="在2019年10月24日，《自然》杂志刊发了Google公司的一篇论文，Google宣称率先实现了“量子霸权”，在量子研究和信息学领域都引发了大量讨论。关于量子计算机，早在20世纪80年代初期就有研究人员提出量子计算的思想，在长达40年时间里，关于量子计算机的研究也从未停止过，当然也在理论模型试验等过程中取得了不错的成果。 由于量子计算机仍然处于研究阶段，大部分是实验研究并没有普及应用，我们关于量">
+<meta name="keywords" content="量子计算机">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Embedded-Hardware">
-<meta property="og:url" content="https://ydlan.github.io/2019/07/11/2019-07-11-embedded-hardware/index.html">
+<meta property="og:title" content="如何理解“量子霸权”">
+<meta property="og:url" content="https://ydlan.github.io/2020/02/27/2020-02-27-quantum-computer/index.html">
 <meta property="og:site_name" content="YDLAN&#39;S BLOG">
-<meta property="og:description" content="0x00 前言终于有时间了，整理一下嵌入式硬件的东西，在过去的一个学期里选修了嵌入式课程，然后相对完整的了解了嵌入式开发过程，咱物联网专业比较好的一点就是可以结合软硬件，都可以了解，上学期还做了一些WSN ZigBee，RFID 的实验，当时觉得用不到，没想到，这次实训竟然也做嵌入式开发，也使用了ZigBee模块完成一些功能，感觉所有东西并不是绝对没用，多了解一点总是好的。 0x01 嵌入式入门关">
+<meta property="og:description" content="在2019年10月24日，《自然》杂志刊发了Google公司的一篇论文，Google宣称率先实现了“量子霸权”，在量子研究和信息学领域都引发了大量讨论。关于量子计算机，早在20世纪80年代初期就有研究人员提出量子计算的思想，在长达40年时间里，关于量子计算机的研究也从未停止过，当然也在理论模型试验等过程中取得了不错的成果。 由于量子计算机仍然处于研究阶段，大部分是实验研究并没有普及应用，我们关于量">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-07-11T12:49:27.505Z">
+<meta property="og:image" content="https://gss3.bdstatic.com/-Po3dSag_xI4khGkpoWK1HF6hhy/baike/c0%3Dbaike180%2C5%2C5%2C180%2C60/sign=0b0d7ce9aaefce1bfe26c098ce3898bb/32fa828ba61ea8d366fd4b1b9a0a304e241f58d5.jpg">
+<meta property="og:image" content="https://www.qtumist.com/wp-content/uploads/2019/09/2019090614544299.png">
+<meta property="og:image" content="https://gss1.bdstatic.com/9vo3dSag_xI4khGkpoWK1HF6hhy/baike/c0%3Dbaike80%2C5%2C5%2C80%2C26/sign=4a26e3f9414a20a425133495f13bf347/dc54564e9258d109baee1259df58ccbf6d814dcf.jpg">
+<meta property="og:image" content="https://gss1.bdstatic.com/9vo3dSag_xI4khGkpoWK1HF6hhy/baike/c0%3Dbaike150%2C5%2C5%2C150%2C50/sign=3185f79b99cad1c8c4b6f4751e570c6c/5366d0160924ab1896e0068339fae6cd7a890b8b.jpg">
+<meta property="og:updated_time" content="2020-02-27T11:01:18.995Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Embedded-Hardware">
-<meta name="twitter:description" content="0x00 前言终于有时间了，整理一下嵌入式硬件的东西，在过去的一个学期里选修了嵌入式课程，然后相对完整的了解了嵌入式开发过程，咱物联网专业比较好的一点就是可以结合软硬件，都可以了解，上学期还做了一些WSN ZigBee，RFID 的实验，当时觉得用不到，没想到，这次实训竟然也做嵌入式开发，也使用了ZigBee模块完成一些功能，感觉所有东西并不是绝对没用，多了解一点总是好的。 0x01 嵌入式入门关">
+<meta name="twitter:title" content="如何理解“量子霸权”">
+<meta name="twitter:description" content="在2019年10月24日，《自然》杂志刊发了Google公司的一篇论文，Google宣称率先实现了“量子霸权”，在量子研究和信息学领域都引发了大量讨论。关于量子计算机，早在20世纪80年代初期就有研究人员提出量子计算的思想，在长达40年时间里，关于量子计算机的研究也从未停止过，当然也在理论模型试验等过程中取得了不错的成果。 由于量子计算机仍然处于研究阶段，大部分是实验研究并没有普及应用，我们关于量">
+<meta name="twitter:image" content="https://gss3.bdstatic.com/-Po3dSag_xI4khGkpoWK1HF6hhy/baike/c0%3Dbaike180%2C5%2C5%2C180%2C60/sign=0b0d7ce9aaefce1bfe26c098ce3898bb/32fa828ba61ea8d366fd4b1b9a0a304e241f58d5.jpg">
 
 
 
 
 
 
-  <link rel="canonical" href="https://ydlan.github.io/2019/07/11/2019-07-11-embedded-hardware/">
+  <link rel="canonical" href="https://ydlan.github.io/2020/02/27/2020-02-27-quantum-computer/">
 
 
 
@@ -134,7 +139,7 @@
   };
 </script>
 
-  <title>Embedded-Hardware | YDLAN'S BLOG</title>
+  <title>如何理解“量子霸权” | YDLAN'S BLOG</title>
   
 
 
@@ -317,7 +322,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://ydlan.github.io/2019/07/11/2019-07-11-embedded-hardware/">
+    <link itemprop="mainEntityOfPage" href="https://ydlan.github.io/2020/02/27/2020-02-27-quantum-computer/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="YDLAN">
@@ -334,7 +339,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Embedded-Hardware
+          <h1 class="post-title" itemprop="name headline">如何理解“量子霸权”
               
             
           </h1>
@@ -359,7 +364,7 @@
                 
               
 
-              <time title="Created: 2019-07-11 10:16:10 / Modified: 20:49:27" itemprop="dateCreated datePublished" datetime="2019-07-11T10:16:10+08:00">2019-07-11</time>
+              <time title="Created: 2020-02-27 18:50:28 / Modified: 19:01:18" itemprop="dateCreated datePublished" datetime="2020-02-27T18:50:28+08:00">2020-02-27</time>
             
 
             
@@ -381,7 +386,7 @@
                 <span class="post-meta-item-text">In</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/学习笔记/" itemprop="url" rel="index"><span itemprop="name">学习笔记</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/分享/" itemprop="url" rel="index"><span itemprop="name">分享</span></a></span>
 
                 
                 
@@ -396,8 +401,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2019/07/11/2019-07-11-embedded-hardware/#comments" itemprop="discussionUrl">
-                  <span class="post-meta-item-text">Comments: </span> <span class="post-comments-count valine-comment-count" data-xid="/2019/07/11/2019-07-11-embedded-hardware/" itemprop="commentCount"></span>
+                <a href="/2020/02/27/2020-02-27-quantum-computer/#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">Comments: </span> <span class="post-comments-count valine-comment-count" data-xid="/2020/02/27/2020-02-27-quantum-computer/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -425,14 +430,39 @@
       
 
       
-        <h3 id="0x00-前言"><a href="#0x00-前言" class="headerlink" title="0x00 前言"></a>0x00 前言</h3><p>终于有时间了，整理一下嵌入式硬件的东西，在过去的一个学期里选修了嵌入式课程，然后相对完整的了解了嵌入式开发过程，咱物联网专业比较好的一点就是可以结合软硬件，都可以了解，上学期还做了一些WSN ZigBee，RFID 的实验，当时觉得用不到，没想到，这次实训竟然也做嵌入式开发，也使用了ZigBee模块完成一些功能，感觉所有东西并不是绝对没用，多了解一点总是好的。</p>
-<h3 id="0x01-嵌入式入门"><a href="#0x01-嵌入式入门" class="headerlink" title="0x01 嵌入式入门"></a>0x01 嵌入式入门</h3><p>关于硬件的东西，之前几乎是从来没有接触，完全不懂什么SOC，也不知道什么MCU，更别说是做开发了，之前唯一对硬件感兴趣的就是树莓派，听说是一块很不错的板子，但由于各种情况，也没有入坑。知道这个学期选了嵌入式，然后因为要完成实验所以入坑了一块EK-TM4C123GXL 开发板，麻雀虽小五脏俱全，这块板子基本能够满足所有嵌入式的基本开发，用来学习还是很不错的。</p>
-<p>关于硬件的学习，其实最主要还是要了解硬件资源，熟悉硬件提供的功能，包括GPIO，时钟，中断等，这些都是最基本的，另外就是一些ADC，DAC，时钟频率，高低电平，这些也是要十分熟悉才行。硬件开发有很多东西是记不住的，所以学会查文档很重要的，学习路线可以大致为：看文档了解硬件资源–找案例照葫芦画瓢–网上查阅资料–查开发文档；有些东西不用刻意去记，用的时候去查就行。但构建思路，开发步骤是需要明确的，比如说要使用GPIO时要初始化寄存器，使用模块功能时要考虑时钟的影响，使用中断时要了解如何调用中断处理函数，如果有要连接传感器的话，还要参考传感器的资料，了解其电气特性等。总之，查资料，阅读资料，理解资料在硬件开发中尤为重要。</p>
-<h3 id="0x02-实训硬件开发"><a href="#0x02-实训硬件开发" class="headerlink" title="0x02 实训硬件开发"></a>0x02 实训硬件开发</h3><p>实训时使用的是CC2530，搭载了ZigBee模块，在开发中都是使用IAR软件，刚好和我们wsn实验ZigBee联系上了，不过我们在wsn实验中我只使用了ZigBee协议栈组网通信，而这次我是利用ZigBee通信来控制硬件功能，而硬件功能实现就是需要嵌入式开发的知识了，刚好把所学内容进行了结合，在嵌入式开发中，不同的硬件资源可能开发就有所不同，但大多数底层逻辑是相同的，所以重点是理解思路。但嵌入式开发仍然有很多烦人的问题，这些Bug出现的原因各种各样，有的是硬件本身故障，有的程序错误，甚至可能的电路连接错误，所以在开发中遇到Bug，排查问题方式方法很关键，我个人认为先从硬件开始检查，最后再检查软件程序，逐层排查是一个相对较好的思路。</p>
-<p>当将嵌入式硬件和网络连接起来后，功能开始就更强大了，当然问题出现几率也开始变大了，在物联网传感器硬件开发中，一般使用ZigBee进行硬件组网，网络协议是单独的且复杂的，很多时候我们在开发过程中是不允许修改协议栈的，都已经封装好的，我们需要的是理解代码，了解功能实现思路，然后再做简单的自定义开发，所以读代码也物联网硬件开发需要的能力。</p>
-<p>在硬件开发中调试是一个不得不进行的过程，而硬件开发的调试不像软件那么方便，它需要在开发板或是硬件资源中运行，这是一个比较繁琐的过程，构建，编译，烧录，运行，测试输出这是一个最基本的流程，也是一个相对花费时间的过程，所以想要提升开发效率，最好的办法是理解问题本质并细心的修改问题，而不是盲目的测试，企图用巧合来达到成功。</p>
-<h3 id="0x03-总结"><a href="#0x03-总结" class="headerlink" title="0x03 总结"></a>0x03 总结</h3><p>本来是准备写一篇详细嵌入式硬件开发的文章，把自己使用的TM4C123GXL 开发和CC2530开发时使用的核心技术，关键代码总结一下，后面发现硬件开发这玩意儿，只要理解了解很简单，实现起来也是多变的，没有一个很固定的标准，所以也不太好总结，也没太必要，下一次遇到是查资料就行。这次在完成项目时参考了很多网上的资料，学到很多东西，比如博客园的小蜜蜂老师和csdn的Bruceoxl老师，他们的博文很全面也很详细，给了我很大的帮助，同时也挺佩服他们能够输出那么多优质内容，应该向他们学习。</p>
-<p>写到这也要告一段落了，关于硬件嵌入式ZigBee开发，我究竟理解多少，掌握了多少，过段时间后我是否还能记起，这些都是无法量化和衡量的，只希望自己总结的方法能够适用于以后的问题。</p>
+        <p>在2019年10月24日，《自然》杂志刊发了Google公司的一篇论文，Google宣称率先实现了“量子霸权”，在量子研究和信息学领域都引发了大量讨论。关于量子计算机，早在20世纪80年代初期就有研究人员提出量子计算的思想，在长达40年时间里，关于量子计算机的研究也从未停止过，当然也在理论模型试验等过程中取得了不错的成果。</p>
+<p>由于量子计算机仍然处于研究阶段，大部分是实验研究并没有普及应用，我们关于量子计算机的了解也是少之又少，大多来自于媒体报道，只了解一个概念，或区别于传统计算机。所以下文整理了一些关于量子计算机的核心概念，希望可以从宏观上了解量子计算机。</p>
+<p><strong>量子计算机</strong></p>
+<p>维基百科上量子计算机的解释是：量子计算机是一种使用量子逻辑进行通用计算的设备，量子计算用来存储数据的对象是量子位元（Qubit量子比特）。</p>
+<p>百度百科上量子计算机的解释是：量子计算机（quantum computer）是一类遵循量子力学规律进行高速数学和逻辑运算、存储及处理量子信息的物理装置。当某个装置处理和计算的是量子信息，运行的是量子算法时，它就是量子计算机。</p>
+<p><img src="https://gss3.bdstatic.com/-Po3dSag_xI4khGkpoWK1HF6hhy/baike/c0%3Dbaike180%2C5%2C5%2C180%2C60/sign=0b0d7ce9aaefce1bfe26c098ce3898bb/32fa828ba61ea8d366fd4b1b9a0a304e241f58d5.jpg" alt></p>
+<p>概念是抽象的，从维基百科和百度百科中可以了解到量子计算机是一种基于量子理论的一种新型计算机。其实现更多的需要物理体系的支持，DiVincenzo 就提出了5条标准，概况了可行量子计算机构建需要满足的条件：</p>
+<ol>
+<li>有可表征的物理量子比特；</li>
+<li>能很好的将量子态初始化初态；</li>
+<li>退相干时间比门操作时间长；</li>
+<li>拥有一套通用的量子门操作集；</li>
+<li>具有特定量子比特的测量能力；</li>
+</ol>
+<p>关于这5点概念的详细解释，可以参考量子客的这篇文章：<a href="https://www.qtumist.com/post/879" target="_blank" rel="noopener">标准量子计算</a>。下面是一些关于量子概念简单解释，有些概念科学界也并没有给出详细定义，存在众说纷纭的现象，如果有兴趣的话可以参考维基百科和百度百科。</p>
+<p><strong>量子比特</strong>（Qubits）</p>
+<p>传统计算机使用的比特(bit)是一种1或0表示的电脉冲和光脉冲流。而量子计算机使用的量子比特的物理载体通常是亚原子（如电子或光子）。由于这种物理载体的特殊性，在制备和控制量子比特过程中通常需要在低温超导或者超高真空的环境中。</p>
+<p><img src="https://www.qtumist.com/wp-content/uploads/2019/09/2019090614544299.png" alt></p>
+<p>由于量子比特的叠加性和纠缠性使得量子比特拥有比0和1更多的状态，可以表达更多信号，量子比特的连接组可以提供比相同数量的二进制位更高的处理能力。这也是量子计算机比传统计算机拥有更高算力的原因之一。</p>
+<p><strong>量子叠加</strong></p>
+<p>量子比特可以同时代表1和0的多种可能性组合，而这种同时处于多种状态的特性称之为叠加（Superposition）。“薛定谔的猫”就生动的描述了这种量子叠加状态（一只猫可以同时既是获得又是死的）。在量子力学中关于叠加态的理解是量子会产生衍射波，衍射波中有波峰波谷，因而量子可取不同的值（当然这需要系统地学习了解）。这里我们只用知道量子比特是可能存在多种状态的就可以了。另外，量子叠加会导致量子比特“坍塌”为0或者1，这是由于叠加的量子比特使得中间计算结果相互抵消造成的。</p>
+<p><img src="https://gss1.bdstatic.com/9vo3dSag_xI4khGkpoWK1HF6hhy/baike/c0%3Dbaike80%2C5%2C5%2C80%2C26/sign=4a26e3f9414a20a425133495f13bf347/dc54564e9258d109baee1259df58ccbf6d814dcf.jpg" alt></p>
+<p><strong>量子纠缠</strong></p>
+<p>一个量子比特对的两个量子比特存在于单个量子状态，当研究人员以可预测的方式改变其中一个量子比特的状态时（无论两个粒子分离有多远），另一个量子比特的状态将瞬间改变（为什么产生这种现象仍然是一个谜）。由于量子纠缠的性质，在量子机器中添加额外的量子比特则会使其数字运算能力呈指数级增长。</p>
+<p><img src="https://gss1.bdstatic.com/9vo3dSag_xI4khGkpoWK1HF6hhy/baike/c0%3Dbaike150%2C5%2C5%2C150%2C50/sign=3185f79b99cad1c8c4b6f4751e570c6c/5366d0160924ab1896e0068339fae6cd7a890b8b.jpg" alt></p>
+<p><strong>退相干</strong></p>
+<p>量子比特与环境之间的相互作用会导致量子行为衰减甚至最终消失，这被称为“退相干（Decoherence）”现象。量子比特的量子态非常脆弱，最轻微振动或温度扰动的变化都可能导致它们在工作正常完成之前就发生量子行为的衰减。所以需要在很严格的环境条件下控制量子比特，也是量子计算机很难实现的原因之一。</p>
+<p><strong>量子霸权</strong></p>
+<p>所谓的量子霸权（quantum supremacy）是指量子计算装置在特定测试案例上表现出超越所有经典计算机的计算能力。</p>
+<p>正如文章开头提到的Google公司率先实现量子霸权是指Google公司开发出一款54量子比特数（其中53个量子比特可用）的超导量子芯片“Sycamore”。基于Sycamore，谷歌对一个53比特、20深度的电路采样一百万次只需200秒。而目前最强的经典超级计算机Summit要得到类似的结果，则需要一万年。这样的突破称其为实现“量子霸权”。</p>
+<p>国内研究则是以国防科技大学计算机学院吴俊杰带领的QUANTA团队，联合信息工程大学等国内外科研机构，提出了量子计算模拟的新算法，该算法在“天河二号”超级计算机上的测试性能达到国际领先水平。</p>
+<p><strong>研究意义</strong></p>
+<p>量子计算机最有希望的应用前景主要是：1、模拟物质在分子状态的行为；2、优化问题的解决方案。量子计算机在理论上是可行的，但是在实践中却困难重重；现量子霸权，将代表超越经典的量子计算能力从理论走进实验，标志着一个新的计算能力飞跃时代的开始。</p>
 
       
     </div>
@@ -453,7 +483,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/嵌入式/" rel="tag"># 嵌入式</a>
+            <a href="/tags/量子计算机/" rel="tag"># 量子计算机</a>
           
         </div>
       
@@ -466,8 +496,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/06/29/2019-06-29-tech-stack/" rel="next" title="记录零碎技术栈">
-                <i class="fa fa-chevron-left"></i> 记录零碎技术栈
+              <a href="/2020/02/06/2020-02-06-usa-business-story/" rel="next" title="纪录片《美国商业大亨传奇》观后感">
+                <i class="fa fa-chevron-left"></i> 纪录片《美国商业大亨传奇》观后感
               </a>
             
           </div>
@@ -475,10 +505,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/07/11/2019-07-11-vmware-linux/" rel="prev" title="VMware-Linux">
-                VMware-Linux <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -530,17 +556,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            Table of Contents
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            Overview
-          </li>
-        </ul>
-      
 
-      <section class="site-overview-wrap sidebar-panel">
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -693,22 +710,6 @@
         </div>
       </section>
 
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#0x00-前言"><span class="nav-number">1.</span> <span class="nav-text">0x00 前言</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#0x01-嵌入式入门"><span class="nav-number">2.</span> <span class="nav-text">0x01 嵌入式入门</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#0x02-实训硬件开发"><span class="nav-number">3.</span> <span class="nav-text">0x02 实训硬件开发</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#0x03-总结"><span class="nav-number">4.</span> <span class="nav-text">0x03 总结</span></a></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
       
 
       
